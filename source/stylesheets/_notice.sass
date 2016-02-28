@@ -1,0 +1,60 @@
+// notice bar
+.notice
+  position: fixed
+  z-index: 3
+  min-height: $header-height
+  background: $notice
+  display: table
+  -webkit-animation: in 0.5s ease
+  -moz-animation: in 0.5s ease
+  -ms-animation: in 0.5s ease
+  -o-animation: in 0.5s ease
+  animation: in 0.5s ease
+  .section
+    padding: 0.8em
+  .autogrid
+    .autocol
+      &:first-child
+        width: 90%
+        padding: 0 1em 0 0
+      &:last-child
+        width: 10%
+  .ion-ios-close-outline
+    cursor: pointer
+    &:hover
+      &:before
+        content: "\f406"
+  &.hide
+    display: none
+
+@-webkit-keyframes in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@-moz-keyframes in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@-ms-keyframes in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@-o-keyframes in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+@keyframes in
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@media screen and (max-width: $handheld)
+
+  .notice
+    .autocol
+      display: table-cell

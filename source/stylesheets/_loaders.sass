@@ -1,0 +1,54 @@
+.load
+  height: 2em
+  width: 2em
+  border-radius: $round
+  display: inline-block
+  border: 3px solid #ddd
+  border-left-color: #666
+  -webkit-animation-name: loading
+  animation-name: loading
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-iteration-count: infinite
+  animation-iteration-count: infinite
+  -webkit-animation-timing-function: linear
+  animation-timing-function: linear
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &.smallest
+    width: 0.5em
+    height: 0.5em
+    border-width: 1px
+  &.small
+    width: 1em
+    height: 1em
+    border-width: 2px
+  &.large
+    width: 3em
+    height: 3em
+    border-width: 4px
+
+@keyframes loading
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+@-webkit-keyframes loading
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+
+@-ms-keyframes loading
+  from
+    -ms-transform: rotate(0deg)
+  to
+    -ms-transform: rotate(360deg)
+
+@-moz-keyframes loading
+  from
+    -moz-transform: rotate(0deg)
+  to
+    -moz-transform: rotate(360deg)

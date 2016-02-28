@@ -1,0 +1,32 @@
+@import variables
+
+.pagination
+  text-align: center
+  padding: 1em
+  margin: 1em 0
+  border-top: 1px solid #eee
+  a, .current, .next_page, .previous_page
+    border: 1px solid $gray-light
+    background: transparent
+    color: $gray
+    margin: 0.5em 0.25em
+    padding: 0.5em 1em
+    font-size: 1em
+    border-radius: $round
+    display: inline-block
+    &.current, &:hover
+      background: $gray-light
+      transition: $all
+      color: $white
+    &.disabled
+      opacity: 0.2
+      -webkit-opacity: 0.2
+      filter: brightness(1)
+      -webkit-filter: brightness(1)
+      &:hover
+        background: transparent
+        color: $gray-light
+
+  .next_page, .previous_page
+    padding: 0.5em 2em
+    min-width: 9em

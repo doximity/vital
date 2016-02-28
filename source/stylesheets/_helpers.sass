@@ -1,0 +1,83 @@
+// Colors
+
+.gray
+  color: $gray
+.gray-light
+  color: $gray-light
+
+// Quick Adjustments
+
+.align-left
+  text-align: left
+.align-right
+  text-align: right
+.float-left
+  float: left
+.float-right
+  float: right
+.no-wrap
+  white-space: nowrap
+.inline
+  display: inline
+.inline-block
+  display: inline-block
+.center
+  text-align: center
+.clear
+  clear: both
+.block
+  display: block
+.break
+  word-break: break-all
+.box
+  border: 1px solid $gray-lightest
+  border-radius: $radius
+  padding: 1em
+  margin: 1em 0
+.radius
+  border-radius: $radius
+.round
+  border-radius: $round
+.uppercase
+  text-transform: uppercase
+.bg
+  background: $gray-lightest
+
+.hide, .hidden
+  display: none
+.show
+  display: block
+  visibility: visible
+
+.full
+  width: 100%
+.full-width-forms
+  input, select, textarea, select
+    width: 100%
+    margin-bottom: 0.75em
+  input[type='checkbox']
+    width: auto
+
+.space
+  &:after
+    content: "\00a0"
+
+// Font Icons
+
+.i2x
+  font-size: 2em
+.i3x
+  font-size: 3em
+.i4x
+  font-size: 4em
+.i5x
+  font-size: 5em
+.same-width
+  text-align: center
+  width: 2em
+  display: inline-block
+
+@media screen and (max-width: $handheld)
+
+  .space, .hide-on-mobile
+    display: none

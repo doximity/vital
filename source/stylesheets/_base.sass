@@ -1,0 +1,118 @@
+@import variables
+
+*
+  box-sizing: border-box
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+
+html, body
+  height: 100%
+
+body
+  color: #444
+  font: 16px / 1.7 $font
+  font-weight: 300
+  background: $body
+
+.row
+  display: table
+  clear: both
+  content: ""
+  width: 100%
+
+.section
+  padding: 1em
+  margin: 0 auto
+
+// Typography
+
+h1, h2, h3, h4, h5, h6, p, ul, ol
+  margin: 1em 0
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
+  line-height: 1.4
+
+blockquote
+  margin: 1em 0
+  padding: 0 1em
+  border-left: 2px solid $gray-lighter
+
+strong, b
+  font-weight: 500
+
+a
+  color: $header
+  text-decoration: none
+  &:hover
+    color: $hover
+    transition: $color
+  &:focus
+    outline: none
+
+hr
+  border: none
+  background: $gray-lighter
+  clear: both
+  margin: 1.5em auto
+  height: 1px
+  &.half
+    width: 50%
+  &.quarter
+    width: 25%
+
+pre
+  white-space: pre-wrap
+  word-break: break-all
+
+code, .code
+  color: $gray-dark
+  font-family: $code
+  font-size: 0.65em
+  background: $gray-lighter
+  padding: 0.1em 0.5em 0.1em 0.3em
+  margin: 0 0.3em 0 0.1em
+  border-radius: 3px
+  display: inline-block
+  position: relative
+  top: -0.1em
+
+dl
+  display: table
+  width: 100%
+dt, dd
+  display: table-cell
+  vertical-align: top
+  float: left
+  clear: both
+dt
+  color: $gray
+  font-size: 0.85em
+dd
+  color: black
+  font-weight: 400
+  padding-bottom: 0.3em
+  &:after
+    content: "\00a0"
+  i
+    margin: 0 1em 0 0
+
+@media screen and (min-width: $desktop)
+
+  .section
+    max-width: 1366px
+
+@media screen and (max-width: $desktop)
+
+  .section
+    max-width: 1166px
+
+@media screen and (max-width: $laptop)
+
+  .section
+    max-width: 1024px
+
+@media screen and (max-width: $phablet)
+
+  .section
+    max-width: 100%

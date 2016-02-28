@@ -1,0 +1,88 @@
+@import variables
+
+// Header & Footer
+.header, .footer
+  background: $header
+  z-index: 1
+  .logo
+    img
+      width: 2.2em
+      margin: 0.5em 0 0 0
+
+// Header
+.header
+  color: $white
+  top: 0
+  width: 100%
+  color: $white
+  opacity: 1
+  vertical-align: middle
+  transition: $fade-and-hide
+  transform: $translate
+  ul, li
+    list-style: none
+    margin: 0
+  ul, li, .logo
+    float: left
+  a, span
+    color: $white
+    margin: 0 -1em
+    height: $header-height
+    display: table-cell
+    width: auto
+    padding: 0.9em 1em
+    vertical-align: middle
+    white-space: nowrap
+    transition: $all
+    &:hover, &.here
+      background: $header-link-hover
+    &:hover
+      i
+        opacity: 1
+  span
+    opacity: 0.6
+    &:hover, &.here
+      background: transparent
+
+  .autocol
+    vertical-align: middle
+  .section
+    padding: 0
+    height: $header-height
+  .right
+    float: right
+
+// Body Contents
+.contents
+  padding: $header-height 0
+  min-height: 42em
+  background: $white
+
+// Footer
+.footer
+  color: $gray-light
+  padding: 5em 1em
+  background: $body
+  hr
+    background: rgba(0,0,0,0.1)
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    display: inline
+    padding: 0 0.5em
+  a
+    color: $gray
+    &:hover
+      color: $hover
+  .logo
+    opacity: 0.2
+  .line
+    color: #ddd
+
+@media screen and (max-width: $handheld)
+
+  .header
+    .autocol
+      display: table-cell

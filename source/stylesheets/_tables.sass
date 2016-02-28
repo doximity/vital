@@ -1,0 +1,40 @@
+@import variables
+
+table
+  margin: 1em 0
+  width: 100% !important
+  font-size: 0.9em
+tr
+  &:nth-child(even)
+    background: #fbfbfb
+th
+  font-weight: 400
+  color: #000
+  text-align: left
+td, th
+  border: 1px solid $gray-lighter
+  padding: 0.5em
+  text-align: left
+  vertical-align: top
+
+@media screen and (max-width: $tablet)
+
+  td, th
+    word-break: break-word
+
+@media screen and (max-width: $handheld)
+
+  tr, td, th
+    display: block
+  tr
+    padding: 1em 0
+    border-top: 1px solid $gray-lighter
+    &:nth-child(even)
+      background: #fff
+  th
+    display: none
+  td
+    clear: both
+    border: none
+  td, th
+    padding: 0.25em 0

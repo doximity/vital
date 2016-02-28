@@ -1,0 +1,132 @@
+@import variables
+
+// buttons
+
+.btn, button, input[type='submit']
+  display: inline-block
+  border-radius: $radius
+  box-shadow: none
+  cursor: pointer
+  font-weight: 300
+  outline: none
+  margin: 0
+  padding: 0.72em 1.5em
+  line-height: 1
+  text-align: center
+  height: auto
+  white-space: nowrap
+  text-decoration: none
+  appearance: none
+  background: transparent
+  color: $gray
+  border: 1px solid $gray
+  font-size: 18px
+  &:hover
+    border-color: $gray
+    filter: brightness(1)
+    -webkit-filter: brightness(1)
+    -moz-filter: brightness(1)
+  &.solid, &:hover, &.active
+    color: $white
+    background: $gray
+
+  // colors
+  &.white
+    color: $white
+    border-color: $white
+    &.solid, &:hover, &.active
+      color: $black
+      background: $white
+  &.gray-light
+    color: $gray-light
+    border-color: $gray-light
+    &.solid, &:hover, &.active
+      color: $gray
+      background: $gray-light
+  &.gray-dark
+    color: $gray-dark
+    border-color: $gray-dark
+    &.solid, &:hover, &.active
+      color: $white
+      background: $gray-dark
+  &.black
+    color: $black
+    border-color: $black
+    &.solid, &:hover, &.active
+      color: $white
+      background: $black
+  &.red
+    color: $red
+    border-color: $red
+    &.solid, &:hover, &.active
+      color: $white
+      background: $red
+  &.orange
+    color: $orange
+    border-color: $orange
+    &.solid, &:hover, &.active
+      color: $white
+      background: $orange
+  &.blue
+    color: $blue
+    border-color: $blue
+    &.solid, &:hover, &.active
+      color: $white
+      background: $blue
+  &.green
+    color: $green
+    border-color: $green
+    &.solid, &:hover, &.active
+      color: $white
+      background: $green
+
+  // solids
+  &.solid
+    &:hover
+      filter: brightness(0.8)
+      -webkit-filter: brightness(0.8)
+      -moz-filter: brightness(0.8)
+
+  // no outline
+  &.no-outline
+    border-color: transparent
+
+  // sizes
+  &.large
+    font-size: 18px
+    padding: 0.8em 1.7em
+    word-wrap: normal
+  &.small
+    padding: 0.5em 0.9em
+    font-size: 13px
+  &.tiny
+    padding: 0.3em 0.8em
+    font-size: 12px
+
+  // shapes
+  &.round
+    border-radius: $round
+
+  // states
+  &:hover
+    transition: $all
+    -webkit-transition: $all
+    -moz-transition: $all
+
+  &:active, &:focus
+    filter: brightness(0.7)
+    -webkit-filter: brightness(0.7)
+    -moz-filter: brightness(0.7)
+
+  &:disabled, &.disabled, &:disabled:hover, &.disabled:hover
+    cursor: default
+    background: transparent
+    color: $gray
+    opacity: 0.2
+    -webkit-opacity: 0.2
+    -moz-opacity: 0.2
+
+@media screen and (max-width: 667px)
+
+  .btn
+    margin-bottom: 1em

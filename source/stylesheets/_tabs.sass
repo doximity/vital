@@ -1,0 +1,109 @@
+@import variables
+
+// tabs
+.tabs
+  border-bottom: 1px solid $gray-light
+  &:after
+    content: ""
+    display: table
+    clear: both
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    float: left
+    margin-right: 1px
+  a, span
+    display: block
+    line-height: 1
+    padding: 1em 2em
+    border: 1px solid transparent
+  a
+    color: $gray
+    text-decoration: none
+    &:focus, &:hover
+      background-color: $gray-lightest
+      cursor: pointer
+      transition: $all
+
+  li.here a, span
+    color: $gray
+    background: white
+    position: relative
+    border: 1px solid $gray-light
+    border-bottom: none
+    bottom: -2px
+    cursor: default
+    text-decoration: none
+
+  // round tabs
+  &.round
+    margin: 1em 0
+    border-bottom: none
+    width: 100%
+    ul
+      display: inline-block
+    li
+      a
+        border-radius: 10em
+        margin: 0 1em 0 0
+        color: $gray
+        &:focus
+          background: none
+          color: $gray
+      &.here
+        a
+          bottom: 0
+          background: transparent
+          border: 1px solid $gray-light
+        &:hover
+          a
+            color: $gray
+            background: transparent
+            &:focus
+              color: white
+      &:hover
+        a
+          background: $gray-light
+          color: #fff
+
+  // make all tabs align from center
+  &.center
+    ul
+      text-align: center
+    li
+      float: none
+      display: inline-block
+
+@media screen and (max-width: $handheld)
+
+  // basic tabs
+  .tabs
+    border-bottom: none
+    li
+      width: 100%
+      a
+        padding: 1em
+      &.here
+        a
+          border-bottom: 1px solid $gray-light
+
+    // progress-style tabs
+    &.round
+      ul
+        display: block
+      li
+        width: 100%
+        float: left
+        display: block
+        clear: none
+        margin: 0
+        padding: 0 0.5em
+        margin: 0.1em 0
+        a
+          padding: 0.9em 1.1em
+          margin: 0
+          border-color: transparent
+          &:hover
+            border-color: $gray-light

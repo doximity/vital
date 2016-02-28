@@ -1,0 +1,577 @@
+---
+title: Vital
+---
+
+- page_classes do
+  | components
+
+.row.hero
+  .section.center
+    h1 Vital
+    h2 A minimally invasive CSS framework for modern web applications.
+
+.row
+  .section
+
+    h2 Vital's Versatility
+    hr
+    p Vital is a fresh alternative to heavily structured frameworks that require deep nesting and excessive markup. Vital is hyper-minimal by design, the advantages you gain in this framework are:
+    ul
+      li Lightweight (~10KB compressed)
+      li Quick and easy to learn
+      li Fairly style agnostic and easy to customize
+      li Easy to read, write and maintain
+    h3 Modify or Override
+    p One-size does not fit all. Vital is built on the principal of flexibility. Vital can be directly modified (or overridden if you prefer), thus allowing your application styles to mature into specific application styles.
+    h3 Getting Started
+    p
+      ' Getting started is simple. All you need is
+      span.code .row
+      ' and
+      span.code .section
+      ' Nest your contents under
+      span.code .section
+      ' .
+
+.row
+  .section
+
+    h2 Font Icons
+    hr
+    p Out of the box, Vital does not come with any font icons, so you can pick and choose your favorite iconograpgy.
+    p For this particular application we use the Ionicons library for icons.
+    h3 Example usage:
+    p
+      span.code i.ion-social-freebsd-devil
+    p
+      ' Renders:
+      i.ion-social-freebsd-devil
+    h3 Size options
+    .autogrid
+      .autocol
+        span.code .i5x
+        br
+        i.i5x.ion-social-freebsd-devil
+      .autocol
+        span.code .i4x
+        br
+        i.i4x.ion-social-freebsd-devil
+      .autocol
+        span.code .i3x
+        br
+        i.i3x.ion-social-freebsd-devil
+      .autocol
+        span.code .i2x
+        br
+        i.i2x.ion-social-freebsd-devil
+    p
+      ' Head over to Ionicons for a preview of all icon options:
+      = link_to 'Ionicons', 'http://ionicons.com/', class: 'btn small', target: '_blank'
+
+.row
+  .section
+
+    h2 Grid
+    hr
+
+    .grid-preview
+
+      .row
+        .col-1-2 .col-1-2
+        .col-1-2 .col-1-2
+      .row
+        .col-1-3 .col-1-3
+        .col-2-3 .col-2-3
+      .row
+        .col-1-3 .col-1-3
+        .col-1-3 .col-1-3
+        .col-1-3 .col-1-3
+      .row
+        .col-1-4 .col-1-4
+        .col-1-4 .col-1-4
+        .col-1-4 .col-1-4
+        .col-1-4 .col-1-4
+      .row
+        .col-1-4 .col-1-4
+        .col-3-4 .col-3-4
+      .row
+        .col-1-5 .col-1-5
+        .col-1-5 .col-1-5
+        .col-1-5 .col-1-5
+        .col-1-5 .col-1-5
+        .col-1-5 .col-1-5
+      .row
+        .col-1-8 .col-1-8
+        .col-1-8 .col-1-8
+        .col-1-8 .col-1-8
+        .col-1-8 .col-1-8
+        .col-1-8 .col-1-8
+        .col-1-8 .col-1-8
+        .col-1-8 .col-1-8
+        .col-1-8 .col-1-8
+
+    p
+      ' The grid is minimally padded evenly by default. However, if your primary layouts are heavy on typography you can opt for right-only padding.
+    p
+      ' You can do this by nesting your
+      span.code .col-
+      ' 's under
+      span.code .right-only
+      | :
+
+    .grid-preview
+      .row.right-only
+        .col-1-2 .col-1-2
+        .col-1-2 .col-1-2
+      .row.right-only
+        .col-1-3 .col-1-3
+        .col-1-3 .col-1-3
+        .col-1-3 .col-1-3
+      .row.right-only
+        .col-3-4 .col-3-4
+        .col-1-4 .col-1-4
+
+    p
+      ' You can also use
+      span.code .row
+      ' to automatically clear
+      span.code .col-
+      ' markup.
+    p
+      ' Alternatively, you can also use
+      span.code .clear
+      ' at the end of
+      span.code .col-
+      ' to clear columns.
+
+    hr
+
+    p
+      ' Add
+      span.code .space
+      ' to your
+      span.code .col-
+      ' markup if you'd like to hide empty columns on mobile.
+      span.code .space
+      ' hides empty colums automatically on mobile widths.
+      span.code .col-
+      ' markup.
+    .empty-grid-preview.center
+      .col-1-3.space
+        span.code .col-1-3.space
+      .col-1-3
+        span.code .col-1-3 Some content.
+      .col-1-3.space
+        span.code .col-1-3.space
+      .clear
+      .empty-render
+        .col-1-3
+        .col-1-3
+          p Some content.
+        .col-1-3
+        .clear
+
+    hr
+
+    h3 Automatic Grid
+    .grid-preview
+      .autogrid
+        .autocol .autocol
+        .autocol .autocol
+      .autogrid
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+      .autogrid
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+      .autogrid
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+      .autogrid
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+      .autogrid
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+        .autocol .autocol
+
+.row
+  .section
+
+    h2 Typography
+    hr
+    h1 h1 - Lorem ipsum Velit in non reprehenderit irure.
+    h2 h2 - Lorem ipsum Reprehenderit commodo voluptate laboris ex in.
+    h3 h3 - Lorem ipsum Voluptate culpa sint dolor.
+    h4 h4 - Lorem ipsum Nostrud sed sit commodo anim cillum.
+    h5 h5 - Lorem ipsum Velit Excepteur sit adipisicing Ut.
+    h6 h6 - Lorem ipsum Adipisicing dolore nisi Excepteur magna deserunt.
+    p consecutive p
+    p consecutive p
+    p consecutive p
+    p
+      ' This is a p with an inlined anchor inside
+      = link_to 'this is the inlined anchor', '#'
+    p
+      strong strong
+    p
+      em em
+    p
+      span span
+    p
+      small small
+    p ol
+    ol
+      li li
+      li li
+      li li
+    p ul
+    ul
+      li li
+      li li
+      li li
+
+.row
+  .section
+
+    h2 Loaders
+    hr
+    .col-1-4.center
+      p
+        .load.large
+        br
+        small Loading
+      p
+        .code .load.large
+    .col-1-4.center
+      p
+        .load
+        br
+        small Loading
+      p
+        .code .load
+    .col-1-4.center
+      p
+        .load.small
+        br
+        small Loading
+      p
+        .code .load.small
+    .col-1-4.center
+      p
+        .load.smallest
+        br
+        small Loading
+      p
+        .code .load.smallest
+    .clear
+
+.row
+  .section
+
+    h2 Buttons
+    hr
+    h3 Size options
+    .autogrid
+      .autocol
+        p
+          ' Default:
+        p
+          span.code .btn
+        p
+          = link_to 'btn', '#', class: 'btn'
+      .autocol
+        p
+          ' Tiny:
+        p
+          span.code .btn.tiny
+        p
+          = link_to 'btn tiny', '#', class: 'btn tiny'
+      .autocol
+        p
+          ' Small:
+        p
+          span.code .btn.small
+        p
+          = link_to 'btn small', '#', class: 'btn small'
+      .autocol
+        p
+          ' Large:
+        p
+          span.code .btn.large
+        p
+          = link_to 'btn large', '#', class: 'btn large'
+      .autocol
+        p
+          ' Full width:
+        p
+          span.code .btn.full
+        p
+          = link_to 'btn large full', '#', class: 'btn large full'
+    .clear
+
+    h3 Shape and fill options
+    .col-1-5
+      p Grays
+      p= link_to 'btn gray-light', '#', class: 'btn small gray-light'
+      p= link_to 'btn', '#', class: 'btn small'
+      p= link_to 'btn gray-dark', '#', class: 'btn small gray-dark'
+      p= link_to 'btn black', '#', class: 'btn small black'
+      p Other Colors
+      p= link_to 'btn red', '#', class: 'btn small red'
+      p= link_to 'btn orange', '#', class: 'btn small orange'
+      p= link_to 'btn yellow', '#', class: 'btn small yellow'
+      p= link_to 'btn green', '#', class: 'btn small green'
+      p= link_to 'btn blue', '#', class: 'btn small blue'
+      p= link_to 'btn disabled', '#', class: 'btn small disabled'
+    .col-1-5
+      p.space
+      p= link_to 'btn round gray-light', '#', class: 'btn small round gray-light'
+      p= link_to 'btn round', '#', class: 'btn small round'
+      p= link_to 'btn round gray-dark', '#', class: 'btn small round gray-dark'
+      p= link_to 'btn round black', '#', class: 'btn small round black'
+      p.space
+      p= link_to 'btn round red', '#', class: 'btn small round red'
+      p= link_to 'btn round orange', '#', class: 'btn small round orange'
+      p= link_to 'btn round yellow', '#', class: 'btn small round yellow'
+      p= link_to 'btn round green', '#', class: 'btn small round green'
+      p= link_to 'btn round blue', '#', class: 'btn small round blue'
+      p= link_to 'btn round disabled', '#', class: 'btn small round disabled'
+    .col-1-5
+      p.space
+      p= link_to 'btn no-outline gray-light', '#', class: 'btn small no-outline gray-light'
+      p= link_to 'btn no-outline', '#', class: 'btn small no-outline'
+      p= link_to 'btn no-outline gray-dark', '#', class: 'btn small no-outline gray-dark'
+      p= link_to 'btn no-outline black', '#', class: 'btn small no-outline black'
+      p.space
+      p= link_to 'btn no-outline red', '#', class: 'btn small no-outline red'
+      p= link_to 'btn no-outline orange', '#', class: 'btn small no-outline orange'
+      p= link_to 'btn no-outline yellow', '#', class: 'btn small no-outline yellow'
+      p= link_to 'btn no-outline green', '#', class: 'btn small no-outline green'
+      p= link_to 'btn no-outline blue', '#', class: 'btn small no-outline blue'
+      p= link_to 'btn no-outline disabled', '#', class: 'btn small no-outline disabled'
+    .col-1-5
+      p.space
+      p= link_to 'btn solid gray-light', '#', class: 'btn small solid gray-light'
+      p= link_to 'btn solid', '#', class: 'btn small solid'
+      p= link_to 'btn solid gray-dark', '#', class: 'btn small solid gray-dark'
+      p= link_to 'btn solid black', '#', class: 'btn small solid black'
+      p.space
+      p= link_to 'btn solid red', '#', class: 'btn small solid red'
+      p= link_to 'btn solid orange', '#', class: 'btn small solid orange'
+      p= link_to 'btn solid yellow', '#', class: 'btn small solid yellow'
+      p= link_to 'btn solid green', '#', class: 'btn small solid green'
+      p= link_to 'btn solid blue', '#', class: 'btn small solid blue'
+      p= link_to 'btn solid disabled', '#', class: 'btn small solid disabled'
+    .col-1-5
+      p.space
+      p= link_to 'btn solid round gray-light', '#', class: 'btn small solid round gray-light'
+      p= link_to 'btn solid round', '#', class: 'btn small solid round'
+      p= link_to 'btn solid round gray-dark', '#', class: 'btn small solid round gray-dark'
+      p= link_to 'btn solid round black', '#', class: 'btn small solid round black'
+      p.space
+      p= link_to 'btn solid round red', '#', class: 'btn small solid round red'
+      p= link_to 'btn solid round orange', '#', class: 'btn small solid round orange'
+      p= link_to 'btn solid round yellow', '#', class: 'btn small solid round yellow'
+      p= link_to 'btn solid round green', '#', class: 'btn small solid round green'
+      p= link_to 'btn solid round blue', '#', class: 'btn small solid round blue'
+      p= link_to 'btn solid round disabled', '#', class: 'btn small solid round disabled'
+    .clear
+
+.row.forms-preview
+  .section
+
+    h2 Forms
+    hr
+    .col-1-3
+    p
+      label
+        button.full.btn.blue name="button" type="submit"  Button Tag (btn blue full)
+    .col-1-3
+      p
+        label
+          input.btn.blue.full name="commit" type="submit" value="Submit Tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="tel" value="phone_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="date" value="date_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="datetime" value="datetime_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="datetime-local" value="datetime_local_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="email" value="email_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="month" value="month_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="number" value="number_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="password" value="password_field_tag"
+    .col-1-3
+      p
+        label
+          input#name_radio_button_tag.full checked="checked" name="name" type="radio" value="radio_button_tag"
+    .col-1-3
+      p
+        label
+          input#name checked="checked" name="name" type="checkbox" value="check_box_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="range" value="range_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="search" value="search_field_tag"
+    .col-1-3
+      p
+        label
+          select#name.full name="name"
+            option value=("select option one")  select option one
+            option value=("select option two")  select option two
+            option value=("select option three")  select option three
+            option value=("select option four")  select option four
+    .col-1-3
+      p
+        label.newselect
+          select.full
+            optgroup label=("group 1")
+              option option
+              option option
+              option option
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="tel" value="telephone_field_tag"
+    .col-1-3
+      p
+        label
+          textarea#name.full name="name"  text_area_tag
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="text" value="text_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="time" value="time_field_tag"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="url" value="string"
+    .col-1-3
+      p
+        label
+          input#name.full name="name" type="week" value="string"
+    .col-1-3
+      p
+        label
+          input#name name="name" type="file"
+    .clear
+
+.row
+  .section
+    h2 Tabs
+    hr
+
+    .box
+      h3 Square tabs
+      .tabs
+        ul
+          li.here
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+
+    .box
+      h3 Square tabs (Centered)
+      .tabs.center
+        ul
+          li.here
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+
+    .box
+      h3 Round tabs
+      .tabs.round
+        ul
+          li.here
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+
+    .box
+      h3 Round tabs (Centered)
+      .tabs.round.center
+        ul
+          li.here
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+          li
+            = link_to 'tab', '#'
+
+.row
+  .section
+
+    h2 Tables
+    hr
+
+    table
+      tr
+        th th
+        th th
+        th th
+      tr
+        td td
+        td td
+        td td
+      tr
+        td td
+        td td
+        td td
