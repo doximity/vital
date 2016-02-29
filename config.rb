@@ -36,8 +36,14 @@ end
 
 # Build-specific configuration
 configure :build do
+
   # Minify on build
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
+
+  # Set relative paths needed for github pages
+  activate :relative_assets
+  set :site_url, "/vital"
+
 end

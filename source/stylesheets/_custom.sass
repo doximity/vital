@@ -12,7 +12,7 @@
     background: $gray-lightest
     font-size: 0.7em
     text-align: center
-    border: 1px solid white
+    border: 0.06em solid white
     font-family: $code
     overflow: hidden
 
@@ -21,23 +21,25 @@
   padding: 1em 1em 0 1em
   background: $gray-lightest
 
-.forms-preview
-  .col-1-3
-    height: 5em
-
-.fonts
-  li
-    position: relative
-    z-index: 0
-    display: inline-block
-    padding: 22px
-    width: 42px
-    border-radius: 4px
-    list-style: none
+.fonts-icons-preview
+  p
+    padding: 1em 0
+    margin: 0
+    height: auto
+    min-height: 3em
     text-align: center
-    font-weight: normal
-    font-size: 32px
-    cursor: pointer
+    line-height: 1.5
+    color: gray
+    width: 25%
+    float: left
+    display: block
+    i
+      color: $gray-dark
+      font-size: 1.5em
+    &:hover
+      background: #eee
+      border-radius: 2px
+      transition: 0.1s linear background
 
 @media screen and (max-width: $handheld)
 

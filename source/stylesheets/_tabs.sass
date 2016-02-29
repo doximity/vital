@@ -1,10 +1,9 @@
 @import variables
 
-$tab-background: white
-
 // tabs
 .tabs
-  border-bottom: 1px solid $gray-light
+  border-bottom: 0.06em solid $bg-tab
+  margin-bottom: 1em
   &:after
     content: ""
     display: table
@@ -15,29 +14,29 @@ $tab-background: white
     padding: 0
   li
     float: left
-    margin-right: 1px
+    padding: 0 0.2%
   a, span
     display: block
     line-height: 1
     padding: 1em 2em
-    border: 1px solid transparent
+    border: none
   a
     color: $gray
     text-decoration: none
-    &:focus, &:hover
-      background: $tab-background
+    &:hover
+      color: white
+      background: $bg-tab
       cursor: pointer
       transition: $all
 
-  li.here a, span
-    color: $gray
-    background: white
-    position: relative
-    border: 1px solid $gray-light
-    border-bottom: none
-    bottom: -2px
-    cursor: default
-    text-decoration: none
+  .here
+    a, span
+      color: white
+      background: $bg-tab
+      position: relative
+      border-bottom: none
+      cursor: default
+      text-decoration: none
 
   // round tabs
   &.round
@@ -46,29 +45,14 @@ $tab-background: white
     width: 100%
     ul
       display: inline-block
-    li
+    a
+      border-radius: 10em
+      &:focus
+        background: none
+    .here
       a
-        border-radius: 10em
-        margin: 0 1em 0 0
-        color: $gray
-        &:focus
-          background: none
-          color: $gray
-      &.here
-        a
-          bottom: 0
-          background: $tab-background
-          border: 1px solid $gray-light
-        &:hover
-          a
-            color: $gray
-            background: $tab-background
-            &:focus
-              color: white
-      &:hover
-        a
-          background: $gray-light
-          color: #fff
+        bottom: 0
+        border: 0.06em solid $bg-tab
 
   // make all tabs align from center
   &.center
@@ -80,32 +64,10 @@ $tab-background: white
 
 @media screen and (max-width: $handheld)
 
-  // basic tabs
   .tabs
-    border-bottom: none
     li
       width: 100%
-      a
-        padding: 1em
-      &.here
-        a
-          border-bottom: 1px solid $gray-light
-
-    // progress-style tabs
+      text-align: center
     &.round
       ul
         display: block
-      li
-        width: 100%
-        float: left
-        display: block
-        clear: none
-        margin: 0
-        padding: 0 0.5em
-        margin: 0.1em 0
-        a
-          padding: 0.9em 1.1em
-          margin: 0
-          border-color: transparent
-          &:hover
-            border-color: $gray-light

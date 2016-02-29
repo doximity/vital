@@ -2,15 +2,15 @@
 
 // buttons
 
+
 .btn, button, input[type='submit']
   display: inline-block
   border-radius: $radius
   box-shadow: none
   cursor: pointer
-  font-weight: 300
   outline: none
   margin: 0
-  padding: 0.72em 1.5em
+  padding: 0.73em 1.5em
   line-height: 1
   text-align: center
   height: auto
@@ -19,18 +19,17 @@
   appearance: none
   background: transparent
   color: $gray
-  border: 1px solid $gray
-  font-size: 18px
+  border: 0.06em solid $gray
+  font-size: 1em
+  font-weight: 300
   &:hover
     border-color: $gray
-    filter: brightness(1)
-    -webkit-filter: brightness(1)
-    -moz-filter: brightness(1)
   &.solid, &:hover, &.active
     color: $white
     background: $gray
 
   // colors
+
   &.white
     color: $white
     border-color: $white
@@ -81,6 +80,7 @@
       background: $green
 
   // solids
+
   &.solid
     &:hover
       filter: brightness(0.8)
@@ -88,30 +88,33 @@
       -moz-filter: brightness(0.8)
 
   // no outline
+
   &.no-outline
     border-color: transparent
 
   // sizes
+
   &.large
-    font-size: 18px
+    font-size: 1.2em
     padding: 0.8em 1.7em
     word-wrap: normal
   &.small
     padding: 0.5em 0.9em
-    font-size: 13px
+    font-size: 0.9em
   &.tiny
     padding: 0.3em 0.8em
-    font-size: 12px
+    font-size: 0.8em
 
   // shapes
+
   &.round
     border-radius: $round
 
   // states
-  &:hover
+
+  &:hover, &:active, &:focus
     transition: $all
-    -webkit-transition: $all
-    -moz-transition: $all
+    opacity: 0.9
 
   &:active, &:focus
     filter: brightness(0.7)

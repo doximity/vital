@@ -5,18 +5,18 @@ table
   // You may disable this if you wish, but this will save you a lot of debugging troubles
   width: 100% !important
   margin: 1em 0
-tr
-  &:nth-child(even)
-    background: #fbfbfb
 th
   font-weight: 400
   color: #000
   text-align: left
 td, th
-  border: 1px solid $gray-lighter
   padding: 0.5em
   text-align: left
   vertical-align: top
+tr
+  border-bottom: 0.06em solid $gray-lighter
+  &:last-child
+    border-bottom: 0
 
 @media screen and (max-width: $tablet)
 

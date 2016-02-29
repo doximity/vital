@@ -1,0 +1,37 @@
+@import variables
+
+// Header
+.header
+  transition: $fade-and-hide
+  transform: $translate
+  background: $header
+  ul, li, .logo
+    float: left
+  ul
+    margin: 0
+  li
+    list-style: none
+    display: inline-block
+  a
+    transition: $all
+    padding: 1.7em 1em
+    display: inline-block
+    color: $gray-dark
+    &:hover, &.here
+      background: rgba(0,0,0,0.1)
+
+  .logo
+    padding: 0 1em
+    &:hover
+      background: none
+      i
+        color: $red
+        transition: $all
+
+  .menu
+    position: absolute
+    right: 0
+
+  .section
+    padding: 0
+    position: relative

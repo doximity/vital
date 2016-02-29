@@ -14,7 +14,11 @@ body
   font-weight: 300
   background: $body
 
-.row
+.contents
+  background: white
+  min-height: 24em
+
+.row, .contents
   display: table
   clear: both
   content: ""
@@ -28,7 +32,7 @@ body
 // Typography
 
 h1, h2, h3, h4, h5, h6, p, ul, ol
-  margin: 1em 0
+  margin: 1rem 0
 
 h1, h2, h3, h4, h5, h6
   font-weight: 400
@@ -42,7 +46,7 @@ strong, b
   font-weight: 500
 
 a
-  color: $header
+  color: $link
   text-decoration: none
   &:hover
     color: $hover
@@ -55,7 +59,7 @@ hr
   background: $gray-lighter
   clear: both
   margin: 1.5em auto
-  height: 1px
+  height: 0.06em
   &.half
     width: 50%
   &.quarter
@@ -102,15 +106,10 @@ dd
   .section
     width: 70%
 
-@media screen and (max-width: $desktop)
+@media screen and (min-width: $desktop-large)
 
   .section
-    width: 80%
-
-@media screen and (max-width: $laptop)
-
-  .section
-    width: 90
+    width: 60%
 
 @media screen and (max-width: $phablet)
 

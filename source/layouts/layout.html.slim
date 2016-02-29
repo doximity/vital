@@ -9,4 +9,7 @@ html
     title = current_page.data.title || "Vital"
 
   body class="#{page_classes}"
-    == yield
+    == partial 'layouts/header'
+    .contents
+      == yield
+    == partial 'layouts/footer'

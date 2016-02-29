@@ -5,7 +5,7 @@
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Sun Feb 28 13:50:23 2016
+Created by FontForge 20150828 at Sun Feb 28 18:12:41 2016
  By Body Taing
 Copyright (c) 2016, Body Taing
 </metadata>
@@ -19,7 +19,7 @@ Copyright (c) 2016, Body Taing
     panose-1="2 0 5 3 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
-    bbox="0 -16 548 400"
+    bbox="0 -63 674 449"
     underline-thickness="25.6"
     underline-position="-51.2"
     unicode-range="U+0020-F101"
@@ -27,9 +27,9 @@ Copyright (c) 2016, Body Taing
     <missing-glyph />
     <glyph glyph-name="space" unicode=" " 
  />
-    <glyph glyph-name="uniF101" unicode="&#xf101;" horiz-adv-x="548" 
-d="M500 175c26 0 48 -21 48 -47s-22 -49 -48 -49c-20 0 -38 13 -45 31h-51c-7 0 -13 5 -15 11l-16 47l-50 -173c-2 -7 -8 -11 -15 -11h-1c-8 0 -14 5 -15 12l-51 308l-45 -182c-2 -7 -9 -12 -16 -12l-180 18s157 12 161 12c2 0 6 0 7 3c0 2 0 1 0 1l60 243c2 7 8 13 16 13
-s15 -6 16 -14l52 -314l45 155c2 7 8 11 15 11v0c7 0 13 -4 15 -11l29 -85h38c6 19 25 33 46 33z" />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" horiz-adv-x="674" 
+d="M615 172c33 0 59 -25 59 -58s-26 -60 -59 -60c-25 0 -47 16 -55 38h-63c-8 0 -16 6 -19 14l-19 58l-61 -214c-2 -8 -10 -13 -19 -13h-1c-9 0 -16 6 -18 15l-64 379l-56 -224c-2 -9 -10 -15 -19 -15l-221 22s193 15 198 15c2 0 7 0 8 4c0 2 1 1 1 1l74 299c2 9 9 16 19 16
+s18 -9 20 -18l64 -386l55 191c2 8 9 14 18 14h1c8 0 15 -6 18 -14l35 -105h48c8 23 30 41 56 41z" />
     <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="513" 
 d="M471 385l42 -42l-323 -324l-22 -20l-21 20l-147 147l42 42l126 -126z" />
   </font>

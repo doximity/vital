@@ -1,0 +1,26 @@
+@import variables
+
+// Footer
+.footer
+  color: $gray-light
+  padding: 3em 1em
+  background: #f1f1f1
+  hr
+    background: rgba(0,0,0,0.1)
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    display: inline
+    padding: 0 0.5em
+  a
+    color: $gray
+    &:hover
+      color: $hover
+
+@media screen and (max-width: $handheld)
+
+  .header
+    .autocol
+      display: table-cell
