@@ -5,6 +5,7 @@
   transition: $fade-and-hide
   transform: $translate
   background: $header
+  border-bottom: 0.06em solid #eee
   ul, li, .logo
     float: left
   ul
@@ -14,21 +15,27 @@
     display: inline-block
   a
     transition: $all
-    padding: 1.7em 1em
+    text-transform: uppercase
+    padding: 2.43em 1.4em
     display: inline-block
     color: $gray-dark
+    font-size: 0.8em
+    font-weight: 400
+    line-height: 1
     &:hover, &.here
-      background: rgba(0,0,0,0.1)
+      background: rgba(0,0,0,0.05)
 
   .logo
     padding: 0 1em
+    color: $red
+    line-height: 1.97
     &:hover
       background: none
       i
-        color: $red
+        color: $red-bright
         transition: $all
 
-  .menu
+  .header-menu
     position: absolute
     right: 0
 
