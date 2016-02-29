@@ -24,7 +24,7 @@
   font-weight: 300
   &:hover
     border-color: $gray
-  &.solid, &:hover, &.active
+  &.solid, &:hover
     color: $white
     background: $gray
 
@@ -33,59 +33,63 @@
   &.white
     color: $white
     border-color: $white
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $black
       background: $white
   &.gray-light
     color: $gray-light
     border-color: $gray-light
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $gray
       background: $gray-light
   &.gray-dark
     color: $gray-dark
     border-color: $gray-dark
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $white
       background: $gray-dark
   &.black
     color: $black
     border-color: $black
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $white
       background: $black
   &.red
     color: $red
     border-color: $red
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $white
       background: $red
   &.orange
     color: $orange
     border-color: $orange
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $white
       background: $orange
+  &.yellow
+    color: $yellow
+    border-color: $yellow
+    &.solid, &:hover
+      color: $white
+      background: $yellow
   &.blue
     color: $blue
     border-color: $blue
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $white
       background: $blue
   &.green
     color: $green
     border-color: $green
-    &.solid, &:hover, &.active
+    &.solid, &:hover
       color: $white
       background: $green
 
   // solids
 
   &.solid
-    &:hover
-      filter: brightness(0.8)
-      -webkit-filter: brightness(0.8)
-      -moz-filter: brightness(0.8)
+    &:hover, &:active
+      opacity: 0.9
 
   // no outline
 
@@ -112,24 +116,12 @@
 
   // states
 
-  &:hover, &:active, &:focus
+  &:hover
     transition: $all
-    opacity: 0.9
-
-  &:active, &:focus
-    filter: brightness(0.7)
-    -webkit-filter: brightness(0.7)
-    -moz-filter: brightness(0.7)
+    opacity: 0.8
 
   &:disabled, &.disabled, &:disabled:hover, &.disabled:hover
     cursor: default
     background: transparent
     color: $gray
     opacity: 0.2
-    -webkit-opacity: 0.2
-    -moz-opacity: 0.2
-
-@media screen and (max-width: 667px)
-
-  .btn
-    margin-bottom: 1em
