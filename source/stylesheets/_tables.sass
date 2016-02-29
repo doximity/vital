@@ -1,5 +1,7 @@
 @import variables
 
+// default table styles
+
 table
   // Force vendor styles and inline styles to respect full width
   // You may disable this if you wish, but this will save you a lot of debugging troubles
@@ -15,7 +17,8 @@ td, th
   vertical-align: top
 tr
   border-bottom: 0.06em solid $gray-lighter
-  &:last-child
+tfoot
+  tr
     border-bottom: 0
 
 @media screen and (max-width: $tablet)

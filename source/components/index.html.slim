@@ -61,9 +61,6 @@ title: Vital
         span.code .i2x
         br
         i.i2x.icon-vital
-    p
-      ' Head over to Ionicons for a preview of all icon options:
-      = link_to 'Ionicons', 'http://ionicons.com/', class: 'btn small', target: '_blank'
 
 .row
   .section
@@ -417,43 +414,35 @@ title: Vital
     .col-1-4
       p
         label
-          input#name.full name="name" type="datetime" placeholder="datetime_field_tag"
+          input#name.full name="name" type="datetime" placeholder="date/time"
     .col-1-4
       p
         label
-          input#name.full name="name" type="datetime-local" placeholder="datetime_local_field_tag"
+          input#name.full name="name" type="datetime-local" placeholder="local date/time"
     .col-1-4
       p
         label
-          input#name.full name="name" type="email" placeholder="email_field_tag"
+          input#name.full name="name" type="email" placeholder="email"
     .col-1-4
       p
         label
-          input#name.full name="name" type="month" placeholder="month_field_tag"
+          input#name.full name="name" type="month" placeholder="month"
     .col-1-4
       p
         label
-          input#name.full name="name" type="number" placeholder="number_field_tag"
+          input#name.full name="name" type="number" placeholder="number"
     .col-1-4
       p
         label
-          input#name.full name="name" type="password" placeholder="password_field_tag"
+          input#name.full name="name" type="password" placeholder="password"
     .col-1-4
       p
         label
-          input#name_radio_button_tag.full checked="checked" name="name" type="radio" value="radio_button_tag"
+          input#name.full name="name" type="range"
     .col-1-4
       p
         label
-          input#name checked="checked" name="name" type="checkbox" value="check_box_tag"
-    .col-1-4
-      p
-        label
-          input#name.full name="name" type="range" value="range_field_tag"
-    .col-1-4
-      p
-        label
-          input#name.full name="name" type="search" value="search_field_tag"
+          input#name.full name="name" type="search" value="search"
     .col-1-4
       p
         label
@@ -464,7 +453,7 @@ title: Vital
             option value=("select option four")  select option four
     .col-1-4
       p
-        label.newselect
+        label.select
           select.full
             optgroup label=("group 1")
               option option
@@ -473,31 +462,56 @@ title: Vital
     .col-1-4
       p
         label
-          input#name.full name="name" type="tel" value="telephone_field_tag"
+          input#name.full name="name" type="tel" placeholder="1-808-000-0000"
     .col-1-4
       p
         label
-          textarea#name.full name="name"  text_area_tag
+          input.full name="name" type="text" placeholder="text"
     .col-1-4
       p
         label
-          input#name.full name="name" type="text" value="text_field_tag"
+          input.full name="name" type="time" placeholder="time"
     .col-1-4
       p
         label
-          input#name.full name="name" type="time" value="time_field_tag"
+          input.full name="name" type="url" placeholder="url"
     .col-1-4
       p
         label
-          input#name.full name="name" type="url" value="string"
+          input.full name="name" type="week" placeholder="week"
     .col-1-4
       p
         label
-          input#name.full name="name" type="week" value="string"
-    .col-1-4
-      p
-        label
-          input#name name="name" type="file"
+          input.full name="name" type="file"
+    .clear
+
+    p
+      label
+        textarea.full name="name" placeholder="textarea"
+
+    .col-1-2
+      p.autogrid
+        label.col>
+          input.full name="name" type="radio" checked="true"
+          | Radio
+        label.col>
+          input.full name="name" type="radio"
+          | Radio
+        label.col>
+          input.full name="name" type="radio" disabled="true"
+          span.gray-light Radio
+
+    .col-1-2
+      p.autogrid
+        label.col>
+          input#name name="name" type="checkbox" checked="true"
+          | Checkbox
+        label.col>
+          input#name name="name" type="checkbox"
+          | Checkbox
+        label.col>
+          input#name name="name" type="checkbox" disabled="true"
+          span.gray-light Checkbox
     .clear
 
 .row.bg
@@ -552,23 +566,27 @@ title: Vital
     hr
 
     table
-      tr
-        th Header
-        th Header
-        th Header
-      tr
-        td 1
-        td 2
-        td 3
-      tr
-        td 4
-        td 5
-        td 6
-      tr
-        td 7
-        td 8
-        td 9
-
+      thead
+        tr
+          th Header
+          th Header
+          th Header
+      tbody
+        tr
+          td 1
+          td 2
+          td 3
+        tr
+          td 4
+          td 5
+          td 6
+        tr
+          td 7
+          td 8
+          td 9
+      tfoot
+        tr
+          td colspan='3' Footer
 
 .row.bg
   .section

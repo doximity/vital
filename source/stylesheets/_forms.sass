@@ -10,7 +10,7 @@ fieldset
 
 input, select, textarea
   font-family: $font
-  font-size: 18px
+  font-size: 1.05em
   outline: none
   border-radius: $radius
   border: 0.06em solid #ddd
@@ -44,6 +44,9 @@ input
     width: 100%
     font-size: 0.9em
     padding: 0.8em 0.5em
+  &[type='search']
+    box-sizing: border-box
+
 
 input[type='checkbox'], input[type='radio']
   appearance: none
@@ -55,7 +58,6 @@ input[type='checkbox'], input[type='radio']
   height: 1em
   width: 1em
   margin: 0 0.3em 0 0
-  -webkit-appearance: none
   border: 0.06em solid #888
   position: relative
   top: 0.15em
@@ -81,7 +83,7 @@ input[type='checkbox']
       font-family: $icons
       font-size: 0.6em
       overflow: hidden
-      line-height: 1
+      line-height: 1.7
 
 input[type='radio']
   border-radius: 50em
