@@ -2,11 +2,9 @@
 title: Vital
 ---
 
-- page_classes do
-  | components
-
 .row.hero
   .section.center
+    i.icon-vital
     h1 Vital
     h2 A minimally invasive CSS framework for modern web applications.
 
@@ -48,19 +46,19 @@ title: Vital
       i.ion-social-freebsd-devil
     h3 Size options
     .autogrid
-      .autocol
+      .col
         span.code .i5x
         br
         i.i5x.ion-social-freebsd-devil
-      .autocol
+      .col
         span.code .i4x
         br
         i.i4x.ion-social-freebsd-devil
-      .autocol
+      .col
         span.code .i3x
         br
         i.i3x.ion-social-freebsd-devil
-      .autocol
+      .col
         span.code .i2x
         br
         i.i2x.ion-social-freebsd-devil
@@ -176,38 +174,38 @@ title: Vital
     h3 Automatic Grid
     .grid-preview
       .autogrid
-        .autocol .autocol
-        .autocol .autocol
+        .col .col
+        .col .col
       .autogrid
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
+        .col .col
+        .col .col
+        .col .col
       .autogrid
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
+        .col .col
+        .col .col
+        .col .col
+        .col .col
       .autogrid
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
       .autogrid
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
       .autogrid
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
-        .autocol .autocol
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
 
 .row
   .section
@@ -287,35 +285,35 @@ title: Vital
     hr
     h3 Size options
     .autogrid
-      .autocol
+      .col
         p
           ' Default:
         p
           span.code .btn
         p
           = link_to 'btn', '#', class: 'btn'
-      .autocol
+      .col
         p
           ' Tiny:
         p
           span.code .btn.tiny
         p
           = link_to 'btn tiny', '#', class: 'btn tiny'
-      .autocol
+      .col
         p
           ' Small:
         p
           span.code .btn.small
         p
           = link_to 'btn small', '#', class: 'btn small'
-      .autocol
+      .col
         p
           ' Large:
         p
           span.code .btn.large
         p
           = link_to 'btn large', '#', class: 'btn large'
-      .autocol
+      .col
         p
           ' Full width:
         p
@@ -400,7 +398,7 @@ title: Vital
     .col-1-3
     p
       label
-        button.full.btn.blue name="button" type="submit"  Button Tag (btn blue full)
+        button.full.btn.blue name="button" type="submit" Button Tag (btn blue full)
     .col-1-3
       p
         label
@@ -408,11 +406,11 @@ title: Vital
     .col-1-3
       p
         label
-          input#name.full name="name" type="tel" value="phone_field_tag"
+          input#name.full name="name" type="tel" value="808-000-0000"
     .col-1-3
       p
         label
-          input#name.full name="name" type="date" value="date_field_tag"
+          input#name.full name="name" type="date" value="12-31-1999"
     .col-1-3
       p
         label
@@ -564,14 +562,18 @@ title: Vital
 
     table
       tr
-        th th
-        th th
-        th th
+        th Header
+        th Header
+        th Header
       tr
-        td td
-        td td
-        td td
+        td 1
+        td 2
+        td 3
       tr
-        td td
-        td td
-        td td
+        td 4
+        td 5
+        td 6
+      tr
+        td 7
+        td 8
+        td 9

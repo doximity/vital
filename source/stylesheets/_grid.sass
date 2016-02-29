@@ -28,7 +28,7 @@ body
   display: table
   table-layout: fixed
   width: 100%
-.autocol
+.col
   display: table-cell
   vertical-align: top
   padding: 0 0.2%
@@ -38,17 +38,17 @@ body
     padding-right: 0
 
 .right-only
-  [class*='col-'], .autocol
+  [class*='col-'], .col
     padding: 0 $right-only-padding 0 0
 
 @media screen and (max-width: $phablet)
 
-  [class*='col-'], .autocol
+  [class*='col-'], .col
     width: 100%
 
-  .autocol
+  .col
     display: block
 
   .right-only
-    [class*='col-'], .autocol
+    [class*='col-'], .col
       padding: 0 0 0 0

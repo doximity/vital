@@ -1,5 +1,7 @@
 @import variables
 
+$tab-background: white
+
 // tabs
 .tabs
   border-bottom: 1px solid $gray-light
@@ -23,7 +25,7 @@
     color: $gray
     text-decoration: none
     &:focus, &:hover
-      background-color: $gray-lightest
+      background: $tab-background
       cursor: pointer
       transition: $all
 
@@ -55,12 +57,12 @@
       &.here
         a
           bottom: 0
-          background: transparent
+          background: $tab-background
           border: 1px solid $gray-light
         &:hover
           a
             color: $gray
-            background: transparent
+            background: $tab-background
             &:focus
               color: white
       &:hover

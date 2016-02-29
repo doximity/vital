@@ -1,9 +1,10 @@
 @import variables
 
 table
-  margin: 1em 0
+  // Force vendor styles and inline styles to respect full width
+  // You may disable this if you wish, but this will save you a lot of debugging troubles
   width: 100% !important
-  font-size: 0.9em
+  margin: 1em 0
 tr
   &:nth-child(even)
     background: #fbfbfb

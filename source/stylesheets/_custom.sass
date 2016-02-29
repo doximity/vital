@@ -2,27 +2,11 @@
 
 // Styles that are very unique should go here.
 
-.components
-  .row
-    &:nth-child(even)
-      background: $gray-lightest
-    &.hero
-      background: $gray-dark
-      color: $gray-light
-      a
-        color: $gray-light
-      h1, i
-        margin: 0
-        font-size: 7em
-      h1
-        color: $white
-      i
-        color: $header
-        line-height: 1
+// Components
 
 .grid-preview
   margin: 2em 0
-  [class*='col-'], .autogrid .autocol
+  [class*='col-'], .autogrid .col
     padding-top: 1em
     padding-bottom: 1em
     background: $gray-lightest
@@ -31,10 +15,6 @@
     border: 1px solid white
     font-family: $code
     overflow: hidden
-  .right-only
-    [class*='col-']
-      background: linear-gradient(right, #eee 1em, $gray-lightest 1em)
-      background: -webkit-linear-gradient(right, #eee 1em, $gray-lightest 1em)
 
 .empty-grid-preview
   margin: 1em 0
@@ -46,19 +26,18 @@
     height: 5em
 
 .fonts
-  ul
-    li
-      position: relative
-      z-index: 0
-      display: inline-block
-      padding: 22px
-      width: 42px
-      border-radius: 4px
-      list-style: none
-      text-align: center
-      font-weight: normal
-      font-size: 32px
-      cursor: pointer
+  li
+    position: relative
+    z-index: 0
+    display: inline-block
+    padding: 22px
+    width: 42px
+    border-radius: 4px
+    list-style: none
+    text-align: center
+    font-weight: normal
+    font-size: 32px
+    cursor: pointer
 
 @media screen and (max-width: $handheld)
 

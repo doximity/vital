@@ -23,7 +23,8 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
-.icon-check:before {
+.icon-check:before,
+.icon-vital:before {
   display: inline-block;
   font-family: "icons";
   font-style: normal;
@@ -39,3 +40,4 @@
 }
 
 .icon-check:before { content: "\f100"; }
+.icon-vital:before { content: "\f101"; }

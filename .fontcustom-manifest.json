@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "dfdde34ced041de8cb0f94df160ee11d9f1922e6df75c240b0d70bd5b0c6754a",
-    "current": "dfdde34ced041de8cb0f94df160ee11d9f1922e6df75c240b0d70bd5b0c6754a"
+    "previous": "c72629f8d9481fcf8f9b0112462e2bb4e2f7ebde6e388b2ea137e3540a3ec741",
+    "current": "c72629f8d9481fcf8f9b0112462e2bb4e2f7ebde6e388b2ea137e3540a3ec741"
   },
   "fonts": [
     "source/fonts/output/icons.ttf",
@@ -13,6 +13,10 @@
     "icon-check": {
       "codepoint": 61696,
       "source": "source/fonts/input/icon-check.svg"
+    },
+    "icon-vital": {
+      "codepoint": 61697,
+      "source": "source/fonts/input/icon-vital.svg"
     }
   },
   "options": {

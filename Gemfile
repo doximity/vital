@@ -11,8 +11,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
-gem 'middleman-compass'
 gem 'middleman-minify-html'
-gem 'slim', '~> 3.0'
-gem 'sass', '~> 3.4'
+gem 'slim'
+gem 'sass'
 gem 'coffee-script'

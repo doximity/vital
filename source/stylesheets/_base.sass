@@ -10,7 +10,7 @@ html, body
 
 body
   color: #444
-  font: 16px / 1.7 $font
+  font: 17px / 1.7 $font
   font-weight: 300
   background: $body
 
@@ -23,6 +23,7 @@ body
 .section
   padding: 1em
   margin: 0 auto
+  width: 90%
 
 // Typography
 
@@ -31,7 +32,6 @@ h1, h2, h3, h4, h5, h6, p, ul, ol
 
 h1, h2, h3, h4, h5, h6
   font-weight: 400
-  line-height: 1.4
 
 blockquote
   margin: 1em 0
@@ -100,19 +100,19 @@ dd
 @media screen and (min-width: $desktop)
 
   .section
-    max-width: 1366px
+    width: 70%
 
 @media screen and (max-width: $desktop)
 
   .section
-    max-width: 1166px
+    width: 80%
 
 @media screen and (max-width: $laptop)
 
   .section
-    max-width: 1024px
+    width: 90
 
 @media screen and (max-width: $phablet)
 
   .section
-    max-width: 100%
+    width: 100%
