@@ -4,24 +4,11 @@ title: Vital
 
 .row.hero
   .section.center
-    i.icon-vital
-    h1 Vital
-    h2 A minimally invasive CSS framework for modern web applications.
+    h1 Components
 
 .row
   .section
-
-    h1 Vital's Versatility
-    hr
-    p Vital is a fresh alternative to heavily structured frameworks that require deep nesting and excessive markup. Vital is hyper-minimal by design, the advantages you gain in this framework are:
-    ul
-      li Lightweight (~20KB minified)
-      li Quick and easy to learn
-      li Fairly style agnostic and easy to customize
-      li Easy to read, write and maintain
-    h2 Modify or Override
-    p One-size does not fit all. Vital is built on the principal of flexibility. Vital can be directly modified (or overridden if you prefer), thus allowing your application styles to mature into specific application styles.
-    h2 Getting Started
+    h1 Basic Structure
     p
       ' Getting started is simple. All you need is
       span.code .row
@@ -33,7 +20,6 @@ title: Vital
 
 .row.bg
   .section
-
     h1 Font Icons
     hr
     p Vital comes with it's own set of font icons, but you can swap it out for anything you'd like or custom build, add or remove icons to Vital's iconograpgy. Vital uses FontCustom.
@@ -168,6 +154,7 @@ title: Vital
     hr
 
     h2 Automatic Grid
+    p Use the automatic grid if you don't need to be specific about your columns. You can create an unlimited amount of columns automatically.
     .grid-preview
       .autogrid
         .col .col
@@ -208,15 +195,15 @@ title: Vital
 
     h1 Typography
     hr
-    h1 h1 - This is an h1
-    h2 h2 - This is an h2
-    h3 h3 - This is an h3
-    h4 h4 - This is an h4
-    h5 h5 - This is an h5
-    h6 h6 - This is an h6
-    p consecutive p
-    p consecutive p
-    p consecutive p
+    h1 h1 - This is some text
+    h2 h2 - This is some text
+    h3 h3 - This is some text
+    h4 h4 - This is some text
+    h5 h5 - This is some text
+    h6 h6 - This is some text
+    p consecutive paragraph tag
+    p consecutive paragraph tag
+    p consecutive paragraph tag
     p
       ' This is a p with an inlined anchor inside
       = link_to 'this is the inlined anchor', '#'
@@ -238,6 +225,20 @@ title: Vital
       li li
       li li
       li li
+    p
+      span> Some blocks of text using
+      span.code> autogrid
+      span> and
+      span.code> right-only
+      | :
+    p.autogrid.right-only
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+    p.autogrid.right-only
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 .row
   .section
@@ -398,11 +399,11 @@ title: Vital
     .col-1-4
       p
         label
-          button.full name="button" type="submit" Button Tag
+          button.btn.full name="button" type="submit" Button Tag
     .col-1-4
       p
         label
-          input.full name="commit" type="submit" value="Submit Tag"
+          input.btn.full name="commit" type="submit" value="Submit Tag"
     .col-1-4
       p
         label
@@ -489,6 +490,8 @@ title: Vital
       label
         textarea.full name="name" placeholder="textarea"
 
+    p We developed custom radios and checkboxes because standard checkboxes didn't scale well. As a side benefit, you can customize the look and feel to be more in line with your application's branding.
+
     .col-1-2
       p.autogrid
         label.col>
@@ -499,7 +502,7 @@ title: Vital
           | Radio
         label.col>
           input.full name="name" type="radio" disabled="true"
-          span.gray-light Radio
+          span.disabled Radio
 
     .col-1-2
       p.autogrid
@@ -511,7 +514,7 @@ title: Vital
           | Checkbox
         label.col>
           input#name name="name" type="checkbox" disabled="true"
-          span.gray-light Checkbox
+          span.disabled Checkbox
     .clear
 
 .row.bg

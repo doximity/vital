@@ -1,11 +1,4 @@
-// Colors
-
-.gray
-  color: $gray
-.gray-light
-  color: $gray-light
-
-// Quick Adjustments
+// Helpers
 
 .align-left
   text-align: left
@@ -15,6 +8,8 @@
   float: left
 .float-right
   float: right
+.disabled
+  color: $gray-light
 .no-wrap
   white-space: nowrap
 .inline
@@ -29,11 +24,6 @@
   display: block
 .break
   word-break: break-all
-.box
-  border: 0.06em solid $gray-lightest
-  border-radius: $radius
-  padding: 1em
-  margin: 1em 0
 .radius
   border-radius: $radius
 .round
@@ -42,15 +32,25 @@
   text-transform: uppercase
 .bg
   background: $gray-lightest
+.box
+  border-radius: $radius
+  border: 0.06em solid $gray-lightest
+  margin: 1em 0
+  padding: 1em
 
-.hide, .hidden
+// Hide / Show
+
+.hide
   display: none
+
 .show
   display: block
-  visibility: visible
+
+// Widths
 
 .full
   width: 100%
+
 .full-width-forms
   input, select, textarea, select
     width: 100%
@@ -58,11 +58,13 @@
   input[type='checkbox']
     width: auto
 
+// Manually inserting a space into an empty element
+
 .space
   &:after
     content: "\00a0"
 
-// Font Icons
+// Font sizing
 
 .i2x
   font-size: 2em
@@ -78,6 +80,8 @@
   display: inline-block
 
 @media screen and (max-width: $handheld)
+
+  // Hide / Show
 
   .space, .hide-on-mobile
     display: none

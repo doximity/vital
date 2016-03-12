@@ -2,26 +2,26 @@
 
 // buttons
 
-
-.btn, button, input[type='submit']
-  display: inline-block
-  border-radius: $radius
-  box-shadow: none
-  cursor: pointer
-  outline: none
-  margin: 0
-  padding: 0.72em 1.5em
-  line-height: 1
-  text-align: center
-  height: auto
-  white-space: nowrap
-  text-decoration: none
+.btn
   appearance: none
   background: transparent
-  color: $gray
+  border-radius: $radius
   border: 0.06em solid $gray
+  box-shadow: none
+  color: $gray
+  cursor: pointer
+  display: inline-block
   font-size: 1.05em
   font-weight: 300
+  height: auto
+  line-height: 1
+  margin: 0
+  outline: none
+  padding: 0.72em 1.5em
+  text-align: center
+  text-decoration: none
+  user-select: none
+  white-space: nowrap
   &:hover
     border-color: $gray
   &.solid, &:hover
@@ -89,7 +89,7 @@
 
   &.solid
     &:hover, &:active
-      opacity: 0.9
+      opacity: 0.8
 
   // no outline
 

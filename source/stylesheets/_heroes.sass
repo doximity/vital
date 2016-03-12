@@ -1,20 +1,17 @@
 @import variables
 
-// Define what a hero section will look like.
-// As with any other component, you can fully customize it to suit your needs.
+// Heroes
 
 .hero
   color: $white
   background: $bg-hero
-  min-height: 25em
 
   h1, h2, h3, h4, h5, h6
     font-weight: 100
     margin: 0
     line-height: 1.3
-
   h1
-    font-size: 7em
+    font-size: 3em
     font-weight: 200
   h2
     font-size: 1.8em
@@ -27,24 +24,5 @@
   h6
     font-size: 1.0em
 
-  i
-    font-size: 8em
-    line-height: 1
-
   .section
     padding: 5em 1.5em
-
-@media screen and (min-width: $desktop)
-
-  .hero
-    min-height: 30em
-
-@media screen and (max-width: $phablet)
-
-  .hero
-    min-height: 20em
-
-@media screen and (max-width: $handheld)
-
-  .hero
-    min-height: 15em
