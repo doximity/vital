@@ -1,32 +1,33 @@
 @import variables
 
-.pagination
-  text-align: center
-  padding: 1em
+#pagination
   margin: 1em 0
-  border-top: 1px solid #eee
+  padding: 1em
+  text-align: center
   a, .current, .next_page, .previous_page
-    border: 1px solid $gray-light
     background: transparent
-    color: $gray
-    margin: 0.5em 0.25em
-    padding: 0.5em 1em
-    font-size: 1em
     border-radius: $round
+    border: 1px solid $gray-light
+    color: $gray
     display: inline-block
+    font-size: 1em
+    margin: 0.5%
+    min-height: 2.6em
+    padding: 0.4em 1em
     &.current, &:hover
       background: $gray-light
-      transition: $all
       color: $white
-    &.disabled
-      opacity: 0.2
-      -webkit-opacity: 0.2
-      filter: brightness(1)
-      -webkit-filter: brightness(1)
-      &:hover
-        background: transparent
-        color: $gray-light
-
+      transition: $all
   .next_page, .previous_page
-    padding: 0.5em 2em
     min-width: 9em
+
+@media screen and (max-width: $handheld)
+
+  #pagination
+    a, em.current
+      margin: 0 1em 1em 0
+    .next_page, .previous_page
+      width: 9em
+      display: block
+      margin: 0 auto 1em auto
+

@@ -20,36 +20,6 @@ title: Vital
 
 .row.bg
   .section
-    h1 Font Icons
-    hr
-    p Vital comes with it's own set of font icons, but you can swap it out for anything you'd like or custom build, add or remove icons to Vital's iconograpgy. Vital uses FontCustom.
-    h2 Example usage:
-    p
-      span.code i.icon-vital
-    p
-      ' Renders:
-      i.icon-vital
-    h2 Size options
-    .autogrid
-      .col
-        span.code .i5x
-        br
-        i.i5x.icon-vital
-      .col
-        span.code .i4x
-        br
-        i.i4x.icon-vital
-      .col
-        span.code .i3x
-        br
-        i.i3x.icon-vital
-      .col
-        span.code .i2x
-        br
-        i.i2x.icon-vital
-
-.row
-  .section
 
     h1 Grid
     hr
@@ -190,7 +160,7 @@ title: Vital
         .col .col
         .col .col
 
-.row.bg
+.row
   .section
 
     h1 Typography
@@ -240,7 +210,7 @@ title: Vital
       span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-.row
+.row.bg
   .section
 
     h1 Loaders
@@ -275,7 +245,7 @@ title: Vital
         .code .load.smallest
     .clear
 
-.row.bg
+.row
   .section
 
     h1 Buttons
@@ -387,7 +357,7 @@ title: Vital
       p= link_to 'solid round disabled', '#', class: 'btn small solid round disabled'
     .clear
 
-.row.forms-preview
+.row.forms-preview.bg
   .section
 
     h1 Forms
@@ -517,52 +487,32 @@ title: Vital
           span.disabled Checkbox
     .clear
 
-.row.bg
+.row
   .section
     h1 Tabs
     hr
-    .tabs
-      ul
-        li.here
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-    .tabs.round
-      ul
-        li.here
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-    .tabs.center
-      ul
-        li.here
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-    .tabs.round.center
-      ul
-        li.here
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
-        li
-          = link_to 'tab', '#'
+    p Square
+    ul.tabs
+      li.here
+        = link_to 'First', '#'
+      li
+        = link_to 'Second', '#'
+      li
+        = link_to 'Third', '#'
+      li
+        = link_to 'Fourth', '#'
+    p Round
+    ul.tabs.round
+      li.here
+        = link_to 'First', '#'
+      li
+        = link_to 'Second', '#'
+      li
+        = link_to 'Third', '#'
+      li
+        = link_to 'Fourth', '#'
 
-.row
+.row.bg
   .section
 
     h1 Tables
@@ -591,16 +541,28 @@ title: Vital
         tr
           td colspan='3' Footer
 
-.row.bg
+.row
   .section
 
     h1 Pagination
     hr
 
-    .pagination
-      p foo
+    #pagination
+      a.previous_page href="#" ← Previous
+      a href="#" 1
+      em.current 2
+      a href="#" 3
+      a href="#" 4
+      a href="#" 5
+      a href="#" 6
+      a href="#" 7
+      a href="#" 8
+      a href="#" 9
+      span.gap ...
+      a.next_page href="#" Next →
 
-.row.fonts-icons-preview
+
+.row.fonts-icons-preview.bg
   .section
 
     h1 Font Icons
@@ -615,3 +577,33 @@ title: Vital
       br
       | icon-check
     .clear
+
+.row
+  .section
+    h1 Font Icons
+    hr
+    p Vital comes with it's own set of font icons, but you can swap it out for anything you'd like or custom build, add or remove icons to Vital's iconograpgy. Vital uses FontCustom.
+    h2 Example usage:
+    p
+      span.code i.icon-vital
+    p
+      ' Renders:
+      i.icon-vital
+    h2 Size options
+    .autogrid
+      .col
+        span.code .i5x
+        br
+        i.i5x.icon-vital
+      .col
+        span.code .i4x
+        br
+        i.i4x.icon-vital
+      .col
+        span.code .i3x
+        br
+        i.i3x.icon-vital
+      .col
+        span.code .i2x
+        br
+        i.i2x.icon-vital

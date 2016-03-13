@@ -1,74 +1,37 @@
 @import variables
 
-// tabs
+// Tabs
+
 .tabs
-  border-bottom: 0.06em solid $bg-tab
-  margin-bottom: 1em
-  &:after
-    content: ""
-    display: table
-    clear: both
-  ul
-    width: 100%
-    list-style: none
-    margin: 0
-    padding: 0
-  li
-    float: left
-    padding: 0 0.2%
-  a, span
-    display: block
-    line-height: 1
-    padding: 1em 2em
-    border: none
+  display: inline-block
+  list-style: none
+  margin: 1em 0
+  padding: 0
+  width: 100%
   a
-    color: $gray
-    text-decoration: none
-    &:hover
-      color: white
-      background: $bg-tab
-      cursor: pointer
-      transition: $all
-
-  .here
-    a, span
-      color: white
-      background: $bg-tab
-      position: relative
-      border-bottom: none
-      cursor: default
-      text-decoration: none
-
-  // round tabs
-  &.round
-    margin: 1em 0
-    border-bottom: none
-    width: 100%
-    ul
-      display: inline-block
-    a
-      border-radius: 10em
-      &:focus
-        background: none
-    .here
+    border-radius: $radius
+    border: 0.0625em solid transparent
+    padding: 0.65em 1em
+  li
+    display: inline-block
+    float: left
+    padding: 0 0.5%
+    &:hover, &.here
       a
-        bottom: 0
-        border: 0.06em solid $bg-tab
-
-  // make all tabs align from center
-  &.center
-    ul
-      text-align: center
-    li
-      float: none
-      display: inline-block
+        border-color: $red
+        color: $red
+        transition: $all
+  &.round
+    li a
+      border-radius: $round
 
 @media screen and (max-width: $handheld)
 
   .tabs
     li
-      width: 100%
-      text-align: center
-    &.round
-      ul
+      display: block
+      float: none
+      a
         display: block
+        margin: 0.5% 0
+        text-align: center
