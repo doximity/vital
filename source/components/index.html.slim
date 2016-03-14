@@ -23,6 +23,12 @@ title: Vital
 
     h1 Grid
     hr
+    p
+      ' Example usage:
+      span.code> .col-1-2
+      ' means 1 of 2 columns.
+      span.code> .col-2-3
+      ' means 2 of 3 columns and so fourth.
 
     .grid-preview
 
@@ -179,7 +185,6 @@ title: Vital
     h6 h6 - This is some text
     p consecutive paragraph tag
     p consecutive paragraph tag
-    p consecutive paragraph tag
     p
       ' This is a p with an inlined anchor inside
       = link_to 'this is the inlined anchor', '#'
@@ -201,6 +206,8 @@ title: Vital
       li li
       li li
       li li
+    blockquote
+      p This is a blockquote
     p
       span> Some blocks of text using
       span.code> autogrid
@@ -567,28 +574,14 @@ title: Vital
       a href="#" 9
       a.next_page href="#" Next →
 
-
-.row.fonts-icons-preview.bg
-  .section
-
-    h1 Font Icons
-    hr
-
-    p
-      i.icon-vital
-      br
-      | icon-vital
-    p
-      i.icon-check
-      br
-      | icon-check
-    .clear
-
-.row
+.row.bg
   .section
     h1 Font Icons
     hr
-    p Vital comes with it's own set of font icons, but you can swap it out for anything you'd like or custom build, add or remove icons to Vital's iconograpgy. Vital uses FontCustom.
+    p
+      ' Vital comes with a few of it's own set of font icons. Some components such as checkboxes and the alert bar are dependant on them. Vital uses
+      a> target='_blank' href='https://github.com/FontCustom/fontcustom' Font Custom
+      ' to generate iconography. We recommend that you generate font icons into Vital's font file instead of importing entire icon libraries to save bandwidth, but if absolutely needed, you can import other libraries and they should play nice together.
     h2 Example usage:
     p
       span.code i.icon-vital
@@ -613,3 +606,19 @@ title: Vital
         span.code .i2x
         br
         i.i2x.icon-vital
+
+.row.fonts-icons-preview
+  .section
+
+    h1 Vital Iconograpgy
+    hr
+
+    p
+      i.icon-vital
+      br
+      | icon-vital
+    p
+      i.icon-check
+      br
+      | icon-check
+    .clear

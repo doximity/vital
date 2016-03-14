@@ -14,19 +14,6 @@ body
   font-weight: 300
   background: $body
 
-.contents
-  background: white
-  min-height: 24em
-
-.row
-  clear: both
-  width: 100%
-
-.section
-  padding: 1em
-  margin: 0 auto
-  width: 90%
-
 // Typography
 
 h1, h2, h3, h4, h5, h6, p, ul, ol
@@ -36,14 +23,6 @@ h1, h2, h3, h4, h5, h6
   font-weight: 400
   line-height: 1.2
 
-blockquote
-  margin: 1em 0
-  padding: 0 1em
-  border-left: 2px solid $gray-lighter
-
-strong, b
-  font-weight: 500
-
 a
   color: $link
   text-decoration: none
@@ -52,6 +31,14 @@ a
     transition: $color
   &:focus
     outline: none
+
+blockquote
+  margin: 1em 0
+  padding: 0 1em
+  border-left: 0.4em solid $gray-lighter
+
+strong, b
+  font-weight: 500
 
 hr
   border: none
@@ -99,6 +86,19 @@ dd
     content: "\00a0"
   i
     margin: 0 1em 0 0
+
+.contents
+  background: white
+  min-height: 24em
+
+.row
+  clear: both
+  width: 100%
+
+.section
+  padding: 1em
+  margin: 0 auto
+  width: 90%
 
 @media screen and (min-width: $desktop)
 
