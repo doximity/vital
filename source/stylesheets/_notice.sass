@@ -1,18 +1,18 @@
 // notice bar
 .notice
-  position: fixed
-  z-index: 3
-  background: $notice
-  display: table
   -webkit-animation: in 0.5s ease
   animation: in 0.5s ease
+  background: $notice
+  display: table
+  position: fixed
+  z-index: 3
   .section
     padding: 0.8em
   .autogrid
     .autocol
       &:first-child
-        width: 90%
         padding: 0 1em 0 0
+        width: 90%
       &:last-child
         width: 10%
   .ion-ios-close-outline

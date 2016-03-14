@@ -1,21 +1,21 @@
 @import variables
 
 fieldset
-  margin: 1em 0
-  border: 0.06em solid #f5f5f5
   border-radius: $radius
+  border: 0.06em solid #f5f5f5
+  margin: 1em 0
   legend
     font-weight: 400
     padding: 0 0.25em
 
 input, select, textarea
-  font-family: $font
-  font-size: 1.05em
-  outline: none
   border-radius: $radius
   border: 0.06em solid #ddd
-  padding: 0.6em 0.5em
+  font-family: $font
+  font-size: 1.05em
   font-weight: 300
+  outline: none
+  padding: 0.6em 0.5em
   &:hover, &:focus
     border-color: $hover
     transition: $all
@@ -30,17 +30,19 @@ input
   &[type='month']
     padding: 0.47em 0.5em
   &[type='range']
-    padding: 0.8em 0
-    width: 100%
-    height: auto
+    -moz-appearance: none
+    -webkit-appearance: none
+    appearance: none
     background: $white
     border-radius: $radius
-    appearance: none
-    -webkit-appearance: none
+    height: auto
+    padding: 0.8em 0
+    width: 100%
   &[type='checkbox'], &[type='radio']
     margin: 0
     padding: 0
   &[type='file']
+    background: $white
     width: 100%
     font-size: 0.9em
     padding: 0.8em 0.5em
@@ -48,18 +50,18 @@ input
     box-sizing: border-box
 
 input[type='checkbox'], input[type='radio']
-  appearance: none
   -moz-appearance: none
   -webkit-appearance: none
-  font-size: 1.1em
-  padding: 0
+  appearance: none
   background: white
-  height: 1em
-  width: 1em
-  margin: 0 0.3em 0 0
   border: 0.06em solid #888
+  font-size: 1.1em
+  height: 1em
+  margin: 0 0.3em 0 0
+  padding: 0
   position: relative
   top: 0.15em
+  width: 1em
   &:checked
     background: $link
     border-color: $link
@@ -71,37 +73,37 @@ input[type='checkbox']
   &:checked
     border: none
     &:before
-      content: "\f100"
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
       bottom: 0
-      text-align: center
       color: white
+      content: "\f100"
       font-family: $icons
       font-size: 0.7em
-      overflow: hidden
+      left: 0
       line-height: 1.7
+      overflow: hidden
+      position: absolute
+      right: 0
+      text-align: center
+      top: 0
 
 input[type='radio']
   border-radius: 50em
   &:checked
     &:before
+      color: white
       content: ' '
+      height: 1em
+      overflow: hidden
       position: absolute
       text-align: center
       top: 0
-      height: 1em
       width: 1em
-      color: white
-      overflow: hidden
 
 select
-  height: 2.55em
   background: white
+  height: 2.55em
 
 // Radios & checkboxes
 .checkbox, .radio
-  line-height: 2.2
   display: block
+  line-height: 2.2
