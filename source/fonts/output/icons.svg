@@ -1,16 +1,16 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-2-28: Created with FontForge (http://fontforge.org)
+2016-3-18: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Sun Feb 28 18:12:41 2016
+Created by FontForge 20150828 at Fri Mar 18 11:43:44 2016
  By Body Taing
 Copyright (c) 2016, Body Taing
 </metadata>
 <defs>
-<font id="icons" horiz-adv-x="200" >
+<font id="icons" horiz-adv-x="416" >
   <font-face 
     font-family="icons"
     font-weight="400"
@@ -22,15 +22,21 @@ Copyright (c) 2016, Body Taing
     bbox="0 -63 674 449"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+0020-F101"
+    unicode-range="U+0020-F104"
   />
     <missing-glyph />
-    <glyph glyph-name="space" unicode=" " 
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="200" 
  />
     <glyph glyph-name="uniF101" unicode="&#xf101;" horiz-adv-x="674" 
 d="M615 172c33 0 59 -25 59 -58s-26 -60 -59 -60c-25 0 -47 16 -55 38h-63c-8 0 -16 6 -19 14l-19 58l-61 -214c-2 -8 -10 -13 -19 -13h-1c-9 0 -16 6 -18 15l-64 379l-56 -224c-2 -9 -10 -15 -19 -15l-221 22s193 15 198 15c2 0 7 0 8 4c0 2 1 1 1 1l74 299c2 9 9 16 19 16
 s18 -9 20 -18l64 -386l55 191c2 8 9 14 18 14h1c8 0 15 -6 18 -14l35 -105h48c8 23 30 41 56 41z" />
-    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="513" 
-d="M471 385l42 -42l-323 -324l-22 -20l-21 20l-147 147l42 42l126 -126z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" 
+d="M355 339c81 -81 81 -213 0 -294s-213 -81 -294 0s-81 213 0 294s213 81 294 0zM304 108l-84 84l84 84l-12 12l-84 -84l-84 84l-12 -12l84 -84l-84 -84l12 -12l84 84l84 -84z" />
+    <glyph glyph-name="uniF104" unicode="&#xf104;" 
+d="M355 339c81 -81 81 -213 0 -294s-213 -81 -294 0s-81 213 0 294s213 81 294 0zM343 57c74 74 74 196 0 270s-196 74 -270 0s-74 -196 0 -270s196 -74 270 0zM292 288l12 -12l-84 -84l84 -84l-12 -12l-84 84l-84 -84l-12 12l84 84l-84 84l12 12l84 -84z" />
+    <glyph glyph-name="uniF103" unicode="&#xf103;" horiz-adv-x="192" 
+d="M180 288l12 -12l-84 -84l84 -84l-12 -12l-84 84l-84 -84l-12 12l84 84l-84 84l12 12l84 -84z" />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="207" 
+d="M74 119c-2 -2 -6 -4 -9 -4s-7 2 -9 4l-56 56l18 18l47 -47l125 126l17 -18z" />
   </font>
 </defs></svg>

@@ -24,6 +24,9 @@
 
 [data-icon]:before,
 .icon-check:before,
+.icon-close:before,
+.icon-close-empty:before,
+.icon-close-outline:before,
 .icon-vital:before {
   display: inline-block;
   font-family: "icons";
@@ -40,4 +43,7 @@
 }
 
 .icon-check:before { content: "\f100"; }
+.icon-close:before { content: "\f102"; }
+.icon-close-empty:before { content: "\f103"; }
+.icon-close-outline:before { content: "\f104"; }
 .icon-vital:before { content: "\f101"; }

@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "bc29a29ec865986d38d4946610a467fe4e7749bc053825b76c37ca2dbc815f69",
-    "current": "bc29a29ec865986d38d4946610a467fe4e7749bc053825b76c37ca2dbc815f69"
+    "previous": "4cd6f271d0a0b9d94b02600b591ebf4f262a8c4f8c77d218dc6ef1619dd994e7",
+    "current": "4cd6f271d0a0b9d94b02600b591ebf4f262a8c4f8c77d218dc6ef1619dd994e7"
   },
   "fonts": [
     "source/fonts/output/icons.ttf",
@@ -13,6 +13,18 @@
     "icon-check": {
       "codepoint": 61696,
       "source": "source/fonts/input/icon-check.svg"
+    },
+    "icon-close": {
+      "codepoint": 61698,
+      "source": "source/fonts/input/icon-close.svg"
+    },
+    "icon-close-empty": {
+      "codepoint": 61699,
+      "source": "source/fonts/input/icon-close-empty.svg"
+    },
+    "icon-close-outline": {
+      "codepoint": 61700,
+      "source": "source/fonts/input/icon-close-outline.svg"
     },
     "icon-vital": {
       "codepoint": 61697,
