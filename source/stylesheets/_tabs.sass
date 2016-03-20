@@ -14,13 +14,14 @@
     padding: 0.65em 1em
   li
     display: inline-block
-    float: left
     padding: 0 0.5%
     &:hover, &.here
       a
         border-color: $red
         color: $red
         transition: $all
+  & ul
+    padding: 0
   &.round
     li a
       border-radius: $round
@@ -30,7 +31,6 @@
   .tabs
     li
       display: block
-      float: none
       a
         display: block
         margin: 0.5% 0
