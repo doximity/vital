@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol
   margin: 1rem 0
 
 h1, h2, h3, h4, h5, h6
-  font-weight: 400
+  font-weight: 300
   line-height: 1.2
 
 a
@@ -46,26 +46,27 @@ hr
   clear: both
   margin: 1.5em auto
   height: 0.06em
-  &.half
+  &.medium
     width: 50%
-  &.quarter
-    width: 25%
+  &.small
+    width: 5em
 
 pre
   white-space: pre-wrap
   word-break: break-all
 
-code, .code
+code
   color: $gray-dark
   font-family: $code
   font-size: 0.65em
   background: $gray-lighter
-  padding: 0.1em 0.5em 0.1em 0.3em
-  margin: 0 0.7em 0 0.5em
-  border-radius: 3px
+  padding: 0 0.2em
+  margin: 0 0.6em 0 0.2em
+  border-radius: $radius
   display: inline-block
-  position: relative
-  top: -0.1em
+  &:before, &:after
+    content: '\00a0'
+    letter-spacing: -0.2em
 
 dl
   display: table

@@ -11,11 +11,11 @@ title: Vital
     h1 Basic Structure
     p
       ' Getting started is simple. All you need is
-      span.code .row
+      code .row
       ' and
-      span.code .section
+      code .section
       ' Nest your contents under
-      span.code .section
+      code .section
       ' .
 
 .row.bg
@@ -25,9 +25,9 @@ title: Vital
     hr
     p
       ' Example usage:
-      span.code> .col-1-2
+      code> .col-1-2
       ' means 1 of 2 columns.
-      span.code> .col-2-3
+      code> .col-2-3
       ' means 2 of 3 columns and so fourth.
 
     .grid-preview
@@ -69,13 +69,13 @@ title: Vital
 
     p
       ' The grid is minimally padded evenly by default. You can adjust padding that suits your needs. If your primary layouts are heavy on typography you can opt for
-      span.code> right-only
+      code> right-only
       | padding.
     p
       ' You can do this by nesting your
-      span.code .col-
+      code .col-
       ' 's under
-      span.code .right-only
+      code .right-only
       | :
 
     .grid-preview
@@ -93,38 +93,38 @@ title: Vital
 
     p
       ' You can also use
-      span.code .row
+      code .row
       ' to automatically clear
-      span.code .col-
+      code .col-
       ' markup.
     p
       ' Alternatively, you can also use
-      span.code .clear
+      code .clear
       ' at the end of
-      span.code .col-
+      code .col-
       ' to clear columns.
 
     hr
 
     p
       ' Add
-      span.code .space
+      code .space
       ' to your
-      span.code .col-
+      code .col-
       ' markup if you'd like to hide empty columns on mobile.
-      span.code .space
+      code .space
       ' hides empty colums are automatically hidden in the
-      span.code> handheld
+      code> handheld
       | media query.
-      span.code .col-
+      code .col-
       ' markup.
     .empty-grid-preview.center
       .col-1-3.space
-        span.code .col-1-3.space
+        code .col-1-3.space
       .col-1-3
-        span.code .col-1-3 Some content.
+        code .col-1-3 Some content.
       .col-1-3.space
-        span.code .col-1-3.space
+        code .col-1-3.space
       .clear
       .empty-render
         .col-1-3
@@ -210,9 +210,9 @@ title: Vital
       p This is a blockquote
     p
       span> Some blocks of text using
-      span.code> autogrid
+      code> autogrid
       span> and
-      span.code> right-only
+      code> right-only
       | :
     p.autogrid.right-only
       span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -269,35 +269,35 @@ title: Vital
         p
           ' Large:
         p
-          span.code .btn.large
+          code .btn.large
         p
           = link_to 'btn large', '#', class: 'btn large'
       .col
         p
           ' Default:
         p
-          span.code .btn
+          code .btn
         p
           = link_to 'btn', '#', class: 'btn'
       .col
         p
           ' Small:
         p
-          span.code .btn.small
+          code .btn.small
         p
           = link_to 'btn small', '#', class: 'btn small'
       .col
         p
           ' Tiny:
         p
-          span.code .btn.tiny
+          code .btn.tiny
         p
           = link_to 'btn tiny', '#', class: 'btn tiny'
       .col
         p
           ' Full width:
         p
-          span.code .btn.full
+          code .btn.full
         p
           = link_to 'btn full', '#', class: 'btn full'
     .clear
@@ -566,26 +566,26 @@ title: Vital
       ' to generate iconography. We recommend that you generate font icons into Vital's font file instead of importing entire icon libraries to save bandwidth, but if absolutely needed, you can import other libraries and they should play nice together.
     h2 Example usage:
     p
-      span.code i.icon-vital
+      code i.icon-vital
     p
       ' Renders:
       i.icon-vital
     h2 Size options
     .autogrid
       .col
-        span.code .i5x
+        code .i5x
         br
         i.i5x.icon-vital
       .col
-        span.code .i4x
+        code .i4x
         br
         i.i4x.icon-vital
       .col
-        span.code .i3x
+        code .i3x
         br
         i.i3x.icon-vital
       .col
-        span.code .i2x
+        code .i2x
         br
         i.i2x.icon-vital
 

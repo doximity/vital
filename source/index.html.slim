@@ -6,12 +6,12 @@ title: Vital
   .section.center
     i.i5x.icon-vital
     h1 Vital
-    br
+    hr.small.opacity-half
     h2 A minimally invasive CSS framework for modern web applications.
 
 .row
   .section
-    h3.thin Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks.
+    h2 Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks.
     hr
     p Vital is hyper-minimal by design, the advantages you gain in this framework are:
     ul
@@ -21,12 +21,14 @@ title: Vital
       li Easy to read, write and maintain
       li Modify vital directly from the source (or overridden if you prefer)
       li No deep nesting or excessive markup and classes
-    h2 Less > More
+    h3 Less &rang; More
     p Some frameworks include an overwhelmingly and unnecessary amount of code. Vital is built on the principal that less is more. Working with less code means:
     ul
       li Less bugs to squash.
       li Less documentation to read.
       li Work more productively.
+    h3 Designed for large and small, teams
+    p Often times, large CSS frameworks are brought into projects for the purpose of speed. If a project grows and needs to scale, the effectiveness and workflow efficiency starts to fall and cause more problems than they solve.
 
 .row.bg
   .section
@@ -34,6 +36,7 @@ title: Vital
     ul
       li Minimal use variable inception (hiding varialbes within variables).
       li Focused on simplicity and developer sanity.
+      li Written in Slim, Sass.
       li Read our single page documentation.
 
 .row
@@ -55,3 +58,13 @@ title: Vital
     h2 Vital Vectors
     p Font Icons have become very popular, but most libraries simply have either too many icons resulting in a very large set of iconograpgy font files, or lack the capability to allow your application icons to diverge into their own unique style. So we've included a Font Custom template for you to be able to quickly generate your own unique set of iconograpgy.
     p Take a look at our custom vectors guide for more information.
+
+.row.hero.center.light-text
+  .section
+    h2 Open Source
+    p
+      ' Developed and maintained by
+      = link_to 'Doximity', 'https://engineering.doximity.com'
+      ' . View the source on
+      = link_to 'GitHub', 'https://github.com/doximity/vital'
+      | .

@@ -1,44 +1,109 @@
 @import variables
 
 // Header
+
 .header
   transition: $fade-and-hide
   transform: $translate
   background: $header
   border-bottom: 0.06em solid #eee
-  ul, li, .logo
-    float: left
-  ul
-    margin: 0
-  li
-    list-style: none
-    display: inline-block
-  a
-    transition: $all
-    text-transform: uppercase
-    padding: 2.43em 1.4em
-    display: inline-block
-    color: $gray-dark
-    font-size: 0.8em
-    font-weight: 400
-    line-height: 1
-    &:hover, &.here
-      background: rgba(0,0,0,0.05)
-
+  .section
+    padding: 0
+    position: relative
   .logo
-    padding: 0 1em
+    padding: 0.6em 1em
     color: $red
-    line-height: 1.97
+    line-height: 1
+    float: left
+    border: 0
     &:hover
       background: none
       i
         color: $red-bright
         transition: $all
 
-  .header-menu
-    position: absolute
-    right: 0
-
-  .section
+nav
+  a
+    display: block
+    padding: 1.3em
+    &:hover
+      background: $gray-lightest
+  ul
     padding: 0
-    position: relative
+    margin: 0
+    li
+      float: left
+      display: inline
+      position: relative
+      background: $header
+      ul
+        left: 0
+        top: 100%
+    ul
+      display: none
+  li:hover > ul
+    display: block
+    position: absolute
+    z-index: 9000
+    width: 12.5em
+    li
+      width: 100%
+  ul ul li:hover > ul
+    right: -12.5em
+    top: 0
+    left: auto
+
+nav >
+  input
+    display: none
+  label
+    display: none
+    float: right
+    padding: 2em
+    cursor: pointer
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+@media screen and (max-width: $handheld)
+
+  .header
+    .logo
+      padding: 0.6em
+
+  nav
+    a
+      padding: 1em
+      border-top: 1px solid #eee
+    > label
+      display: block
+      font-size: 1.5em
+      padding: 0.56em
+    ul
+      li ul
+        display: block
+      li
+        float: none
+        display: block
+        border-right: none
+        text-align: center
+    >
+      ul
+        display: none
+        clear: both
+      input:checked + ul
+        display: block
+    li:hover ul
+      position: relative
+      width: auto
+    ul ul li:hover > ul
+      right: auto
+      top: auto
+      left: auto
+
+    // Hide all sub-menu items by default
+
+    ul ul a
+      display: none

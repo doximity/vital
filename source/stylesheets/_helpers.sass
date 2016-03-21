@@ -22,7 +22,7 @@
   clear: both
 .block
   display: block
-.break
+.break-all
   word-break: break-all
 .radius
   border-radius: $radius
@@ -39,6 +39,17 @@
   border: 0.06em solid $gray-lightest
   margin: 1em 0
   padding: 1em
+.opacity-half
+  opacity: 0.5
+
+// Lighten all typography for dark backgrounds
+
+.light-text
+  *
+    color: white
+  a
+    color: white
+    text-decoration: underline
 
 // Hide / Show
 

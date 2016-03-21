@@ -1,12 +1,37 @@
 .row.header
   .section
-    = link_to '/', class: 'logo' do
-      i.icon-vital.i3x
 
-    ul.header-links
-      li = link_to "Components", '/components'
-      li = link_to "Guidelines", '#'
-      li = link_to "Extras", '#'
+    nav
+      = link_to '/', class: 'logo' do
+        i.icon-vital.i3x
 
-    ul.header-menu
-      li = link_to "Menu", '#'
+      label for="menu-toggle"  ☰
+      input#menu-toggle type="checkbox"
+
+      ul
+        li
+          = link_to "Components", '/components'
+          ul
+            li
+              = link_to "Basic Structure", '#'
+              ul
+                li = link_to "Grid", '#'
+                li = link_to "Automatic Grid", '#'
+            li = link_to "Typography", '#'
+            li = link_to "Loaders", '#'
+            li = link_to "Buttons", '#'
+            li = link_to "Forms", '#'
+            li = link_to "Tabs", '#'
+            li = link_to "Tables", '#'
+            li = link_to "Pagination", '#'
+            li = link_to "Font Icons", '#'
+            li = link_to "Vital Iconograpgy", '#'
+        li
+          = link_to "Guidelines", '#'
+          ul
+            li
+              = link_to "Item", '#'
+        li
+          = link_to "Extras", '#'
+        li
+          = link_to "Tips & Tricks", '#'
