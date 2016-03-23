@@ -560,10 +560,6 @@ title: Vital
   .section
     h1 Font Icons
     hr
-    p
-      ' Vital comes with a few of it's own set of font icons. Some components such as checkboxes and the alert bar are dependant on them. Vital uses
-      a> target='_blank' href='https://github.com/FontCustom/fontcustom' Font Custom
-      ' to generate iconography. We recommend that you generate font icons into Vital's font file instead of importing entire icon libraries to save bandwidth, but if absolutely needed, you can import other libraries and they should play nice together.
     h2 Example usage:
     p
       code i.icon-vital
@@ -589,18 +585,39 @@ title: Vital
         br
         i.i2x.icon-vital
 
-.row.fonts-icons-preview
+.row
   .section
 
     h1 Vital Iconograpgy
+    p
+      ' Vital comes with a few of it's own set of font icons. Some components such as checkboxes and the alert bar are dependant on them.
+    p Most font icon libraries simply have either too many icons that result in very large files. We've included a Font Custom template for you to be able to quickly generate your own unique set of iconograpgy from SVG files.
+    p (instructions here)
+    p
+      ' For more information on creating and compiling vectors, visit
+      a> target='_blank' href='https://github.com/FontCustom/fontcustom' Font Custom
+
     hr
 
-    p
-      i.icon-vital
-      br
-      | icon-vital
-    p
-      i.icon-check
-      br
-      | icon-check
-    .clear
+    .fonts-icons-preview
+      p
+        i.icon-check
+        br
+        | icon-check
+      p
+        i.icon-close
+        br
+        | icon-close
+      p
+        i.icon-close-empty
+        br
+        | icon-close-empty
+      p
+        i.icon-close-outline
+        br
+        | icon-close-outline
+      p
+        i.icon-vital
+        br
+        | icon-vital
+      .clear

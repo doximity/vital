@@ -2,6 +2,9 @@
 title: Vital
 ---
 
+- content_for :assets do
+  = stylesheet_link_tag :demo
+
 .row.hero
   .section.center
     i.i5x.icon-vital
@@ -20,9 +23,9 @@ title: Vital
       li Fairly style agnostic and easy to customize
       li Easy to read, write and maintain
       li Modify vital directly from the source (or overridden if you prefer)
-      li No deep nesting or excessive markup and classes
+      li Minimal nesting of markup and classes
     h3 Less &rang; More
-    p Some frameworks include an overwhelmingly and unnecessary amount of code. Vital is built on the principal that less is more. Working with less code means:
+    p Some frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means:
     ul
       li Less bugs to squash.
       li Less documentation to read.
@@ -30,7 +33,7 @@ title: Vital
     h3 Designed for large and small, teams
     p Often times, large CSS frameworks are brought into projects for the purpose of speed. If a project grows and needs to scale, the effectiveness and workflow efficiency starts to fall and cause more problems than they solve.
 
-.row.bg
+.row
   .section
     h2 Readable
     ul
@@ -46,24 +49,19 @@ title: Vital
       li Designed to be lightweight (20kb minified).
       li Less code means less bugs, and more time to focus on business requirements and design.
 
-.row.bg
+.row
   .section
     h2 Mobile First
     ul
       li But also very desktop friendly.
       li Easy large screen scaling optimizations with just a few lines of code.
 
-.row
-  .section
-    h2 Vital Vectors
-    p Font Icons have become very popular, but most libraries simply have either too many icons resulting in a very large set of iconograpgy font files, or lack the capability to allow your application icons to diverge into their own unique style. So we've included a Font Custom template for you to be able to quickly generate your own unique set of iconograpgy.
-    p Take a look at our custom vectors guide for more information.
-
-.row.hero.center.light-text
-  .section
-    h2 Open Source
+.row.open-source.light-text
+  .section.center
+    = image_tag 'demo/opensource.svg'
+    h1 Open Source
     p
-      ' Developed and maintained by
+      ' Vital is developed and maintained by
       = link_to 'Doximity', 'https://engineering.doximity.com'
       ' . View the source on
       = link_to 'GitHub', 'https://github.com/doximity/vital'

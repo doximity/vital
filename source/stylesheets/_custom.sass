@@ -3,6 +3,7 @@
 // Styles that are very unique should go here.
 
 // Components
+// We recommend you keep the components page within your application so that you can easily test global changes with ease.
 
 .grid-preview
   margin: 2em 0
@@ -41,16 +42,32 @@
       border-radius: 2px
       transition: 0.1s linear background
 
+// Demo
+
 .index
   .hero
     h1
       font-size: 5em
       line-height: 1
     .icon-vital
-      line-height: 0.5
+      line-height: 1.4
+      font-size: 8em
+  .row
+    &:not(:nth-child(1))
+      padding: 2em 0
+      h1
+        font-size: 2em
+  .open-source
+    background: linear-gradient(to bottom right, #73B558, #45D093)
+    img
+      width: 10em
 
 @media screen and (max-width: $handheld)
+
+  // Components
 
   .fonts-icons-preview
     p
       width: 50%
+
+  // Demo
