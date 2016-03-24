@@ -72,13 +72,13 @@ input[type='checkbox'], input[type='radio']
   appearance: none
   background: white
   border: 0.06em solid #888
-  font-size: 1.1em
   height: 1em
-  margin: 0 0.3em 0 0
+  margin: 0 0.3em -0.15em 0
   padding: 0
   position: relative
-  top: 0.15em
+  top: 0
   width: 1em
+  overflow: hidden
   &:checked
     background: $link
     border-color: $link
@@ -94,14 +94,13 @@ input[type='checkbox']
       color: white
       content: "\f100"
       font-family: $icons
-      font-size: 1.2em
-      left: 0
-      line-height: 0.85
-      overflow: hidden
-      position: absolute
+      font-size: 1.3em
+      left: 0.13em
+      line-height: 0
+      position: relative
       right: 0
       text-align: center
-      top: 0
+      top: 0.05em
 
 input[type='radio']
   border-radius: 50em
