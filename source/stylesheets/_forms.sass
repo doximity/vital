@@ -12,15 +12,18 @@ input, select, textarea
   border-radius: $radius
   border: 0.06em solid #ddd
   font-family: $font
-  font-size: 1.05em
+  font-size: inherit
   font-weight: 300
   outline: none
-  padding: 0.65em 0.5em
+  padding: 0.72em 0.5em
   &:hover, &:focus
     border-color: $hover
     transition: $all
   &:focus
     box-shadow: 0 0 10px $focus
+
+textarea
+  padding: 0.5em
 
 input
   &[type='date'],
@@ -28,32 +31,12 @@ input
   &[type='time'],
   &[type='week'],
   &[type='month']
-    padding: 0.47em 0.5em
+    padding: 0.57em 0.5em
   &[type='range']
     -moz-appearance: none
     -webkit-appearance: none
     appearance: none
-    background: $white
-    border-radius: $radius
-    height: auto
-    overflow: hidden
-    padding: 0
-    width: 100%
-    height: 2.5em
-    &::-webkit-slider-runnable-track
-      padding: 0
-    &::-webkit-slider-thumb
-      -webkit-appearance: none
-      background: #aaa
-      border-radius: 0.2em
-      border: 0
-      cursor: pointer
-      height: 2.3em
-      width: 0.5em
-    &:hover, &:focus
-      outline: none
-      &::-webkit-slider-thumb
-        background: $link
+    padding: 0.87em 0.1em
 
   &[type='checkbox'], &[type='radio']
     margin: 0
@@ -117,7 +100,7 @@ input[type='radio']
 
 select
   background: white
-  height: 2.55em
+  height: 2.73em
 
 // Radios & checkboxes
 .checkbox, .radio
