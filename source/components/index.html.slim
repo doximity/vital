@@ -14,7 +14,7 @@ title: Vital
       code .row
       ' and
       code .section
-      ' Nest your contents under
+      ' . Nest your contents under
       code .section
       ' .
 
@@ -381,44 +381,40 @@ title: Vital
         a.btn.full href='#' Anchor
     .col-1-4
       label
-        button.btn.full name="button" type="submit" Button Tag
+        button.btn.full Button Tag
     .col-1-4
       label
-        input.btn.full name="commit" type="submit" value="Submit Tag"
+        input.btn.full type="submit" value="Submit Tag"
     .col-1-4
       label
-        input#name.full name="name" type="tel" placeholder="1-808-000-0000"
+        input.full type="datetime" placeholder="date/time"
     .clear
     .col-1-4
       label
-        input#name.full name="name" type="datetime" placeholder="date/time"
+        input.full type="email" placeholder="email"
     .col-1-4
       label
-        input#name.full name="name" type="email" placeholder="email"
+        input.full type="number" placeholder="number"
     .col-1-4
       label
-        input#name.full name="name" type="number" placeholder="number"
+        input.full type="file"
     .col-1-4
       label
-        input.full name="name" type="file"
+        input.full type="password" placeholder="password"
     .clear
     .col-1-4
       label
-        input#name.full name="name" type="password" placeholder="password"
+        input.full type="search" value="search"
     .col-1-4
       label
-        input#name.full name="name" type="search" value="search"
+        input.full type="tel" placeholder="1-808-000-0000"
     .col-1-4
       label
-        input#name.full name="name" type="tel" placeholder="1-808-000-0000"
-    .col-1-4
-      label
-        select#name.full name="name"
+        select.full name="name"
           option value=("select option one") select option
           option value=("select option two") select option
           option value=("select option three") select option
           option value=("select option four") select option
-    .clear
     .col-1-4
       label.select
         select.full
@@ -426,6 +422,7 @@ title: Vital
             option select option
             option select option
             option select option
+    .clear
     .col-1-4
       label
         input.full name="name" type="text" placeholder="text"
@@ -434,23 +431,25 @@ title: Vital
         input.full name="name" type="url" placeholder="url"
     .col-1-4
       label
-        input#name.full name="name" type="range"
+        input.full name="name" type="range"
     .clear
-    .col-1-4
+
+    .col-1-5
       label
-        input#name.full name="name" type="date" placeholder="12-31-1999"
-    .col-1-4
+        input.full name="name" type="date" placeholder="12-31-1999"
+    .col-1-5
       label
-        input#name.full name="name" type="datetime-local" placeholder="local date/time"
-    .col-1-4
+        input.full name="name" type="datetime-local" placeholder="local date/time"
+    .col-1-5
       label
         input.full name="name" type="time" placeholder="time"
-    .col-1-4
+    .col-1-5
       label
         input.full name="name" type="week" placeholder="week"
-    .col-1-4
+    .col-1-5
       label
-        input#name.full name="name" type="month" placeholder="month"
+        input.full name="name" type="month" placeholder="month"
+    .clear
     .col-1-4
       label
         textarea.full name="name" placeholder="textarea"
@@ -473,13 +472,13 @@ title: Vital
     .col-1-2
       p.autogrid
         label.col>
-          input#name name="name" type="checkbox" checked="true"
+          input name="name" type="checkbox" checked="true"
           | Checkbox
         label.col>
-          input#name name="name" type="checkbox"
+          input name="name" type="checkbox"
           | Checkbox
         label.col>
-          input#name name="name" type="checkbox" disabled="true"
+          input name="name" type="checkbox" disabled="true"
           span.disabled Checkbox
     .clear
 

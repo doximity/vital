@@ -37,22 +37,22 @@ select
   line-height: 1.1
   padding-right: 1em
 
-select, input[type='file']
-  height: 2.73em
-
 input
   &[type='range']
     -moz-appearance: none
     -webkit-appearance: none
     appearance: none
     padding: 0.87em 0.1em
-
+    &:focus
+      outline: 0
   &[type='checkbox'], &[type='radio']
     margin: 0
     padding: 0
   &[type='file']
     background-color: $white
     width: 100%
+    font-size: 0.7em
+    padding: 1.1em 0.5em
   &[type='search']
     box-sizing: border-box !important
 
@@ -105,7 +105,18 @@ input[type='radio']
       top: 0
       width: 1em
 
-// Radios & checkboxes
-.checkbox, .radio
-  display: block
-  line-height: 2.2
+@-moz-document url-prefix()
+
+  input
+    &[type='range']
+      border: 0
+      margin: 0.6em 0 0 0
+    &[type='file']
+      padding: 1.05em 0.5em
+
+  select
+    padding: 0.65em 0.5em
+    &:-moz-focusring
+      color: transparent
+      text-shadow: 0 0 0 #000
+      transition: none
