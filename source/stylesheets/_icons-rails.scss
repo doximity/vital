@@ -23,6 +23,7 @@
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.icon-arrow-updown:before,
 .icon-check:before,
 .icon-close:before,
 .icon-close-empty:before,
@@ -42,6 +43,7 @@
   font-smoothing: antialiased;
 }
 
+.icon-arrow-updown:before { content: "\f109"; }
 .icon-check:before { content: "\f100"; }
 .icon-close:before { content: "\f102"; }
 .icon-close-empty:before { content: "\f103"; }

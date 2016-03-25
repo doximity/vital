@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "7f93755fcb310ee91169390f18811e29cabe42eade55d279bd0af92f8f559538",
-    "current": "7f93755fcb310ee91169390f18811e29cabe42eade55d279bd0af92f8f559538"
+    "previous": "5305c7f3586462b7bb4b1a127d18e3a4b7924364b1fd5563040f55354f0789ea",
+    "current": "5305c7f3586462b7bb4b1a127d18e3a4b7924364b1fd5563040f55354f0789ea"
   },
   "fonts": [
     "source/fonts/output/icons.ttf",
@@ -10,6 +10,10 @@
     "source/fonts/output/icons.eot"
   ],
   "glyphs": {
+    "icon-arrow-updown": {
+      "codepoint": 61705,
+      "source": "source/fonts/input/icon-arrow-updown.svg"
+    },
     "icon-check": {
       "codepoint": 61696,
       "source": "source/fonts/input/icon-check.svg"

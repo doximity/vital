@@ -375,6 +375,7 @@ title: Vital
 
     h1 Forms
     hr
+
     .col-1-4
       label
         a.btn.full href='#' Anchor
@@ -390,69 +391,70 @@ title: Vital
     .clear
     .col-1-4
       label
-        input#name.full name="name" type="date" placeholder="12-31-1999"
-    .col-1-4
-      label
         input#name.full name="name" type="datetime" placeholder="date/time"
     .col-1-4
       label
-        input#name.full name="name" type="datetime-local" placeholder="local date/time"
-    .col-1-4
-      label
         input#name.full name="name" type="email" placeholder="email"
-    .clear
-    .col-1-4
-      label
-        input#name.full name="name" type="month" placeholder="month"
     .col-1-4
       label
         input#name.full name="name" type="number" placeholder="number"
     .col-1-4
       label
-        input#name.full name="name" type="password" placeholder="password"
-    .col-1-4
-      input#name.full name="name" type="range"
+        input.full name="name" type="file"
     .clear
+    .col-1-4
+      label
+        input#name.full name="name" type="password" placeholder="password"
     .col-1-4
       label
         input#name.full name="name" type="search" value="search"
     .col-1-4
       label
+        input#name.full name="name" type="tel" placeholder="1-808-000-0000"
+    .col-1-4
+      label
         select#name.full name="name"
-          option value=("select option one")  select option one
-          option value=("select option two")  select option two
-          option value=("select option three")  select option three
-          option value=("select option four")  select option four
+          option value=("select option one") select option
+          option value=("select option two") select option
+          option value=("select option three") select option
+          option value=("select option four") select option
+    .clear
     .col-1-4
       label.select
         select.full
           optgroup label=("group 1")
-            option option
-            option option
-            option option
-    .col-1-4
-      label
-        input#name.full name="name" type="tel" placeholder="1-808-000-0000"
-    .clear
+            option select option
+            option select option
+            option select option
     .col-1-4
       label
         input.full name="name" type="text" placeholder="text"
     .col-1-4
       label
-        input.full name="name" type="time" placeholder="time"
-    .col-1-4
-      label
         input.full name="name" type="url" placeholder="url"
     .col-1-4
       label
-        input.full name="name" type="week" placeholder="week"
+        input#name.full name="name" type="range"
     .clear
-    .col-full.full
+    .col-1-4
       label
-        input.full name="name" type="file"
-    .col-full.full
+        input#name.full name="name" type="date" placeholder="12-31-1999"
+    .col-1-4
+      label
+        input#name.full name="name" type="datetime-local" placeholder="local date/time"
+    .col-1-4
+      label
+        input.full name="name" type="time" placeholder="time"
+    .col-1-4
+      label
+        input.full name="name" type="week" placeholder="week"
+    .col-1-4
+      label
+        input#name.full name="name" type="month" placeholder="month"
+    .col-1-4
       label
         textarea.full name="name" placeholder="textarea"
+    .clear
 
     p We developed custom radios and checkboxes because standard checkboxes didn't scale well. As a side benefit, you can customize the look and feel to be more in line with your application's branding.
 

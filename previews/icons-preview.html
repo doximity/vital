@@ -160,7 +160,8 @@
       [data-icon]:before { content: attr(data-icon); }
 
       [data-icon]:before,
-      .icon-check:before,
+      .icon-arrow-updown:before,
+.icon-check:before,
 .icon-close:before,
 .icon-close-empty:before,
 .icon-close-outline:before,
@@ -179,7 +180,8 @@
   font-smoothing: antialiased;
       }
 
-      .icon-check:before { content: "\f100"; }
+      .icon-arrow-updown:before { content: "\f109"; }
+.icon-check:before { content: "\f100"; }
 .icon-close:before { content: "\f102"; }
 .icon-close-empty:before { content: "\f103"; }
 .icon-close-outline:before { content: "\f104"; }
@@ -199,10 +201,23 @@
   <body class="characters-off">
     <div id="page" class="container">
       <header>
-        <h1>icons contains 5 glyphs:</h1>
+        <h1>icons contains 6 glyphs:</h1>
         <a onclick="toggleCharacters(); return false;" href="#">Toggle Preview Characters</a>
       </header>
 
+      
+      <div class="glyph">
+        <div class="preview-glyphs">
+          <span class="step size-12"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-14"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-16"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-18"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-21"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-24"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-36"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-48"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-60"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span><span class="step size-72"><span class="letters">Pp</span><i id="icon-arrow-updown" class="icon-arrow-updown"></i></span>
+        </div>
+        <div class="preview-scale">
+          <span class="step">12</span><span class="step">14</span><span class="step">16</span><span class="step">18</span><span class="step">21</span><span class="step">24</span><span class="step">36</span><span class="step">48</span><span class="step">60</span><span class="step">72</span>
+        </div>
+        <div class="usage">
+          <input class="class" type="text" readonly="readonly" onClick="this.select();" value=".icon-arrow-updown" />
+          <input class="point" type="text" readonly="readonly" onClick="this.select();" value="&amp;#xf109;" />
+        </div>
+      </div>
       
       <div class="glyph">
         <div class="preview-glyphs">

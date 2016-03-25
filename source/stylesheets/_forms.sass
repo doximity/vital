@@ -2,7 +2,7 @@
 
 fieldset
   border-radius: $radius
-  border: 0.06em solid #f5f5f5
+  border: $border-width solid #f5f5f5
   margin: 1em 0
   legend
     font-weight: 400
@@ -10,7 +10,7 @@ fieldset
 
 input, select, textarea
   border-radius: $radius
-  border: 0.06em solid #ddd
+  border: $border-width solid #ddd
   font-family: $font
   font-size: inherit
   font-weight: 300
@@ -25,13 +25,22 @@ input, select, textarea
 textarea
   padding: 0.5em
 
+select
+  -moz-appearance: none
+  -webkit-appearance: none
+  appearance: none
+  background-image: image_url('fonts/input/icon-arrow-updown.svg')
+  background-color: white
+  background-size: 6%
+  background-repeat: no-repeat
+  background-position: right
+  line-height: 1.1
+  padding-right: 1em
+
+select, input[type='file']
+  height: 2.73em
+
 input
-  &[type='date'],
-  &[type='datetime-local'],
-  &[type='time'],
-  &[type='week'],
-  &[type='month']
-    padding: 0.57em 0.5em
   &[type='range']
     -moz-appearance: none
     -webkit-appearance: none
@@ -42,10 +51,8 @@ input
     margin: 0
     padding: 0
   &[type='file']
-    background: $white
+    background-color: $white
     width: 100%
-    font-size: 0.9em
-    padding: 0.7em 0.5em
   &[type='search']
     box-sizing: border-box !important
 
@@ -53,8 +60,8 @@ input[type='checkbox'], input[type='radio']
   -moz-appearance: none
   -webkit-appearance: none
   appearance: none
-  background: white
-  border: 0.06em solid #888
+  background-color: white
+  border: $border-width solid #888
   height: 1em
   margin: 0 0.3em -0.15em 0
   padding: 0
@@ -63,7 +70,7 @@ input[type='checkbox'], input[type='radio']
   width: 1em
   overflow: hidden
   &:checked
-    background: $link
+    background-color: $link
     border-color: $link
   &:disabled
     opacity: 0.3
@@ -97,10 +104,6 @@ input[type='radio']
       text-align: center
       top: 0
       width: 1em
-
-select
-  background: white
-  height: 2.73em
 
 // Radios & checkboxes
 .checkbox, .radio
