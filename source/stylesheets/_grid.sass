@@ -1,13 +1,10 @@
-body
+[class*='col-'], .col
+  padding: 0
   &:after
-    content: ""
-    display: table
-    clear: both
+    content: '\0000a0'
 
 [class*='col-']
   float: left
-  padding: 0.25%
-  content: ""
 
 .col-1-3
   width: 33.33%
@@ -31,9 +28,8 @@ body
 .col
   display: table-cell
   vertical-align: top
-  padding: 0 0.2%
 
-.right-only
+.right-padded
   [class*='col-'], .col
     padding: 0 5% 0 0
 
@@ -45,6 +41,6 @@ body
   .col
     display: block
 
-  .right-only
+  .right-padded
     [class*='col-'], .col
       padding: 0 0 0 0
