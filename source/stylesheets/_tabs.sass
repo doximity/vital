@@ -2,6 +2,26 @@
 
 // Tabs
 
+.tabs-block
+  background: transparent
+  border-bottom: $border-width solid $gray-lighter
+  .col, a
+    padding: 0.5em
+  .col
+    text-align: center
+    position: relative
+    &:last-child
+      border-right: 0
+    &:hover, &.here
+      background: $gray-lighter
+      transition: $all
+  a
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
 .tabs
   display: inline-block
   list-style: none
@@ -26,7 +46,12 @@
     li a
       border-radius: $round
 
-@media screen and (max-width: $handheld)
+@media screen and (max-width: $phablet)
+
+  .tabs-block
+    border-bottom: 0
+    .col, a
+      padding: 0.75em
 
   .tabs
     li
