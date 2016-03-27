@@ -1,6 +1,6 @@
 @import variables
 
-*
+*, *:after, *:before
   box-sizing: border-box
   -moz-box-sizing: border-box
   -webkit-box-sizing: border-box
@@ -9,7 +9,7 @@ html, body
   height: 100%
 
 body
-  color: #444
+  color: $text
   font: 17px / 1.7 $font
   font-weight: 300
   background: $body
@@ -51,7 +51,7 @@ hr
   background: $gray-lighter
   clear: both
   margin: 1.5em auto
-  height: 0.12em
+  height: $border-width
   &.half
     width: 50%
   &.small

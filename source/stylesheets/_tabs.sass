@@ -5,8 +5,6 @@
 .tabs-block
   background: transparent
   border-bottom: $border-width solid $gray-lighter
-  .col, a
-    padding: 0.5em
   .col
     text-align: center
     position: relative
@@ -16,11 +14,10 @@
       background: $gray-lighter
       transition: $all
   a
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
+    width: 100%
+    display: inline-block
+    padding: 0.5em
+    color: $text
 
 .tabs
   display: inline-block
@@ -32,14 +29,14 @@
     border-radius: $radius
     border: $border-width solid transparent
     padding: 0.65em 1em
+    color: $text
   li
     display: inline-block
     padding: 0 0.5%
     &:hover, &.here
       a
-        border-color: $red
-        color: $red
         transition: $all
+        background: $gray-lighter
   & ul
     padding: 0
   &.round
@@ -48,15 +45,17 @@
 
 @media screen and (max-width: $phablet)
 
+  .tabs-block, .tabs
+    a
+      margin: 0.5% 0
+      padding: 0.65em 0.5em
+      display: block
+      text-align: center
+
   .tabs-block
     border-bottom: 0
-    .col, a
-      padding: 0.75em
 
   .tabs
     li
       display: block
-      a
-        display: block
-        margin: 0.5% 0
-        text-align: center
+      padding: 0

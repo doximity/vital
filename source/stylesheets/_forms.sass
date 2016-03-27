@@ -1,8 +1,9 @@
 @import variables
 
-form, .full-width-form
+form, .full-width
   *
     width: 100%
+    display: block
 
 fieldset
   border-radius: $radius
@@ -53,6 +54,7 @@ input
   &[type='checkbox'], &[type='radio']
     margin: 0
     padding: 0
+    width: auto
   &[type='file']
     background-color: $white
     width: 100%
