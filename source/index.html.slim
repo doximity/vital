@@ -14,20 +14,14 @@ title: Vital
 
 .page
   .row
-    .section
+    .section.center
       h1 Minimal
-      p Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks.
-      ul
-        li Quick and easy to learn
-        li Fairly style agnostic and easy to customize
-        li Easy to read, write and maintain
-        li Modify vital directly from the source (or overridden if you prefer)
-        li Minimal nesting of markup and classes
+      p Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks. Vital is easy to learn and is very customizable.
 
   .row
     .section.center
       h1 Less is more
-      p Some frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are less bugs to squash and less documentation to read. Less time coding means more time to focus on your next killer feature.
+      p Some frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are less bugs to squash and less documentation to read. Less time spent coding means more time to focus on your next killer feature.
 
   .row
     .section.center
@@ -36,7 +30,7 @@ title: Vital
 
   .row
     .section.center
-      h1 Build on a focus of readability
+      h1 Easy to read and write
       .autogrid
         .col Written in Slim, Sass.
         .col Minimal use variable inception.
@@ -46,24 +40,27 @@ title: Vital
 
   .row
     .section.center
-      h1 Feather light
-      p Vital is developed to be as light enough for the most demanding platforms.
+      h1 Light as a feather
+      p At just 30KB, Vital is will load and render very quickly.
       .autogrid
         .col
           h1 22 KB
-          p Compiled font icons
+          hr.small
+          p CSS framework
         .col
           h1 8 KB
-          p Compiled font icons
+          hr.small
+          p Font icons
 
-  .row
-    .section.center
+  .row.bg.devices
+    .section.center.light-text
       h1 Truely mobile first
-      p But also very desktop friendly. Easy large screen scaling optimizations with just a few lines of code.
+      p Written almost entirely in em property values, Vital allows you to scale your user interface and apply optimizations with just a few lines of code.
+      = image_tag 'demo/devices.png', class: 'full'
 
-  .row.open-source.light-text
-    .section.center
-      = image_tag 'demo/opensource.svg'
+  .row.bg-green.open-source
+    .section.center.light-text
+      = image_tag 'demo/open-source.png'
       h1 Open Source
       p
         ' Vital is developed and maintained by
