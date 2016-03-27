@@ -3,7 +3,6 @@
 form, .full-width
   *
     width: 100%
-    display: block
 
 fieldset
   border-radius: $radius
@@ -21,6 +20,7 @@ input, select, textarea
   font-weight: 300
   outline: none
   padding: 0.72em 0.5em
+  display: block
   &:hover, &:focus
     border-color: $hover
     transition: $all
@@ -34,13 +34,13 @@ select
   -moz-appearance: none
   -webkit-appearance: none
   appearance: none
-  background-image: image_url('fonts/input/icon-arrow-updown.svg')
+  background-image: image_url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><polyline points="114.3,212.8 388,212.8 251.1,0 114.3,212.8 "/><polyline points="388,297.9 114.3,297.9 251.1,510.7 388,297.9 "/></svg>')
   background-color: white
   background-size: 1em
   background-repeat: no-repeat
   background-position: right
   line-height: 1.1
-  padding: 0.77em 0.5em
+  padding: 0.78em 0.5em
   padding-right: 1em
 
 input
@@ -51,66 +51,60 @@ input
     padding: 0.87em 0.1em
     &:focus
       outline: 0
-  &[type='checkbox'], &[type='radio']
-    margin: 0
-    padding: 0
-    width: auto
   &[type='file']
     background-color: $white
     width: 100%
     font-size: 0.7em
-    padding: 1.1em 0.5em
+    padding: 1.1111em 0.5em
   &[type='search']
     box-sizing: border-box !important
-
-input[type='checkbox'], input[type='radio']
-  -moz-appearance: none
-  -webkit-appearance: none
-  appearance: none
-  background-color: white
-  border: $border-width solid #888
-  height: 1em
-  margin: 0 0.3em -0.15em 0
-  padding: 0
-  position: relative
-  top: 0
-  width: 1em
-  overflow: hidden
-  &:checked
-    background-color: $link
-    border-color: $link
-  &:disabled
-    opacity: 0.3
-
-input[type='checkbox']
-  border-radius: $radius
-  &:checked
-    border: none
-    &:before
-      bottom: 0
-      color: white
-      content: "\f100"
-      font-family: $icons
-      font-size: 1.3em
-      left: 0.13em
-      line-height: 0
-      position: relative
-      right: 0
-      text-align: center
-      top: 0.05em
-
-input[type='radio']
-  border-radius: 50em
-  &:checked
-    &:before
-      color: white
-      content: ' '
-      height: 1em
-      overflow: hidden
-      position: absolute
-      text-align: center
-      top: 0
-      width: 1em
+  &[type='checkbox'], &[type='radio']
+    -moz-appearance: none
+    -webkit-appearance: none
+    appearance: none
+    background-color: white
+    border: $border-width solid #888
+    display: inline-block
+    height: 1em
+    margin: 0 0.3em -0.15em 0
+    padding: 0
+    position: relative
+    top: 0
+    width: 1em
+    overflow: hidden
+    &:checked
+      background-color: $link
+      border-color: $link
+    &:disabled
+      opacity: 0.3
+  &[type='checkbox']
+    border-radius: $radius
+    &:checked
+      border: none
+      &:before
+        bottom: 0
+        color: white
+        content: "\f100"
+        font-family: $icons
+        font-size: 1.3em
+        left: 0.13em
+        line-height: 0
+        position: relative
+        right: 0
+        text-align: center
+        top: 0.05em
+  &[type='radio']
+    border-radius: $round
+    &:checked
+      &:before
+        color: white
+        content: ' '
+        height: 1em
+        overflow: hidden
+        position: absolute
+        text-align: center
+        top: 0
+        width: 1em
 
 @-moz-document url-prefix()
 

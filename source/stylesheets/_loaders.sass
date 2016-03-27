@@ -1,18 +1,22 @@
 .load
-  height: 2em
-  width: 2em
+  -webkit-animation-duration: 1s
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-name: loading
+  -webkit-animation-timing-function: linear
+  -moz-animation-duration: 1s
+  -moz-animation-iteration-count: infinite
+  -moz-animation-name: loading
+  -moz-animation-timing-function: linear
+  animation-duration: 1s
+  animation-iteration-count: infinite
+  animation-name: loading
+  animation-timing-function: linear
   border-radius: $round
-  display: inline-block
   border: 0.2em solid #ddd
   border-left-color: #666
-  -webkit-animation-name: loading
-  animation-name: loading
-  -webkit-animation-duration: 1s
-  animation-duration: 1s
-  -webkit-animation-iteration-count: infinite
-  animation-iteration-count: infinite
-  -webkit-animation-timing-function: linear
-  animation-timing-function: linear
+  display: inline-block
+  height: 2em
+  width: 2em
   &.smallest
     width: 0.6em
     height: 0.6em
@@ -37,12 +41,6 @@
     -webkit-transform: rotate(0deg)
   to
     -webkit-transform: rotate(360deg)
-
-@-ms-keyframes loading
-  from
-    -ms-transform: rotate(0deg)
-  to
-    -ms-transform: rotate(360deg)
 
 @-moz-keyframes loading
   from

@@ -2,50 +2,6 @@
 
 // Styles that are very unique should go here.
 
-// Components
-// We recommend you keep the components page within your application so that you can easily test global changes with ease.
-
-.grid-preview
-  margin: 2em 0
-  [class*='col-'], .autogrid .col
-    padding-top: 0.5em
-    padding-bottom: 0.5em
-    background: #eee
-    font-size: 0.7em
-    text-align: center
-    border: $border-width solid #ddd
-    font-family: $code
-    overflow: hidden
-
-.empty-grid-preview
-  margin: 1em 0
-  padding: 1em 1em 0 1em
-  background: $gray-lightest
-
-.fonts-icons-preview
-  p
-    padding: 1em 0
-    margin: 0
-    height: auto
-    min-height: 3em
-    text-align: center
-    line-height: 1.5
-    color: gray
-    width: 25%
-    float: left
-    display: block
-    i
-      color: $gray-dark
-      font-size: 1.5em
-    &:hover
-      background: #eee
-      border-radius: 2px
-      transition: 0.1s linear background
-
-.forms-preview
-  [class*='col-']
-    padding: 0 0.1%
-
 // Demo
 
 .index
@@ -58,18 +14,27 @@
       font-size: 8em
   .page
     .section.center
-      padding: 2em 10%
+      padding: 2em 0
+      p
+        padding: 0 15%
+  .light
+    color: #ddd
+    .stats
+      h1
+        font-size: 4em
+        margin: 0
+        span
+          font-size: 0.5em
+          color: #666
+          &:before
+            content: ' '
+      hr
+        margin: 0 auto
   .devices
-    background: #4E798E
+    background: #5E82A0
+    *
+      color: white
   .open-source
     img
       width: 9em
       margin: 2em 0 0 0
-
-@media screen and (max-width: $handheld)
-
-  // Components
-
-  .fonts-icons-preview
-    p
-      width: 50%

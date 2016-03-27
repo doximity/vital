@@ -38,24 +38,34 @@ title: Vital
       .clear
       p Read our single page documentation.
 
-  .row
+  .row.light.bg-black
     .section.center
       h1 Light as a feather
-      p At just 30KB, Vital is will load and render very quickly.
-      .autogrid
+      p At just 30KB, Vital loads and renders quickly.
+      .autogrid.stats
         .col
-          h1 22 KB
-          hr.small
+          h1
+            | 22
+            span KB
+          hr.small.opacity-half
           p CSS framework
         .col
-          h1 8 KB
-          hr.small
+          h1
+            | 8
+            span KB
+          hr.small.opacity-half
           p Font icons
+        .col
+          h1
+            | 0
+            span KB
+          hr.small.opacity-half
+          p No javascript
 
   .row.bg.devices
-    .section.center.light-text
-      h1 Truly mobile first
-      p Written almost entirely in em property values, Vital allows you to scale your user interface and apply optimizations with just a few lines of code.
+    .section.center
+      h1 One for all
+      p Vital is a true mobile-first framework. Elements such as select boxes, checkboxes and radios renders consistently across different platforms. Vital is also written almost entirely in em values which allows for consistent scaling with just a line or two of code.
       = image_tag 'demo/devices.png', class: 'full'
 
   .row.bg-green.open-source
