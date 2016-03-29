@@ -26,19 +26,22 @@ title: Vital
   .row
     .section.center
       h1 Work more productively
-      p Often times, large CSS frameworks are brought into projects for the purpose of speed. When a project grows and needs to scale, the effectiveness and workflow efficiency starts to fall and cause more problems than they solve. Vital reduces onboarding time because there is less to learn and vastly less code to sift through.
+      p Often times, large CSS frameworks are used for a speedy time to market. When a project grows and needs to scale or develop it's own branding, the effectiveness and workflow efficiency starts to fall and cause more problems. Vital reduces onboarding time and workflow inefficiencies because there is less to learn and maintain.
 
-  .row
+  .row.bg-black#simplicity
     .section.center
       h1 Simplicity
       .autogrid
         .col
+          hr.small
           h2 Written in Sass and Slim
           p It's 2016. Why use brackets when you don't have to?
         .col
+          hr.small
           h2 Un-complicate variables
           p Minimal use of variables and mixins. No more digging through an endless inception of trails to get what you need.
         .col
+          hr.small
           h2 Easy to read and write
           p No ridiculous amounts of nesting or classes required to get things working.
       hr
@@ -47,8 +50,9 @@ title: Vital
         =' link_to 'documentation', '/components'
         | for more details.
 
-  .row.light.bg-black
+  .row#light
     .section.center
+      = image_tag 'demo/feather.jpg', class: 'full'
       h1 Light as a feather
       p At just 30KB, Vital loads and renders quickly.
       .autogrid.stats
@@ -56,28 +60,28 @@ title: Vital
           h1
             | 22
             span KB
-          hr.small.opacity-half
+          hr.small
           p CSS framework
         .col
           h1
             | 8
             span KB
-          hr.small.opacity-half
+          hr.small
           p Font icons
         .col
           h1
             | 0
             span KB
-          hr.small.opacity-half
+          hr.small
           p No javascript
 
-  .row.bg.devices
+  .row.bg#devices
     .section.center
       h1 One for all, and all for one
       p Vital is a true mobile-first framework. Elements such as select boxes, checkboxes and radios renders consistently across different platforms. Vital is also written almost entirely in em values which allows for consistent scaling with just a line or two of code.
       = image_tag 'demo/devices.png', class: 'full'
 
-  .row.bg-green.open-source
+  .row.bg-green#open-source
     .section.center.light-text
       = image_tag 'demo/open-source.png'
       h1 Open Source
