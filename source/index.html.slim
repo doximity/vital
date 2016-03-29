@@ -16,34 +16,37 @@ title: Vital
   .row
     .section.center
       h1 Minimal
-      p Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks. Vital is easy to learn and is very customizable.
+      p.centered-text Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks. Vital is easy to learn and is very customizable.
 
   .row
     .section.center
       h1 Less is more
-      p Some frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are less bugs to squash and less documentation to read. Less time spent coding means more time to focus on your next killer feature.
+      p.centered-text Some frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are less bugs to squash and less documentation to read. Less time spent coding means more time to focus on your next killer feature.
 
   .row
     .section.center
       h1 Work more productively
-      p Often times, large CSS frameworks are used for a speedy time to market. When a project grows and needs to scale or develop it's own branding, the effectiveness and workflow efficiency starts to fall and cause more problems. Vital reduces onboarding time and workflow inefficiencies because there is less to learn and maintain.
+      p.centered-text Often times, large CSS frameworks are used for a speedy time to market. When a project grows and needs to scale or develop it's own branding, the effectiveness and workflow efficiency starts to fall and cause more problems. Vital reduces onboarding time and workflow inefficiencies because there is less to learn and maintain.
 
-  .row.bg-black#simplicity
+  .row.bg-black#simple
     .section.center
-      h1 Simplicity
-      .autogrid
+      h1 Simple
+      .autogrid.padded
         .col
-          hr.small
-          h2 Sass + Slim
-          p Why use brackets when you don't have to? Enjoy the simplistic beauty of Sass and Slim pre-processors.
+          = image_tag 'demo/spring.png', class: 'full'
+          h2 Flexible
+          p
+            ' Vital is built with
+            = link_to 'Sass', 'http://sass-lang.com/', target: '_blank'
+            | , the preferred CSS prerprcessor of today.
         .col
-          hr.small
-          h2 Un-complicate variables
-          p Minimal use of variables and mixins. No more digging through an endless inception of trails to get what you need.
+          = image_tag 'demo/code.png', class: 'full'
+          h2 Readable
+          p No ridiculous amounts of classes or nesting. No excessively burried code.
         .col
-          hr.small
-          h2 Easy to read and write
-          p No ridiculous amounts of nesting or classes required to get things working.
+          = image_tag 'demo/expand.png', class: 'full'
+          h2 Scalable
+          p Written almost entirely in em values, allowing for easy and consistent scaling.
       hr
       p
         ' Read the
@@ -54,11 +57,11 @@ title: Vital
     .section.center
       = image_tag 'demo/feather.jpg', class: 'full'
       h1 Light as a feather
-      p At just 30KB, Vital loads and renders quickly.
+      p At just 25KB in total size, Vital loads and renders quickly.
       .autogrid.stats
         .col
           h1
-            | 22
+            | 17
             span KB
           hr.small
           p CSS framework
@@ -77,8 +80,8 @@ title: Vital
 
   .row.bg#devices
     .section.center
-      h1 One for all, and all for one
-      p Vital is a true mobile-first framework. Elements such as select boxes, checkboxes and radios renders consistently across different platforms. Vital is also written almost entirely in em values which allows for consistent scaling with just a line or two of code.
+      h1 Vast device support
+      p.centered-text Vital is a true cross-platform mobile first framework. Elements such as select boxes, checkboxes and radios render consistently across different platforms.
       = image_tag 'demo/devices.png', class: 'full'
 
   .row.bg-green#open-source
@@ -87,7 +90,7 @@ title: Vital
       h1 Open Source
       p
         ' Vital is developed and maintained by
-        = link_to 'Doximity', 'https://engineering.doximity.com'
+        = link_to 'Doximity', 'https://engineering.doximity.com', target: '_blank'
         ' . View the source on
-        = link_to 'GitHub', 'https://github.com/doximity/vital'
+        = link_to 'GitHub', 'https://github.com/doximity/vital', target: '_blank'
         | .
