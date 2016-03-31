@@ -15,20 +15,10 @@ title: Vital
 .page
   .row
     .section.center
-      h1 Minimal
-      p.centered-text Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks. Vital is easy to learn and is very customizable.
+      h1 Minial
+      h3.centered-text Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks. Vital is a very small framework that is easy to learn and is very customizable.
 
-  .row
-    .section.center
-      h1 Less is more
-      p.centered-text Some frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are less bugs to squash and less documentation to read. Less time spent coding means more time to focus on your next killer feature.
-
-  .row
-    .section.center
-      h1 Work more productively
-      p.centered-text Often times, large CSS frameworks are used for a speedy time to market. When a project grows and needs to scale or develop it's own branding, the effectiveness and workflow efficiency starts to fall and cause more problems. Vital reduces onboarding time and workflow inefficiencies because there is less to learn and maintain.
-
-  .row.bg-black#simple
+  .row.bg#simple
     .section.center
       h1 Simple
       .autogrid.padded
@@ -78,10 +68,22 @@ title: Vital
           hr.small
           p No javascript
 
+  .row.bg-blue#productive
+    .section.padded.light-text
+      .col-1-2
+        = image_tag 'demo/chart.png'
+        h1 Less is more
+        p Traditional CSS frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are less bugs to squash and less documentation to read. Less time spent coding means more time to focus on your next killer feature.
+      .col-1-2
+        = image_tag 'demo/hammer.png'
+        h1 Regain productivity
+        p Often times a large CSS framework is used to speed up the time to market or to enforce consistency, but when a project grows beyond the initial scope of a concept, development becomes more difficult and time consuming. Vital reduces workflow inefficiencies as there is less to learn and maintain.
+      .clear
+
   .row.bg#devices
     .section.center
       h1 Vast device support
-      p.centered-text Vital is a true cross-platform mobile first framework. Elements such as select boxes, checkboxes and radios render consistently across different platforms.
+      p.centered-text Vital is a true cross-platform mobile first framework. Elements such as select boxes, checkboxes and radios render consistently across different platforms while gracefully degrading on legacy.
       = image_tag 'demo/devices.png', class: 'full'
 
   .row.bg-green#open-source

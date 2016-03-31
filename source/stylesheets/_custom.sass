@@ -5,50 +5,70 @@
 
 // Demo
 
+.centered-text
+  padding: 0 15%
+
 .index
   .hero
     h1
       font-size: 5em
       line-height: 1
     .icon-vital
-      line-height: 1.4
+      line-height: 1
       font-size: 8em
   .page
-    .section.center
-      padding: 2em 1em
+    .section
+      padding: 3em 1em
+
+#productive
+  .section
+    padding: 5em 1em
+  img
+    width: 4em
+    opacity: 0.7
+  p
+    padding-right: 2em
+
+#simple
+  img
+    width: 4em
+    opacity: 0.8
+  .autogrid
+    padding: 2em 0
+
+#light
+  img
+    padding: 2% 15% 0 15%
+  .stats
+    h1
+      font-size: 4em
+      margin: 0
+      font-weight: 100
+      span
+        font-size: 0.5em
+        color: #aaa
+        &:before
+          content: ' '
+    hr
+      margin: 0 auto
+
+#open-source
+  img
+    width: 9em
+    margin: 2em 0 0 0
+
+@media screen and (max-width: $phablet)
 
   .centered-text
-    padding: 0 15%
+    padding: 0 5%
 
-  #simple
-    color: #aaa
-    img
-      width: 4em
-      opacity: 0.8
-    h1, h2, h3, h4, h5, h6
-      color: #fff
-    hr
-      opacity: 0.1
-    .autogrid
-      padding: 2em 0
+  .index .page .section
+    padding: 1em
 
-  #light
-    img
-      padding: 2% 15% 0 15%
-    .stats
-      h1
-        font-size: 4em
-        margin: 0
-        font-weight: 100
-        span
-          font-size: 0.5em
-          color: #aaa
-          &:before
-            content: ' '
-      hr
-        margin: 0 auto
-
-  #open-source
-    img
-      width: 9em
-      margin: 2em 0 0 0
+  #productive
+    p
+      padding-right: 0
+    .section
+      padding: 2em 1em 1em 1em
+    .col-1-2
+      padding-bottom: 2em
