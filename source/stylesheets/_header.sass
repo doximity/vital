@@ -6,7 +6,7 @@
   transition: $fade-and-hide
   transform: $translate
   background: $header
-  border-bottom: 0.06em solid #eee
+  height: $header-height
   .section
     padding: 0
     position: relative
@@ -27,7 +27,7 @@ nav
     display: block
     padding: 1.3em
     &:hover
-      background: $gray-lightest
+      background: $header-link-hover
   ul
     padding: 0
     margin: 0
@@ -53,21 +53,47 @@ nav
     top: 0
     left: auto
 
-nav >
-  #menu-toggle
-    display: none
-  label
-    display: none
-    float: right
-    padding: 2em
-    cursor: pointer
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
+#menu-toggle, #menu-toggle-label
+  cursor: pointer
+  height: $header-height
+  width: $header-height
+  position: absolute
+  right: 0
+  user-select: none
 
-@media screen and (max-width: $handheld)
+#menu-toggle
+  display: none
+  border-radius: 0
+  border: 0
+  box-shadow: none
+  margin: 0
+  outline: none
+  padding: 0
+  z-index: -1
+  &:hover
+    background: $header-link-hover
+  &:before
+    content: '\f10a'
+    font-family: $icons
+    font-size: 2em
+    padding: 0.5em
+    position: absolute
+    right: 0
+  &:checked
+    background: $header-link-hover
+    &:before
+      bottom: 0
+      color: $text
+      content: '\f103'
+      font-size: 3em
+      line-height: 0
+      left: 0
+      padding: 0.7em 0
+      position: absolute
+      right: 0
+      top: 0
+
+@media screen and (max-width: $tablet)
 
   .header
     .logo
@@ -77,10 +103,6 @@ nav >
     a
       padding: 1em
       border-top: 1px solid #eee
-    > label
-      display: block
-      font-size: 1.5em
-      padding: 0.56em
     ul
       li ul
         display: block
@@ -98,12 +120,24 @@ nav >
     li:hover ul
       position: relative
       width: auto
-    ul ul li:hover > ul
-      right: auto
-      top: auto
-      left: auto
+    ul ul
+      li:hover > ul
+        right: auto
+        top: auto
+        left: auto
+      a
+        display: none
 
-    // Hide all sub-menu items by default
+  #menu-toggle
+    display: block
 
-    ul ul a
-      display: none
+  .menu-cover
+    background: $header
+    bottom: 0
+    height: 100%
+    left: 0
+    position: fixed
+    right: 0
+    top: $header-height
+    z-index: 9999
+

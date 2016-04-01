@@ -5,10 +5,10 @@
       = link_to '/', class: 'logo' do
         i.icon-vital.i3x
 
-      label for="menu-toggle"  ☰
+      label#menu-toggle-label for="menu-toggle"
       input#menu-toggle type="checkbox"
 
-      ul
+      ul.menu-cover
         li = link_to "Components", '/components'
         li = link_to "Guides", '#'
         li = link_to "Examples", '#'

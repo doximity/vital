@@ -13,13 +13,6 @@
   font-style: normal;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: "icons";
-    src: font-url("fonts/output/icons.svg#icons") format("svg");
-  }
-}
-
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
@@ -28,6 +21,7 @@
 .icon-close:before,
 .icon-close-empty:before,
 .icon-close-outline:before,
+.icon-menu:before,
 .icon-vital:before {
   display: inline-block;
   font-family: "icons";
@@ -48,4 +42,5 @@
 .icon-close:before { content: "\f102"; }
 .icon-close-empty:before { content: "\f103"; }
 .icon-close-outline:before { content: "\f104"; }
+.icon-menu:before { content: "\f10a"; }
 .icon-vital:before { content: "\f101"; }

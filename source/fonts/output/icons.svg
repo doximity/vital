@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2016-3-24: Created with FontForge (http://fontforge.org)
+2016-4-1: Created with FontForge (http://fontforge.org)
 -->
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150828 at Thu Mar 24 20:32:23 2016
+Created by FontForge 20150828 at Fri Apr  1 12:11:28 2016
  By Body Taing
 Copyright (c) 2016, Body Taing
 </metadata>
@@ -22,7 +22,7 @@ Copyright (c) 2016, Body Taing
     bbox="0 -64 512 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+0020-F109"
+    unicode-range="U+0020-F10A"
   />
     <missing-glyph />
     <glyph glyph-name="space" unicode=" " horiz-adv-x="200" 
@@ -34,6 +34,8 @@ d="M437 373c100 -100 100 -262 0 -362s-262 -100 -362 0s-100 262 0 362s262 100 362
 l104 -104z" />
     <glyph glyph-name="uniF100" unicode="&#xf100;" horiz-adv-x="257" 
 d="M91 100c-3 -3 -7 -5 -11 -5s-7 3 -10 6l-70 69l22 22l59 -58l155 156l21 -23z" />
+    <glyph glyph-name="uniF10A" unicode="&#xf10a;" 
+d="M0 357h512v-21h-512v21zM0 203h512v-20h-512v20zM0 50h512v-21h-512v21z" />
     <glyph glyph-name="uniF103" unicode="&#xf103;" horiz-adv-x="236" 
 d="M222 311l14 -14l-104 -104l104 -104l-14 -14l-104 103l-104 -103l-14 15l103 103l-103 103l14 15l104 -104z" />
     <glyph glyph-name="uniF109" unicode="&#xf109;" horiz-adv-x="274" 
