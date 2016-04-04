@@ -1,49 +1,88 @@
 @import variables
 
 // Helpers
+// These helpers are here for quick adjustments. Cha
+
+// Text, Typography
+
+.align-left
+  text-align: left
+
+.align-right
+  text-align: right
+
+.break-all
+  word-break: break-all
+
+.center
+  text-align: center
+
+.no-wrap
+  white-space: nowrap
+
+.thin
+  font-weight: 100
+
+.uppercase
+  text-transform: uppercase
+
+// Lighten all typography for dark backgrounds
+
+.light-text
+  *
+    color: white
+  a
+    color: white
+    text-decoration: underline
+
+// Alignment
 
 .auto
   margin: 0 auto
-.align-left
-  text-align: left
-.align-right
-  text-align: right
+
 .block
   display: block
+
+.clear
+  clear: both
+
+.float-left
+  float: left
+
+.float-right
+  float: right
+
+.inline
+  display: inline
+
+.inline-block
+  display: inline-block
+
+// Forms
+
+.checkbox, .radio
+  display: block
+  line-height: 2.2
+
+// Styled Elements
+
 .box
   border-radius: $radius
   border: $border-width solid $gray-lightest
   margin: 1em 0
   padding: 1em
-.break-all
-  word-break: break-all
-.checkbox, .radio
-  display: block
-  line-height: 2.2
-.float-left
-  float: left
-.float-right
-  float: right
-.no-wrap
-  white-space: nowrap
-.inline
-  display: inline
-.inline-block
-  display: inline-block
-.center
-  text-align: center
-.clear
-  clear: both
+
 .disabled
   color: $gray-light
+
 .radius
   border-radius: $radius
+
 .round
   border-radius: $round
-.thin
-  font-weight: 100
-.uppercase
-  text-transform: uppercase
+
+// Opacities
+
 .opacity-half
   opacity: 0.5
 
@@ -52,8 +91,7 @@
 .gray
   color: $gray
 
-
-// Background colors
+// Backgrounds
 
 .bg
   background: $gray-lightest
@@ -65,15 +103,6 @@
   background: $bg-gray
 .bg-blue
   background: $bg-blue
-
-// Lighten all typography for dark backgrounds
-
-.light-text
-  *
-    color: white
-  a
-    color: white
-    text-decoration: underline
 
 // Hide / Show
 
@@ -104,14 +133,13 @@
   font-size: 4em
 .i5x
   font-size: 5em
+
 .same-width
   text-align: center
   width: 2em
   display: inline-block
 
 @media screen and (max-width: $handheld)
-
-  // Hide / Show
 
   .space, .hide-on-mobile
     display: none
