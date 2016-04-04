@@ -1,42 +1,20 @@
-// notice bar
+@import variables
+
+// Notice
+
 .notice
-  -webkit-animation: in 0.5s ease
-  animation: in 0.5s ease
   background: $notice
-  display: table
-  position: fixed
-  z-index: 3
+  text-align: center
   .section
-    padding: 0.8em
-  .autogrid
-    .col
-      vertical-align: middle
-      &:first-child
-        padding: 0 1em 0 0
-        width: 90%
-      &:last-child
-        width: 10%
-  .icon-close-outline
+    position: relative
+    padding-right: 3em
+  i.icon-close-outline
     cursor: pointer
+    font-size: 2em
+    line-height: 1.91
+    position: absolute
+    right: 0.5em
+    top: 0
     &:hover
       &:before
-        content: "\f102"
-  &.hide
-    display: none
-
-@-webkit-keyframes in
-  0%
-    opacity: 0
-  100%
-    opacity: 1
-@keyframes in
-  0%
-    opacity: 0
-  100%
-    opacity: 1
-
-@media screen and (max-width: $handheld)
-
-  .notice
-    .col
-      display: table-cell
+        content: '\f102'
