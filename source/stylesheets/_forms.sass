@@ -19,7 +19,7 @@ input, select, textarea
   font-size: inherit
   font-weight: 300
   outline: none
-  padding: 0.72em 0.5em
+  padding: 0.49em 0.5em
   display: block
   &:hover, &:focus
     border-color: $hover
@@ -31,7 +31,6 @@ textarea
   padding: 0.5em
 
 select
-  -moz-appearance: none
   -webkit-appearance: none
   appearance: none
   background-image: image_url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><polyline points="114.3,212.8 388,212.8 251.1,0 114.3,212.8 "/><polyline points="388,297.9 114.3,297.9 251.1,510.7 388,297.9 "/></svg>')
@@ -44,20 +43,24 @@ select
   padding-right: 1em
 
 input
+
   &[type='range']
     -moz-appearance: none
     -webkit-appearance: none
     appearance: none
-    padding: 0.87em 0.1em
+    padding: 0.90em 0.1em
     &:focus
       outline: 0
+
   &[type='file']
     background-color: $white
     width: 100%
-    font-size: 0.7em
-    padding: 1.1111em 0.5em
+    font-size: 12px
+    padding: 0.99em 0.5em
+
   &[type='search']
     box-sizing: border-box !important
+
   &[type='checkbox'], &[type='radio']
     -moz-appearance: none
     -webkit-appearance: none
@@ -77,6 +80,7 @@ input
       border-color: $link
     &:disabled
       opacity: 0.3
+
   &[type='checkbox']
     border-radius: $radius
     &:checked
@@ -86,13 +90,14 @@ input
         color: white
         content: "\f100"
         font-family: $icons
-        font-size: 1.3em
-        left: 0.13em
-        line-height: 0
-        position: relative
+        font-size: 1em
+        left: 0
+        line-height: 1
+        position: absolute
         right: 0
         text-align: center
-        top: 0.05em
+        top: 0
+
   &[type='radio']
     border-radius: $round
     &:checked
@@ -106,14 +111,27 @@ input
         top: 0
         width: 1em
 
+// Adjustments for Safari
+
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+
+  input
+    &[type='file']
+      padding: 1.019em 0.5em
+    &[type='range']
+      padding: 0.88em 0.5em
+
+// Adjustments for Firefox
+// We're not going to try too hard make Firefox look exactly the same as Chrome or Safari.
+
 @-moz-document url-prefix()
 
   input
+    &[type='file']
+      padding: 1.019em 0.5em
     &[type='range']
       border: 0
       margin: 0.6em 0 0 0
-    &[type='file']
-      padding: 1.05em 0.5em
 
   select
     padding: 0.65em 0.5em
