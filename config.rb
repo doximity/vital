@@ -24,6 +24,9 @@ activate :syntax
 # Pretty URLs
 activate :directory_indexes
 
+# Set relative paths needed for github pages
+activate :relative_assets
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
@@ -47,13 +50,9 @@ configure :build do
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
+  activate :gzip
 
-  # Set relative paths needed for github pages
-  activate :relative_assets
-
-  # Cache buster
-  activate :asset_hash
-
+  set :relative_links, true
   set :site_url, "/vital"
 
 end
