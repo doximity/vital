@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "5438fe7ce00417500a21d83d8a768cfed2924a89868fcfccdcec9e8555637d69",
-    "current": "5438fe7ce00417500a21d83d8a768cfed2924a89868fcfccdcec9e8555637d69"
+    "previous": "d2a10a4e0939f665a2d2d9a891fc0a6115b33414f0a0aece1dad6b6311b3a1cd",
+    "current": "d2a10a4e0939f665a2d2d9a891fc0a6115b33414f0a0aece1dad6b6311b3a1cd"
   },
   "fonts": [
     "source/fonts/output/icons.ttf",
@@ -63,12 +63,12 @@
     "preprocessor_path": "fonts/output",
     "quiet": false,
     "templates": [
-      "scss-rails",
+      "scss",
       "preview"
     ]
   },
   "templates": [
-    "source/stylesheets/_icons-rails.scss",
+    "source/stylesheets/_icons.scss",
     "previews/icons-preview.html"
   ]
 }

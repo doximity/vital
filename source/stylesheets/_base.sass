@@ -78,7 +78,7 @@ code
   display: inline-block
   word-break: break-all
   &:before, &:after
-    content: '\00a0'
+    content: $non-breaking-space
     letter-spacing: -0.2em
 
 dl
@@ -97,7 +97,7 @@ dd
   font-weight: 400
   padding-bottom: 0.3em
   &:after
-    content: "\00a0"
+    content: $non-breaking-space
   i
     margin: 0 1em 0 0
 
