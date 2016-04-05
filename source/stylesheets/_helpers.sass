@@ -1,7 +1,7 @@
 @import variables
 
 // Helpers
-// These helpers are here for quick adjustments. Cha
+// These helpers are here for quick adjustments. Add small reusable classes here.
 
 // Text, Typography
 
@@ -151,5 +151,16 @@
 
 @media screen and (max-width: $handheld)
 
+  // Hide these classes on the $handheld breakpoint
+
   .space, .hide-on-mobile
     display: none
+
+  .responsive
+    width: 100%
+
+@media screen and (max-width: $handheld-landscape)
+
+  .responsive-landscape
+    width: 100%
+
