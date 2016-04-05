@@ -13,8 +13,10 @@ fieldset
     padding: 0 0.25em
 
 input, select, textarea
+  -webkit-appearance: none
   border-radius: $radius
   border: $border-width solid #ddd
+  box-shadow: none
   font-family: $font
   font-size: inherit
   outline: none
@@ -114,11 +116,16 @@ input
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
 
+  input:not(.btn), select, textarea
+    min-height: 2.8em
+
   input
     &[type='file']
-      padding: 1.019em 0.5em
+      padding: 1.06em 0.5em
     &[type='range']
       padding: 0.88em 0.5em
+    &[type='checkbox'], &[type='radio']
+      min-height: 0
 
 // Adjustments for Firefox
 // We're not going to try too hard make Firefox look exactly the same as Chrome or Safari.
