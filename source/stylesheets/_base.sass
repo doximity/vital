@@ -70,16 +70,17 @@ pre
 code
   color: $gray-dark
   font-family: $code
-  font-size: 0.65em
+  font-size: 0.7em
   background: $gray-lighter
-  padding: 0 0.2em
-  margin: 0 0.6em 0 0.2em
+  padding: 0.3em 0.8em
+  margin: 0 0.3em 0 0.2em
   border-radius: $radius
   display: inline-block
   word-break: break-all
-  &:before, &:after
-    content: $non-breaking-space
-    letter-spacing: -0.2em
+  p &
+    display: inline
+    padding: 0.1em 0.4em 0.1em 0.3em
+    margin: 0
 
 dl
   display: table

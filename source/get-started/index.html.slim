@@ -13,14 +13,43 @@ title: Vital | Get Started
     h2 Quickest (Compiled)
     p Import into stylesheet or as a stylesheet link tag:
     p
-      // TO DO: Replace this with public URL
       code https://raw.githubusercontent.com/doximity/vital/master/releases/vital.min.css
     hr
     h2 Recommended (Source)
     p
+      code https://github.com/doximity/vital/tree/master/source/stylesheets
+    p
       ' Vital works best when manipulated directly. Download or copy the
       code> slim
-      | files into your project.
-
+      | files into your project. This installation method is preferred if you want to develop your own unique branding while keeping code output to a minimum. One possible caveat to this method is you sacrifice future upgradability as you may encounter breaking changes.
     h3 File Structure
-    = image_tag 'demo/structure.png', class: 'responsive-landscape', width: 243
+    = code('sass') do
+      |
+        // Vendor
+        @import normalize
+
+        // Components
+        @import variables
+        @import icons
+        @import grid
+
+        @import base
+        @import buttons
+        @import footer
+        @import forms
+        @import header
+        @import heroes
+        @import loaders
+        @import notice
+        @import pagination
+        @import tables
+        @import tabs
+        @import helpers
+
+        // Customizations
+        @import custom
+
+    hr
+    h2 Packages
+    p A ruby gem and npm package installation options are in the works.
+
