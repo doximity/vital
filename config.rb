@@ -42,6 +42,7 @@ configure :build do
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
+  activate :syntax
 
   # Set relative paths needed for github pages
   activate :relative_assets
