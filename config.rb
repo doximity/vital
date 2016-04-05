@@ -17,7 +17,11 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
+
+# Syntax highlighting
 activate :syntax
+
+# Pretty URLs
 activate :directory_indexes
 
 # Reload the browser automatically whenever files change
@@ -46,6 +50,10 @@ configure :build do
 
   # Set relative paths needed for github pages
   activate :relative_assets
+
+  # Cache buster
+  activate :asset_hash
+
   set :site_url, "/vital"
 
 end
