@@ -13,6 +13,13 @@
   font-style: normal;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "icons";
+    src: font-url("fonts/output/icons.svg#icons") format("svg");
+  }
+}
+
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
@@ -44,3 +51,11 @@
 .icon-close-outline:before { content: "\f104"; }
 .icon-menu:before { content: "\f10a"; }
 .icon-vital:before { content: "\f101"; }
+
+$font-icons-icon-arrow-updown: "\f109";
+$font-icons-icon-check: "\f100";
+$font-icons-icon-close: "\f102";
+$font-icons-icon-close-empty: "\f103";
+$font-icons-icon-close-outline: "\f104";
+$font-icons-icon-menu: "\f10a";
+$font-icons-icon-vital: "\f101";
