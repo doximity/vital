@@ -52,7 +52,7 @@ The Vital project is build using a simple static generator: https://middlemanapp
 - In your terminal, run: `bundle`
 - To start your server, run: `middleman`
 
-Compiling Font Icons
+### Compiling Font Icons
 
 To compile font icons, you must first install fontforge and the fontcuston gem.
 
@@ -63,6 +63,4 @@ brew install eot-utils
 gem install fontcustom
 ```
 
-### Compilation
-
-`fontcustom compile`
+After installation is complete, run: `fontcustom compile`. Open `_icons.scss` and change `url` to `font-url`. While changing the `fontcustom.yml` templates flag from `scss` to `scss-rails` automatically does this, it also removes the very useful `$font-icons-` variables.

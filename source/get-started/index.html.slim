@@ -53,3 +53,33 @@ title: Vital | Get Started
     h2 Packages
     p A ruby gem and npm package installation options are in the works.
 
+    hr
+    h2 Compiling Font Icons
+
+    p To compile font icons, you must first install fontforge and the fontcuston gem.
+
+    = code('bash') do
+      |
+        # On Mac
+        brew install fontforge --with-python
+        brew install eot-utils
+        gem install fontcustom
+
+
+    p
+      ' After installation is complete, run
+      code> fontcustom compile
+      ' Open
+      code> _icons.scss
+      ' and change
+      code> url
+      ' to
+      code> font-url
+      ' . While changing the
+      code> fontcustom.yml
+      ' templates flag from
+      code> scss to
+      ' scss-rails
+      code> automatically does this, it also removes the very useful
+      ' $font-icons-
+      | variables.
