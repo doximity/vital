@@ -77,6 +77,8 @@ GEM
       sass (>= 3.4)
       tilt (~> 1.4.1)
       uglifier (~> 2.6)
+    middleman-gh-pages (0.3.0)
+      rake (> 0.9.3)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -84,9 +86,6 @@ GEM
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
-    middleman-syntax (2.1.0)
-      middleman-core (>= 3.2)
-      rouge (~> 1.0)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
@@ -106,10 +105,10 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rake (11.1.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    rouge (1.10.1)
     sass (3.4.21)
     slim (3.0.6)
       temple (~> 0.7.3)
@@ -132,9 +131,9 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   middleman (>= 4.0.0)
+  middleman-gh-pages
   middleman-livereload
   middleman-minify-html
-  middleman-syntax
   sass
   slim
   tzinfo-data
