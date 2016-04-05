@@ -11,7 +11,7 @@ html
     == favicon_tag "apple-touch-icon-120x120.png", rel: "apple-touch-icon", type: "image/png", sizes: "120x120"
     == favicon_tag "apple-touch-icon-152x152.png", rel: "apple-touch-icon", type: "image/png", sizes: "152x152"
     == stylesheet_link_tag :vital
-    = yield_content :assets
+    == yield_content :assets
 
   body class="#{page_classes}"
     == partial 'layouts/header'
