@@ -2,12 +2,12 @@
   .section
 
     nav
-      = link_to '/', class: 'logo' do
+      = link_to 'index.html', class: 'logo' do
         i.icon-vital.i3x
 
       label#menu-toggle-label for="menu-toggle"
       input#menu-toggle type="checkbox"
 
       ul.menu
-        li = link_to "Components", '/components'
-        li = link_to "Get Started", '/get-started'
+        li = link_to "Components", '/components.html'
+        li = link_to "Get Started", '/get-started.html'
