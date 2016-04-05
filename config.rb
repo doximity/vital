@@ -17,11 +17,12 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
+activate :syntax
+activate :directory_indexes
 
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
-  activate :syntax
 end
 
 ###
@@ -42,7 +43,6 @@ configure :build do
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
-  activate :syntax
 
   # Set relative paths needed for github pages
   activate :relative_assets
