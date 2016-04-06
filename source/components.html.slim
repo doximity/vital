@@ -218,18 +218,38 @@ title: Vital | Components
       span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-.row
+.row.header-preview
   .section
-    h1 Navigation Header Bar
+    h1 Navigation Header
     hr
     p
-      ' The navigation bar is fully responsive and can host an unlimited amount of menu items. Sub-menu items are hidden by default on
+      ' The navigation bar is fully responsive and can host an unlimited amount of menu items.
+    p
+      ' Sub-menu items are hidden by default on
       code> $tablet
       ' and smaller, but you can disable this by editing or removing line
       code> 131
       ' in
       code _header.sass
       | .
+
+
+    = code('slim') do
+      |
+        .row.header
+          .section
+            nav
+              = link_to 'index.html', class: 'logo' do
+                i.icon-vital.i3x
+              label#menu-toggle-label for='menu-toggle'
+              input#menu-toggle type='checkbox'
+              ul.menu
+                li = link_to 'Link', '#'
+                li
+                  = link_to 'With Menu', '#'
+                  ul
+                    li = link_to 'Menu Item', '#'
+                    li = link_to 'Menu Item', '#'
 
 .row
   .section
@@ -400,107 +420,108 @@ title: Vital | Components
       span> if you do not use a form tag.
     hr
     form
-      .col-1-4
+      .col-1-3
         label
           a.btn href='#' Anchor
-      .col-1-4
+      .col-1-3
         label
           button.btn Button Tag
-      .col-1-4
+      .col-1-3
         label
-          input.btn type="submit" value="Submit Tag"
-      .col-1-4
-        label
-          input type="email" placeholder="email"
+          input.btn type='submit' value='Submit Tag'
+      hr
       .clear
       .col-1-4
         label
-          input type="datetime" placeholder="date/time"
+          input type='email' placeholder='email'
       .col-1-4
         label
-          input type="number" placeholder="number"
+          input type='datetime' placeholder='date/time'
       .col-1-4
         label
-          input type="password" placeholder="password"
+          input type='number' placeholder='number'
       .col-1-4
         label
-          input name="name" type="text" placeholder="text"
+          input type='password' placeholder='password'
       .clear
       .col-1-4
         label
-          input type="search" value="search"
+          input name='name' type='text' placeholder='text'
       .col-1-4
         label
-          input type="tel" placeholder="1-808-000-0000"
+          input type='search' value='search'
       .col-1-4
         label
-          select name="name"
-            option value=("select option one") select option
-            option value=("select option two") select option
-            option value=("select option three") select option
-            option value=("select option four") select option
+          input type='tel' placeholder='1-808-000-0000'
       .col-1-4
-        label.select
+        label
+          select name='name'
+            option value=('select option one') select option
+            option value=('select option two') select option
+            option value=('select option three') select option
+            option value=('select option four') select option
+      .clear
+      .col-1-4
+        label
           select
-            optgroup label=("group 1")
+            optgroup label=('group 1')
               option select option
               option select option
               option select option
-      .clear
       .col-1-4
         label
-          input name="name" type="url" placeholder="url"
+          input name='name' type='url' placeholder='url'
       .col-1-4
         label
-          input type="file"
+          input type='file'
       .col-1-4
         label
-          input name="name" type="range"
+          input name='name' type='range'
       .clear
 
       .col-1-5
         label
-          input name="name" type="date" placeholder="12-31-1999"
+          input name='name' type='date' placeholder='12-31-1999'
       .col-1-5
         label
-          input name="name" type="datetime-local" placeholder="local date/time"
+          input name='name' type='datetime-local' placeholder='local date/time'
       .col-1-5
         label
-          input name="name" type="time" placeholder="time"
+          input name='name' type='time' placeholder='time'
       .col-1-5
         label
-          input name="name" type="week" placeholder="week"
+          input name='name' type='week' placeholder='week'
       .col-1-5
         label
-          input name="name" type="month" placeholder="month"
+          input name='name' type='month' placeholder='month'
       .clear
       label
-        textarea name="name" placeholder="textarea" rows="4"
+        textarea name='name' placeholder='textarea' rows='4'
 
       p We developed custom radios and checkboxes because standard checkboxes didn't scale well. As a side benefit, you can customize the look and feel to be more in line with your application's branding.
 
       .col-1-2
         p.autogrid
           label.col>
-            input name="name" type="radio" checked="true"
+            input name='name' type='radio' checked='true'
             | Radio
           label.col>
-            input name="name" type="radio"
+            input name='name' type='radio'
             | Radio
           label.col>
-            input name="name" type="radio" disabled="true"
+            input name='name' type='radio' disabled='true'
             span.disabled Radio
 
       .col-1-2
         p.autogrid
           label.col>
-            input name="name" type="checkbox" checked="true"
+            input name='name' type='checkbox' checked='true'
             | Checkbox
           label.col>
-            input name="name" type="checkbox"
+            input name='name' type='checkbox'
             | Checkbox
           label.col>
-            input name="name" type="checkbox" disabled="true"
+            input name='name' type='checkbox' disabled='true'
             span.disabled Checkbox
       .clear
 
@@ -575,18 +596,18 @@ title: Vital | Components
     hr
 
     .pagination
-      a.previous_page href="#" ← Previous
-      a href="#" 1
+      a.previous_page href='#' ← Previous
+      a href='#' 1
       em.current 2
-      a href="#" 3
-      a href="#" 4
-      a href="#" 5
-      a href="#" 6
-      a href="#" 7
-      a href="#" 8
+      a href='#' 3
+      a href='#' 4
+      a href='#' 5
+      a href='#' 6
+      a href='#' 7
+      a href='#' 8
       span.gap ...
-      a href="#" 9
-      a.next_page href="#" Next →
+      a href='#' 9
+      a.next_page href='#' Next →
 
 .row.bg
   .section
