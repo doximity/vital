@@ -4,7 +4,7 @@
 
 Import into stylesheet or as a stylesheet link tag:
 
-`https://raw.githubusercontent.com/doximity/vital/master/releases/vital.min.css`
+`https://cdn.rawgit.com/doximity/vital/master/releases/vital.min.css`
 
 ## Recommended (Source)
 
