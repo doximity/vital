@@ -63,4 +63,6 @@ brew install eot-utils
 gem install fontcustom
 ```
 
-After installation is complete, run: `fontcustom compile`. Open `_icons.scss` and change `url` to `font-url`. While changing the `fontcustom.yml` templates flag from `scss` to `scss-rails` automatically does this, it also removes the very useful `$font-icons-` variables.
+After installation is complete, run: `fontcustom compile`.
+
+You must open `_icons.scss` and change `url` to `font-url`. While changing the `fontcustom.yml` templates flag from `scss` to `scss-rails` automatically does this, it also removes the very useful `$font-icons-` variables.
