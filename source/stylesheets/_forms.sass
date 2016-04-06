@@ -49,7 +49,7 @@ input
     -moz-appearance: none
     -webkit-appearance: none
     appearance: none
-    padding: 0.90em 0.1em
+    padding: 0.860em 0.1em
     &:focus
       outline: 0
 
@@ -57,7 +57,7 @@ input
     background-color: $white
     width: 100%
     font-size: 12px
-    padding: 0.99em 0.5em
+    padding: 1.02em 0.5em
 
   &[type='search']
     box-sizing: border-box !important
@@ -112,35 +112,19 @@ input
         top: 0
         width: 1em
 
-// Adjustments for Safari
-
-@media screen and (-webkit-min-device-pixel-ratio: 0)
-
-  input:not(.btn), select, textarea
-    min-height: 2.8em
-
-  input
-    &[type='file']
-      padding: 1.06em 0.5em
-    &[type='range']
-      padding: 0.88em 0.5em
-    &[type='checkbox'], &[type='radio']
-      min-height: 0
-
-// Adjustments for Firefox
-// We're not going to try too hard make Firefox look exactly the same as Chrome or Safari.
+// Adjustments to Firefox
 
 @-moz-document url-prefix()
 
   input
     &[type='file']
-      padding: 1.019em 0.5em
+      padding: 1.013em 0.5em
     &[type='range']
       border: 0
       margin: 0.6em 0 0 0
 
   select
-    padding: 0.65em 0.5em
+    padding: 0.6410em 0.5em
     &:-moz-focusring
       color: transparent
       text-shadow: 0 0 0 #000
