@@ -20,7 +20,7 @@ title: Vital | Components
       code .section
       ' .
 
-.row.bg
+.row
   .section
 
     h1 Grid
@@ -171,6 +171,37 @@ title: Vital | Components
 
 .row
   .section
+    h1 Navigation Header
+    hr
+    p The navigation bar is fully responsive and can host an unlimited amount of menu items.
+    p
+      ' Sub-menu items are hidden by default on
+      code> $tablet
+      ' and smaller, but you can disable this by editing or removing line
+      code> 131
+      ' in
+      code _header.sass
+      | .
+
+    = code('slim') do
+      |
+        .row.header
+          .section
+            nav
+              = link_to 'index.html', class: 'logo' do
+                i.icon-vital.i3x
+              label#menu-toggle-label for='menu-toggle'
+              input#menu-toggle type='checkbox'
+              ul.menu
+                li = link_to 'Link', '#'
+                li
+                  = link_to 'With Menu', '#'
+                  ul
+                    li = link_to 'Menu Item', '#'
+                    li = link_to 'Menu Item', '#'
+
+.row
+  .section
     h1 Typography
     hr
     h1 h1 - This is some text
@@ -218,39 +249,6 @@ title: Vital | Components
       span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
       span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-.row.header-preview
-  .section
-    h1 Navigation Header
-    hr
-    p
-      ' The navigation bar is fully responsive and can host an unlimited amount of menu items.
-    p
-      ' Sub-menu items are hidden by default on
-      code> $tablet
-      ' and smaller, but you can disable this by editing or removing line
-      code> 131
-      ' in
-      code _header.sass
-      | .
-
-
-    = code('slim') do
-      |
-        .row.header
-          .section
-            nav
-              = link_to 'index.html', class: 'logo' do
-                i.icon-vital.i3x
-              label#menu-toggle-label for='menu-toggle'
-              input#menu-toggle type='checkbox'
-              ul.menu
-                li = link_to 'Link', '#'
-                li
-                  = link_to 'With Menu', '#'
-                  ul
-                    li = link_to 'Menu Item', '#'
-                    li = link_to 'Menu Item', '#'
-
 .row
   .section
     h1 Notice
@@ -262,7 +260,7 @@ title: Vital | Components
     | This is a notice. Slot me anywhere.
     i.icon-close-outline
 
-.row.bg
+.row
   .section
     h1 Loaders
     hr
@@ -559,7 +557,7 @@ title: Vital | Components
       li
         = link_to 'Tab', '#'
 
-.row.bg
+.row
   .section
 
     h1 Tables
@@ -608,7 +606,7 @@ title: Vital | Components
       a href='#' 9
       a.next_page href='#' Next →
 
-.row.bg
+.row
   .section
     h1 Font Icons
     hr
