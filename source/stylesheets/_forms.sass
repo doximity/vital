@@ -38,10 +38,10 @@ select
   background-color: white
   background-size: 1em
   background-repeat: no-repeat
-  background-position: right
+  background-position: 99% 50%
   line-height: 1.1
   padding: 0.78em 0.5em
-  padding-right: 1em
+  padding-right: 1.4em
 
 input
 
@@ -61,9 +61,9 @@ input
 
   &[type='search']
     box-sizing: border-box !important
+    -webkit-appearance: none
 
   &[type='checkbox'], &[type='radio']
-    -moz-appearance: none
     -webkit-appearance: none
     appearance: none
     background-color: white
@@ -111,6 +111,17 @@ input
         text-align: center
         top: 0
         width: 1em
+
+// Adjustments for iOS Safari
+
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+
+  input:not(.btn), select, textarea
+    min-height: 2.7em
+
+  input
+    &[type='checkbox'], &[type='radio']
+      min-height: 0
 
 // Adjustments to Firefox
 
