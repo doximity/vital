@@ -2,7 +2,7 @@
 
 A minimally invasive CSS framework for modern web applications.
 
-- Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks. Vital is a very small framework that is easy to learn and is very customizable.
+- Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks.
 - Built with Sass
 - No ridiculous amounts of classes or nesting. No excessively burried code.
 - Written almost entirely in em values, allowing for easy and consistent scaling.
