@@ -1,10 +1,20 @@
+# Vital
+
+A minimally invasive CSS framework for modern web applications.
+
+- Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks. Vital is a very small framework that is easy to learn and is very customizable.
+- Built with Sass
+- No ridiculous amounts of classes or nesting. No excessively burried code.
+- Written almost entirely in em values, allowing for easy and consistent scaling.
+- Small. CSS: 17KB, Font Icons: 8KB
+
 # Setup / Installation
 
 ## Quickest (Compiled)
 
 Import into stylesheet or as a stylesheet link tag:
 
-`https://raw.githubusercontent.com/doximity/vital/master/releases/vital.min.css`
+`https://cdn.rawgit.com/doximity/vital/master/releases/v1.0.0/vital.min.css`
 
 ## Recommended (Source)
 
