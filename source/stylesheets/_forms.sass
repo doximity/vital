@@ -13,15 +13,18 @@ fieldset
     padding: 0 0.25em
 
 input, select, textarea
+  -moz-appearance: none
   -webkit-appearance: none
+  appearance: none
   border-radius: $radius
   border: $border-width solid #ddd
   box-shadow: none
+  color: $text
+  display: block
   font-family: $font
   font-size: inherit
   outline: none
-  padding: 0.49em 0.5em
-  display: block
+  padding: 0.49em $input-left-right-padding
   &:hover, &:focus
     border-color: $hover
     transition: $all
@@ -29,43 +32,38 @@ input, select, textarea
     box-shadow: 0 0 10px $focus
 
 textarea
-  padding: 0.5em
+  padding: $input-left-right-padding
 
 select
-  -webkit-appearance: none
-  appearance: none
   background-image: image_url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><polyline points="114.3,212.8 388,212.8 251.1,0 114.3,212.8 "/><polyline points="388,297.9 114.3,297.9 251.1,510.7 388,297.9 "/></svg>')
-  background-color: white
+  background-color: $input-background-color
   background-size: 1em
   background-repeat: no-repeat
   background-position: 99% 50%
   line-height: 1.1
-  padding: 0.78em 0.5em
+  padding: 0.78em $input-left-right-padding
   padding-right: 1.4em
 
 input
+  &:not(.btn):not([type='checkbox']):not([type='radio'])
+    min-height: 2.7em
 
   &[type='file']
-    background-color: $white
+    background-color: $input-background-color
     width: 100%
     font-size: 12px
-    padding: 1.02em 0.5em
+    padding: 1.02em $input-left-right-padding
 
   &[type='range']
-    -webkit-appearance: none
-    appearance: none
     padding: 0.870em 0.1em
     &:focus
       outline: 0
 
   &[type='search']
     box-sizing: border-box !important
-    -webkit-appearance: none
 
   &[type='checkbox'], &[type='radio']
-    -webkit-appearance: none
-    appearance: none
-    background-color: white
+    background-color: $input-background-color
     border: $border-width solid #888
     display: inline-block
     height: 1em
@@ -76,8 +74,8 @@ input
     width: 1em
     overflow: hidden
     &:checked
-      background-color: $link
-      border-color: $link
+      background-color: $input-checkbox-checked
+      border-color: $input-checkbox-checked
     &:disabled
       opacity: 0.3
 
@@ -124,14 +122,34 @@ input
 
   input
     &[type='file']
-      padding: 1.0em 0.5em
+      padding: 1.0em $input-left-right-padding
     &[type='range']
       border: 0
       margin: 0.6em 0 0 0
 
   select
-    padding: 0.6410em 0.5em
+    padding: 0.6410em $input-left-right-padding
     &:-moz-focusring
       color: transparent
       text-shadow: 0 0 0 #000
       transition: none
+
+// Adjustments for internet explorer 10+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+
+  select
+    padding: 0.65em $input-left-right-padding
+    padding-right: $input-left-right-padding
+
+  input
+
+    &[type='file']
+      &::-ms-value
+        background: $input-background-color
+      &::-ms-value, &::-ms-value
+        box-shadow: none
+        border: 0
+
+    &[type='range']
+      border-color: transparent
