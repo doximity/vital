@@ -1,8 +1,15 @@
 @import variables
 
-form, .full-width
-  *
-    width: 100%
+.full-width-forms
+  .btn,
+  a,
+  button,
+  submit,
+  select,
+  textarea,
+  input
+    &:not([type='checkbox']):not([type='radio'])
+      width: 100%
 
 fieldset
   border-radius: $radius

@@ -53,6 +53,12 @@
 .examples .header .menu li:nth-child(3)
   background: $header-link-hover
 
+@media screen and (max-width: $phablet)
+
+  .forms-preview
+    [class*='col-']
+      padding: 0.5% 0
+
 @media screen and (max-width: $handheld)
 
   // Components

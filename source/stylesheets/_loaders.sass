@@ -2,11 +2,6 @@
 
 // Loaders
 
-$loader-large: 3em
-$loader: 2em
-$loader-small: 1em
-$loader-smallest: 0.6em
-
 .load
   -webkit-animation-duration: 1s
   -webkit-animation-iteration-count: infinite
@@ -21,7 +16,7 @@ $loader-smallest: 0.6em
   animation-name: loading
   animation-timing-function: linear
   border-radius: $round
-  border: 0.2em solid #ddd
+  border: $border-width * 3 solid #DDD
   border-left-color: #666
   display: inline-block
   height: 2em
@@ -29,15 +24,15 @@ $loader-smallest: 0.6em
   &.smallest
     width: $loader-smallest
     height: $loader-smallest
-    border-width: 0.1em
+    border-width: $border-width
   &.small
     width: $loader-small
     height: $loader-small
-    border-width: 0.1em
+    border-width: $border-width * 2
   &.large
     width: $loader-large
     height: $loader-large
-    border-width: 0.3em
+    border-width: $border-width * 4
 
 @keyframes loading
   from
@@ -58,11 +53,6 @@ $loader-smallest: 0.6em
     -moz-transform: rotate(360deg)
 
 // Adjustments for IE 8/9
-
-$loader-large: 48px
-$loader: 32px
-$loader-small: 16px
-$loader-smallest: 9px
 
 .ie8, .ie9
 

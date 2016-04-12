@@ -309,30 +309,22 @@ title: Vital | Components
     hr
     .col-1-4.center
       p
-        .load.large
-        br
-        small Loading
+        span.load.large
       p
         code .load.large
     .col-1-4.center
       p
-        .load
-        br
-        small Loading
+        span.load
       p
         code .load
     .col-1-4.center
       p
-        .load.small
-        br
-        small Loading
+        span.load.small
       p
         code .load.small
     .col-1-4.center
       p
-        .load.smallest
-        br
-        small Loading
+        span.load.smallest
       p
         code .load.smallest
     .clear
@@ -455,12 +447,9 @@ title: Vital | Components
     p Cross-platform consistency is important when Vital was created, so we created form elements that will look and feel consistent on most platforms while retaining the ability to gracefully degrade.
     p
       span> Form fields that are nested under the
-      code> form
-      span> tag are automatically full in width. Optionally you can use the class
-      code> .full-width
-      span> if you do not use a form tag.
+      code> .full-width-forms
     hr
-    form
+    .full-width-forms
       .col-1-3
         label
           a.btn href='#' Anchor
@@ -535,8 +524,11 @@ title: Vital | Components
         label
           input name='name' type='month' placeholder='month'
       .clear
-      label
-        textarea name='name' placeholder='textarea' rows='4'
+      .col-1-2
+        label
+          textarea name='name' placeholder='textarea' rows='4'
+      .col-1-2.space
+      .clear
 
       p We developed custom radios and checkboxes because standard checkboxes didn't scale well. As a side benefit, you can customize the look and feel to be more in line with your application's branding.
 
