@@ -12,18 +12,8 @@ title: Vital | Components
 .row
   .section
     h1 Basic Structure
-    p
-      code .row
-      ' and
-      code .section
-      ' classes are core. Example usage:
 
-    = code('slim') do
-      |
-        .row
-          .content
-            p Hello World
-
+    h2 Application layout
     p Your typical application layout HTML would look something like this:
 
     = code('slim') do
@@ -52,6 +42,20 @@ title: Vital | Components
             .contents
               = yield
             = partial 'layouts/footer'
+
+    h2 Views
+    p
+      ' Views are simple.
+      code .row
+      ' and
+      code .section
+      ' classes are core. Example usage:
+
+    = code('slim') do
+      |
+        .row
+          .content
+            p Hello World
 
 
 .row
