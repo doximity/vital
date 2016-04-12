@@ -27,11 +27,12 @@
 
 .padded
   [class*='col-'], .col
-    padding: 0 5%
+    padding-left: $grid-padding
+    padding-right: $grid-padding
 
 .right-padded
   [class*='col-'], .col
-    padding: 0 5% 0 0
+    padding-right: $grid-padding
 
 @media screen and (max-width: $phablet)
 
@@ -43,4 +44,4 @@
 
   .right-padded
     [class*='col-'], .col
-      padding: 0 0 0 0
+      padding: 0
