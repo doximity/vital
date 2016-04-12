@@ -16,9 +16,12 @@ title: Vital | Components
       code .row
       ' and
       code .section
-      ' classes are core. Nest your contents under
-      code .section
-      ' .
+      ' classes are core. Example usage:
+    = code('slim') do
+      |
+        .row
+          .content
+            p Hello World
 
 .row
   .section
@@ -70,9 +73,13 @@ title: Vital | Components
       .clear
 
     p
-      ' The grid is minimally padded evenly by default. You can adjust padding that suits your needs. If your primary layouts are heavy on typography you can opt for
-      code> right-padded
+      ' The grid is not padded by default. If your primary layouts are heavy on typography you can use the
+      code> .padded
       | padding.
+    p
+      ' The grid is not padded by default. If your primary layouts are heavy on typography you can use the
+      code> .right-padded
+      | class
     p
       ' You can do this by nesting your
       code .col-
@@ -270,28 +277,28 @@ title: Vital | Components
         br
         small Loading
       p
-        .code .load.large
+        code .load.large
     .col-1-4.center
       p
         .load
         br
         small Loading
       p
-        .code .load
+        code .load
     .col-1-4.center
       p
         .load.small
         br
         small Loading
       p
-        .code .load.small
+        code .load.small
     .col-1-4.center
       p
         .load.smallest
         br
         small Loading
       p
-        .code .load.smallest
+        code .load.smallest
     .clear
 
 .row
@@ -654,8 +661,14 @@ title: Vital | Components
 
     .fonts-icons-preview
       p
+        i.icon-arrow-updown
+        | icon-arrow-updown
+      p
         i.icon-check
         | icon-check
+      p
+        i.icon-clock
+        | icon-clock
       p
         i.icon-close
         | icon-close

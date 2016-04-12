@@ -25,6 +25,7 @@
 [data-icon]:before,
 .icon-arrow-updown:before,
 .icon-check:before,
+.icon-clock:before,
 .icon-close:before,
 .icon-close-empty:before,
 .icon-close-outline:before,
@@ -46,6 +47,7 @@
 
 .icon-arrow-updown:before { content: "\f109"; }
 .icon-check:before { content: "\f100"; }
+.icon-clock:before { content: "\f10b"; }
 .icon-close:before { content: "\f102"; }
 .icon-close-empty:before { content: "\f103"; }
 .icon-close-outline:before { content: "\f104"; }
@@ -54,6 +56,7 @@
 
 $font-icons-icon-arrow-updown: "\f109";
 $font-icons-icon-check: "\f100";
+$font-icons-icon-clock: "\f10b";
 $font-icons-icon-close: "\f102";
 $font-icons-icon-close-empty: "\f103";
 $font-icons-icon-close-outline: "\f104";

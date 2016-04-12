@@ -1,7 +1,7 @@
 {
   "checksum": {
-    "previous": "d2a10a4e0939f665a2d2d9a891fc0a6115b33414f0a0aece1dad6b6311b3a1cd",
-    "current": "d2a10a4e0939f665a2d2d9a891fc0a6115b33414f0a0aece1dad6b6311b3a1cd"
+    "previous": "d1dc51686b6893fe85a361ec56817547ecaad145091a8aa28d7298350b4bb390",
+    "current": "d1dc51686b6893fe85a361ec56817547ecaad145091a8aa28d7298350b4bb390"
   },
   "fonts": [
     "source/fonts/output/icons.ttf",
@@ -17,6 +17,10 @@
     "icon-check": {
       "codepoint": 61696,
       "source": "source/fonts/input/icon-check.svg"
+    },
+    "icon-clock": {
+      "codepoint": 61707,
+      "source": "source/fonts/input/icon-clock.svg"
     },
     "icon-close": {
       "codepoint": 61698,

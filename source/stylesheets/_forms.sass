@@ -116,7 +116,7 @@ input
 @media screen and (-webkit-min-device-pixel-ratio: 0)
 
   input:not(.btn):not([type='checkbox']):not([type='radio']), select, textarea
-    min-height: 2.7em
+    min-height: $input-height
 
 // Adjustments to Firefox
 
@@ -155,3 +155,29 @@ input
 
     &[type='range']
       border-color: transparent
+
+// Adjustments for IE 8/9
+
+.ie8, .ie9
+
+  select
+    padding: 0.65em $input-left-right-padding
+    padding-right: $input-left-right-padding
+
+  input
+
+    &[type='checkbox'], &[type='radio']
+      background: transparent
+      border: 0
+      &:checked
+        background-color: transparent
+        border-color: transparent
+      &:focus
+        border: 0
+
+    &[type='file']
+      height: $input-height + 1.1em
+
+    &[type='range']
+      height: 2em
+      line-height: 0

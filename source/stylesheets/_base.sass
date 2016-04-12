@@ -1,5 +1,7 @@
 @import variables
 
+// Base
+
 *
   box-sizing: border-box
   -moz-box-sizing: border-box
@@ -34,6 +36,11 @@ h1, h2, h3, h4, h5, h6, p, ul, ol
 h1, h2, h3, h4, h5, h6
   line-height: 1.5
 
+ul, ol
+  padding: 0
+li
+  list-style: none
+
 a
   color: $link
   text-decoration: none
@@ -49,8 +56,8 @@ blockquote
   padding: 0 1em
   border-left: 0.4em solid $gray-lighter
 
-strong, b
-  font-weight: 500
+strong, b, .bold
+  font-weight: $bold
 
 hr
   border: none
@@ -129,3 +136,13 @@ dd
 
   .section
     width: 100%
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+
+  strong, b, .bold
+    font-weight: $bold
+
+.ie8, .ie9
+
+  strong, b, .bold
+    font-weight: $bold
