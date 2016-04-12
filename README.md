@@ -62,6 +62,10 @@ The Vital project is build using a simple static generator: https://middlemanapp
 - In your terminal, run: `bundle`
 - To start your server, run: `middleman`
 
+### Building the Output
+
+- `bundle exec rake build`
+
 ### Compiling Font Icons
 
 To compile font icons, you must first install fontforge and the fontcuston gem.

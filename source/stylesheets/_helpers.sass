@@ -5,6 +5,17 @@
 
 // Text, Typography
 
+ul, ol
+  &.list
+    margin-left: 1em
+    padding-left: 1em
+
+ul.list li
+  list-style: disc
+
+ol.list li
+  list-style: decimal
+
 .align-left
   text-align: left
 
@@ -13,9 +24,6 @@
 
 .break-word
   word-break: break-all
-
-.center
-  text-align: center
 
 .no-wrap
   white-space: nowrap
@@ -29,10 +37,9 @@
 // Lighten all typography for dark backgrounds
 
 .light-text
-  *
+  *, a
     color: white
   a
-    color: white
     text-decoration: underline
 
 // Alignment
@@ -42,6 +49,9 @@
 
 .block
   display: block
+
+.center
+  text-align: center
 
 .clear
   clear: both

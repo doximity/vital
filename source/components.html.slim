@@ -61,8 +61,9 @@ title: Vital | Components
 .row
   .section
 
-    h1 Grid
     hr
+    h1 Grid
+
     p
       ' Example usage:
       code> .col-1-2
@@ -145,7 +146,7 @@ title: Vital | Components
       ' at the end of
       code .col-
       ' to clear columns.
-    hr
+
     p
       span> Eempty grid columns need content within to work properly. In mose cases you'll want to hide them on your handheld breakpoint.
       ' Add
@@ -174,7 +175,7 @@ title: Vital | Components
           p Some content.
         .col-1-3.space
         .clear
-    hr
+
     h2 Automatic Grid
     p Use the automatic grid if you don't need to be specific about your columns and only need equally sized columns. You can create an unlimited amount of columns automatically:
     .grid-preview
@@ -214,8 +215,9 @@ title: Vital | Components
 
 .row
   .section
-    h1 Navigation Header
     hr
+    h1 Navigation Header
+
     p The navigation bar is fully responsive and can host an unlimited amount of menu items.
     p
       ' Sub-menu items are hidden by default on
@@ -245,8 +247,9 @@ title: Vital | Components
 
 .row
   .section
-    h1 Typography
     hr
+    h1 Typography
+
     h1 h1 - This is some text
     h2 h2 - This is some text
     h3 h3 - This is some text
@@ -259,7 +262,12 @@ title: Vital | Components
       ' This is a p with an inlined anchor inside
       = link_to 'this is the inlined anchor', '#'
     p
-      strong strong
+      span>
+        strong strong
+      span>
+        b b
+      span>
+        span.bold .bold
     p
       em em
     p
@@ -273,6 +281,15 @@ title: Vital | Components
       li li
     p ul
     ul
+      li li
+      li li
+      li li
+    ol.list
+      li li
+      li li
+      li li
+    p ul
+    ul.list
       li li
       li li
       li li
@@ -294,8 +311,9 @@ title: Vital | Components
 
 .row
   .section
-    h1 Notice
     hr
+    h1 Notice
+
     p The standard notification bar is relative in position:
 
 .row.notice
@@ -305,34 +323,36 @@ title: Vital | Components
 
 .row
   .section
-    h1 Loaders
     hr
+    h1 Loaders
+
     .col-1-4.center
       p
         span.load.large
-      p
+        br
         code .load.large
     .col-1-4.center
       p
         span.load
-      p
+        br
         code .load
     .col-1-4.center
       p
         span.load.small
-      p
+        br
         code .load.small
     .col-1-4.center
       p
         span.load.smallest
-      p
+        br
         code .load.smallest
     .clear
 
 .row
   .section
-    h1 Buttons
     hr
+    h1 Buttons
+
     h2 Size options
     .autogrid
       .col
@@ -443,12 +463,13 @@ title: Vital | Components
 .row.forms-preview.bg
   .section
 
+    hr
     h1 Forms
     p Cross-platform consistency is important when Vital was created, so we created form elements that will look and feel consistent on most platforms while retaining the ability to gracefully degrade.
     p
       span> Form fields that are nested under the
       code> .full-width-forms
-    hr
+
     .full-width-forms
       .col-1-3
         label
@@ -565,8 +586,9 @@ title: Vital | Components
 
 .row
   .section
-    h1 Tabs
     hr
+    h1 Tabs
+
     p Traditional
     .autogrid.tabs-block
       .col.here
@@ -601,8 +623,9 @@ title: Vital | Components
 .row
   .section
 
-    h1 Tables
     hr
+    h1 Tables
+
 
     table
       thead
@@ -630,8 +653,9 @@ title: Vital | Components
 .row
   .section
 
-    h1 Pagination
     hr
+    h1 Pagination
+
 
     .pagination
       a.previous_page href='#' ← Previous
@@ -649,8 +673,9 @@ title: Vital | Components
 
 .row
   .section
-    h1 Font Icons
     hr
+    h1 Font Icons
+
     h2 Example usage:
     p
       code> i.icon-vital
@@ -682,14 +707,13 @@ title: Vital | Components
 .row
   .section
 
-    h1 Vital Iconograpgy
     hr
-    p Vital comes with a few of it's own set of font icons. Some components such as checkboxes and the alert bar are dependant on them.
-    p Most font icon libraries simply have either too many icons that result in very large files. We've included a Font Custom template for you to be able to quickly generate your own unique set of iconograpgy from SVG files.
+    h1 Vital Iconograpgy
+
     p
-      ' For more information on creating and compiling vectors, visit
-      a> target='_blank' href='https://github.com/FontCustom/fontcustom' Font Custom
-    p.gray Please note that some icons (such as those with social names) are blocked by ad-blockers.
+      ' Vital comes with a small set of font icons built with
+      = link_to 'Font Custom', 'https://github.com/FontCustom/fontcustom', target: '_blank'
+      ' . Some components such as the select box, checkboxes and the alert bar are reliant on font iconograpgy.
 
     .fonts-icons-preview
       p
@@ -717,3 +741,47 @@ title: Vital | Components
         i.icon-vital
         | icon-vital
       .clear
+
+    h2 Compiling Custom Font Icons
+
+    p To compile font icons, you must first install fontforge and the fontcuston gem.
+
+    = code('bash') do
+      |
+        # On Mac
+        # Requires Ruby 1.9.2+, FontForge with Python scripting
+        brew install fontforge --with-python
+        brew install eot-utils
+        gem install fontcustom
+
+    p
+      ' Place your
+      code .svg
+      ' files into your input path, such as:
+      code> source/fonts/input.
+      ' See
+      code> fontcustom.yml
+      | to customize or set your own paths.
+
+    p
+      ' After installation is complete, run
+      code fontcustom compile
+    p
+      ' You will need to open
+      code _icons.scss
+      ' and change
+      code url
+      ' to
+      code font-url
+      ' . While changing the
+      code fontcustom.yml
+      ' templates flag from
+      code scss
+      ' to
+      code scss-rails
+      ' automatically does this, it also removes the very useful
+      code $font-icons-
+      | variables.
+
+    p.gray
+      i Please note that some icons (such as those with social names) are blocked by ad-blockers.
