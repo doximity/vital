@@ -115,12 +115,8 @@ input
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
 
-  input:not(.btn), select, textarea
+  input:not(.btn):not([type='checkbox']):not([type='radio']), select, textarea
     min-height: 2.7em
-
-  input
-    &[type='checkbox'], &[type='radio']
-      min-height: 0
 
 // Adjustments to Firefox
 

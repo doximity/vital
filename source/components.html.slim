@@ -498,28 +498,34 @@ title: Vital | Components
       p We developed custom radios and checkboxes because standard checkboxes didn't scale well. As a side benefit, you can customize the look and feel to be more in line with your application's branding.
 
       .col-1-2
-        p.autogrid
-          label.col>
-            input name='name' type='radio' checked='true'
-            | Radio
-          label.col>
-            input name='name' type='radio'
-            | Radio
-          label.col>
-            input name='name' type='radio' disabled='true'
-            span.disabled Radio
+        .autogrid
+          .col>
+            label
+              input name='name' type='radio' checked='true'
+              | Radio
+          .col>
+            label
+              input name='name' type='radio'
+              | Radio
+          .col>
+            label
+              input name='name' type='radio' disabled='true'
+              span.disabled Radio
 
       .col-1-2
-        p.autogrid
-          label.col>
-            input name='name' type='checkbox' checked='true'
-            | Checkbox
-          label.col>
-            input name='name' type='checkbox'
-            | Checkbox
-          label.col>
-            input name='name' type='checkbox' disabled='true'
-            span.disabled Checkbox
+        .autogrid
+          .col>
+            label
+              input name='name' type='checkbox' checked='true'
+              | Checkbox
+          .col>
+            label
+              input name='name' type='checkbox'
+              | Checkbox
+          .col>
+            label
+              input name='name' type='checkbox' disabled='true'
+              span.disabled Checkbox
       .clear
 
 .row
