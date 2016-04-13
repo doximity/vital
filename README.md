@@ -87,8 +87,8 @@ You must open `_icons.scss` and change `url` to `font-url`. While changing the `
 
 ## Publishing to Github Pages
 
-To publishing to `gh-pages` automatically, run `bundle exec rake publish`
+Publishing to `gh-pages` is done automatically by running `bundle exec rake publish`
 
 ## Reporting Issues and Suggestions
 
-Please submit Github issues for problems with the library. Also, feel free to submit a pull-request with suggested changes. 
+Please submit Github issues for problems with the library. Also, feel free to submit a pull-request with suggested changes.
