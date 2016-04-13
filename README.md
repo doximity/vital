@@ -71,7 +71,7 @@ Vital is built using a simple static generator: https://middlemanapp.com/
 
 #### Compiling Font Icons
 
-To compile font icons, you must first install fontforge and the fontcuston gem.
+To compile font icons, you must first install fontforge and the fontcustom gem.
 
 ```bash
 # On Mac
