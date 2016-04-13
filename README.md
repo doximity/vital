@@ -3,10 +3,13 @@
 A minimally invasive CSS framework for modern web applications.
 
 - Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks.
-- Built with Sass
+- Built with Sass and Slim for readability and maintainability.
 - No ridiculous amounts of classes or nesting. No excessively burried code.
 - Written almost entirely in em values, allowing for easy and consistent scaling.
-- Small. CSS: 17KB, Font Icons: 8KB, Javascripts: 0KB (none)
+- Small, just 30KB total size.
+  - CSS: 21KB
+  - Font Icons: 8KB
+  - Javascripts: 0KB (none)
 
 ## Setup / Installation
 
@@ -81,3 +84,7 @@ gem install fontcustom
 After installation is complete, run: `fontcustom compile`.
 
 You must open `_icons.scss` and change `url` to `font-url`. While changing the `fontcustom.yml` templates flag from `scss` to `scss-rails` automatically does this, it also removes the very useful `$font-icons-` variables.
+
+## Publishing to Github Pages
+
+To publishing to `gh-pages` automatically, run: `bundle exec rake publish`
