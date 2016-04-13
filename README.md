@@ -59,7 +59,7 @@ A ruby gem and npm package installation options are in the works.
 
 ## Development Installation
 
-Vital is build using a simple static generator: https://middlemanapp.com/
+Vital is built using a simple static generator: https://middlemanapp.com/
 
 - Clone: `https://github.com/doximity/vital`
 - In your terminal, run `bundle`
@@ -88,3 +88,7 @@ You must open `_icons.scss` and change `url` to `font-url`. While changing the `
 ## Publishing to Github Pages
 
 To publishing to `gh-pages` automatically, run `bundle exec rake publish`
+
+## Reporting Issues and Suggestions
+
+Please submit Github issues for problems with the library. Also, feel free to submit a pull-request with suggested changes. 
