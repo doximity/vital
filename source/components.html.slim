@@ -43,6 +43,40 @@ title: Vital | Components
               = yield
             = partial 'layouts/footer'
 
+    h2 File Structure
+    p Your typical application SASS should look like this:
+    = code('sass') do
+      |
+        // Vendor
+        @import normalize
+
+        // Components
+        @import variables
+        @import icons
+        @import grid
+        @import base
+        @import buttons
+        @import footer
+        @import forms
+        @import header
+        @import heroes
+        @import loaders
+        @import notice
+        @import pagination
+        @import tables
+        @import tabs
+        @import helpers
+
+        // Customizations
+        @import custom
+
+    p
+      ' Small reusable classes should be placed in
+      code> _helpers.sass
+      ' and larger, more unique code should live in
+      code _custom.sass
+      | .
+
     h2 Views
     p
       ' Views are simple.
@@ -56,7 +90,6 @@ title: Vital | Components
         .row
           .section
             p Hello World
-
 
 .row
   .section
