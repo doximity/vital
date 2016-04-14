@@ -71,9 +71,12 @@ $bold:                         500
 
 // Transitions
 
-$all:                          all 0.2s ease-in-out
-$fade-and-hide:                top 0.2s ease-in-out, opacity 0.2s ease-in-out
-$color:                        color 0.2s ease-in-out
+$standard-animation-speed:     200ms
+$all:                          all $standard-animation-speed ease-in-out
+$color:                        color $standard-animation-speed ease-in-out
+
+// GPU Trickery
+
 $translate:                    translateZ(0)
 
 // Radius

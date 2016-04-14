@@ -3,19 +3,18 @@
 // Header
 
 .header
-  transition: $fade-and-hide
-  transform: $translate
   background: $header
   height: $header-height
+  transform: $translate
   .section
     padding: 0
     position: relative
   .logo
-    padding: 0.6em 1em
-    color: $red
-    line-height: 1
-    float: left
     border: 0
+    color: $red
+    float: left
+    line-height: 1
+    padding: 0.6em 1em
     &:hover
       background: none
       i
@@ -32,10 +31,10 @@ nav
     padding: 0
     margin: 0
     li
-      float: left
-      display: inline
-      position: relative
       background: $header
+      display: inline
+      float: left
+      position: relative
       ul
         left: 0
         top: 100%
@@ -44,25 +43,25 @@ nav
   li:hover > ul
     display: block
     position: absolute
-    z-index: 9000
     width: 12.5em
+    z-index: 9000
     li
       width: 100%
   ul ul li:hover > ul
+    left: auto
     right: -12.5em
     top: 0
-    left: auto
 
 #menu-toggle, #menu-toggle-label
   cursor: pointer
+  display: none
   height: $header-height
-  width: $header-height
   position: absolute
   right: 0
   user-select: none
+  width: $header-height
 
 #menu-toggle
-  display: none
   border-radius: 0
   border: 0
   box-shadow: none
@@ -86,37 +85,40 @@ nav
       color: $text
       content: $font-icons-icon-close-empty
       font-size: 3em
-      line-height: 0
       left: 0
+      line-height: 0
       padding: 0.7em 0
       position: absolute
       right: 0
       top: 0
 
-@media screen and (max-width: $tablet)
+@media screen and (max-width: $phablet)
 
   .header
     .logo
       padding: 0.6em
 
+  #menu-toggle, #menu-toggle-label
+    display: block
+
   nav
     a
-      padding: 1em
       border-top: 1px solid #eee
+      padding: 1em
     ul
       li ul
         display: block
       li
-        float: none
-        display: block
         border-right: none
+        display: block
+        float: none
         text-align: center
         a
           background: $header-link-hover
     >
       ul
-        display: none
         clear: both
+        display: none
       input:checked + ul
         display: block
     li:hover ul
@@ -124,11 +126,6 @@ nav
       width: auto
     ul ul
       li:hover > ul
+        left: auto
         right: auto
         top: auto
-        left: auto
-      a
-        display: none
-
-  #menu-toggle
-    display: block
