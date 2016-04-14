@@ -17,7 +17,7 @@ A minimally invasive CSS framework for modern web applications.
 
 Import into stylesheet or as a stylesheet link tag:
 
-`https://cdn.rawgit.com/doximity/vital/master/releases/v1.0.0/vital.min.css`
+`https://cdn.rawgit.com/doximity/vital/master/releases/v1.0.0/stylesheets/vital.min.css`
 
 ### Recommended (Source)
 
