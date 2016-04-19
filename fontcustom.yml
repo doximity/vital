@@ -7,12 +7,9 @@ debug: true
 quiet: false
 
 input:
-  # required
   vectors: source/fonts/input
-  # templates: [path]
 
 output:
-  # required
   fonts: source/fonts/output
   css: source/stylesheets
   preview: previews
