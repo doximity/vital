@@ -23,7 +23,7 @@ Import into stylesheet or as a stylesheet link tag:
 
 `https://github.com/doximity/vital/tree/master/source/stylesheets`
 
-Vital works best when manipulated directly. Download or copy the slim files into your project. This installation method is preferred if you want to develop your own unique branding while keeping code output to a minimum. One possible caveat to this method is you sacrifice future upgradability as you may encounter breaking changes.
+Vital works best when manipulated directly. Download or copy the `.sass` files into your project. This installation method is preferred if you want to develop your own unique branding while keeping code output to a minimum. One possible caveat to this method is you sacrifice future upgradability as you may encounter breaking changes.
 
 #### File Structure
 
