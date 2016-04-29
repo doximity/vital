@@ -1,46 +1,46 @@
 {
   "checksum": {
-    "previous": "df1258de85b01f6afcb358f6d0682f08bf24fc871fb353912217f801db0fe7f9",
-    "current": "df1258de85b01f6afcb358f6d0682f08bf24fc871fb353912217f801db0fe7f9"
+    "previous": "c54e6588d3551c3324807bbaa9e1b7e274c629b155a915dfc70652c3fa89cd05",
+    "current": "c54e6588d3551c3324807bbaa9e1b7e274c629b155a915dfc70652c3fa89cd05"
   },
   "fonts": [
-    "source/fonts/output/icons.ttf",
-    "source/fonts/output/icons.svg",
-    "source/fonts/output/icons.woff",
-    "source/fonts/output/icons.eot"
+    "source/fonts/vital-icons.ttf",
+    "source/fonts/vital-icons.svg",
+    "source/fonts/vital-icons.woff",
+    "source/fonts/vital-icons.eot"
   ],
   "glyphs": {
     "icon-arrow-updown": {
       "codepoint": 61705,
-      "source": "source/fonts/input/icon-arrow-updown.svg"
+      "source": "icons/icon-arrow-updown.svg"
     },
     "icon-check": {
       "codepoint": 61696,
-      "source": "source/fonts/input/icon-check.svg"
+      "source": "icons/icon-check.svg"
     },
     "icon-clock": {
       "codepoint": 61707,
-      "source": "source/fonts/input/icon-clock.svg"
+      "source": "icons/icon-clock.svg"
     },
     "icon-close": {
       "codepoint": 61698,
-      "source": "source/fonts/input/icon-close.svg"
+      "source": "icons/icon-close.svg"
     },
     "icon-close-empty": {
       "codepoint": 61699,
-      "source": "source/fonts/input/icon-close-empty.svg"
+      "source": "icons/icon-close-empty.svg"
     },
     "icon-close-outline": {
       "codepoint": 61700,
-      "source": "source/fonts/input/icon-close-outline.svg"
+      "source": "icons/icon-close-outline.svg"
     },
     "icon-menu": {
       "codepoint": 61706,
-      "source": "source/fonts/input/icon-menu.svg"
+      "source": "icons/icon-menu.svg"
     },
     "icon-vital": {
       "codepoint": 61697,
-      "source": "source/fonts/input/icon-vital.svg"
+      "source": "icons/icon-vital.svg"
     }
   },
   "options": {
@@ -52,19 +52,19 @@
     "font_descent": 64,
     "font_design_size": 16,
     "font_em": 512,
-    "font_name": "icons",
+    "font_name": "vital-icons",
     "force": true,
     "input": {
-      "templates": "source/fonts/input",
-      "vectors": "source/fonts/input"
+      "templates": "icons",
+      "vectors": "icons"
     },
     "no_hash": true,
     "output": {
       "css": "source/stylesheets",
-      "fonts": "source/fonts/output",
+      "fonts": "source/fonts",
       "preview": "previews"
     },
-    "preprocessor_path": "fonts/output",
+    "preprocessor_path": "../fonts",
     "quiet": false,
     "templates": [
       "scss",
@@ -72,7 +72,7 @@
     ]
   },
   "templates": [
-    "source/stylesheets/_icons.scss",
-    "previews/icons-preview.html"
+    "source/stylesheets/_vital-icons.scss",
+    "previews/vital-icons-preview.html"
   ]
 }

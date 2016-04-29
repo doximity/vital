@@ -1,22 +1,22 @@
 //
-// Icon Font: icons
+// Icon Font: vital-icons
 //
 
 @font-face {
-  font-family: "icons";
-  src: font-url("fonts/output/icons.eot");
-  src: font-url("fonts/output/icons.eot?#iefix") format("embedded-opentype"),
-       font-url("fonts/output/icons.woff") format("woff"),
-       font-url("fonts/output/icons.ttf") format("truetype"),
-       font-url("fonts/output/icons.svg#icons") format("svg");
+  font-family: "vital-icons";
+  src: url("../fonts/vital-icons.eot");
+  src: url("../fonts/vital-icons.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/vital-icons.woff") format("woff"),
+       url("../fonts/vital-icons.ttf") format("truetype"),
+       url("../fonts/vital-icons.svg#vital-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: "icons";
-    src: font-url("fonts/output/icons.svg#icons") format("svg");
+    font-family: "vital-icons";
+    src: url("../fonts/vital-icons.svg#vital-icons") format("svg");
   }
 }
 
@@ -32,7 +32,7 @@
 .icon-menu:before,
 .icon-vital:before {
   display: inline-block;
-  font-family: "icons";
+  font-family: "vital-icons";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -54,11 +54,11 @@
 .icon-menu:before { content: "\f10a"; }
 .icon-vital:before { content: "\f101"; }
 
-$font-icons-icon-arrow-updown: "\f109";
-$font-icons-icon-check: "\f100";
-$font-icons-icon-clock: "\f10b";
-$font-icons-icon-close: "\f102";
-$font-icons-icon-close-empty: "\f103";
-$font-icons-icon-close-outline: "\f104";
-$font-icons-icon-menu: "\f10a";
-$font-icons-icon-vital: "\f101";
+$font-vital-icons-icon-arrow-updown: "\f109";
+$font-vital-icons-icon-check: "\f100";
+$font-vital-icons-icon-clock: "\f10b";
+$font-vital-icons-icon-close: "\f102";
+$font-vital-icons-icon-close-empty: "\f103";
+$font-vital-icons-icon-close-outline: "\f104";
+$font-vital-icons-icon-menu: "\f10a";
+$font-vital-icons-icon-vital: "\f101";
