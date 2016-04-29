@@ -6,6 +6,8 @@ force: true
 debug: true
 quiet: false
 
+# depending on the type of application, you'll probably need to change the source paths accordingly
+
 input:
   vectors: source/fonts/input
 
