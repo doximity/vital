@@ -12,8 +12,8 @@ input:
   vectors: icons
 
 output:
-  fonts: source/fonts
-  css: source/stylesheets
+  fonts: assets/fonts
+  css: assets/stylesheets
   preview: previews
 
 templates:
