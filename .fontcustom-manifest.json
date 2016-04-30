@@ -1,13 +1,13 @@
 {
   "checksum": {
-    "previous": "c54e6588d3551c3324807bbaa9e1b7e274c629b155a915dfc70652c3fa89cd05",
-    "current": "c54e6588d3551c3324807bbaa9e1b7e274c629b155a915dfc70652c3fa89cd05"
+    "previous": "10d13299490ecdcd05d2d87101d7d35f70e5fe5681be6c084be778b00d2037ce",
+    "current": "10d13299490ecdcd05d2d87101d7d35f70e5fe5681be6c084be778b00d2037ce"
   },
   "fonts": [
-    "source/fonts/vital-icons.ttf",
-    "source/fonts/vital-icons.svg",
-    "source/fonts/vital-icons.woff",
-    "source/fonts/vital-icons.eot"
+    "assets/fonts/vital-icons.ttf",
+    "assets/fonts/vital-icons.svg",
+    "assets/fonts/vital-icons.woff",
+    "assets/fonts/vital-icons.eot"
   ],
   "glyphs": {
     "icon-arrow-updown": {
@@ -60,8 +60,8 @@
     },
     "no_hash": true,
     "output": {
-      "css": "source/stylesheets",
-      "fonts": "source/fonts",
+      "css": "assets/stylesheets",
+      "fonts": "assets/fonts",
       "preview": "previews"
     },
     "preprocessor_path": "../fonts",
@@ -72,7 +72,7 @@
     ]
   },
   "templates": [
-    "source/stylesheets/_vital-icons.scss",
+    "assets/stylesheets/_vital-icons.scss",
     "previews/vital-icons-preview.html"
   ]
 }
