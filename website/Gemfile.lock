@@ -1,3 +1,9 @@
+PATH
+  remote: ../
+  specs:
+    vital (0.1.0)
+      sass (>= 3.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -142,6 +148,7 @@ DEPENDENCIES
   sass
   slim
   tzinfo-data
+  vital!
   wdm (~> 0.1.0)
 
 BUNDLED WITH
