@@ -42,6 +42,9 @@ TODO: Write about usage with contents from tarball
 // If you are using compass
 //   @import vital/compass
 
+// If you want to change colors, fonts, etc...
+//   @import custom_variables
+
 // Components
 @import vital/variables
 @import vital/icons
