@@ -4,15 +4,15 @@
 
 @font-face
   font-family: "vital-icons"
-  src: url("../fonts/vital-icons.eot")
-  src: url("../fonts/vital-icons.eot?#iefix") format("embedded-opentype"), url("../fonts/vital-icons.woff") format("woff"), url("../fonts/vital-icons.ttf") format("truetype"), url("../fonts/vital-icons.svg#vital-icons") format("svg")
+  src: url(if($vital-sass-asset-helper, vital-font-path("vital-icons.eot"), "../fonts/vital-icons.eot"))
+  src: url(if($vital-sass-asset-helper, vital-font-path("vital-icons.eot?#iefix"), "../fonts/vital-icons.eot?#iefix")) format("embedded-opentype"), url(if($vital-sass-asset-helper, vital-font-path("vital-icons.woff"), "../fonts/vital-icons.woff")) format("woff"), url(if($vital-sass-asset-helper, vital-font-path("vital-icons.ttf"), "../fonts/vital-icons.ttf")) format("truetype"), url(if($vital-sass-asset-helper, vital-font-path("vital-icons.svg#vital-icons"), "../fonts/vital-icons.svg#vital-icons")) format("svg")
   font-weight: normal
   font-style: normal
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
   @font-face
     font-family: "vital-icons"
-    src: url("../fonts/vital-icons.svg#vital-icons") format("svg")
+    src: url(if($vital-sass-asset-helper, vital-font-path("vital-icons.svg#vital-icons"), "../fonts/vital-icons.svg#vital-icons")) format("svg")
 
 [data-icon]:before
   content: attr(data-icon)
