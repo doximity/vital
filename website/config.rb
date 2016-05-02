@@ -32,6 +32,8 @@ configure :development do
   activate :livereload
 end
 
+files.watch :source, path: File.join(root, '../assets')
+
 ###
 # Helpers
 ###
