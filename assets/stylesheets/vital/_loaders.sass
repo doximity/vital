@@ -1,0 +1,82 @@
+@import variables
+
+// Loaders
+
+.load
+  -webkit-animation-duration: 1s
+  -webkit-animation-iteration-count: infinite
+  -webkit-animation-name: loading
+  -webkit-animation-timing-function: linear
+  -moz-animation-duration: 1s
+  -moz-animation-iteration-count: infinite
+  -moz-animation-name: loading
+  -moz-animation-timing-function: linear
+  animation-duration: 1s
+  animation-iteration-count: infinite
+  animation-name: loading
+  animation-timing-function: linear
+  border-radius: $round
+  border: $border-width * 3 solid #DDD
+  border-left-color: #666
+  display: inline-block
+  height: 2em
+  width: 2em
+  &.smallest
+    width: $loader-smallest
+    height: $loader-smallest
+    border-width: $border-width
+  &.small
+    width: $loader-small
+    height: $loader-small
+    border-width: $border-width * 2
+  &.large
+    width: $loader-large
+    height: $loader-large
+    border-width: $border-width * 4
+
+@keyframes loading
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+@-webkit-keyframes loading
+  from
+    -webkit-transform: rotate(0deg)
+  to
+    -webkit-transform: rotate(360deg)
+
+@-moz-keyframes loading
+  from
+    -moz-transform: rotate(0deg)
+  to
+    -moz-transform: rotate(360deg)
+
+// Adjustments for IE 8/9
+
+.ie8, .ie9
+
+  .load
+    border-color: transparent
+    line-height: 1
+    font-size: $loader
+    width: $loader
+    height: $loader
+    display: inline
+    &:after
+      content: $font-vital-icons-icon-clock
+      font-family: $icons
+    &.smallest
+      font-size: $loader-smallest
+      width: $loader-smallest
+      height: $loader-smallest
+      border-width: 0.1em
+    &.small
+      font-size: $loader-small
+      width: $loader-small
+      height: $loader-small
+      border-width: 0.1em
+    &.large
+      font-size: $loader-large
+      width: $loader-large
+      height: $loader-large

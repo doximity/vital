@@ -1,0 +1,134 @@
+@import variables
+
+// Header
+
+.header
+  background: $header
+  height: $header-height
+  transform: $translate
+  .section
+    padding: 0
+    position: relative
+  .logo
+    border: 0
+    color: $red
+    float: left
+    line-height: 1
+    padding: 0.6em 1em
+    max-height: $header-height
+    overflow: hidden
+    &:hover
+      background: none
+      i
+        color: $red-bright
+        transition: $all
+
+nav
+  a
+    display: block
+    padding: 1.3em
+    &:hover
+      background: $header-link-hover
+  ul
+    padding: 0
+    margin: 0
+    li
+      background: $header
+      display: inline
+      float: left
+      position: relative
+      ul
+        left: 0
+        top: 100%
+    ul
+      display: none
+  li:hover > ul
+    display: block
+    position: absolute
+    width: 12.5em
+    z-index: 9000
+    li
+      width: 100%
+  ul ul li:hover > ul
+    left: auto
+    right: -12.5em
+    top: 0
+
+#menu-toggle, #menu-toggle-label
+  cursor: pointer
+  display: none
+  height: $header-height
+  position: absolute
+  right: 0
+  user-select: none
+  width: $header-height
+
+#menu-toggle
+  border-radius: 0
+  border: 0
+  box-shadow: none
+  margin: 0
+  outline: none
+  padding: 0
+  z-index: -1
+  &:hover
+    background: $header-link-hover
+  &:before
+    content: $font-vital-icons-icon-menu
+    font-family: $icons
+    font-size: 2em
+    padding: 0.24em 0.5em
+    position: absolute
+    right: 0
+  &:checked
+    background: $header-link-hover
+    &:before
+      bottom: 0
+      color: $text
+      content: $font-vital-icons-icon-close-empty
+      font-size: 3em
+      left: 0
+      line-height: 0
+      padding: 0.7em 0
+      position: absolute
+      right: 0
+      top: 0
+
+@media screen and (max-width: $phablet)
+
+  .header
+    .logo
+      padding: 0.6em
+
+  #menu-toggle, #menu-toggle-label
+    display: block
+
+  nav
+    a
+      border-top: 1px solid #eee
+      padding: 1em
+    ul
+      li ul
+        display: block
+      li
+        border-right: none
+        display: block
+        float: left
+        width: 100%
+        text-align: center
+        a
+          background: $header-link-hover
+    >
+      ul
+        clear: both
+        display: none
+      input:checked + ul
+        display: block
+    li:hover ul
+      position: relative
+      width: auto
+    ul ul
+      li:hover > ul
+        left: auto
+        right: auto
+        top: auto

@@ -1,6 +1,6 @@
-font_name: icons
+font_name: vital-icons
 css_selector: .{{glyph}}
-preprocessor_path: "fonts/output"
+preprocessor_path: "../fonts"
 no_hash: true
 force: true
 debug: true
@@ -9,11 +9,11 @@ quiet: false
 # depending on the type of application, you'll probably need to change the source paths accordingly
 
 input:
-  vectors: source/fonts/input
+  vectors: icons
 
 output:
-  fonts: source/fonts/output
-  css: source/stylesheets
+  fonts: assets/fonts
+  css: assets/stylesheets
   preview: previews
 
 templates:
