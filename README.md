@@ -6,10 +6,16 @@ A minimally invasive CSS framework for modern web applications.
 - Built with Sass and Slim for readability and maintainability.
 - No ridiculous amounts of classes or nesting. No excessively buried code.
 - Written almost entirely in em values, allowing for easy and consistent scaling.
-- Small, just 31KB (8KB gzipped) total size.
-  - CSS: 22KB (6KB gzipped)
-  - Font Icons: 9KB (2KB per file)
-  - JavaScripts: 0KB (none)
+- Small:
+
+|                | Size  | Gzipped |
+|:---------------|:------|:--------|
+| CSS Framework  | 22 KB | 6 KB    |
+| Icons (.svg)   | 3 KB  | 1 KB    |
+| Icons (.eot)   | 2 KB  |         |
+| Icons (.ttf)   | 2 KB  |         |
+| Icons (.woff)  | 2 KB  |         |
+| Total          | 31 KB |         |
 
 ## Setup / Installation
 
