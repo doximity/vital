@@ -15,6 +15,7 @@ A minimally invasive CSS framework for modern web applications.
 | Icons (.eot)   | 2 KB  |         |
 | Icons (.ttf)   | 2 KB  |         |
 | Icons (.woff)  | 2 KB  |         |
+| Javascripts    | 0     |         |
 | Total          | 31 KB |         |
 
 ## Setup / Installation
