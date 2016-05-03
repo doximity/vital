@@ -4,12 +4,12 @@ A minimally invasive CSS framework for modern web applications.
 
 - Vital is a reverse approach to "everything and the kitchen sink" CSS frameworks.
 - Built with Sass and Slim for readability and maintainability.
-- No ridiculous amounts of classes or nesting. No excessively burried code.
+- No ridiculous amounts of classes or nesting. No excessively buried code.
 - Written almost entirely in em values, allowing for easy and consistent scaling.
 - Small, just 31KB (8KB gzipped) total size.
   - CSS: 22KB (6KB gzipped)
   - Font Icons: 9KB (2KB per file)
-  - Javascripts: 0KB (none)
+  - JavaScripts: 0KB (none)
 
 ## Setup / Installation
 
@@ -55,7 +55,7 @@ Vital works best when manipulated directly. Download or copy the `.sass` files i
 
 ### Packages
 
-A ruby gem and npm package installation options are in the works.
+A Ruby gem and npm package installation options are in the works.
 
 ## Development Installation
 
@@ -63,7 +63,7 @@ Vital is built using a simple static generator: https://middlemanapp.com/
 
 - Clone: `https://github.com/doximity/vital`
 - In your terminal, run `bundle`
-- To start your server, run `middleman` then navigate to `http://localhost:4567`
+- To start your server, run `middleman` then navigate to http://localhost:4567
 
 #### Building the Output
 
@@ -71,7 +71,7 @@ Vital is built using a simple static generator: https://middlemanapp.com/
 
 #### Compiling Font Icons
 
-To compile font icons, you must first install fontforge and the fontcustom gem.
+To compile font icons, you must first install FontForge and the Font Custom gem.
 
 ```bash
 # On Mac
@@ -85,10 +85,10 @@ After installation is complete, run `fontcustom compile`.
 
 You must open `_icons.scss` and change `url` to `font-url`. While changing the `fontcustom.yml` templates flag from `scss` to `scss-rails` automatically does this, it also removes the very useful `$font-icons-` variables.
 
-## Publishing to Github Pages
+## Publishing to GitHub Pages
 
 Publishing to `gh-pages` is done automatically by running `bundle exec rake publish`
 
 ## Reporting Issues and Suggestions
 
-Please submit Github issues for problems with the library. Also, feel free to submit a pull-request with suggested changes.
+Please submit GitHub issues for problems with the library. Also, feel free to submit a pull-request with suggested changes.
