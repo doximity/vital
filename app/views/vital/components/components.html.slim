@@ -1,0 +1,692 @@
+- content_for :assets do
+  = stylesheet_link_tag 'vital-rails'
+  = stylesheet_link_tag 'vital-components'
+
+.row.hero
+  .section.center
+    h1 CSS Components
+
+.row
+  .section
+
+    h1 Grid
+
+    p
+      ' Example usage:
+      code> .col-1-2
+      ' means 1 of 2 columns.
+      code> .col-2-3
+      ' means 2 of 3 columns and so fourth.
+
+    .grid-preview
+
+      .col-1-2 .col-1-2
+      .col-1-2 .col-1-2
+
+      .col-1-3 .col-1-3
+      .col-2-3 .col-2-3
+
+      .col-1-3 .col-1-3
+      .col-1-3 .col-1-3
+      .col-1-3 .col-1-3
+
+      .col-1-4 .col-1-4
+      .col-1-4 .col-1-4
+      .col-1-4 .col-1-4
+      .col-1-4 .col-1-4
+
+      .col-1-4 .col-1-4
+      .col-3-4 .col-3-4
+
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+
+      .clear
+
+    p
+      ' The grid is not padded by default, but if you choose, you can pad the grid evenly on the left and right sides by nesting your grid elements under:
+      code> .padded
+      | padding.
+    p
+      ' If your layouts are heavy on typography you can use the
+      code> .right-padded
+      ' class by nesting your
+      code .col-
+      ' 's under
+      code .right-padded
+      | :
+
+    .grid-preview
+      .padded
+        .col-1-2 .col-1-2
+        .col-1-2 .col-1-2
+      .padded
+        .col-1-3 .col-1-3
+        .col-1-3 .col-1-3
+        .col-1-3 .col-1-3
+      .padded
+        .col-3-4 .col-3-4
+        .col-1-4 .col-1-4
+      .clear
+
+    p
+      ' You can also use
+      code .row
+      ' to automatically clear
+      code .col-
+      ' markup.
+    p
+      ' Alternatively, you can also use
+      code .clear
+      ' at the end of
+      code .col-
+      ' to clear columns.
+
+    p
+      span> Empty grid columns need content within to work properly. In most cases you'll want to hide them on your handheld breakpoint.
+      ' Add
+      code .space
+      ' to your
+      code .col-
+      ' markup if you'd like an empty column to exist. The
+      code .space
+      ' class hides those empty columns automatically within the
+      code> $handheld
+      | media query.
+    .empty-grid-preview.center
+      .col-1-3.space
+        p
+          code .col-1-3.space
+      .col-1-3
+        p
+          code .col-1-3 Some content.
+      .col-1-3.space
+        p
+          code .col-1-3.space
+      .clear
+      .empty-render
+        .col-1-3.space
+        .col-1-3
+          p Some content.
+        .col-1-3.space
+        .clear
+
+    h2 Automatic Grid
+    p Use the automatic grid if you don't need to be specific about your columns and only need equally sized columns. You can create an unlimited amount of columns automatically:
+    .grid-preview
+      .autogrid
+        .col .col
+        .col .col
+      .autogrid
+        .col .col
+        .col .col
+        .col .col
+      .autogrid
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+      .autogrid
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+      .autogrid
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+      .autogrid
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+        .col .col
+
+.row
+  .section
+    hr
+    h1 Navigation Header
+
+    p The navigation bar is fully responsive and can host an unlimited amount of sub-menu items.
+
+    code
+      |
+        .row.header
+          .section
+            nav
+              = link_to 'index.html', class: 'logo' do
+                i.icon-vital.i3x
+              label#menu-toggle-label for='menu-toggle'
+              input#menu-toggle type='checkbox'
+              ul.menu
+                li = link_to 'Link', '#'
+                li
+                  = link_to 'With Menu', '#'
+                  ul
+                    li = link_to 'Menu Item', '#'
+                    li = link_to 'Menu Item', '#'
+
+.row
+  .section
+    hr
+    h1 Typography
+
+    h1 h1 - This is some text
+    h2 h2 - This is some text
+    h3 h3 - This is some text
+    h4 h4 - This is some text
+    h5 h5 - This is some text
+    h6 h6 - This is some text
+    p consecutive paragraph tag
+    p consecutive paragraph tag
+    p
+      ' This is a p with an inlined anchor inside
+      = link_to 'this is the inlined anchor', '#'
+    p
+      span>
+        strong strong
+      span>
+        b b
+      span>
+        span.bold .bold
+    p
+      em em
+    p
+      span span
+    p
+      small small
+    p ol
+    ol
+      li li
+      li li
+      li li
+    p ul
+    ul
+      li li
+      li li
+      li li
+    ol.list
+      li li
+      li li
+      li li
+    p ul
+    ul.list
+      li li
+      li li
+      li li
+    blockquote
+      p This is a blockquote
+    p
+      span> Some blocks of text using
+      code> autogrid
+      span> and
+      code> right-padded
+      | :
+    p.autogrid.right-padded
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    p.autogrid.right-padded
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      span.col Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+.row
+  .section
+    hr
+    h1 Notice
+
+    p The standard notification bar is relative in position:
+
+.row.notice
+  .section
+    | This is a notice. Slot me anywhere.
+    i.icon-close-outline
+
+.row
+  .section
+    hr
+    h1 Loaders
+
+    .col-1-4.center
+      p
+        span.load.large
+        br
+        code .load.large
+    .col-1-4.center
+      p
+        span.load
+        br
+        code .load
+    .col-1-4.center
+      p
+        span.load.small
+        br
+        code .load.small
+    .col-1-4.center
+      p
+        span.load.smallest
+        br
+        code .load.smallest
+    .clear
+
+.row
+  .section
+    hr
+    h1 Buttons
+
+    h2 Size options
+    .autogrid
+      .col
+        p
+          ' Large:
+        p
+          code .btn.large
+        p
+          = link_to 'btn large', '#', class: 'btn large'
+      .col
+        p
+          ' Default:
+        p
+          code .btn
+        p
+          = link_to 'btn', '#', class: 'btn'
+      .col
+        p
+          ' Small:
+        p
+          code .btn.small
+        p
+          = link_to 'btn small', '#', class: 'btn small'
+      .col
+        p
+          ' Tiny:
+        p
+          code .btn.tiny
+        p
+          = link_to 'btn tiny', '#', class: 'btn tiny'
+      .col
+        p
+          ' Full width:
+        p
+          code .btn.full
+        p
+          = link_to 'btn full', '#', class: 'btn full'
+    .clear
+
+    h2 Shape and fill options
+    .col-1-5
+      p Grays
+      p= link_to 'gray-light', '#', class: 'btn small gray-light'
+      p= link_to 'btn', '#', class: 'btn small'
+      p= link_to 'gray-dark', '#', class: 'btn small gray-dark'
+      p= link_to 'black', '#', class: 'btn small black'
+      p Other Colors
+      p= link_to 'red', '#', class: 'btn small red'
+      p= link_to 'orange', '#', class: 'btn small orange'
+      p= link_to 'yellow', '#', class: 'btn small yellow'
+      p= link_to 'green', '#', class: 'btn small green'
+      p= link_to 'blue', '#', class: 'btn small blue'
+      p= link_to 'disabled', '#', class: 'btn small disabled'
+    .col-1-5
+      p.space
+      p= link_to 'round gray-light', '#', class: 'btn small round gray-light'
+      p= link_to 'round', '#', class: 'btn small round'
+      p= link_to 'round gray-dark', '#', class: 'btn small round gray-dark'
+      p= link_to 'round black', '#', class: 'btn small round black'
+      p.space
+      p= link_to 'round red', '#', class: 'btn small round red'
+      p= link_to 'round orange', '#', class: 'btn small round orange'
+      p= link_to 'round yellow', '#', class: 'btn small round yellow'
+      p= link_to 'round green', '#', class: 'btn small round green'
+      p= link_to 'round blue', '#', class: 'btn small round blue'
+      p= link_to 'round disabled', '#', class: 'btn small round disabled'
+    .col-1-5
+      p.space
+      p= link_to 'no-outline gray-light', '#', class: 'btn small no-outline gray-light'
+      p= link_to 'no-outline', '#', class: 'btn small no-outline'
+      p= link_to 'no-outline gray-dark', '#', class: 'btn small no-outline gray-dark'
+      p= link_to 'no-outline black', '#', class: 'btn small no-outline black'
+      p.space
+      p= link_to 'no-outline red', '#', class: 'btn small no-outline red'
+      p= link_to 'no-outline orange', '#', class: 'btn small no-outline orange'
+      p= link_to 'no-outline yellow', '#', class: 'btn small no-outline yellow'
+      p= link_to 'no-outline green', '#', class: 'btn small no-outline green'
+      p= link_to 'no-outline blue', '#', class: 'btn small no-outline blue'
+      p= link_to 'no-outline disabled', '#', class: 'btn small no-outline disabled'
+    .col-1-5
+      p.space
+      p= link_to 'solid gray-light', '#', class: 'btn small solid gray-light'
+      p= link_to 'solid', '#', class: 'btn small solid'
+      p= link_to 'solid gray-dark', '#', class: 'btn small solid gray-dark'
+      p= link_to 'solid black', '#', class: 'btn small solid black'
+      p.space
+      p= link_to 'solid red', '#', class: 'btn small solid red'
+      p= link_to 'solid orange', '#', class: 'btn small solid orange'
+      p= link_to 'solid yellow', '#', class: 'btn small solid yellow'
+      p= link_to 'solid green', '#', class: 'btn small solid green'
+      p= link_to 'solid blue', '#', class: 'btn small solid blue'
+      p= link_to 'solid disabled', '#', class: 'btn small solid disabled'
+    .col-1-5
+      p.space
+      p= link_to 'solid round gray-light', '#', class: 'btn small solid round gray-light'
+      p= link_to 'solid round', '#', class: 'btn small solid round'
+      p= link_to 'solid round gray-dark', '#', class: 'btn small solid round gray-dark'
+      p= link_to 'solid round black', '#', class: 'btn small solid round black'
+      p.space
+      p= link_to 'solid round red', '#', class: 'btn small solid round red'
+      p= link_to 'solid round orange', '#', class: 'btn small solid round orange'
+      p= link_to 'solid round yellow', '#', class: 'btn small solid round yellow'
+      p= link_to 'solid round green', '#', class: 'btn small solid round green'
+      p= link_to 'solid round blue', '#', class: 'btn small solid round blue'
+      p= link_to 'solid round disabled', '#', class: 'btn small solid round disabled'
+    .clear
+
+.row.forms-preview.bg
+  .section
+
+    hr
+    h1 Forms
+    p Cross-platform consistency is important when Vital was created, so we created form elements that will look and feel consistent on most platforms while retaining the ability to gracefully degrade.
+    p
+      span> Form fields that are nested under the
+      code> .full-width-forms
+
+    .full-width-forms
+      .col-1-3
+        label
+          a.btn href='#' Anchor
+      .col-1-3
+        label
+          button.btn Button Tag
+      .col-1-3
+        label
+          input.btn type='submit' value='Submit Tag'
+      .clear
+      .col-1-4
+        label
+          input type='email' placeholder='email'
+      .col-1-4
+        label
+          input type='datetime' placeholder='date/time'
+      .col-1-4
+        label
+          input type='number' placeholder='number'
+      .col-1-4
+        label
+          input type='password' placeholder='password'
+      .clear
+      .col-1-4
+        label
+          input name='name' type='text' placeholder='text'
+      .col-1-4
+        label
+          input type='search' placeholder='search'
+      .col-1-4
+        label
+          input type='tel' placeholder='1-808-000-0000'
+      .col-1-4
+        label
+          select name='name'
+            option value=('select option one') select option
+            option value=('select option two') select option
+            option value=('select option three') select option
+            option value=('select option four') select option
+      .clear
+      .col-1-4
+        label
+          select
+            optgroup label=('group 1')
+              option select option
+              option select option
+              option select option
+      .col-1-4
+        label
+          input name='name' type='url' placeholder='url'
+      .col-1-4
+        label
+          input type='file'
+      .col-1-4
+        label
+          input name='name' type='range'
+      .clear
+
+      .col-1-5
+        label
+          input name='name' type='date' placeholder='12-31-1999'
+      .col-1-5
+        label
+          input name='name' type='datetime-local' placeholder='local date/time'
+      .col-1-5
+        label
+          input name='name' type='time' placeholder='time'
+      .col-1-5
+        label
+          input name='name' type='week' placeholder='week'
+      .col-1-5
+        label
+          input name='name' type='month' placeholder='month'
+      .clear
+      .col-1-2
+        label
+          textarea name='name' placeholder='textarea' rows='4'
+      .col-1-2.space
+      .clear
+
+      p We developed custom radios and checkboxes because standard checkboxes didn't scale well. As a side benefit, you can customize the look and feel to be more in line with your application's branding.
+
+      .col-1-2
+        .autogrid
+          .col
+            label
+              input name='name' type='radio' checked='true'
+              | Radio
+          .col
+            label
+              input name='name' type='radio'
+              | Radio
+          .col
+            label
+              input name='name' type='radio' disabled='true'
+              span.disabled Radio
+
+      .col-1-2
+        .autogrid
+          .col
+            label
+              input name='name' type='checkbox' checked='true'
+              | Checkbox
+          .col
+            label
+              input name='name' type='checkbox'
+              | Checkbox
+          .col
+            label
+              input name='name' type='checkbox' disabled='true'
+              span.disabled Checkbox
+      .clear
+
+.row
+  .section
+    hr
+    h1 Tabs
+
+    p Traditional
+    .autogrid.tabs-block
+      .col.here
+        = link_to 'Tab', '#'
+      .col
+        = link_to 'Tab', '#'
+      .col
+        = link_to 'Tab', '#'
+      .col
+        = link_to 'Tab', '#'
+    p Square
+    ul.tabs
+      li.here
+        = link_to 'Tab', '#'
+      li
+        = link_to 'Tab', '#'
+      li
+        = link_to 'Tab', '#'
+      li
+        = link_to 'Tab', '#'
+    p Round
+    ul.tabs.round
+      li.here
+        = link_to 'Tab', '#'
+      li
+        = link_to 'Tab', '#'
+      li
+        = link_to 'Tab', '#'
+      li
+        = link_to 'Tab', '#'
+
+.row
+  .section
+
+    hr
+    h1 Tables
+
+
+    table
+      thead
+        tr
+          th Header
+          th Header
+          th Header
+      tbody
+        tr
+          td 1
+          td 2
+          td 3
+        tr
+          td 4
+          td 5
+          td 6
+        tr
+          td 7
+          td 8
+          td 9
+      tfoot
+        tr
+          td colspan='3' Footer
+
+.row
+  .section
+
+    hr
+    h1 Pagination
+
+
+    .pagination
+      a.previous_page href='#' ← Previous
+      a href='#' 1
+      em.current 2
+      a href='#' 3
+      a href='#' 4
+      a href='#' 5
+      a href='#' 6
+      a href='#' 7
+      a href='#' 8
+      span.gap ...
+      a href='#' 9
+      a.next_page href='#' Next →
+
+.row
+  .section
+    hr
+    h1 Font Icons
+
+    h2 Example usage:
+    p
+      code> i.icon-vital
+      ' renders:
+      i.icon-vital
+    h2 Size options
+    .autogrid
+      .col
+        p
+          code .i5x
+          br
+          i.i5x.icon-vital
+      .col
+        p
+          code .i4x
+          br
+          i.i4x.icon-vital
+      .col
+        p
+          code .i3x
+          br
+          i.i3x.icon-vital
+      .col
+        p
+          code .i2x
+          br
+          i.i2x.icon-vital
+
+.row
+  .section
+
+    hr
+    h1 Vital Iconograpgy
+
+    p
+      ' Vital comes with a small set of font icons built with
+      = link_to 'Font Custom', 'https://github.com/FontCustom/fontcustom', target: '_blank'
+      ' . Some components such as the select box, checkboxes and the alert bar are reliant on font iconograpgy.
+
+    .fonts-icons-preview
+      p
+        i.icon-arrow-updown
+        | icon-arrow-updown
+      p
+        i.icon-check
+        | icon-check
+      p
+        i.icon-clock
+        | icon-clock
+      p
+        i.icon-close
+        | icon-close
+      p
+        i.icon-close-empty
+        | icon-close-empty
+      p
+        i.icon-close-outline
+        | icon-close-outline
+      p
+        i.icon-menu
+        | icon-menu
+      p
+        i.icon-vital
+        | icon-vital
+
+.row
+  .section
+
+    hr
+    h1 Syntax Highlighting
+
+    p
+      =' link_to 'Rouge', 'https://github.com/jneen/rouge', target: '_blank'
+      ' syntax highlighting support is included with
+      code _syntax.sass

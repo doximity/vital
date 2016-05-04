@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    meta[content='IE=edge' http-equiv='X-UA-Compatible']/
+    meta[charset='UTF-8']/
+    meta[content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport']/
+    title Vital Components
+    /[if IE 9]
+      html class='ie9'
+    /[if IE 8]
+      html class='ie8'
+    = yield :assets
+
+  body class='components components_index'
+    .row.header
+      .section
+        nav
+          = link_to '#', class: 'logo' do
+            i.icon-vital.i3x
+          label#menu-toggle-label for="menu-toggle"
+          input#menu-toggle type="checkbox"
+          ul.menu
+            li = link_to "Home", '#'
+            li = link_to "About", '#'
+    .contents
+      = yield
+    .row.footer.center
+      .section
+        i.icon-vital.i3x
+        hr.small
+        ul
+          li = link_to "Home", "#"
+          li.line │
+          li = link_to "Contact", "#"
+          li.line │
+          li = link_to "About", "#"
+        hr.small
+        p
+          ' &copy;
+          = Time.now.strftime('%Y')
