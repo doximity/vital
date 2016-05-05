@@ -5,10 +5,15 @@ namespace :vital do
     sh 'rm -rf assets/stylesheets/_icons.*'
     sh 'rm -rf assets/fonts'
     sh 'fontcustom compile'
+    # Unquote escape sequences, e.g. content: "#{$sep}\00a0" to content: #{$sep}\00a0
+    # Works around Sass issue: https://github.com/sass/sass/issues/1395
+    sh 'sed -i.bkp \'s|"\(\\\\f[0-9a-z]*\)"|\1|g\' assets/stylesheets/_vital-icons.scss'
     sh 'sass-convert assets/stylesheets/_vital-icons.scss assets/stylesheets/vital/_icons.sass'
+    # Add back the quote
+    sh 'sed -i.bkp \'s|\(\\\\f[0-9a-z]*\)|"\1"|g\' assets/stylesheets/vital/_icons.sass'
     sh 'sed -i.bkp \'s|url("../fonts/\([^"]*\)")|url(if($vital-sass-asset-helper, vital-font-path("\1"), "../fonts/\1"))|g\' assets/stylesheets/vital/_icons.sass'
-    sh 'rm assets/stylesheets/_vital-icons.scss'
-    sh 'rm assets/stylesheets/vital/_icons.sass.bkp'
+    sh 'rm -f assets/stylesheets/{,**/}*.bkp'
+    sh 'rm -f assets/stylesheets/{,**/}*.scss'
   end
 
   task :prepare_package do
