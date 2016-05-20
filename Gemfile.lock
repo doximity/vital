@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    vital (0.1.0)
+    vital (1.1.0)
       sass (>= 3.4)
 
 GEM
@@ -24,7 +24,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
-    sass (3.4.21)
+    sass (3.4.22)
     thor (0.19.1)
     timers (4.0.4)
       hitimes
@@ -39,4 +39,4 @@ DEPENDENCIES
   vital!
 
 BUNDLED WITH
-   1.11.2
+   1.12.4

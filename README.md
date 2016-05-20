@@ -35,17 +35,20 @@ TODO: Write about usage with contents from tarball
 
 ```sass
 // Vendor
+
 @import vital/normalize
 
 // If you are using Rails or another framework that leverages sprockets
-//   @import vital/sprockets
+// @import vital/sprockets
+
 // If you are using compass
-//   @import vital/compass
+// @import vital/compass
 
 // If you want to change colors, fonts, etc...
-//   @import custom_variables
+// @import my_custom_variables
 
 // Components
+
 @import vital/variables
 @import vital/icons
 @import vital/grid
@@ -65,10 +68,10 @@ TODO: Write about usage with contents from tarball
 @import vital/helpers
 
 // Customizations
-//
+
 // Styles that are very unique to specific pages or intended not to be re-used
 // should be added here or on a custom partial and imported.
-//   @import custom
+// @import custom
 ```
 
 ## Development
