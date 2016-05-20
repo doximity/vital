@@ -23,36 +23,36 @@
         color: $red-bright
         transition: $all
 
-nav
-  a
-    display: block
-    padding: 1.3em
-    &:hover
-      background: $header-link-hover
-  ul
-    padding: 0
-    margin: 0
-    li
-      background: $header
-      display: inline
-      float: left
-      position: relative
-      ul
-        left: 0
-        top: 100%
+  nav
+    a
+      display: block
+      padding: 1.3em
+      &:hover
+        background: $header-link-hover
     ul
-      display: none
-  li:hover > ul
-    display: block
-    position: absolute
-    width: 12.5em
-    z-index: 9000
-    li
-      width: 100%
-  ul ul li:hover > ul
-    left: auto
-    right: -12.5em
-    top: 0
+      padding: 0
+      margin: 0
+      li
+        background: $header
+        display: inline
+        float: left
+        position: relative
+        ul
+          left: 0
+          top: 100%
+      ul
+        display: none
+    li:hover > ul
+      display: block
+      position: absolute
+      width: 12.5em
+      z-index: 9000
+      li
+        width: 100%
+    ul ul li:hover > ul
+      left: auto
+      right: -12.5em
+      top: 0
 
 #menu-toggle, #menu-toggle-label
   cursor: pointer
@@ -100,35 +100,35 @@ nav
     .logo
       padding: 0.6em
 
+    nav
+      a
+        border-top: 1px solid #eee
+        padding: 1em
+      ul
+        li ul
+          display: block
+        li
+          border-right: none
+          display: block
+          float: left
+          width: 100%
+          text-align: center
+          a
+            background: $header-link-hover
+      >
+        ul
+          clear: both
+          display: none
+        input:checked + ul
+          display: block
+      li:hover ul
+        position: relative
+        width: auto
+      ul ul
+        li:hover > ul
+          left: auto
+          right: auto
+          top: auto
+
   #menu-toggle, #menu-toggle-label
     display: block
-
-  nav
-    a
-      border-top: 1px solid #eee
-      padding: 1em
-    ul
-      li ul
-        display: block
-      li
-        border-right: none
-        display: block
-        float: left
-        width: 100%
-        text-align: center
-        a
-          background: $header-link-hover
-    >
-      ul
-        clear: both
-        display: none
-      input:checked + ul
-        display: block
-    li:hover ul
-      position: relative
-      width: auto
-    ul ul
-      li:hover > ul
-        left: auto
-        right: auto
-        top: auto
