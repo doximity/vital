@@ -21,9 +21,45 @@ breaking changes.
 
 ### Rails
 
+Add `vital` to your Gemfile:
+
+```ruby
+gem 'vital'
 ```
-TODO: Write about usage with contents from tarball
+
+`bundle install` and restart your server to make the files available through
+the pipeline.
+
+Import Vital styles in `app/assets/stylesheets/application.sass` or equivalent:
+
+```sass
+// Custom vital variables must be set or import before vital itself.
+@import "vital/sprockets"
+@import "vital/all"
 ```
+
+Or import each [`sass` partial](assets/stylesheets/vital) individually into your
+`sass` stylesheet as described on the [file structure](#file-structure) section
+below.
+
+For a live documentation of your CSS components, add the following to your
+`config/routes.rb`:
+
+```ruby
+Rails.application.routes.draw do
+  mount Vital::Engine, at: "/components"
+end
+```
+
+And add [slim](https://github.com/slim-template/slim) to your project.
+
+If you need to customize that page, copy the
+[default slim template](app/views/vital_components/index.html.slim) to your project's
+`app/views/vital_components/index.html.slim` and the
+[components sass stylesheet](assets/stylesheets/vital-components.css.sass) to
+`app/assets/stylesheets/vital-components.css.sass`.
+
+Custom generators
 
 ### From sources
 
@@ -86,9 +122,10 @@ To release a new version, update the version number in `version.rb`, and then
 run `bundle exec rake release`, which will create a git tag for the version,
 push git commits and tags, and push the `.gem` file to
 [rubygems.org](https://rubygems.org). After a gem release, you should also
-build the tarball with framework sources that can be prepared with
-`bundle exec rake vital:prepare_package` and uploaded to the corresponding
-[GitHub tagged release](https://github.com/doximity/vital/releases).
+release the tarball with framework sources with `bundle exec rake gh_release`
+so that it gets uploaded to the
+[corresponding GitHub release](https://github.com/doximity/vital/releases)
+and to ensure that our releases have a changelog in place.
 
 ### Documentation
 
