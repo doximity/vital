@@ -85,12 +85,9 @@ To compile font icons, you must first install FontForge and the Font Custom gem.
 # Requires Ruby 1.9.2+, FontForge with Python scripting
 brew install fontforge --with-python
 brew install eot-utils
-gem install fontcustom
 ```
 
-After installation is complete, run `fontcustom compile`.
-
-You must open `_icons.scss` and change `url` to `font-url`. While changing the `fontcustom.yml` templates flag from `scss` to `scss-rails` automatically does this, it also removes the very useful `$font-icons-` variables.
+After installation is complete, run `bundle exec vital:compile_fonts`.
 
 ## Publishing to GitHub Pages
 
