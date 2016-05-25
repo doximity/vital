@@ -35,6 +35,9 @@ Vital works best when manipulated directly. Download or copy the `.sass` files i
 #### File Structure
 
 ```sass
+// If you are using rails
+// @import sprockets
+
 // Vendor
 @import normalize
 
