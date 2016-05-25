@@ -11,6 +11,7 @@ namespace :vital do
     sh 'sass-convert source/stylesheets/_icons.scss source/stylesheets/_icons.sass'
     # Add back the quote
     sh 'sed -i.bkp \'s|\(\\\\f[0-9a-z]*\)|"\1"|g\' source/stylesheets/_icons.sass'
+    sh 'sed -i.bkp \'s|url("../fonts/\([^"]*\)")|url(if($vital-sass-asset-helper, vital-font-path("\1"), "../fonts/\1"))|g\' source/stylesheets/_icons.sass'
     sh 'rm -f source/stylesheets/{,**/}*.bkp'
     sh 'rm -f source/stylesheets/{,**/}*.scss'
   end
