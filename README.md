@@ -90,7 +90,7 @@ brew install fontforge --with-python
 brew install eot-utils
 ```
 
-After installation is complete, run `bundle exec vital:compile_fonts`.
+After installation is complete, run `bundle exec rake vital:compile_fonts`.
 
 ## Publishing to GitHub Pages
 
