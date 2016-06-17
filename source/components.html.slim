@@ -47,6 +47,9 @@ title: Vital | Components
     p Your typical application SASS should look like this:
     = code('sass') do
       |
+        // If you are using rails
+        // @import sprockets
+
         // Vendor
         @import normalize
 
@@ -777,36 +780,19 @@ title: Vital | Components
         # Requires Ruby 1.9.2+, FontForge with Python scripting
         brew install fontforge --with-python
         brew install eot-utils
-        gem install fontcustom
 
     p
       ' Place your
-      code .svg
-      ' files into your input path, such as:
-      code> source/fonts/input.
-      ' See
-      code> fontcustom.yml
-      | to customize or set your own paths.
+      code> .svg
+      ' files into your input path. Vital's input path is:
+      code> icons
 
     p
       ' After installation is complete, run
-      code fontcustom compile
-    p
-      ' You will need to open
-      code _icons.scss
-      ' and change
-      code url
-      ' to
-      code font-url
-      ' . While changing the
-      code fontcustom.yml
-      ' templates flag from
-      code scss
-      ' to
-      code scss-rails
-      ' automatically does this, it also removes the very useful
-      code $font-icons-
-      | variables.
+      code> `rake vital:compile_fonts`
+      ' See
+      code> fontcustom.yml
+      | to customize or set your own paths.
 
     p.gray
       i Please note that some icons (such as those with social names) are blocked by ad-blockers.
@@ -818,6 +804,6 @@ title: Vital | Components
     h1 Syntax Highlighting
 
     p
-      =' link_to 'Rouge', 'https://github.com/jneen/rouge', target: '_blank'
+      => link_to 'Rouge', 'https://github.com/jneen/rouge', target: '_blank'
       ' syntax highlighting support is included with
       code _syntax.sass

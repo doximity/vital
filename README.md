@@ -24,7 +24,7 @@ A minimally invasive CSS framework for modern web applications.
 
 Import into stylesheet or as a stylesheet link tag:
 
-`https://cdn.rawgit.com/doximity/vital/master/releases/v1.0.1/stylesheets/vital.min.css`
+`https://cdn.rawgit.com/doximity/vital/master/releases/v1.1.0/stylesheets/vital.min.css`
 
 ### Recommended (Source)
 
@@ -35,6 +35,9 @@ Vital works best when manipulated directly. Download or copy the `.sass` files i
 #### File Structure
 
 ```sass
+// If you are using rails
+// @import sprockets
+
 // Vendor
 @import normalize
 
@@ -85,12 +88,9 @@ To compile font icons, you must first install FontForge and the Font Custom gem.
 # Requires Ruby 1.9.2+, FontForge with Python scripting
 brew install fontforge --with-python
 brew install eot-utils
-gem install fontcustom
 ```
 
-After installation is complete, run `fontcustom compile`.
-
-You must open `_icons.scss` and change `url` to `font-url`. While changing the `fontcustom.yml` templates flag from `scss` to `scss-rails` automatically does this, it also removes the very useful `$font-icons-` variables.
+After installation is complete, run `rake vital:compile_fonts`.
 
 ## Publishing to GitHub Pages
 

@@ -1,0 +1,80 @@
+//
+// Icon Font: icons
+//
+
+// https://github.com/sass/sass/issues/659#issuecomment-64819075
+@function char($character-code)
+  @if function-exists("selector-append")
+    @return unquote('"\\#{$character-code}"')
+
+  @return str-slice("x", 1, 1) + $character-code
+
+@font-face
+  font-family: "icons"
+  src: url(if($vital-sass-asset-helper, vital-font-path("icons.eot"), "../fonts/icons.eot"))
+  src: url(if($vital-sass-asset-helper, vital-font-path("icons.eot?#iefix"), "../fonts/icons.eot?#iefix")) format("embedded-opentype"), url(if($vital-sass-asset-helper, vital-font-path("icons.woff"), "../fonts/icons.woff")) format("woff"), url(if($vital-sass-asset-helper, vital-font-path("icons.ttf"), "../fonts/icons.ttf")) format("truetype"), url(if($vital-sass-asset-helper, vital-font-path("icons.svg#icons"), "../fonts/icons.svg#icons")) format("svg")
+  font-weight: normal
+  font-style: normal
+
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+  @font-face
+    font-family: "icons"
+    src: url(if($vital-sass-asset-helper, vital-font-path("icons.svg#icons"), "../fonts/icons.svg#icons")) format("svg")
+
+[data-icon]:before
+  content: attr(data-icon)
+
+[data-icon]:before,
+.icon-arrow-updown:before,
+.icon-check:before,
+.icon-clock:before,
+.icon-close:before,
+.icon-close-empty:before,
+.icon-close-outline:before,
+.icon-menu:before,
+.icon-vital:before
+  display: inline-block
+  font-family: "icons"
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  line-height: 1
+  text-decoration: inherit
+  text-rendering: optimizeLegibility
+  text-transform: none
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+.icon-arrow-updown:before
+  content: char("f100")
+
+.icon-check:before
+  content: char("f101")
+
+.icon-clock:before
+  content: char("f102")
+
+.icon-close:before
+  content: char("f103")
+
+.icon-close-empty:before
+  content: char("f104")
+
+.icon-close-outline:before
+  content: char("f105")
+
+.icon-menu:before
+  content: char("f106")
+
+.icon-vital:before
+  content: char("f107")
+
+$font-icons-icon-arrow-updown: char("f100")
+$font-icons-icon-check: char("f101")
+$font-icons-icon-clock: char("f102")
+$font-icons-icon-close: char("f103")
+$font-icons-icon-close-empty: char("f104")
+$font-icons-icon-close-outline: char("f105")
+$font-icons-icon-menu: char("f106")
+$font-icons-icon-vital: char("f107")

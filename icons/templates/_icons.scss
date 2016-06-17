@@ -1,0 +1,25 @@
+//
+// Icon Font: <%= font_name %>
+//
+
+// https://github.com/sass/sass/issues/659#issuecomment-64819075
+@function char($character-code) {
+  @if function-exists("selector-append") {
+    @return unquote("\"\\#{$character-code}\"");
+  }
+
+  @return str-slice("\x", 1, 1) + $character-code;
+}
+
+<%= font_face(path: @font_path_alt) %>
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+<%= glyph_selectors %> {
+<%= glyph_properties %>
+}
+
+<%= glyphs %>
+<% @glyphs.each do |name, value| %>
+$font-<%= font_name.gsub(/[^\w\d_]/, '-') %>-<%= name.to_s %>: "\<%= value[:codepoint].to_s(16) %>";<% end %>

@@ -9,7 +9,7 @@ gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Middleman Gems
-gem 'middleman', '>= 4.0.0'
+gem 'middleman'
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-syntax'
@@ -17,3 +17,4 @@ gem 'middleman-gh-pages'
 gem 'slim'
 gem 'sass'
 gem 'coffee-script'
+gem 'fontcustom'
