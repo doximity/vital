@@ -2,6 +2,13 @@
 // Icon Font: icons
 //
 
+// https://github.com/sass/sass/issues/659#issuecomment-64819075
+@function char($character-code)
+  @if function-exists("selector-append")
+    @return unquote('"\\#{$character-code}"')
+
+  @return str-slice("x", 1, 1) + $character-code
+
 @font-face
   font-family: "icons"
   src: url(if($vital-sass-asset-helper, vital-font-path("icons.eot"), "../fonts/icons.eot"))
@@ -40,34 +47,34 @@
   font-smoothing: antialiased
 
 .icon-arrow-updown:before
-  content: "\f100"
+  content: char("f109")
 
 .icon-check:before
-  content: "\f101"
+  content: char("f100")
 
 .icon-clock:before
-  content: "\f102"
+  content: char("f10b")
 
 .icon-close:before
-  content: "\f103"
+  content: char("f102")
 
 .icon-close-empty:before
-  content: "\f104"
+  content: char("f103")
 
 .icon-close-outline:before
-  content: "\f105"
+  content: char("f104")
 
 .icon-menu:before
-  content: "\f106"
+  content: char("f10a")
 
 .icon-vital:before
-  content: "\f107"
+  content: char("f101")
 
-$font-icons-icon-arrow-updown: "\f100"
-$font-icons-icon-check: "\f101"
-$font-icons-icon-clock: "\f102"
-$font-icons-icon-close: "\f103"
-$font-icons-icon-close-empty: "\f104"
-$font-icons-icon-close-outline: "\f105"
-$font-icons-icon-menu: "\f106"
-$font-icons-icon-vital: "\f107"
+$font-icons-icon-arrow-updown: char("f109")
+$font-icons-icon-check: char("f100")
+$font-icons-icon-clock: char("f10b")
+$font-icons-icon-close: char("f102")
+$font-icons-icon-close-empty: char("f103")
+$font-icons-icon-close-outline: char("f104")
+$font-icons-icon-menu: char("f10a")
+$font-icons-icon-vital: char("f101")
