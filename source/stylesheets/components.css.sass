@@ -4,6 +4,56 @@
 
 // Although this is for demo purposes, we recommend you keep the components page within your application so that you can easily test global changes with ease.
 
+// Make syntax look cool
+.highlight
+  code
+    -webkit-filter: contrast(0.7) hue-rotate(40deg) invert(1)
+
+// Syntax toggler
+
+.tabs
+  float: none
+  list-style: none
+  margin: 0
+  padding: 0
+  position: relative
+  label
+    background: #CCC
+    background: rgba(0,0,0,0.4)
+    color: #aaa
+    cursor: pointer
+    display: inline-block
+    float: right
+    margin-left: 1px
+    padding: 0.6em 1em
+    text-transform: uppercase
+    font-size: 0.8em
+    &:hover
+      color: #fff
+      background: rgba(0,0,0,1)
+  input[type=radio]
+    display: none
+  .highlight
+    margin: 0
+.tab-labels
+  position: absolute
+  right: 0
+  z-index: 2
+  &:after
+    content: ''
+    display: table
+    clear: both
+.tab-content
+  display: none
+  width: 100%
+[id^=tab]:checked ~
+  div[id^=tab-content]
+    display: block
+  [id^=label]
+    color: #FFF
+
+// Grid
+
 .grid-preview
   margin: 2em 0
   [class*='col-'], .autogrid .col
@@ -20,6 +70,8 @@
   margin: 1em 0
   padding: 1em 1em 0 1em
   background: $gray-lightest
+
+// Font icons
 
 .fonts-icons-preview
   p
@@ -41,6 +93,8 @@
       background: #eee
       border-radius: 2px
       transition: 0.1s linear background
+
+// Navigation
 
 .header-preview
   .header, nav ul li

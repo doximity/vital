@@ -16,32 +16,41 @@ title: Vital | Components
     h2 Application layout
     p Your typical application layout HTML would look something like this:
 
-    = code('slim') do
-      |
-        doctype html
-        html
-          head
-            meta[content='IE=edge' http-equiv='X-UA-Compatible']/
-            meta[charset='UTF-8']/
-            meta[content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport']/
-            title = current_page.data.title || 'Vital'
-            /[if IE 9]
-              html class='ie9'
-            /[if IE 8]
-              html class='ie8'
-            = favicon_tag 'images/favicon.ico'
-            = favicon_tag 'apple-touch-icon-60x60.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '60x60'
-            = favicon_tag 'apple-touch-icon-76x76.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '76x76'
-            = favicon_tag 'apple-touch-icon-120x120.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '120x120'
-            = favicon_tag 'apple-touch-icon-152x152.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '152x152'
-            = stylesheet_link_tag :vital
-            = yield_content :assets
+    .tabs
+      .tab-labels
+        label#label2 for="tab2" HTML
+        label#label1 for="tab1" SLIM
+      .tab-container
+        input#tab1 checked="checked" name="tabs" type="radio"
+        #tab-content1.tab-content
+          = code('slim') do
+            |
+              doctype html
+              html
+                head
+                  meta[content='IE=edge' http-equiv='X-UA-Compatible']/
+                  meta[charset='UTF-8']/
+                  meta[content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport']/
+                  title Vital
+                  /[if IE 9]
+                    html class='ie9'
+                  /[if IE 8]
+                    html class='ie8'
+                  = favicon_tag 'images/favicon.ico'
+                  = stylesheet_link_tag :vital
 
-          body class='#{page_classes}'
-            = partial 'layouts/header'
-            .contents
-              = yield
-            = partial 'layouts/footer'
+                body
+                  = partial 'layouts/header'
+                  .contents
+                    = yield
+                  = partial 'layouts/footer'
+
+      .tab-container
+        input#tab2 name="tabs" type="radio"
+        #tab-content2.tab-content
+          = code('html') do
+            |
+              <classic html content> </classic html content>
 
     h2 File Structure
     p Your typical application SASS should look like this:
