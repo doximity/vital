@@ -7,50 +7,33 @@
 // Make syntax look cool
 .highlight
   code
+    padding: 1.2em
     -webkit-filter: contrast(0.7) hue-rotate(40deg) invert(1)
 
 // Syntax toggler
-
-.tabs
-  float: none
-  list-style: none
-  margin: 0
-  padding: 0
+.code-toggler
   position: relative
-  label
-    background: #CCC
-    background: rgba(0,0,0,0.4)
-    color: #aaa
-    cursor: pointer
-    display: inline-block
-    float: right
-    margin-left: 1px
-    padding: 0.6em 1em
-    text-transform: uppercase
-    font-size: 0.8em
-    &:hover
-      color: #fff
-      background: rgba(0,0,0,1)
-  input[type=radio]
-    display: none
-  .highlight
+  *
     margin: 0
-.tab-labels
-  position: absolute
-  right: 0
-  z-index: 2
-  &:after
-    content: ''
-    display: table
-    clear: both
-.tab-content
-  display: none
-  width: 100%
-[id^=tab]:checked ~
-  div[id^=tab-content]
-    display: block
-  [id^=label]
-    color: #FFF
+    padding: 0
+  .toggle-tabs
+    border-radius: $radius
+    overflow: hidden
+    position: absolute
+    right: 0
+    z-index: 1
+  .toggle
+    background: #0D0D0D
+    background: rgba(0, 0, 0, 0.5)
+    color: #bbb
+    cursor: pointer
+    float: right
+    font-size: 0.8em
+    margin: 0 0 0 1px
+    padding: 0.3em 0.75em
+    &:hover, &.here
+      background: #000
+      color: #fff
 
 // Grid
 
@@ -65,11 +48,6 @@
     border: $border-width solid #ddd
     font-family: $code
     overflow: hidden
-
-.empty-grid-preview
-  margin: 1em 0
-  padding: 1em 1em 0 1em
-  background: $gray-lightest
 
 // Font icons
 
@@ -103,8 +81,7 @@
 // This block highlights the header links, demo only.
 
 .components .header .menu li:nth-child(1),
-.get-started .header .menu li:nth-child(2),
-.examples .header .menu li:nth-child(3)
+.get-started .header .menu li:nth-child(2)
   background: $header-link-hover
 
 @media screen and (max-width: $phablet)

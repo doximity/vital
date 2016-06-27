@@ -14,94 +14,304 @@ title: Vital | Components
     h1 Basic Structure
 
     h2 Application layout
-    p Your typical application layout HTML would look something like this:
+    p Your application layout HTML should contain the following:
 
-    .tabs
-      .tab-labels
-        label#label2 for="tab2" HTML
-        label#label1 for="tab1" SLIM
-      .tab-container
-        input#tab1 checked="checked" name="tabs" type="radio"
-        #tab-content1.tab-content
-          = code('slim') do
-            |
-              doctype html
-              html
-                head
-                  meta[content='IE=edge' http-equiv='X-UA-Compatible']/
-                  meta[charset='UTF-8']/
-                  meta[content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport']/
-                  title Vital
-                  /[if IE 9]
-                    html class='ie9'
-                  /[if IE 8]
-                    html class='ie8'
-                  = favicon_tag 'images/favicon.ico'
-                  = stylesheet_link_tag :vital
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            doctype html
+            html
+              head
+                meta[content='IE=edge' http-equiv='X-UA-Compatible']
+                meta[charset='UTF-8']
+                meta[content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no', name='viewport']
+                link[href='application.css', rel='stylesheet']
+              body
+                / Render header
+                .row.header Header markup ...
 
-                body
-                  = partial 'layouts/header'
-                  .contents
-                    = yield
-                  = partial 'layouts/footer'
+                / Render page contents
+                .contents
+                  .row
+                    .secton Your page content ...
 
-      .tab-container
-        input#tab2 name="tabs" type="radio"
-        #tab-content2.tab-content
-          = code('html') do
-            |
-              <classic html content> </classic html content>
+                / Render footer
+                .row.footer Footer markup ...
 
-    h2 File Structure
-    p Your typical application SASS should look like this:
-    = code('sass') do
-      |
-        // If you are using rails
-        // @import sprockets
+      .hide
+        = code('html') do
+          |
+            <!DOCTYPE html>
+            <html>
+              <head>
+                <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+                <meta charset='UTF-8'>
+                <meta content='width=device-width initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0 user-scalable=no' name='viewport'>
+                <link href='application.css' rel='stylesheet' media='all'>
+              </head>
 
-        // Vendor
-        @import normalize
+              <body>
 
-        // Components
-        @import variables
-        @import icons
-        @import grid
-        @import base
-        @import buttons
-        @import footer
-        @import forms
-        @import header
-        @import heroes
-        @import loaders
-        @import notice
-        @import pagination
-        @import tables
-        @import tabs
-        @import helpers
+                <!-- Render header -->
+                <div class="row header">
+                   Header markup ...
+                </div>
 
-        // Customizations
-        @import custom
+                <!-- Render page contents -->
+                <div class="contents">
+                  <div class="row">
+                    <div class="section">
+                      Your page content ...
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Render footer -->
+                <div class="row footer">
+                   Footer markup ...
+                </div>
+
+              </body>
+            </html>
+
+    h2 Header
+    p The navigation bar is fully responsive and can host an unlimited amount of sub-menu items.
+
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .row.header
+              .section
+                nav
+                  a.logo href='index.html'
+                    i.icon-vital.i3x
+                  label#menu-toggle-label for='menu-toggle'
+                  input#menu-toggle type='checkbox'
+                  ul.menu
+                    li
+                      a href='#' Link
+                    li
+                      a href='#' Link with Menu
+                      ul
+                        li
+                          a href='#' Menu Item
+                        li
+                          a href='#' Menu Item
+      .hide
+        = code('html') do
+          |
+            <div class="row header">
+              <div class="section">
+                <nav>
+                  <a href="/" class="logo">
+                    <i class="icon-vital i3x"></i>
+                  </a>
+                  <label for="menu-toggle" id="menu-toggle-label"></label>
+                  <input id="menu-toggle" type="checkbox">
+                  <ul class="menu">
+                    <li>
+                      <a href="#">Link</a>
+                    </li>
+                    <li>
+                      <a href="#">Link with Menu</a>
+                      <ul>
+                        <li>
+                          <a href="#">Menu Item</a>
+                        </li>
+                        <li>
+                          <a href="#">Menu Item</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+
+    h2 Footer
+
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .row.footer.center
+              .section
+                i.icon-vital.i3x
+                hr.small
+                ul
+                  li
+                    a href='#' Link
+                  li.line │
+                  li
+                    a href='#' Link
+                  li.line │
+                  li
+                    a href='#' Link
+                hr.small
+                p
+                  ' &copy;
+                  | year
+
+      .hide
+        = code('html') do
+          |
+            <div class="row footer center">
+              <div class="section">
+                <i class="icon-vital i3x"></i>
+                <hr class="small">
+                <ul>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li class="line">│</li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                  <li class="line">│</li>
+                  <li>
+                    <a href="#">Link</a>
+                  </li>
+                </ul>
+                <hr class="small">
+                <p>&copy; YEAR</p>
+              </div>
+            </div>
+
+    h2 Application Stylesheet
+    p Your application stylessheet should look like this:
+
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle CSS
+        li.toggle.here SASS
+      = code('sass') do
+        |
+          // If you are using rails
+          // @import sprockets
+
+          // Vendor
+          @import normalize
+
+          // Components
+          @import variables
+          @import icons
+          @import grid
+          @import base
+          @import buttons
+          @import footer
+          @import forms
+          @import header
+          @import heroes
+          @import loaders
+          @import notice
+          @import pagination
+          @import tables
+          @import tabs
+          @import helpers
+
+          // Customizations
+          @import custom
+
+      .hide
+        = code('css') do
+          |
+            /* If you are using rails */
+            /* @import 'sprockets'; */
+
+            /* Vendor */
+            @import 'normalize';
+
+            /* Components */
+            @import 'variables';
+            @import 'icons';
+            @import 'grid';
+            @import 'base';
+            @import 'buttons';
+            @import 'footer';
+            @import 'forms';
+            @import 'header';
+            @import 'heroes';
+            @import 'loaders';
+            @import 'notice';
+            @import 'pagination';
+            @import 'tables';
+            @import 'tabs';
+            @import 'helpers';
+
+            /* Customizations */
+            @import 'custom';
 
     p
       ' Small reusable classes should be placed in
       code> _helpers.sass
-      ' and larger, more unique code should live in
+      ' and larger, more unique styles should live in
       code _custom.sass
       | .
 
     h2 Views
     p
       ' Views are simple.
-      code .row
+      code row
       ' and
-      code .section
+      code section
       ' classes are core. Example usage:
 
-    = code('slim') do
-      |
-        .row
-          .section
-            p Hello World
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .row
+              .section
+                p Hello World
+      .hide
+        = code('html') do
+          |
+            <div class="row">
+              <div class="section">
+                <!-- stuff -->
+              </div>
+            </div>
+
+    h2 Notification Bar
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .row.notice
+              .section
+                | Notice ...
+                i.icon-close-outline
+      .hide
+        = code('html') do
+          |
+            <div class="row notice">
+              <div class="section">
+                Notice ...
+                <i class="icon-close-outline"></i>
+              </div>
+            </div>
+    p renders:
+.row.notice
+  .section
+    | This is a notice. Slot me anywhere.
+    i.icon-close-outline
 
 .row
   .section
@@ -111,176 +321,204 @@ title: Vital | Components
 
     p
       ' Example usage:
-      code> .col-1-2
+      code> col-1-2
       ' means 1 of 2 columns.
-      code> .col-2-3
+      code> col-2-3
       ' means 2 of 3 columns and so fourth.
 
     .grid-preview
 
-      .col-1-2 .col-1-2
-      .col-1-2 .col-1-2
+      .col-1-2 col-1-2
+      .col-1-2 col-1-2
 
-      .col-1-3 .col-1-3
-      .col-2-3 .col-2-3
+      .col-1-3 col-1-3
+      .col-2-3 col-2-3
 
-      .col-1-3 .col-1-3
-      .col-1-3 .col-1-3
-      .col-1-3 .col-1-3
+      .col-1-3 col-1-3
+      .col-1-3 col-1-3
+      .col-1-3 col-1-3
 
-      .col-1-4 .col-1-4
-      .col-1-4 .col-1-4
-      .col-1-4 .col-1-4
-      .col-1-4 .col-1-4
+      .col-1-4 col-1-4
+      .col-1-4 col-1-4
+      .col-1-4 col-1-4
+      .col-1-4 col-1-4
 
-      .col-1-4 .col-1-4
-      .col-3-4 .col-3-4
+      .col-1-4 col-1-4
+      .col-3-4 col-3-4
 
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
+      .col-1-5 col-1-5
+      .col-1-5 col-1-5
+      .col-1-5 col-1-5
+      .col-1-5 col-1-5
+      .col-1-5 col-1-5
 
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
+      .col-1-8 col-1-8
+      .col-1-8 col-1-8
+      .col-1-8 col-1-8
+      .col-1-8 col-1-8
+      .col-1-8 col-1-8
+      .col-1-8 col-1-8
+      .col-1-8 col-1-8
+      .col-1-8 col-1-8
 
       .clear
 
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .col-1-2
+              // stuff
+            .col-1-2
+              // stuff
+            .clear
+      .hide
+        = code('html') do
+          |
+            <div class="col-1-2">
+              <!-- stuff -->
+            </div>
+            <div class="col-1-2">
+              <!-- stuff -->
+            </div>
+            <div class="clear"></div>
+
     p
       ' The grid is not padded by default, but if you choose, you can pad the grid evenly on the left and right sides by nesting your grid elements under:
-      code> .padded
+      code> padded
       | padding.
     p
       ' If your layouts are heavy on typography you can use the
-      code> .right-padded
+      code> right-padded
       ' class by nesting your
-      code .col-
+      code col-
       ' 's under
-      code .right-padded
+      code right-padded
       | :
 
     .grid-preview
       .padded
-        .col-1-2 .col-1-2
-        .col-1-2 .col-1-2
+        .col-1-2 col-1-2
+        .col-1-2 col-1-2
       .padded
-        .col-1-3 .col-1-3
-        .col-1-3 .col-1-3
-        .col-1-3 .col-1-3
+        .col-1-3 col-1-3
+        .col-1-3 col-1-3
+        .col-1-3 col-1-3
       .padded
-        .col-3-4 .col-3-4
-        .col-1-4 .col-1-4
+        .col-3-4 col-3-4
+        .col-1-4 col-1-4
       .clear
 
     p
       ' You can also use
-      code .row
+      code row
       ' to automatically clear
-      code .col-
+      code col-
       ' markup.
     p
       ' Alternatively, you can also use
-      code .clear
+      code clear
       ' at the end of
-      code .col-
+      code col-
       ' to clear columns.
 
     p
       span> Empty grid columns need content within to work properly. In most cases you'll want to hide them on your handheld breakpoint.
       ' Add
-      code .space
+      code space
       ' to your
-      code .col-
+      code col-
       ' markup if you'd like an empty column to exist. The
-      code .space
+      code space
       ' class hides those empty columns automatically within the
       code> $handheld
       | media query.
-    .empty-grid-preview.center
-      .col-1-3.space
-        p
-          code .col-1-3.space
-      .col-1-3
-        p
-          code .col-1-3 Some content.
-      .col-1-3.space
-        p
-          code .col-1-3.space
-      .clear
-      .empty-render
-        .col-1-3.space
-        .col-1-3
-          p Some content.
-        .col-1-3.space
-        .clear
+
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .col-1-3.space
+            .col-1-3
+              // stuff
+            .col-1-3.space
+            .clear
+      .hide
+        = code('html') do
+          |
+            <div class="col-1-4 space"></div>
+            <div class="col-1-3">
+              <!-- stuff -->
+            </div>
+            <div class="col-1-4 space"></div>
 
     h2 Automatic Grid
     p Use the automatic grid if you don't need to be specific about your columns and only need equally sized columns. You can create an unlimited amount of columns automatically:
     .grid-preview
       .autogrid
-        .col .col
-        .col .col
+        .col col
+        .col col
       .autogrid
-        .col .col
-        .col .col
-        .col .col
+        .col col
+        .col col
+        .col col
       .autogrid
-        .col .col
-        .col .col
-        .col .col
-        .col .col
+        .col col
+        .col col
+        .col col
+        .col col
       .autogrid
-        .col .col
-        .col .col
-        .col .col
-        .col .col
-        .col .col
+        .col col
+        .col col
+        .col col
+        .col col
+        .col col
       .autogrid
-        .col .col
-        .col .col
-        .col .col
-        .col .col
-        .col .col
-        .col .col
+        .col col
+        .col col
+        .col col
+        .col col
+        .col col
+        .col col
       .autogrid
-        .col .col
-        .col .col
-        .col .col
-        .col .col
-        .col .col
-        .col .col
-        .col .col
+        .col col
+        .col col
+        .col col
+        .col col
+        .col col
+        .col col
+        .col col
 
-.row
-  .section
-    hr
-    h1 Navigation Header
-
-    p The navigation bar is fully responsive and can host an unlimited amount of sub-menu items.
-
-    = code('slim') do
-      |
-        .row.header
-          .section
-            nav
-              = link_to 'index.html', class: 'logo' do
-                i.icon-vital.i3x
-              label#menu-toggle-label for='menu-toggle'
-              input#menu-toggle type='checkbox'
-              ul.menu
-                li = link_to 'Link', '#'
-                li
-                  = link_to 'With Menu', '#'
-                  ul
-                    li = link_to 'Menu Item', '#'
-                    li = link_to 'Menu Item', '#'
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .autogrid
+              .col
+                // stuff
+              .col
+                // stuff
+              .col
+                // stuff
+      .hide
+        = code('html') do
+          |
+            <div class="autogrid">
+              <div class="col"></div>
+              <div class="col">
+                <!-- stuff -->
+              </div>
+              <div class="col"></div>
+            </div>
 
 .row
   .section
@@ -349,40 +587,28 @@ title: Vital | Components
 .row
   .section
     hr
-    h1 Notice
-
-    p The standard notification bar is relative in position:
-
-.row.notice
-  .section
-    | This is a notice. Slot me anywhere.
-    i.icon-close-outline
-
-.row
-  .section
-    hr
     h1 Loaders
 
     .col-1-4.center
       p
         span.load.large
         br
-        code .load.large
+        code load.large
     .col-1-4.center
       p
         span.load
         br
-        code .load
+        code load
     .col-1-4.center
       p
         span.load.small
         br
-        code .load.small
+        code load.small
     .col-1-4.center
       p
         span.load.smallest
         br
-        code .load.smallest
+        code load.smallest
     .clear
 
 .row
@@ -396,35 +622,35 @@ title: Vital | Components
         p
           ' Large:
         p
-          code .btn.large
+          code btn.large
         p
           = link_to 'btn large', '#', class: 'btn large'
       .col
         p
           ' Default:
         p
-          code .btn
+          code btn
         p
           = link_to 'btn', '#', class: 'btn'
       .col
         p
           ' Small:
         p
-          code .btn.small
+          code btn.small
         p
           = link_to 'btn small', '#', class: 'btn small'
       .col
         p
           ' Tiny:
         p
-          code .btn.tiny
+          code btn.tiny
         p
           = link_to 'btn tiny', '#', class: 'btn tiny'
       .col
         p
           ' Full width:
         p
-          code .btn.full
+          code btn.full
         p
           = link_to 'btn full', '#', class: 'btn full'
     .clear
@@ -505,7 +731,7 @@ title: Vital | Components
     p Cross-platform consistency is important when Vital was created, so we created form elements that will look and feel consistent on most platforms while retaining the ability to gracefully degrade.
     p
       span> Form fields that are nested under the
-      code> .full-width-forms
+      code> full-width-forms
 
     .full-width-forms
       .col-1-3
@@ -543,18 +769,22 @@ title: Vital | Components
       .col-1-4
         label
           select name='name'
-            option value=('select option one') select option
-            option value=('select option two') select option
-            option value=('select option three') select option
-            option value=('select option four') select option
+            option select
+            option one
+            option two
+            option three
       .clear
       .col-1-4
         label
           select
-            optgroup label=('group 1')
-              option select option
-              option select option
-              option select option
+            optgroup label=('Group One')
+              option one
+              option two
+              option three
+            optgroup label=('Group Two')
+              option one
+              option two
+              option three
       .col-1-4
         label
           input name='name' type='url' placeholder='url'
@@ -636,6 +866,42 @@ title: Vital | Components
         = link_to 'Tab', '#'
       .col
         = link_to 'Tab', '#'
+    br
+
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            .autogrid.tabs-block
+              .col.here
+                = link_to 'Tab', '#'
+              .col
+                = link_to 'Tab', '#'
+              .col
+                = link_to 'Tab', '#'
+              .col
+                = link_to 'Tab', '#'
+      .hide
+        = code('html') do
+          |
+            <div class="autogrid tabs-block">
+              <div class="col here">
+                <a href="#">Tab</a>
+              </div>
+              <div class="col here">
+                <a href="#">Tab</a>
+              </div>
+              <div class="col here">
+                <a href="#">Tab</a>
+              </div>
+              <div class="col here">
+                <a href="#">Tab</a>
+              </div>
+            </div>
+
     p Square
     ul.tabs
       li.here
@@ -646,6 +912,41 @@ title: Vital | Components
         = link_to 'Tab', '#'
       li
         = link_to 'Tab', '#'
+
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            ul.tabs
+              li.here
+                = link_to 'Tab', '#'
+              li
+                = link_to 'Tab', '#'
+              li
+                = link_to 'Tab', '#'
+              li
+                = link_to 'Tab', '#'
+      .hide
+        = code('html') do
+          |
+            <ul class="tabs">
+              <li class="here">
+                <a href="#">Tab</a>
+              </li>
+              <li>
+                <a href="#">Tab</a>
+              </li>
+              <li>
+                <a href="#">Tab</a>
+              </li>
+              <li>
+                <a href="#">Tab</a>
+              </li>
+            </ul>
+
     p Round
     ul.tabs.round
       li.here
@@ -657,12 +958,46 @@ title: Vital | Components
       li
         = link_to 'Tab', '#'
 
+    .code-toggler
+      ul.toggle-tabs
+        li.toggle HTML
+        li.toggle.here SLIM
+      .show
+        = code('slim') do
+          |
+            ul.tabs.round
+              li.here
+                = link_to 'Tab', '#'
+              li
+                = link_to 'Tab', '#'
+              li
+                = link_to 'Tab', '#'
+              li
+                = link_to 'Tab', '#'
+      .hide
+        = code('html') do
+          |
+            <ul class="tabs round">
+              <li class="here">
+                <a href="#">Tab</a>
+              </li>
+              <li>
+                <a href="#">Tab</a>
+              </li>
+              <li>
+                <a href="#">Tab</a>
+              </li>
+              <li>
+                <a href="#">Tab</a>
+              </li>
+            </ul>
+
 .row
   .section
 
     hr
     h1 Tables
-
+    p Base table styles require no classes.
 
     table
       thead
@@ -722,22 +1057,22 @@ title: Vital | Components
     .autogrid
       .col
         p
-          code .i5x
+          code i5x
           br
           i.i5x.icon-vital
       .col
         p
-          code .i4x
+          code i4x
           br
           i.i4x.icon-vital
       .col
         p
-          code .i3x
+          code i3x
           br
           i.i3x.icon-vital
       .col
         p
-          code .i2x
+          code i2x
           br
           i.i2x.icon-vital
 
@@ -745,7 +1080,7 @@ title: Vital | Components
   .section
 
     hr
-    h1 Vital Iconography
+    h1 Iconography
 
     p
       ' Vital comes with a small set of font icons built with
@@ -792,7 +1127,7 @@ title: Vital | Components
 
     p
       ' Place your
-      code> .svg
+      code> svg
       ' files into your input path. Vital's input path is:
       code> icons
 

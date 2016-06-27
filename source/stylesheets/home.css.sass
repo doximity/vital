@@ -10,9 +10,8 @@
     .icon-vital
       line-height: 1
       font-size: 8em
-  .page
-    .section
-      padding: 3em 1em
+  .page .section
+    padding: 3em 1em
   .centered-text
     padding: 0 15%
 
@@ -58,13 +57,22 @@
   .centered-text
     padding: 0 5%
 
-  .index .page .section
+  .page .section
     padding: 1em
 
+  .always-fixed .col
+    display: table-cell
+
   #productive
+    text-align: center
     p
       padding-right: 0
     .section
       padding: 2em 1em 1em 1em
     .col-1-2
       padding-bottom: 2em
+
+@media screen and (max-width: $handheld)
+
+  .always-fixed .col
+    display: block

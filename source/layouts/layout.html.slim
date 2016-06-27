@@ -18,7 +18,7 @@ html
     = stylesheet_link_tag :vital
     = yield_content :assets
 
-  body class='#{page_classes}'
+  body class='#{page_classes} antialiased'
     = partial 'layouts/header'
     .contents
       = yield
