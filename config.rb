@@ -1,3 +1,9 @@
+# TODO: This should be removed once we have a gem in place
+require 'sass'
+::Sass.load_paths << 'sass'
+
+set :source, 'docs'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -54,5 +60,4 @@ configure :build do
 
   set :relative_links, true
   set :site_url, "/vital"
-
 end
