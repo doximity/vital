@@ -1,8 +1,4 @@
-# TODO: This should be removed once we have a gem in place
-require 'sass'
-::Sass.load_paths << 'sass'
-
-set :source, 'docs'
+set :source, '.'
 
 ###
 # Page options, layouts, aliases and proxies
