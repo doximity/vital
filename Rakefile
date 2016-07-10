@@ -5,7 +5,7 @@ task :build do
   release_dir = "dist"
   [
     "rm -rf #{release_dir}",
-    "mkdir -p #{release_dir}/css",
+    "mkdir -p #{release_dir}/{css,scss}",
     "cp {CHANGELOG,LICENSE,README}.md #{release_dir}/",
     "cp -R sass #{release_dir}/",
     "cp -R fonts #{release_dir}/"
@@ -13,6 +13,7 @@ task :build do
 
   sh "bundle exec sass -r vital -C #{release_dir}/sass/vital.css.sass #{release_dir}/css/vital.css"
   sh "bundle exec sass -r vital -C -t compressed #{release_dir}/sass/vital.css.sass #{release_dir}/css/vital.min.css"
+  sh "sass-convert -R -F sass -T scss -C #{release_dir}/sass #{release_dir}/scss"
 end
 
 task :compile_fonts do
