@@ -13,8 +13,8 @@ input:
   vectors: icons/vectors
 
 output:
-  fonts: source/fonts
-  css: source/stylesheets
+  fonts: fonts
+  css: sass/vital
   preview: previews
 
 templates:
