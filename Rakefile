@@ -1,3 +1,20 @@
+require 'bundler/gem_tasks'
+
+task :build do
+  puts '-----> Preparing assets for release'
+  release_dir = "dist"
+  [
+    "rm -rf #{release_dir}",
+    "mkdir -p #{release_dir}/css",
+    "cp {CHANGELOG,LICENSE,README}.md #{release_dir}/",
+    "cp -R sass #{release_dir}/",
+    "cp -R fonts #{release_dir}/"
+  ].each { |cmd| sh cmd }
+
+  sh "bundle exec sass -r vital -C #{release_dir}/sass/vital.css.sass #{release_dir}/css/vital.css"
+  sh "bundle exec sass -r vital -C -t compressed #{release_dir}/sass/vital.css.sass #{release_dir}/css/vital.min.css"
+end
+
 task :compile_fonts do
   sh 'rm -rf sass/_icons.*'
   sh 'rm -rf fonts'
