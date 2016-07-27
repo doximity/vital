@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
   spec.email         = ['btaing@doximity.com', 'frehm@doximity.com']
 
   spec.summary       = 'A minimally invasive CSS framework for modern web applications.'
-  # spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = 'https://doximity.github.io/vital/'
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features|docs|icons)/}) }
