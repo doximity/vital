@@ -18,70 +18,43 @@ A minimally invasive CSS framework for modern web applications.
 | Javascripts    | 0     |         |
 | Total          | 31 KB |         |
 
-## Setup / Installation
 
-### Quickest (Compiled)
+## Usage
 
-Import into stylesheet or as a stylesheet link tag:
+A couple installation options are available:
 
-`https://cdn.rawgit.com/doximity/vital/master/releases/v1.1.0/stylesheets/vital.min.css`
+- Download the latest release tarball from https://github.com/doximity/vital/releases.
+- Install the `vital` Ruby Gem on your project.
+- Use a precompiled release from RawGit.
 
-### Recommended (Source)
+Check out [our docs](http://doximity.github.io/vital/get-started/) for information on installation methods, framework contents, templates, examples and more.
 
-`https://github.com/doximity/vital/tree/master/source/stylesheets`
+## Development
 
-Vital works best when manipulated directly. Download or copy the `.sass` files into your project. This installation method is preferred if you want to develop your own unique branding while keeping code output to a minimum. One possible caveat to this method is you sacrifice future upgradability as you may encounter breaking changes.
+**NOTE**: The project requires Ruby 2.0+ for building its assets and documentation.
 
-#### File Structure
+Initial setup:
 
-```sass
-// If you are using rails
-// @import sprockets
+```sh
+git clone https://github.com/doximity/vital.git
+cd vital
+bundle
 
-// Vendor
-@import normalize
-
-// Components
-@import variables
-@import icons
-@import grid
-
-@import base
-@import buttons
-@import footer
-@import forms
-@import header
-@import heroes
-@import loaders
-@import notice
-@import pagination
-@import tables
-@import tabs
-@import helpers
-
-// Customizations
-@import custom
+# If you want to build / work on documentation
+cd docs
+bundle
 ```
 
-### Packages
+### Compiling assets locally
 
-A Ruby gem and npm package installation options are in the works.
+```sh
+cd vital
+bundle exec rake vital:build
+```
 
-## Development Installation
+### Compiling Font Icons
 
-Vital is built using a simple static generator: https://middlemanapp.com/
-
-- Clone: `https://github.com/doximity/vital`
-- In your terminal, run `bundle`
-- To start your server, run `middleman` then navigate to http://localhost:4567
-
-#### Building the Output
-
-- `bundle exec rake build`
-
-#### Compiling Font Icons
-
-To compile font icons, you must first install FontForge and the Font Custom gem.
+To compile font icons, you must first install FontForge.
 
 ```bash
 # On Mac
@@ -90,11 +63,27 @@ brew install fontforge --with-python
 brew install eot-utils
 ```
 
-After installation is complete, run `rake vital:compile_fonts`.
+After installation is complete, run `rake vital:compile_font`.
 
-## Publishing to GitHub Pages
+### Build the documentation
 
-Publishing to `gh-pages` is done automatically by running `bundle exec rake publish`
+Vital is built using a simple static generator: https://middlemanapp.com/
+
+- Clone: `https://github.com/doximity/vital`
+- In your terminal, run `bundle`
+- To start your server, run `middleman` then navigate to http://localhost:4567
+
+## Releasing a new version
+
+- Ensure docs, `README.md`, `CHANGELOG.md` are up to date
+- Bump version on `lib/vital/version.rb`
+- `bundle exec rake vital:build`
+- `git add ...` all of the updated files
+- `git commit -m 'vX.Y.Z'`
+- `git push origin master`
+- `bundle exec rake release` to push to RubyGems
+- `cd docs && bundle exec rake publish` to update GitHub pages
+- Visit http://doximity.github.io/vital/ and ensure it has been updated
 
 ## Reporting Issues and Suggestions
 
