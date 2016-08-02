@@ -69,9 +69,11 @@ After installation is complete, run `rake vital:compile_font`.
 
 Vital is built using a simple static generator: https://middlemanapp.com/
 
-- Clone: `https://github.com/doximity/vital`
-- In your terminal, run `bundle`
-- To start your server, run `middleman` then navigate to http://localhost:4567
+```sh
+cd vital/docs
+bundle
+bundle exec middleman
+```
 
 ## Releasing a new version
 
