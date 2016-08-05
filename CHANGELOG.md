@@ -1,10 +1,4 @@
-v1.0.0
-  - Initial release
-
-v1.0.1
-  - Scope the nav to `.header` class
-  - Fix incorrect naming of a breakpoint
-  - Whitespace consistency changes in _variables
+_Post v1.1.0 releases changelog can be found on https://github.com/doximity/vital/releases_
 
 v1.1.0
   - Add command: `rake vital:compile_fonts`
@@ -14,3 +8,11 @@ v1.1.0
   - Updated the font input and output paths
   - Fix a typo
   - Add `!default` to variables
+
+v1.0.1
+  - Scope the nav to `.header` class
+  - Fix incorrect naming of a breakpoint
+  - Whitespace consistency changes in `_variables`
+
+v1.0.0
+  - Initial release
