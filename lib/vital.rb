@@ -6,7 +6,9 @@ module Vital
     def load!
       register_compass_extension if compass?
 
-      if sprockets?
+      if rails?
+        register_rails_engine
+      elsif sprockets?
         register_sprockets
       end
 
@@ -23,6 +25,10 @@ module Vital
     end
 
     # Environment detection helpers
+    def rails?
+      defined?(::Rails)
+    end
+
     def sprockets?
       defined?(::Sprockets)
     end
@@ -40,6 +46,10 @@ module Vital
 
     def register_sprockets
       Sprockets.append_path(sass_path)
+    end
+
+    def register_rails_engine
+      require 'vital/engine'
     end
   end
 end
