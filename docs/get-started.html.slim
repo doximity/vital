@@ -13,19 +13,58 @@ title: Vital | Get Started
     h2 Quickest (Compiled)
     p Import into stylesheet or as a stylesheet link tag:
     p
-      code https://cdn.rawgit.com/doximity/vital/master/releases/v1.1.0/stylesheets/vital.min.css
+      code https://cdn.rawgit.com/doximity/vital/v1.2.0/dist/vital.min.css
     hr
     h2 Recommended (Source)
     p
-      code https://github.com/doximity/vital/tree/master/source/stylesheets
+      ' Vital works best when manipulated directly so download the latest package release from
+      => link_to 'GitHub', 'https://github.com/doximity/vital/releases'
+      | and extract its contents into your one of your project's sources directory. This installation method is preferred if you want to develop your own unique branding while keeping code output to a minimum. One possible caveat to this method is you sacrifice future upgradability as you may encounter breaking changes.
     p
-      ' Vital works best when manipulated directly. Download or copy the
-      code slim
-      | files into your project. This installation method is preferred if you want to develop your own unique branding while keeping code output to a minimum. One possible caveat to this method is you sacrifice future upgradability as you may encounter breaking changes.
+      | The released tarballs include different flavors of the framework that you can use depending on your needs. Its structure looks as the following:
+
+    = code do
+      |
+        dist/
+        ├── css
+        │   └── ... precompiled CSS files ...
+        ├── fonts
+        │   └── ... icons font files ...
+        ├── sass
+        │   └── ... framework sources as SASS files ...
+        └── scss
+            └── ... framework sources as SCSS files ...
+
+    p
+      | Depending on your project needs, copy the appropriate version of the stylesheets (
+      code CSS
+      ' ,
+      code SASS
+      ' or
+      code SCSS
+      ' ) and the
+      code fonts
+      | directory over to a directory within your project's sources that can be accessed from a browser.
     p
       ' Read the
       => link_to 'documentation', '/components.html'
       | for information on the basics of setting up a common application layout.
     hr
-    h2 Packages
-    p A ruby gem and npm package installation options are in the works.
+    h2 Rails
+    p
+      ' Add the gem to your project's
+      code Gemfile
+      | :
+    = code('ruby') do
+      |
+        gem 'vital'
+    p
+      ' And add the following at the top of your project's
+      code app/assets/stylesheets/application.sass.css
+      | :
+    = code('sass') do
+      |
+        @import vital/sprockets
+        @import vital/all
+    h2 NPM
+    p A NPM package is in the works.
