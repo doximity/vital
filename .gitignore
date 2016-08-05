@@ -7,6 +7,11 @@
 # Ignore bundler config
 /.bundle
 
+/dist/**/*.md
+/dist/**/*.sass
+/dist/**/*.scss
+vital-*.tar.gz
+
 # Ignore the build directory
 /build
 
