@@ -85,6 +85,7 @@ bundle exec middleman
 - `git push origin master`
 - `bundle exec rake release` to push to RubyGems
 - `cd docs && bundle exec rake publish` to update GitHub pages
+- Go to https://github.com/doximity/vital/releases and create a new release with the tarball attached
 - Visit http://doximity.github.io/vital/ and ensure it has been updated
 
 ## Reporting Issues and Suggestions
