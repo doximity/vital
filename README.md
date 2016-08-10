@@ -27,7 +27,7 @@ A couple installation options are available:
 - Install the `vital` Ruby Gem on your project.
 - Use a precompiled release from RawGit.
 
-Check out [our docs](http://doximity.github.io/vital/get-started/) for information on installation methods, framework contents, templates, examples and more.
+Check out [our docs](http://vitalcss.com/get-started/) for information on installation methods, framework contents, templates, examples and more.
 
 ## Development
 
@@ -86,7 +86,7 @@ bundle exec middleman
 - `bundle exec rake release` to push to RubyGems
 - `cd docs && bundle exec rake publish` to update GitHub pages
 - Go to https://github.com/doximity/vital/releases and create a new release with the tarball attached
-- Visit http://doximity.github.io/vital/ and ensure it has been updated
+- Visit http://vitalcss.com/ and ensure it has been updated
 
 ## Reporting Issues and Suggestions
 
