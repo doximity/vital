@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: #{data.site.url}/sitemap.xml

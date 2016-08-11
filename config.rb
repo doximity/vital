@@ -10,6 +10,7 @@ set :source, '.'
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/sitemap.xml', layout: false
 
 import_path "#{Vital.gem_path}/fonts"
 
@@ -24,12 +25,16 @@ import_path "#{Vital.gem_path}/fonts"
 
 # Syntax highlighting
 activate :syntax
-
 # Pretty URLs
 activate :directory_indexes
-
 # Set relative paths needed for github pages
 activate :relative_assets
+# SEO Optimizations
+activate :meta_tags
+# Sitemap generator
+activate :search_engine_sitemap, default_priority: 1, default_change_frequency: 'weekly'
+# Bust caches
+activate :asset_hash, ignore: ['images/opengraph.jpg', 'images/logo.png']
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -50,6 +55,11 @@ end
 # Build-specific configuration
 configure :build do
 
+  activate :robots, :rules => [
+    {:user_agent => '*', :allow => %w(/)}
+  ],
+  sitemap: '#{data.site.url}/sitemap.xml'
+
   # Minify on build
   activate :minify_html
   activate :minify_css
@@ -58,4 +68,5 @@ configure :build do
 
   set :relative_links, true
   set :site_url, "/vital"
+  set :url_root, 'http://vitalcss.com'
 end
