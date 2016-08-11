@@ -1,0 +1,31 @@
+# Required
+
+language: 'en-us'
+url: 'http://vitalcss.com'
+preferred_url: 'http://vitalcss.com'
+human_url: 'vitalcss.com'
+name: 'Vital CSS Framework'
+title: 'Vital CSS Framework'
+description: "A minimally invasive CSS framework for modern web applications. Only 8 KB."
+
+logo_image_name: 'logo.png'
+logo_image_path: 'http://vitalcss.com/images/logo.png'
+
+email: ''
+subject: ''
+body: ''
+address: ''
+phone: ''
+
+# gh-pages directory
+# if you're using github pages
+directory: '/vital'
+
+# social
+twitter_handle: '@dox_engineering'
+
+# opengraph
+pull_image: 'http://vitalcss.com/images/opengraph.jpg'
+
+# gray image
+lazyload_placeholder: 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='
