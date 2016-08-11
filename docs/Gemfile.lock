@@ -15,6 +15,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     backports (3.6.8)
+    builder (3.2.2)
     coffee-script (2.4.1)
       coffee-script-source
       execjs
@@ -87,9 +88,16 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-meta-tags (0.2.0)
+      middleman-core (>= 3.0.0)
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
+    middleman-robots (1.2.1)
+      middleman (>= 4.0)
+    middleman-search_engine_sitemap (1.4.0)
+      builder
+      middleman-core (~> 4.0)
     middleman-syntax (2.1.0)
       middleman-core (>= 3.2)
       rouge (~> 1.0)
@@ -131,7 +139,10 @@ DEPENDENCIES
   middleman
   middleman-gh-pages
   middleman-livereload
+  middleman-meta-tags
   middleman-minify-html
+  middleman-robots
+  middleman-search_engine_sitemap
   middleman-syntax
   sass
   slim

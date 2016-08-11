@@ -4,7 +4,9 @@ html
     meta[content='IE=edge' http-equiv='X-UA-Compatible']/
     meta[charset='UTF-8']/
     meta[content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport']/
-    title = current_page.data.title || 'Vital'
+
+    = auto_display_meta_tags
+
     /[if IE 9]
       html class="ie9"
     /[if IE 8]
@@ -16,6 +18,7 @@ html
     = favicon_tag 'apple-touch-icon-120x120.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '120x120'
     = favicon_tag 'apple-touch-icon-152x152.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '152x152'
     = stylesheet_link_tag :vital
+    = stylesheet_link_tag :demo
     = yield_content :assets
 
   body class='#{page_classes}'
