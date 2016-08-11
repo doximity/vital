@@ -1,6 +1,4 @@
----
-title: Vital
----
+- set_meta_tags title: 'Vital | CSS Framework'
 
 .row.hero.bg-red
   .section.narrow.center
@@ -22,18 +20,18 @@ title: Vital
       hr.red.small
       .autogrid.padded
         .col
-          = image_tag 'demo/spring.svg', class: 'full'
+          = image_tag data.site.lazyload_placeholder, class: 'b-lazy full', data: {src: 'images/demo/spring.svg'}
           h2 Flexible
           p
             ' Vital is built with
             = link_to 'Sass', 'http://sass-lang.com/', target: '_blank'
             | , the preferred CSS preprocessor of today.
         .col
-          = image_tag 'demo/code.svg', class: 'full'
+          = image_tag data.site.lazyload_placeholder, class: 'b-lazy full', data: {src: 'images/demo/code.svg'}
           h2 Readable
           p No ridiculous amounts of classes or nesting. No excessively buried code.
         .col
-          = image_tag 'demo/expand.svg', class: 'full'
+          = image_tag data.site.lazyload_placeholder, class: 'b-lazy full', data: {src: 'images/demo/expand.svg'}
           h2 Scalable
           p
             ' Written almost entirely in
@@ -42,7 +40,7 @@ title: Vital
 
   .row#light
     .section.center
-      = image_tag 'demo/feather.svg', class: 'full'
+      = image_tag data.site.lazyload_placeholder, class: 'b-lazy full', data: {src: 'images/demo/feather.svg'}
       h1 Light as a feather
       hr.red.small
       p At a total size of just 31 KB minified or 8 KB gzipped, Vital loads and renders quickly.
@@ -81,11 +79,11 @@ title: Vital
   .row.bg-blue#productive
     .section.padded.light-text
       .col-1-2
-        = image_tag 'demo/chart.svg'
+        = image_tag data.site.lazyload_placeholder, data: {src: 'images/demo/chart.svg'}, class: 'b-lazy'
         h1 Less is more
         p Traditional CSS frameworks include an overwhelming and unnecessary amount of bloat. Vital is built on the principal that less is more. Working with less code means there are fewer bugs to squash and less documentation to read. Less time spent coding means more time to focus on your next killer feature.
       .col-1-2
-        = image_tag 'demo/hammer.svg'
+        = image_tag data.site.lazyload_placeholder, data: {src: 'images/demo/hammer.svg'}, class: 'b-lazy'
         h1 Regain productivity
         p Often times a large CSS framework is used to speed up the time to market or to enforce consistency, but when a project grows beyond the initial scope of a concept, development becomes more difficult and time consuming. Vital reduces workflow inefficiencies because there is less to learn and maintain.
       .clear
@@ -95,11 +93,11 @@ title: Vital
       h1 Vast device support
       hr.red.small
       p.centered-text Vital is a true cross-platform, mobile-first framework. Elements such as select boxes, checkboxes and radios render consistently across different platforms while gracefully degrading on legacy.
-      = image_tag 'demo/devices.svg', class: 'full'
+      = image_tag data.site.lazyload_placeholder, class: 'b-lazy full', data: {src: 'images/demo/devices.svg'}
 
   .row.bg-black#open-source
     .section.narrow.center.light-text
-      = image_tag 'demo/open-source.svg'
+      = image_tag data.site.lazyload_placeholder, class: 'b-lazy', data: {src: 'images/demo/open-source.svg'}
       h1 Open Source
       hr.small.opacity-2
       p

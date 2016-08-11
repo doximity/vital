@@ -20,6 +20,7 @@ html
     = stylesheet_link_tag :vital
     = stylesheet_link_tag :demo
     = yield_content :assets
+    = partial 'layouts/lazyload'
 
   body class='#{page_classes}'
     = partial 'layouts/header'
