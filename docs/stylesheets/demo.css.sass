@@ -1,0 +1,177 @@
+@import vital/variables
+
+// Demo
+
+// Variables
+
+// Gradated Background Colors
+
+$bg-default:                        linear-gradient(to bottom right, #B52352, #EF2B35)
+$bg-default-fallback:               #C80730
+
+$bg-red:                            linear-gradient(to bottom right, #B52352, #EF2B35)
+$bg-red-fallback:                   #C80730
+
+$bg-orange:                         linear-gradient(to bottom right, #EE495C, #F09259)
+$bg-orange-fallback:                #EE495C
+
+$bg-green:                          linear-gradient(to bottom right, #45D093, #B0CB80)
+$bg-green-fallback:                 #45D093
+
+$bg-blue:                           linear-gradient(to bottom right, #4E6CCF, #20CAB6)
+$bg-blue-fallback:                  #4E6CCF
+
+$bg-black:                          linear-gradient(to bottom right, #161616, #444)
+$bg-black-fallback:                 #161616
+
+$bg-gray:                           linear-gradient(to bottom right, #888, #DFDFDF)
+$bg-gray-fallback:                  #888
+
+// Base
+
+// HR Colors
+hr
+  height: 3px
+  &.red
+    background: #DD3F41
+
+// Typography
+
+body
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+// Helpers
+
+.narrow
+  max-width: 38em
+
+// Backgrounds
+
+.bg
+  background: $gray-lightest
+.bg-white
+  background: #FFF
+
+// Backgrounds (Gradients)
+
+.bg-default
+  background: $bg-default-fallback
+  background: $bg-default
+.bg-black
+  background: $bg-black-fallback
+  background: $bg-black
+.bg-gray
+  background: $bg-gray-fallback
+  background: $bg-gray
+.bg-blue
+  background: $bg-blue-fallback
+  background: $bg-blue
+.bg-red
+  background: $bg-red-fallback
+  background: $bg-red
+.bg-orange
+  background: $bg-orange-fallback
+  background: $bg-orange
+.bg-green
+  background: $bg-green-fallback
+  background: $bg-green
+
+// Opacities
+
+.opacity-1
+  opacity: 0.1
+.opacity-2
+  opacity: 0.2
+.opacity-3
+  opacity: 0.3
+.opacity-4
+  opacity: 0.4
+.opacity-5
+  opacity: 0.5
+.opacity-6
+  opacity: 0.6
+.opacity-7
+  opacity: 0.7
+.opacity-8
+  opacity: 0.8
+.opacity-9
+  opacity: 0.9
+
+// Header
+
+.header nav ul li
+  float: right
+.get-started .header .menu li:nth-child(4),
+.components .header .menu li:nth-child(3)
+  background: $header-link-hover
+
+// Home
+
+.index
+  .hero
+    h1
+      font-size: 5em
+      line-height: 1
+    .icon-vital
+      line-height: 1
+      font-size: 8em
+  .page
+    .section
+      padding: 3em 1em
+  .centered-text
+    padding: 0 15%
+
+#productive
+  .section
+    padding: 5em 1em
+  img
+    width: 4em
+    opacity: 0.7
+  p
+    padding-right: 2em
+
+#simple
+  img
+    width: 4em
+    opacity: 0.8
+  .autogrid
+    padding: 2em 0
+
+#light
+  img
+    padding: 2% 15% 0 15%
+  .stats
+    h1
+      font-size: 4em
+      margin: 0
+      font-weight: 100
+      span
+        font-size: 0.5em
+        color: #aaa
+        &:before
+          content: ' '
+    hr
+      margin: 0 auto
+
+#open-source
+  img
+    width: 5em
+    margin: 2em 0 0 0
+
+@media screen and (max-width: $phablet)
+
+  .centered-text
+    padding: 0 5%
+
+  .index .page .section
+    padding: 1em
+
+  #productive
+    p
+      padding-right: 0
+    .section
+      padding: 2em 1em 1em 1em
+    .col-1-2
+      padding-bottom: 2em
