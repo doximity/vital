@@ -11,10 +11,10 @@ description: "Vital - CSS Framework"
 logo_image_name: 'logo.png'
 logo_image_path: 'http://vitalcss.com/images/logo.png'
 
-email: 'jobs@doximity.com'
-subject: 'Hello'
-body: 'Hello...'
-address: '500 3rd St. Suite 510 · San Francisco, CA 94107'
+email: ''
+subject: ''
+body: ''
+address: ''
 phone: ''
 
 # gh-pages directory
