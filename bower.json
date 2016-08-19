@@ -12,6 +12,9 @@
   "license": "Apache-2.0",
   "ignore": [
     "**/.*",
+    "*.gemspec",
+    "Gemfile*",
+    "Rakefile",
     "node_modules",
     "bower_components",
     "test",
