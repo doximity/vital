@@ -67,5 +67,11 @@
         @import vital/all
 
     hr
-    h2 NPM
-    p A NPM package is in the works.
+    h2 Bower
+    = code('sh') do
+      |
+        bower install --save vital
+    p
+      ' And reference the assets from within your project's
+      code bower_components/vital
+      | directory

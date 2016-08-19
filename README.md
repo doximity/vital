@@ -24,7 +24,7 @@ A minimally invasive CSS framework for modern web applications.
 A couple installation options are available:
 
 - Download the latest release tarball from https://github.com/doximity/vital/releases.
-- Install the `vital` Ruby Gem on your project.
+- Install the `vital` RubyGem or Bower package on your project.
 - Use a precompiled release from RawGit.
 
 Check out [our docs](http://vitalcss.com/get-started/) for information on installation methods, framework contents, templates, examples and more.
