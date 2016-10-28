@@ -67,11 +67,14 @@
         @import vital/all
 
     hr
-    h2 Bower
+    h2 Bower / NPM
     = code('sh') do
       |
         bower install --save vital
+        npm install --save vital
     p
       ' And reference the assets from within your project's
       code bower_components/vital
+      | or
+      code node_modules/vital
       | directory
