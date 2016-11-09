@@ -11,7 +11,7 @@
     h2 Quickest (Compiled)
     p Import into stylesheet or as a stylesheet link tag:
     p
-      code https://cdn.rawgit.com/doximity/vital/v1.2.0/dist/css/vital.min.css
+      code https://cdn.rawgit.com/doximity/vital/v1.2.1/dist/css/vital.min.css
     hr
     h2 Recommended (Source)
     p
@@ -67,5 +67,14 @@
         @import vital/all
 
     hr
-    h2 NPM
-    p A NPM package is in the works.
+    h2 Bower / NPM
+    = code('sh') do
+      |
+        bower install --save vital
+        npm install --save vital-css
+    p
+      ' And reference the assets from within your project's
+      code bower_components/vital
+      | or
+      code node_modules/vital-css
+      | directory

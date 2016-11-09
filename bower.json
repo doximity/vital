@@ -1,0 +1,30 @@
+{
+  "name": "vital",
+  "homepage": "http://vitalcss.com",
+  "authors": [
+    "Body Taing <btaing@doximity.com>",
+    "Fabio Rehm <frehm@doximity.com>"
+  ],
+  "description": "A minimally invasive CSS framework for modern web applications.",
+  "main": [
+    "sass/vital.sass"
+  ],
+  "license": "Apache-2.0",
+  "ignore": [
+    "**/.*",
+    "*.gemspec",
+    "Gemfile*",
+    "Rakefile",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "build",
+    "pkg",
+    "previews",
+    "docs",
+    "icons",
+    "lib",
+    "releases"
+  ]
+}

@@ -1,0 +1,15 @@
+**/.*
+*.gemspec
+Gemfile*
+Rakefile
+node_modules
+bower_components
+test
+tests
+build
+pkg
+previews
+docs
+icons
+lib
+releases
