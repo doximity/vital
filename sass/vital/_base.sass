@@ -12,8 +12,11 @@ html, body
   width: 100%
 
 body
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
   background: $body
   color: $text
+  font-smoothing: antialiased
   font: 17px / 1.7 $font
   &:after
     content: ""
@@ -26,8 +29,8 @@ img
 
 // Typography
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, div
-  font-weight: 300
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
 
 h1, h2, h3, h4, h5, h6, p, ul, ol
   margin: 1em 0
@@ -136,13 +139,3 @@ dd
 
   .section
     width: 100%
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-
-  strong, b, .bold
-    font-weight: $bold
-
-.ie8, .ie9
-
-  strong, b, .bold
-    font-weight: $bold
