@@ -23,10 +23,6 @@
             meta[charset='UTF-8']/
             meta[content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport']/
             title = current_page.data.title || 'Vital'
-            /[if IE 9]
-              html class='ie9'
-            /[if IE 8]
-              html class='ie8'
             = favicon_tag 'images/favicon.ico'
             = favicon_tag 'apple-touch-icon-60x60.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '60x60'
             = favicon_tag 'apple-touch-icon-76x76.png', rel: 'apple-touch-icon', type: 'image/png', sizes: '76x76'
@@ -53,6 +49,7 @@
 
         // Components
         @import variables
+        @import mixins
         @import icons
         @import grid
         @import base
@@ -260,7 +257,7 @@
           .section
             nav
               = link_to 'index.html', class: 'logo' do
-                i.icon-vital.i3x
+                = image_tag 'logo.svg'
               label#menu-toggle-label for='menu-toggle'
               input#menu-toggle type='checkbox'
               ul.menu
@@ -652,7 +649,6 @@
     hr
     h1 Tables
 
-
     table
       thead
         tr
@@ -682,7 +678,6 @@
     hr
     h1 Pagination
 
-
     .pagination
       a.previous_page href='#' ← Previous
       a href='#' 1
@@ -700,100 +695,73 @@
 .row
   .section
     hr
-    h1 Font Icons
-
-    h2 Example usage:
-    p
-      code> i.icon-vital
-      ' renders:
-      i.icon-vital
-    h2 Size options
+    h1 Sizing
+    p Scale any element quickly and easily by using these miltiplier classes.
     .autogrid
       .col
         p
-          code .i5x
+          code .x5
           br
-          i.i5x.icon-vital
+          i.x5.icon-vital
       .col
         p
-          code .i4x
+          code .x4
           br
-          i.i4x.icon-vital
+          i.x4.icon-vital
       .col
         p
-          code .i3x
+          code .x3
           br
-          i.i3x.icon-vital
+          i.x3.icon-vital
       .col
         p
-          code .i2x
+          code .x2
           br
-          i.i2x.icon-vital
+          i.x2.icon-vital
 
 .row
   .section
 
     hr
-    h1 Vital Iconography
+    h1 Iconography
 
     p
-      ' Vital comes with a small set of font icons built with
-      = link_to 'Font Custom', 'https://github.com/FontCustom/fontcustom', target: '_blank'
-      ' . Some components such as the select box, checkboxes and the alert bar are reliant on font iconography.
+      ' Vital comes with a small set of icons. Some components such as the select box, checkboxes and the alert bar rely on these icons, but you can modify or remove them as needed.
 
-    .fonts-icons-preview
+    .icons-preview
       p
-        i.icon-arrow-updown
+        = image_tag 'icons/icon-arrow-updown.svg'
+        br
         | icon-arrow-updown
       p
-        i.icon-check
+        = image_tag 'icons/icon-check.svg'
+        br
         | icon-check
       p
-        i.icon-clock
+        = image_tag 'icons/icon-clock.svg'
+        br
         | icon-clock
       p
-        i.icon-close
+        = image_tag 'icons/icon-close.svg'
+        br
         | icon-close
       p
-        i.icon-close-empty
+        = image_tag 'icons/icon-close-empty.svg'
+        br
         | icon-close-empty
       p
-        i.icon-close-outline
+        = image_tag 'icons/icon-close-outline.svg'
+        br
         | icon-close-outline
       p
-        i.icon-menu
+        = image_tag 'icons/icon-menu.svg'
+        br
         | icon-menu
       p
-        i.icon-vital
+        = image_tag 'icons/icon-vital.svg'
+        br
         | icon-vital
       .clear
-
-    h2 Compiling Custom Font Icons
-
-    p To compile font icons, you must first install fontforge and the fontcustom gem.
-
-    = code('bash') do
-      |
-        # On Mac
-        # Requires Ruby 1.9.2+, FontForge with Python scripting
-        brew install fontforge --with-python
-        brew install eot-utils
-
-    p
-      ' Place your
-      code> .svg
-      ' files into your input path. Vital's input path is:
-      code> icons
-
-    p
-      ' After installation is complete, run
-      code> `rake vital:compile_fonts`
-      ' See
-      code> fontcustom.yml
-      | to customize or set your own paths.
-
-    p.gray
-      i Please note that some icons (such as those with social names) are blocked by ad-blockers.
 
 .row
   .section

@@ -10,13 +10,8 @@ A minimally invasive CSS framework for modern web applications.
 
 |                | Size  | Gzipped |
 |:---------------|:------|:--------|
-| CSS Framework  | 22 KB | 6 KB    |
-| Icons (.svg)   | 3 KB  | 1 KB    |
-| Icons (.eot)   | 2 KB  |         |
-| Icons (.ttf)   | 2 KB  |         |
-| Icons (.woff)  | 2 KB  |         |
 | Javascripts    | 0     |         |
-| Total          | 31 KB |         |
+| Vital CSS      | 22 KB | 6 KB    |
 
 
 ## Usage
@@ -51,19 +46,6 @@ bundle
 cd vital
 bundle exec rake vital:build
 ```
-
-### Compiling Font Icons
-
-To compile font icons, you must first install FontForge.
-
-```bash
-# On Mac
-# Requires Ruby 1.9.2+, FontForge with Python scripting
-brew install fontforge --with-python
-brew install eot-utils
-```
-
-After installation is complete, run `rake vital:compile_font`.
 
 ### Build the documentation
 

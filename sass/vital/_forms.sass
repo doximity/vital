@@ -1,6 +1,9 @@
 @import variables
 
 .full-width-forms
+  .btn
+    padding-left: 0.5em
+    padding-right: 0.5em
   .btn,
   a,
   button,
@@ -19,32 +22,33 @@ fieldset
     font-weight: 400
     padding: 0 0.25em
 
+input, select, textarea, button, .btn
+  margin-bottom: 1px
+
 input, select, textarea
   @include appearance-none
   border-radius: $radius
-  border: $border-width solid #ddd
+  border: 1px solid $gray-lighter
+  background-color: $input-background-color
   box-shadow: none
   color: $text
   display: block
-  font-family: $font
   font-size: inherit
   outline: none
   padding: 0.49em $input-left-right-padding
   &:hover, &:focus
-    border-color: $hover
+    border-color: $gray
     transition: $all
+    background-color: $input-background-color-hover
   &:focus
-    box-shadow: 0 0 10px $focus
+    border-color: $gray
 
 textarea
   padding: $input-left-right-padding
 
 select
-  background-image: url($svg-arrow-updown)
-  background-color: $input-background-color
-  background-size: 1em
-  background-repeat: no-repeat
-  background-position: 99% 50%
+  @include svg-background
+  background-image: url($icon-arrow-updown)
   line-height: 1.1
   padding: 0.78em $input-left-right-padding
   padding-right: 1.4em
@@ -88,19 +92,9 @@ input
   &[type='checkbox']
     border-radius: $radius
     &:checked
+      @include svg-background
+      background-image: url($icon-check-inverse)
       border: none
-      &:before
-        bottom: 0
-        color: white
-        content: $font-icons-icon-check
-        font-family: $icons
-        font-size: 1em
-        left: 0
-        line-height: 1
-        position: absolute
-        right: 0
-        text-align: center
-        top: 0
 
   &[type='radio']
     border-radius: $round
@@ -149,11 +143,14 @@ input
     padding-right: $input-left-right-padding
 
   input
+
     &[type='file']
       &::-ms-value
         background: $input-background-color
       &::-ms-value, &::-ms-value
         box-shadow: none
         border: 0
+
     &[type='range']
       border-color: transparent
+

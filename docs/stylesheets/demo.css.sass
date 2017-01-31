@@ -35,13 +35,6 @@ hr
   &.red
     background: #DD3F41
 
-// Typography
-
-body
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
-  font-smoothing: antialiased
-
 // Helpers
 
 .narrow
@@ -106,6 +99,15 @@ body
 .get-started .header .menu li:nth-child(4),
 .components .header .menu li:nth-child(3)
   background: $header-link-hover
+
+// Lazyload
+
+.b-lazy
+  opacity: 0
+.b-loading, .b-loaded
+  opacity: 1
+  transform: $translate
+  transition: opacity 0.5s ease
 
 // Home
 

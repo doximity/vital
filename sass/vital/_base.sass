@@ -3,20 +3,16 @@
 // Base
 
 *
-  box-sizing: border-box
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
+  @include box-sizing
 
 html, body
   height: 100%
   width: 100%
 
 body
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
+  @include font-smoothing
   background: $body
   color: $text
-  font-smoothing: antialiased
   font: 17px / 1.7 $font
   &:after
     content: ""

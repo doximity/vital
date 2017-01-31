@@ -21,7 +21,11 @@
   padding: 1em 1em 0 1em
   background: $gray-lightest
 
-.fonts-icons-preview
+.icons-preview
+  img
+    &[src$='.svg']
+      width: 1em
+      height: 1em
   p
     padding: 1em 0
     margin: 0
@@ -33,12 +37,8 @@
     width: 25%
     float: left
     display: block
-    i
-      color: $gray-dark
-      font-size: 1.5em
-      display: block
     &:hover
-      background: #eee
+      background: $gray-lightest
       border-radius: 2px
       transition: 0.1s linear background
 
@@ -56,7 +56,7 @@
 
   // Components
 
-  .fonts-icons-preview
+  .icons-preview
     p
       width: 50%
 
