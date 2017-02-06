@@ -61,7 +61,7 @@ sass:
   .row
     .section
       h2.center Basic Forms
-      hr
+      hr.small
       .autogrid.full-width-forms
         .col-1-4.space
         .col-1-2
@@ -92,7 +92,7 @@ sass:
                 small Enter your email
               input type='email' placeholder='you@example.com'
             p
-              = link_to 'Reset', '#', class: 'btn red solid disabled', disabled: 'disabled'
+              = link_to 'Reset', '#', class: 'btn red solid'
         .col-1-4.space
         .clear
 
@@ -127,7 +127,7 @@ sass:
   .row
     .section
       h2.center Background Cards
-      hr
+      hr.small
       .boxed-backgrounds
         .col-1-3
           .card
@@ -176,7 +176,7 @@ sass:
   .row
     .section
       h2.center Feed Cards
-      hr
+      hr.small
       .feed-cards
         .autogrid
           .col
@@ -219,7 +219,7 @@ sass:
   .row.photo-collage
     .section
       h2.center Photo Collage
-      hr
+      hr.small
 
       .boxed-text
         .boxed-text-outer.col-1-3.bg-01
@@ -263,7 +263,7 @@ sass:
   .row
     .section
       h2.center Account
-      hr
+      hr.small
 
       .col-1-4
         ul.bordered-list
@@ -300,4 +300,68 @@ sass:
 
       .clear
 
-  hr
+  .row.bg-black.light-text
+    .section.narrow
+      h1.center Live Examples
+      hr.small.opacity-1
+      .autogrid
+        .col
+          h2 Work @ Doximity
+          ul.list
+            li = link_to 'https://workat.doximity.com/', 'https://workat.doximity.com/', target: '_blank'
+            li = link_to 'https://workat.doximity.com/positions/', 'https://workat.doximity.com/positions/', target: '_blank'
+            li = link_to 'https://workat.doximity.com/about/', 'https://workat.doximity.com/about/', target: '_blank'
+            li = link_to 'https://workat.doximity.com/contact/', 'https://workat.doximity.com/contact/', target: '_blank'
+          h2 Doximity Engineering
+          ul.list
+            li = link_to 'https://engineering.doximity.com/', 'https://engineering.doximity.com/', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/pages/engineering-stack', 'https://engineering.doximity.com/pages/engineering-stack', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/sitemaps', 'https://engineering.doximity.com/sitemaps', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/authors', 'https://engineering.doximity.com/authors', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/', 'https://engineering.doximity.com/', target: '_blank'
+          h2 Doximity
+          ul.list
+            li = link_to 'https://doximity.com', 'https://doximity.com', target: '_blank'
+            li = link_to 'https://doximity.com/about/company', 'https://doximity.com/about/company', target: '_blank'
+            li = link_to 'https://doximity.com/about/press', 'https://doximity.com/about/press', target: '_blank'
+            li = link_to 'https://doximity.com/about/jobs', 'https://doximity.com/about/jobs', target: '_blank'
+            li = link_to 'https://doximity.com/about/contact', 'https://doximity.com/about/contact', target: '_blank'
+            li = link_to 'https://doximity.com/about/advisors', 'https://doximity.com/about/advisors', target: '_blank'
+            li = link_to 'https://doximity.com/clinicians/product', 'https://doximity.com/clinicians/product', target: '_blank'
+            li = link_to 'https://doximity.com/clinicians/download', 'https://doximity.com/clinicians/download', target: '_blank'
+            li = link_to 'https://doximity.com/clinicians/privacy', 'https://doximity.com/clinicians/privacy', target: '_blank'
+            li = link_to 'https://doximity.com/directory', 'https://doximity.com/directory', target: '_blank'
+            li = link_to 'https://doximity.com/partners', 'https://doximity.com/partners', target: '_blank'
+            li = link_to 'https://doximity.com/partnerships', 'https://doximity.com/partnerships', target: '_blank'
+            li = link_to 'https://doximity.com/developers/home', 'https://doximity.com/developers/home', target: '_blank'
+            li = link_to 'https://doximity.com/hospitals', 'https://doximity.com/hospitals', target: '_blank'
+            li = link_to 'https://doximity.com/signin', 'https://doximity.com/signin', target: '_blank'
+            li = link_to 'https://doximity.com/password_resets/new', 'https://doximity.com/password_resets/new', target: '_blank'
+            li = link_to 'https://doximity.com/browser_warning', 'https://doximity.com/browser_warning', target: '_blank'
+            li = link_to 'https://doximity.com/careers/signin', 'https://doximity.com/careers/signin', target: '_blank'
+            li = link_to 'https://doximity.com/careers_press_embed', 'https://doximity.com/careers_press_embed', target: '_blank'
+            li = link_to 'https://doximity.com/about/press_room', 'https://doximity.com/about/press_room', target: '_blank'
+            li = link_to 'https://doximity.com/about/testimonials', 'https://doximity.com/about/testimonials', target: '_blank'
+            li = link_to 'https://doximity.com/about/faq', 'https://doximity.com/about/faq', target: '_blank'
+            li = link_to 'https://doximity.com/free_cme', 'https://doximity.com/free_cme', target: '_blank'
+            li = link_to 'https://doximity.com/reg/free_cme', 'https://doximity.com/reg/free_cme', target: '_blank'
+            li = link_to 'https://doximity.com/medstudents', 'https://doximity.com/medstudents', target: '_blank'
+            li = link_to 'https://doximity.com/docfax', 'https://doximity.com/docfax', target: '_blank'
+            li = link_to 'https://doximity.com/amion', 'https://doximity.com/amion', target: '_blank'
+            li = link_to 'https://doximity.com/summit', 'https://doximity.com/summit', target: '_blank'
+            li = link_to 'https://doximity.com/fellows/apply', 'https://doximity.com/fellows/apply', target: '_blank'
+            li = link_to 'https://doximity.com/doxconnect', 'https://doximity.com/doxconnect', target: '_blank'
+            li = link_to 'https://doximity.com/conferences', 'https://doximity.com/conferences', target: '_blank'
+            li = link_to 'https://doximity.com/promo/fax', 'https://doximity.com/promo/fax', target: '_blank'
+            li = link_to 'https://doximity.com/leadership', 'https://doximity.com/leadership', target: '_blank'
+            li = link_to 'https://doximity.com/careers/methodology', 'https://doximity.com/careers/methodology', target: '_blank'
+            li = link_to 'https://doximity.com/ipad', 'https://doximity.com/ipad', target: '_blank'
+            li = link_to 'https://doximity.com/watch', 'https://doximity.com/watch', target: '_blank'
+            li = link_to 'https://doximity.com/emcare', 'https://doximity.com/emcare', target: '_blank'
+            li = link_to 'https://doximity.com/apdim', 'https://doximity.com/apdim', target: '_blank'
+            li = link_to 'https://doximity.com/apds', 'https://doximity.com/apds', target: '_blank'
+            li = link_to 'https://doximity.com/careers_press_embed', 'https://doximity.com/careers_press_embed', target: '_blank'
+          h2 Doximity Blog
+          ul.list
+            li = link_to 'https://blog.doximity.com/', 'https://blog.doximity.com/', target: '_blank'
+
