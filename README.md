@@ -1,3 +1,4 @@
+**Note:** Vital v1.x.x is not backwards compatible with v2.x.x. Some things may break.
 # Vital
 
 A minimally invasive CSS framework for modern web applications.
