@@ -25,15 +25,6 @@
   display: table-cell
   vertical-align: top
 
-.padded
-  [class*='col-'], .col
-    padding-left: $grid-padding
-    padding-right: $grid-padding
-
-.right-padded
-  [class*='col-'], .col
-    padding-right: $grid-padding
-
 @media screen and (max-width: $phablet)
 
   [class*='col-'], .col
@@ -41,7 +32,3 @@
 
   .col
     display: block
-
-  .right-padded
-    [class*='col-'], .col
-      padding: 0

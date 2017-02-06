@@ -4,7 +4,7 @@ v2.0.0
   - Removed fontcustom and font icon dependencies in favor of SVG
   - Removed IE8/IE9 specific overrides as they are no longer supported
   - Removed `font-weight` on most tags in `_base.sass`
-  - Text anti-aliasing is enabed by default
+  - Text anti-aliasing is enabled by default
   - Add to documentation
 
 v1.1.0

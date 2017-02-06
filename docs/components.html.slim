@@ -95,54 +95,65 @@
     hr
     h1 Grid
 
+    h2 Usage
+
     p
       ' Example usage:
       code> .col-1-2
       ' means 1 of 2 columns.
       code> .col-2-3
-      ' means 2 of 3 columns and so fourth.
+      ' means 2 of 3 columns and so fourth. You can create most basic layouts with these grid classes.
 
     .grid-preview
-
       .col-1-2 .col-1-2
       .col-1-2 .col-1-2
-
       .col-1-3 .col-1-3
       .col-2-3 .col-2-3
-
       .col-1-3 .col-1-3
       .col-1-3 .col-1-3
       .col-1-3 .col-1-3
-
       .col-1-4 .col-1-4
       .col-1-4 .col-1-4
       .col-1-4 .col-1-4
       .col-1-4 .col-1-4
-
       .col-1-4 .col-1-4
       .col-3-4 .col-3-4
-
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
-      .col-1-5 .col-1-5
-
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-      .col-1-8 .col-1-8
-
       .clear
 
+    p
+      code> .col-1-5
+      ' and
+      code> .col-1-8
+      ' Do not have accompanying classes. They are designed to be equally sized.
+
+    .grid-preview
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+      .col-1-5 .col-1-5
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .col-1-8 .col-1-8
+      .clear
+
+    h2 Grid Padding
     p
       ' The grid is not padded by default, but if you choose, you can pad the grid evenly on the left and right sides by nesting your grid elements under:
       code> .padded
       | padding.
+
+    .grid-preview
+      .padded
+        .col-2-3 .col-2-3
+        .col-1-3 .col-1-3
+      .clear
+
     p
       ' If your layouts are heavy on typography you can use the
       code> .right-padded
@@ -153,16 +164,9 @@
       | :
 
     .grid-preview
-      .padded
-        .col-1-2 .col-1-2
-        .col-1-2 .col-1-2
-      .padded
+      .right-padded
+        .col-2-3 .col-2-3
         .col-1-3 .col-1-3
-        .col-1-3 .col-1-3
-        .col-1-3 .col-1-3
-      .padded
-        .col-3-4 .col-3-4
-        .col-1-4 .col-1-4
       .clear
 
     p
@@ -170,9 +174,7 @@
       code .row
       ' to automatically clear
       code .col-
-      ' markup.
-    p
-      ' Alternatively, you can also use
+      ' markup. Alternatively, you can also use
       code .clear
       ' at the end of
       code .col-
@@ -702,22 +704,22 @@
         p
           code .x5
           br
-          i.x5.icon-vital
+          h1.x5 x5
       .col
         p
           code .x4
           br
-          i.x4.icon-vital
+          h1.x4 x4
       .col
         p
           code .x3
           br
-          i.x3.icon-vital
+          h1.x3 x3
       .col
         p
           code .x2
           br
-          i.x2.icon-vital
+          h1.x2 x2
 
 .row
   .section

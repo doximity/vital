@@ -193,6 +193,23 @@ ol.list li
   width: 2em
   display: inline-block
 
+// Grid
+
+.padded
+  [class*='col-'], .col
+    padding-left: $grid-padding
+    padding-right: $grid-padding
+
+.right-padded
+  [class*='col-'], .col
+    padding-right: $grid-padding
+
+@media screen and (max-width: $phablet)
+
+  .right-padded
+    [class*='col-'], .col
+      padding: 0
+
 @media screen and (max-width: $handheld)
 
   // Hide these classes on the $handheld breakpoint
