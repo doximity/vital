@@ -9,13 +9,10 @@ A minimally invasive CSS framework for modern web applications.
 - Written almost entirely in em values, allowing for easy and consistent scaling.
 - Small:
 
-With:
-
 |                | Size  | Gzipped |
 |:---------------|:------|:--------|
 | Javascripts    | 0     |         |
 | Vital CSS      | 31 KB | 7 KB    |
-
 
 ## Usage
 
