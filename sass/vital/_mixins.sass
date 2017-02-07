@@ -1,8 +1,16 @@
 // Mixins
 
-@mixin color($color-variable)
-  color: $color-variable
-  fill: $color-variable
+@mixin appearance($appearance-variable)
+  -moz-appearance: $appearance-variable
+  -ms-appearance: $appearance-variable
+  -o-appearance: $appearance-variable
+  -webkit-appearance: $appearance-variable
+  appearance: $appearance-variable
+
+@mixin box-sizing($box-sizing-variable)
+  box-sizing: $box-sizing-variable
+  -moz-box-sizing: $box-sizing-variable
+  -webkit-box-sizing: $box-sizing-variable
 
 @mixin border-radius($border-radius-variable)
   -moz-border-radius: $border-radius-variable
@@ -32,6 +40,10 @@
   -o-box-shadow: $box-shadow-variable
   -webkit-box-shadow: $box-shadow-variable
   box-shadow: $box-shadow-variable
+
+@mixin color($color-variable)
+  color: $color-variable
+  fill: $color-variable
 
 @mixin column-count($column-count-variable)
   -webkit-column-count: $column-count-variable
@@ -106,42 +118,3 @@
   -webkit-transform-style: preserve-3d
   -moz-transform-style: preserve-3d
   transform-style: preserve-3d
-
-@mixin appearance-none
-  -moz-appearance: none
-  -ms-appearance: none
-  -o-appearance: none
-  -webkit-appearance: none
-  appearance: none
-
-@mixin box-sizing
-  box-sizing: border-box
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
-
-@mixin background-size-cover
-  -moz-background-size: cover
-  -ms-background-size: cover
-  -o-background-size: cover
-  -webkit-background-size: cover
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
-
-@mixin background-size-contain
-  -moz-background-size: contain
-  -ms-background-size: contain
-  -o-background-size: contain
-  -webkit-background-size: contain
-  background-size: contain
-  background-repeat: no-repeat
-  background-position: center
-
-@mixin background-size-fit
-  -moz-background-size: fit
-  -ms-background-size: fit
-  -o-background-size: fit
-  -webkit-background-size: fit
-  background-size: fit
-  background-repeat: no-repeat
-  background-position: center

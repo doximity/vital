@@ -26,7 +26,7 @@ input, select, textarea, button, .btn
   margin-bottom: 1px
 
 input, select, textarea
-  @include appearance-none
+  @include appearance(none)
   border-radius: $radius
   border: 1px solid $gray-lighter
   background-color: $input-background-color
@@ -70,7 +70,7 @@ input
 
   &[type='search']
     box-sizing: border-box !important
-    @include appearance-none
+    @include appearance(none)
 
   &[type='checkbox'], &[type='radio']
     background-color: $input-background-color
