@@ -1,0 +1,44 @@
+// Background cards
+
+.boxed-image,
+.boxed-action,
+.boxed-meta
+  position: absolute
+.boxed-image,
+.boxed-action
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+.boxed-image
+  @include background-size(cover)
+.boxed-meta
+  bottom: 0
+  z-index: 1
+.boxed-action
+  opacity: 0
+  padding: 20% 0 0
+  z-index: 2
+.boxed
+  padding-top: 80%
+  position: relative
+  text-align: center
+  &:hover
+    .boxed-action
+      background: rgba(255, 255, 255, .7)
+      opacity: 1
+      transition: $all
+
+@media screen and (max-width: $tablet)
+
+  .boxed-backgrounds
+    [class*='col-']
+      width: 50%
+    .clear
+      display: none
+
+@media screen and (max-width: $handheld)
+
+  .boxed-backgrounds
+    [class*='col-']
+      width: 100%

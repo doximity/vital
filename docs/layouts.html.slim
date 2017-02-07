@@ -1,0 +1,366 @@
+- set_meta_tags title: 'Vital | Layouts'
+
+- @ipsum_title = 'Lorem ipsum dolor sit amet, sed do eiusmod, sondu'
+- @ipsum_paragraph = 'Consequat duis aute irure dolor in reprehenderit in voluptate velit esse.'
+- @ipsum_title_small = 'Dolor sit amet sondu cotnghi'
+- @ipsum_paragraph_small = 'Duis aute  in voluptate velit esse.'
+
+sass:
+  // backgrounds
+  .bg-01
+    background-image: image_url('https://unsplash.it/1000/1000/?image=787')
+  .bg-02
+    background-image: image_url('https://unsplash.it/1000/1000/?image=723')
+  .bg-03
+    background-image: image_url('https://unsplash.it/1000/1000/?image=803')
+  .bg-04
+    background-image: image_url('https://unsplash.it/1000/1000/?image=884')
+  .bg-05
+    background-image: image_url('https://unsplash.it/1000/1000/?image=981')
+  .bg-06
+    background-image: image_url('https://unsplash.it/1000/1000/?image=826')
+  .bg-07
+    background-image: image_url('https://unsplash.it/1000/1000/?image=823')
+  .bg-08
+    background-image: image_url('https://unsplash.it/1000/1000/?image=813')
+  .bg-09
+    background-image: image_url('https://unsplash.it/1000/1000/?image=892')
+  .bg-10
+    background-image: image_url('https://unsplash.it/1000/1000/?image=900')
+  .bg-11
+    background-image: image_url('https://unsplash.it/1000/1000/?image=894')
+  .bg-12
+    background-image: image_url('https://unsplash.it/1000/1000/?image=901')
+  .bg-13
+    background-image: image_url('https://unsplash.it/1000/1000/?image=896')
+  .bg-14
+    background-image: image_url('https://unsplash.it/1000/1000/?image=923')
+  .bg-15
+    background-image: image_url('https://unsplash.it/1000/1000/?image=898')
+
+  // products
+  .bg-a
+    background-image: image_url('products/01.jpg')
+  .bg-b
+    background-image: image_url('products/02.jpg')
+  .bg-c
+    background-image: image_url('products/03.jpg')
+  .bg-d
+    background-image: image_url('products/04.jpg')
+  .bg-e
+    background-image: image_url('products/05.jpg')
+  .bg-f
+    background-image: image_url('products/06.jpg')
+
+.row.bg-red.light-text
+  .section.center
+    h1 Layouts
+
+.page.bg
+
+  .row
+    .section
+      h2.center Basic Forms
+      hr.small
+      .autogrid.full-width-forms
+        .col-1-4.space
+        .col-1-2
+          h3.center Sign In
+          .box.bg-white.no-first-last
+            p
+              input type='email' placeholder='Email'
+              input type='password' placeholder='Password'
+            p
+              = link_to 'Go', '#', class: 'btn red solid'
+            hr
+            .col-1-2
+              = link_to 'Sign Up', '#', class: 'btn gray-medium no-outline small'
+            .col-1-2
+              = link_to 'Forgot Password?', '#', class: 'btn gray-medium no-outline small'
+            .clear
+        .col-1-4.space
+        .clear
+
+    .section
+      .autogrid.full-width-forms
+        .col-1-4.space
+        .col-1-2
+          h3.center Reset Password
+          .box.bg-white.no-first-last
+            p
+              label
+                small Enter your email
+              input type='email' placeholder='you@example.com'
+            p
+              = link_to 'Reset', '#', class: 'btn red solid'
+        .col-1-4.space
+        .clear
+
+    .section
+      .autogrid.full-width-forms
+        .col-1-4.space
+        .col-1-2
+          h3.center Create Account
+          .box.no-first-last.bg-white
+            p
+              label
+                small Enter your email
+              input type='email' placeholder='you@example.com'
+            p
+              label
+                small Confirm your email
+              input type='email' placeholder='you@example.com'
+            p
+              label
+                small Create a password
+              input type='password' placeholder='Password'
+            hr
+            p
+              = link_to 'Create Account', '#', class: 'btn red solid'
+            p.center
+              ' Have an account?
+              = link_to 'Sign in', '#'
+        .col-1-4.space
+        .clear
+
+  .row
+    .section
+      h2.center Background Cards
+      hr.small
+      .boxed-backgrounds
+        .col-1-3
+          .card
+            .boxed
+              .boxed-action
+                h2 Place of Beauty
+                = link_to 'Go There', '#', class: 'btn large solid round black'
+              .boxed-image.bg-10
+        .col-1-3
+          .card
+            .boxed
+              .boxed-action
+                h2 Place of Beauty
+                = link_to 'Go There', '#', class: 'btn large solid round black'
+              .boxed-image.bg-11
+        .col-1-3
+          .card
+            .boxed
+              .boxed-action
+                h2 Place of Beauty
+                = link_to 'Go There', '#', class: 'btn large solid round black'
+              .boxed-image.bg-12
+        .col-1-3
+          .card
+            .boxed
+              .boxed-action
+                h2 Place of Beauty
+                = link_to 'Go There', '#', class: 'btn large solid round black'
+              .boxed-image.bg-13
+        .col-1-3
+          .card
+            .boxed
+              .boxed-action
+                h2 Place of Beauty
+                = link_to 'Go There', '#', class: 'btn large solid round black'
+              .boxed-image.bg-14
+        .col-1-3
+          .card
+            .boxed
+              .boxed-action
+                h2 Place of Beauty
+                = link_to 'Go There', '#', class: 'btn large solid round black'
+              .boxed-image.bg-15
+        .clear
+
+  .row
+    .section
+      h2.center Feed Cards
+      hr.small
+      .feed-cards
+        .autogrid
+          .col
+            .feed-card
+              = image_tag 'https://unsplash.it/1000/800/?image=731'
+              h3 = @ipsum_title
+              p = @ipsum_paragraph
+          .col
+            .feed-card
+              = image_tag 'https://unsplash.it/1000/800/?image=872'
+              h3 = @ipsum_title
+              p = @ipsum_paragraph
+          .col
+            .feed-card
+              = image_tag 'https://unsplash.it/1000/800/?image=176'
+              h3 = @ipsum_title
+              p = @ipsum_paragraph
+        .autogrid
+          .col
+            .feed-card
+              = image_tag 'https://unsplash.it/1000/800/?image=957'
+              h3 = @ipsum_title
+              p = @ipsum_paragraph
+          .col
+            .feed-card
+              = image_tag 'https://unsplash.it/1000/800/?image=118'
+              h3 = @ipsum_title
+              p = @ipsum_paragraph
+          .col
+            .feed-card
+              = image_tag 'https://unsplash.it/1000/800/?image=263'
+              h3 = @ipsum_title
+              p = @ipsum_paragraph
+          .col
+            .feed-card
+              = image_tag 'https://unsplash.it/1000/800/?image=485'
+              h3 = @ipsum_title
+              p = @ipsum_paragraph
+
+  .row.photo-collage
+    .section
+      h2.center Photo Collage
+      hr.small
+
+      .boxed-text
+        .boxed-text-outer.col-1-3.bg-01
+          .boxed-text-content
+        .boxed-text-outer.col-2-3.bg-02
+          .boxed-text-content
+            h2 = @ipsum_title_small
+            p = @ipsum_paragraph_small
+        .clear
+
+        .boxed-text-outer.col-2-3.bg-03
+          .boxed-text-content
+        .boxed-text-outer.col-1-3.bg-04
+          .boxed-text-content
+            h2 = @ipsum_title_small
+            p = @ipsum_paragraph_small
+        .clear
+
+        .boxed-text-outer.col-1-2.bg-05
+          .boxed-text-content
+            h2 = @ipsum_title_small
+            p = @ipsum_paragraph_small
+        .boxed-text-outer.col-1-2.bg-06
+          .boxed-text-content
+        .clear
+
+        .boxed-text-outer.col-1-3.bg-07
+          .boxed-text-content
+            h2 = @ipsum_title_small
+            p = @ipsum_paragraph_small
+        .boxed-text-outer.col-1-3.bg-08
+          .boxed-text-content
+            h2 = @ipsum_title_small
+            p = @ipsum_paragraph_small
+        .boxed-text-outer.col-1-3.bg-09
+          .boxed-text-content
+            h2 = @ipsum_title_small
+            p = @ipsum_paragraph_small
+        .clear
+
+  .row
+    .section
+      h2.center Account
+      hr.small
+
+      .col-1-4
+        ul.bordered-list
+          li = link_to 'Profile', '#', class: 'here'
+          li = link_to 'Subscription', '#'
+          li = link_to 'Payment', '#'
+
+      .col-3-4.bg-white.padding.no-first-last
+        h2
+          | Richard Hendricks
+          = image_tag 'http://www.piedpiper.com/app/themes/pied-piper/dist/images/richard.png', class: 'float-right', width: '15%'
+        ul
+          li
+            small.gray-light Email
+            br
+            span richard@piedpiper.com
+          li
+            small.gray-light Handle
+            br
+            span @rHendricks
+          li
+            small.gray-light Description
+            br
+            span Middle-out compression done right.
+
+        p
+          small.gray-light About
+          br
+          | Richard is the CEO (Chief Executive Officer) of Ronify, a company he founded and then was fired from. Isn’t that weird? Although he left four credits short of graduation, he attended Stanford, where none of his computer science classes mentioned the possibility of having an innovative software firm you created ripped from you by soulless bean counters.
+
+
+        p
+          = link_to 'Edit Profile', '#', class: 'btn red'
+
+      .clear
+
+  .row.bg-black.light-text
+    .section.narrow
+      h1.center Live Examples
+      hr.small.opacity-1
+      .autogrid
+        .col
+          h2 Work @ Doximity
+          ul.list
+            li = link_to 'https://workat.doximity.com/', 'https://workat.doximity.com/', target: '_blank'
+            li = link_to 'https://workat.doximity.com/positions/', 'https://workat.doximity.com/positions/', target: '_blank'
+            li = link_to 'https://workat.doximity.com/about/', 'https://workat.doximity.com/about/', target: '_blank'
+            li = link_to 'https://workat.doximity.com/contact/', 'https://workat.doximity.com/contact/', target: '_blank'
+          h2 Doximity Engineering
+          ul.list
+            li = link_to 'https://engineering.doximity.com/', 'https://engineering.doximity.com/', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/pages/engineering-stack', 'https://engineering.doximity.com/pages/engineering-stack', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/sitemaps', 'https://engineering.doximity.com/sitemaps', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/authors', 'https://engineering.doximity.com/authors', target: '_blank'
+            li = link_to 'https://engineering.doximity.com/', 'https://engineering.doximity.com/', target: '_blank'
+          h2 Doximity
+          ul.list
+            li = link_to 'https://doximity.com', 'https://doximity.com', target: '_blank'
+            li = link_to 'https://doximity.com/about/company', 'https://doximity.com/about/company', target: '_blank'
+            li = link_to 'https://doximity.com/about/press', 'https://doximity.com/about/press', target: '_blank'
+            li = link_to 'https://doximity.com/about/jobs', 'https://doximity.com/about/jobs', target: '_blank'
+            li = link_to 'https://doximity.com/about/contact', 'https://doximity.com/about/contact', target: '_blank'
+            li = link_to 'https://doximity.com/about/advisors', 'https://doximity.com/about/advisors', target: '_blank'
+            li = link_to 'https://doximity.com/clinicians/product', 'https://doximity.com/clinicians/product', target: '_blank'
+            li = link_to 'https://doximity.com/clinicians/download', 'https://doximity.com/clinicians/download', target: '_blank'
+            li = link_to 'https://doximity.com/clinicians/privacy', 'https://doximity.com/clinicians/privacy', target: '_blank'
+            li = link_to 'https://doximity.com/directory', 'https://doximity.com/directory', target: '_blank'
+            li = link_to 'https://doximity.com/partners', 'https://doximity.com/partners', target: '_blank'
+            li = link_to 'https://doximity.com/partnerships', 'https://doximity.com/partnerships', target: '_blank'
+            li = link_to 'https://doximity.com/developers/home', 'https://doximity.com/developers/home', target: '_blank'
+            li = link_to 'https://doximity.com/hospitals', 'https://doximity.com/hospitals', target: '_blank'
+            li = link_to 'https://doximity.com/signin', 'https://doximity.com/signin', target: '_blank'
+            li = link_to 'https://doximity.com/password_resets/new', 'https://doximity.com/password_resets/new', target: '_blank'
+            li = link_to 'https://doximity.com/browser_warning', 'https://doximity.com/browser_warning', target: '_blank'
+            li = link_to 'https://doximity.com/careers/signin', 'https://doximity.com/careers/signin', target: '_blank'
+            li = link_to 'https://doximity.com/careers_press_embed', 'https://doximity.com/careers_press_embed', target: '_blank'
+            li = link_to 'https://doximity.com/about/press_room', 'https://doximity.com/about/press_room', target: '_blank'
+            li = link_to 'https://doximity.com/about/testimonials', 'https://doximity.com/about/testimonials', target: '_blank'
+            li = link_to 'https://doximity.com/about/faq', 'https://doximity.com/about/faq', target: '_blank'
+            li = link_to 'https://doximity.com/free_cme', 'https://doximity.com/free_cme', target: '_blank'
+            li = link_to 'https://doximity.com/reg/free_cme', 'https://doximity.com/reg/free_cme', target: '_blank'
+            li = link_to 'https://doximity.com/medstudents', 'https://doximity.com/medstudents', target: '_blank'
+            li = link_to 'https://doximity.com/docfax', 'https://doximity.com/docfax', target: '_blank'
+            li = link_to 'https://doximity.com/amion', 'https://doximity.com/amion', target: '_blank'
+            li = link_to 'https://doximity.com/summit', 'https://doximity.com/summit', target: '_blank'
+            li = link_to 'https://doximity.com/fellows/apply', 'https://doximity.com/fellows/apply', target: '_blank'
+            li = link_to 'https://doximity.com/doxconnect', 'https://doximity.com/doxconnect', target: '_blank'
+            li = link_to 'https://doximity.com/conferences', 'https://doximity.com/conferences', target: '_blank'
+            li = link_to 'https://doximity.com/promo/fax', 'https://doximity.com/promo/fax', target: '_blank'
+            li = link_to 'https://doximity.com/leadership', 'https://doximity.com/leadership', target: '_blank'
+            li = link_to 'https://doximity.com/careers/methodology', 'https://doximity.com/careers/methodology', target: '_blank'
+            li = link_to 'https://doximity.com/ipad', 'https://doximity.com/ipad', target: '_blank'
+            li = link_to 'https://doximity.com/watch', 'https://doximity.com/watch', target: '_blank'
+            li = link_to 'https://doximity.com/emcare', 'https://doximity.com/emcare', target: '_blank'
+            li = link_to 'https://doximity.com/apdim', 'https://doximity.com/apdim', target: '_blank'
+            li = link_to 'https://doximity.com/apds', 'https://doximity.com/apds', target: '_blank'
+            li = link_to 'https://doximity.com/careers_press_embed', 'https://doximity.com/careers_press_embed', target: '_blank'
+          h2 Doximity Blog
+          ul.list
+            li = link_to 'https://blog.doximity.com/', 'https://blog.doximity.com/', target: '_blank'
+

@@ -5,68 +5,96 @@
 
 // Text, Typography
 
+// Lists
+
 ul, ol
   &.list
-    margin-left: 1em
     padding-left: 1em
-
-ul.list li
-  list-style: disc
-
-ol.list li
-  list-style: decimal
+    li
+      padding-bottom: 0.5em
+ul.list
+  li
+    list-style: disc
+  ul
+    margin-top: 0
+    li
+      list-style: circle
+ol.list
+  li
+    list-style: decimal
+  ul
+    margin-bottom: 0
+    li
+      list-style: circle
 
 .align-left
   text-align: left
-
 .align-right
   text-align: right
-
 .break-word
   word-break: break-all
+.thin
+  font-weight: 100
+.uppercase
+  text-transform: uppercase
+
+// Removals
 
 .no-wrap
   white-space: nowrap
-
-.thin
-  font-weight: 100
-
-.uppercase
-  text-transform: uppercase
+.no-text-margins *
+  margin: 0
+.no-margin-top
+  margin-top: 0
+.no-margin-bottom
+  margin-bottom: 0
+.no-first-last
+  *
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
 
 // Lighten all typography for dark backgrounds
 
 .light-text
   *, a
     color: white
-  a
+  a:hover
     text-decoration: underline
+
+// Page width
+
+.narrow
+  max-width: 34em
+  margin: 0 auto
+.narrow-large
+  max-width: 40em
+  margin: 0 auto
+.narrow-small
+  max-width: 20em
+  margin: 0 auto
 
 // Alignment
 
 .auto
   margin: 0 auto
-
 .block
   display: block
-
 .center
   text-align: center
-
 .clear
   clear: both
-
 .float-left
   float: left
-
 .float-right
   float: right
-
 .inline
   display: inline
-
 .inline-block
   display: inline-block
+.padding
+  padding: 1em
 
 // Forms
 
@@ -81,35 +109,23 @@ ol.list li
   border: $border-width solid #ddd
   margin: 1em 0
   padding: 1em
-
 .disabled
   color: $gray-light
-
 .radius
   border-radius: $radius
-
 .round
   border-radius: $round
-
-// Opacities
-
-.opacity-half
-  opacity: 0.5
 
 // Colors
 
 .gray
   color: $gray
-
 .gray-medium
   color: $gray-medium
-
 .gray-light
   color: $gray-light
-
 .gray-lighter
   color: $gray-lighter
-
 .gray-lightest
   color: $gray-lightest
 
@@ -117,28 +133,52 @@ ol.list li
 
 .bg
   background: $gray-lightest
-
-// Backgrounds (Gradients)
-
+.bg-white
+  background: #FFF
+.bg-default
+  background: $bg-default-fallback
+  background: $bg-default
 .bg-black
   background: $bg-black-fallback
   background: $bg-black
-
 .bg-gray
   background: $bg-gray-fallback
   background: $bg-gray
-
 .bg-blue
   background: $bg-blue-fallback
   background: $bg-blue
-
 .bg-red
   background: $bg-red-fallback
   background: $bg-red
-
+.bg-orange
+  background: $bg-orange-fallback
+  background: $bg-orange
 .bg-green
   background: $bg-green-fallback
   background: $bg-green
+
+// Opacities
+
+.opacity-1
+  opacity: 0.1
+.opacity-2
+  opacity: 0.2
+.opacity-3
+  opacity: 0.3
+.opacity-4
+  opacity: 0.4
+.opacity-5
+  opacity: 0.5
+.opacity-6
+  opacity: 0.6
+.opacity-7
+  opacity: 0.7
+.opacity-8
+  opacity: 0.8
+.opacity-9
+  opacity: 0.9
+.opaque
+  opacity: 1
 
 // Hide / Show
 
@@ -159,21 +199,57 @@ ol.list li
   &:after
     content: $non-breaking-space
 
-// Font sizing
+// Sizing
 
-.i2x
+.x2
   font-size: 2em
-.i3x
+.x3
   font-size: 3em
-.i4x
+.x4
   font-size: 4em
-.i5x
+.x5
   font-size: 5em
 
 .same-width
   text-align: center
   width: 2em
   display: inline-block
+
+// Image sizes
+
+img
+  height: auto
+  &.smallest
+    width: 1em
+  &.smaller
+    width: 2em
+  &.small
+    width: 3em
+  &.medium
+    width: 4em
+  &.large
+    width: 5em
+  &.larger
+    width: 6em
+  &.largest
+    width: 7em
+
+// Grid
+
+.padded
+  [class*='col-'], .col
+    padding-left: $grid-padding
+    padding-right: $grid-padding
+
+.right-padded
+  [class*='col-'], .col
+    padding-right: $grid-padding
+
+@media screen and (max-width: $phablet)
+
+  .right-padded
+    [class*='col-'], .col
+      padding: 0
 
 @media screen and (max-width: $handheld)
 

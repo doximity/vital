@@ -2,32 +2,47 @@
 
 // Demo
 
-// Variables
+.grid-preview
+  margin: 2em 0
+  [class*='col-'], .autogrid .col
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+    background: #eee
+    font-size: 0.7em
+    text-align: center
+    border: $border-width solid #ddd
+    font-family: $code
+    overflow: hidden
 
-// Gradated Background Colors
+.empty-grid-preview
+  margin: 1em 0
+  padding: 1em 1em 0 1em
+  background: $gray-lightest
 
-$bg-default:                        linear-gradient(to bottom right, #B52352, #EF2B35)
-$bg-default-fallback:               #C80730
+.icons-preview
+  img
+    &[src$='.svg']
+      width: 1em
+      height: 1em
+  p
+    padding: 1em 0
+    margin: 0
+    height: auto
+    min-height: 3em
+    text-align: center
+    line-height: 1.5
+    color: gray
+    width: 25%
+    float: left
+    display: block
+    &:hover
+      background: $gray-lightest
+      border-radius: 2px
+      transition: 0.1s linear background
 
-$bg-red:                            linear-gradient(to bottom right, #B52352, #EF2B35)
-$bg-red-fallback:                   #C80730
-
-$bg-orange:                         linear-gradient(to bottom right, #EE495C, #F09259)
-$bg-orange-fallback:                #EE495C
-
-$bg-green:                          linear-gradient(to bottom right, #45D093, #B0CB80)
-$bg-green-fallback:                 #45D093
-
-$bg-blue:                           linear-gradient(to bottom right, #4E6CCF, #20CAB6)
-$bg-blue-fallback:                  #4E6CCF
-
-$bg-black:                          linear-gradient(to bottom right, #161616, #444)
-$bg-black-fallback:                 #161616
-
-$bg-gray:                           linear-gradient(to bottom right, #888, #DFDFDF)
-$bg-gray-fallback:                  #888
-
-// Base
+.header-preview
+  .header, nav ul li
+    background: #efefef !important
 
 // HR Colors
 hr
@@ -35,77 +50,23 @@ hr
   &.red
     background: #DD3F41
 
-// Typography
-
-body
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
-  font-smoothing: antialiased
-
-// Helpers
-
-.narrow
-  max-width: 38em
-
-// Backgrounds
-
-.bg
-  background: $gray-lightest
-.bg-white
-  background: #FFF
-
-// Backgrounds (Gradients)
-
-.bg-default
-  background: $bg-default-fallback
-  background: $bg-default
-.bg-black
-  background: $bg-black-fallback
-  background: $bg-black
-.bg-gray
-  background: $bg-gray-fallback
-  background: $bg-gray
-.bg-blue
-  background: $bg-blue-fallback
-  background: $bg-blue
-.bg-red
-  background: $bg-red-fallback
-  background: $bg-red
-.bg-orange
-  background: $bg-orange-fallback
-  background: $bg-orange
-.bg-green
-  background: $bg-green-fallback
-  background: $bg-green
-
-// Opacities
-
-.opacity-1
-  opacity: 0.1
-.opacity-2
-  opacity: 0.2
-.opacity-3
-  opacity: 0.3
-.opacity-4
-  opacity: 0.4
-.opacity-5
-  opacity: 0.5
-.opacity-6
-  opacity: 0.6
-.opacity-7
-  opacity: 0.7
-.opacity-8
-  opacity: 0.8
-.opacity-9
-  opacity: 0.9
-
 // Header
 
 .header nav ul li
   float: right
-.get-started .header .menu li:nth-child(4),
-.components .header .menu li:nth-child(3)
+.get-started .header .menu li:nth-child(5),
+.components .header .menu li:nth-child(4),
+.layouts .header .menu li:nth-child(3),
   background: $header-link-hover
+
+// Lazyload
+
+.b-lazy
+  opacity: 0
+.b-loading, .b-loaded
+  opacity: 1
+  transform: $translate
+  transition: opacity 0.5s ease
 
 // Home
 
@@ -160,7 +121,12 @@ body
     width: 5em
     margin: 2em 0 0 0
 
+
 @media screen and (max-width: $phablet)
+
+  .forms-preview
+    [class*='col-']
+      padding: 0.5% 0
 
   .centered-text
     padding: 0 5%
@@ -175,3 +141,15 @@ body
       padding: 2em 1em 1em 1em
     .col-1-2
       padding-bottom: 2em
+
+@media screen and (max-width: $handheld)
+
+  // Components
+
+  .icons-preview
+    p
+      width: 50%
+
+  .forms-preview
+    input:not([type='checkbox']):not([type='radio']), select, textarea, .btn
+      margin: 0.1em 0

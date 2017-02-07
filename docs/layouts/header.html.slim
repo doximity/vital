@@ -3,13 +3,15 @@
 
     nav
       = link_to 'index.html', class: 'logo' do
-        i.icon-vital.i3x
+        = image_tag 'logo.svg'
 
       label#menu-toggle-label for='menu-toggle'
       input#menu-toggle type='checkbox'
+      .icon-menu
 
       ul.menu
         li = link_to 'GitHub', 'https://github.com/doximity/vital'
         li = link_to 'Why Vital?', 'https://engineering.doximity.com/articles/vital-css-framework', target: '_blank'
+        li = link_to 'Layouts', '/layouts.html'
         li = link_to 'Components', '/components.html'
         li = link_to 'Get Started', '/get-started.html'

@@ -22,7 +22,3 @@ vital-*.tar.gz
 
 # Ignore .DS_store file
 .DS_Store
-
-# FontCustom stuff
-.fontcustom-manifest.json
-previews/

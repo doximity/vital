@@ -1,0 +1,120 @@
+// Mixins
+
+@mixin appearance($appearance-variable)
+  -moz-appearance: $appearance-variable
+  -ms-appearance: $appearance-variable
+  -o-appearance: $appearance-variable
+  -webkit-appearance: $appearance-variable
+  appearance: $appearance-variable
+
+@mixin box-sizing($box-sizing-variable)
+  box-sizing: $box-sizing-variable
+  -moz-box-sizing: $box-sizing-variable
+  -webkit-box-sizing: $box-sizing-variable
+
+@mixin border-radius($border-radius-variable)
+  -moz-border-radius: $border-radius-variable
+  -ms-border-radius: $border-radius-variable
+  -o-border-radius: $border-radius-variable
+  -webkit-border-radius: $border-radius-variable
+  border-radius: $border-radius-variable
+
+@mixin background($background-variable)
+  -moz-background: $background-variable
+  -ms-background: $background-variable
+  -o-background: $background-variable
+  -webkit-background: $background-variable
+
+@mixin background-size($background-size-variable)
+  -moz-background-size: $background-size-variable
+  -ms-background-size: $background-size-variable
+  -o-background-size: $background-size-variable
+  -webkit-background-size: $background-size-variable
+  background-size: $background-size-variable
+  background-repeat: no-repeat
+  background-position: center
+
+@mixin box-shadow($box-shadow-variable)
+  -moz-box-shadow: $box-shadow-variable
+  -ms-box-shadow: $box-shadow-variable
+  -o-box-shadow: $box-shadow-variable
+  -webkit-box-shadow: $box-shadow-variable
+  box-shadow: $box-shadow-variable
+
+@mixin color($color-variable)
+  color: $color-variable
+  fill: $color-variable
+
+@mixin column-count($column-count-variable)
+  -webkit-column-count: $column-count-variable
+  -moz-column-count: $column-count-variable
+  -ms-column-count: $column-count-variable
+  column-count: $column-count-variable
+  columns: $column-count-variable
+
+@mixin filter($filter-variable)
+  -moz-filter: $filter-variable
+  -ms-filter: $filter-variable
+  -o-filter: $filter-variable
+  -webkit-filter: $filter-variable
+  filter: $filter-variable
+
+@mixin user-select($user-select-variable)
+  -moz-user-select: $user-select-variable
+  -ms-user-select: $user-select-variable
+  -o-user-select: $user-select-variable
+  -webkit-user-select: $user-select-variable
+  user-select: $user-select-variable
+
+@mixin object-fit($object-fit-variable)
+  -moz-object-fit: $object-fit-variable
+  -ms-object-fit: $object-fit-variable
+  -o-object-fit: $object-fit-variable
+  -webkit-object-fit: $object-fit-variable
+  object-fit: $object-fit-variable
+
+@mixin transform($transform-variable)
+  -webkit-transform: $transform-variable
+  -moz-transform: $transform-variable
+  -ms-transform: $transform-variable
+  transform: $transform-variable
+
+@mixin transition($transition-variable)
+  -webkit-transition: $transition-variable
+  -moz-transition: $transition-variable
+  -ms-transition: $transition-variable
+  transition: $transition-variable
+
+@mixin transition-delay($transition-delay-variable)
+  -webkit-transition-delay: $transition-delay-variable
+  -moz-transition-delay: $transition-delay-variable
+  -ms-transition-delay: $transition-delay-variable
+  transition-delay: $transition-delay-variable
+
+@mixin transition-duration($transition-duration-variable)
+  -webkit-transition-duration: $transition-duration-variable
+  -moz-transition-duration: $transition-duration-variable
+  -ms-transition-duration: $transition-duration-variable
+  transition-duration: $transition-duration-variable
+
+// Pre-defined
+
+@mixin font-smoothing
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+
+@mixin svg-background
+  background-size: 1em
+  background-repeat: no-repeat
+  background-position: 99% 50%
+
+@mixin vertical-align
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  transform-style: preserve-3d

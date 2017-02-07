@@ -3,7 +3,7 @@
 // buttons
 
 .btn
-  @include appearance-none
+  @include appearance(none)
   background: transparent
   border-radius: $radius
   border: $border-width solid $gray
@@ -121,8 +121,9 @@
 
   &:disabled, &.disabled, &:disabled:hover, &.disabled:hover
     cursor: default
-    background: transparent
-    color: $gray
+    background-color: $gray-light !important
+    border-color: $gray-light !important
+    color: $gray !important
     opacity: 0.2
 
 // Adjustments for Firefox

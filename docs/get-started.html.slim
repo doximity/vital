@@ -11,7 +11,11 @@
     h2 Quickest (Compiled)
     p Import into stylesheet or as a stylesheet link tag:
     p
-      code https://cdn.rawgit.com/doximity/vital/v1.2.1/dist/css/vital.min.css
+      code https://cdn.rawgit.com/doximity/vital/v2.0.0/dist/css/vital.min.css
+    p
+      strong
+        ' Note:
+      ' Vital v2.x is not backwards compatible with v1.x. Some things may break. You may need to do some refactoring.
     hr
     h2 Recommended (Source)
     p
@@ -26,8 +30,6 @@
         dist/
         ├── css
         │   └── ... precompiled CSS files ...
-        ├── fonts
-        │   └── ... icons font files ...
         ├── sass
         │   └── ... framework sources as SASS files ...
         └── scss
@@ -40,9 +42,7 @@
       code SASS
       ' or
       code SCSS
-      ' ) and the
-      code fonts
-      | directory over to a directory within your project's sources that can be accessed from a browser.
+      | ) directory over to a directory within your project's sources that can be accessed from a browser.
     p
       ' Read the
       => link_to 'documentation', '/components.html'
@@ -65,6 +65,74 @@
       |
         @import vital/sprockets
         @import vital/all
+    p
+      code> vital/all
+      ' includes everything. You can also import individual partials depending on your needs:
+
+    = code('sass') do
+      |
+        // If you are using rails
+        @import sprockets
+
+        // Vendor
+        @import vital/normalize
+
+        // Components
+        @import vital/variables
+        @import vital/mixins
+        @import vital/icons
+        @import vital/grid
+        @import vital/base
+        @import vital/buttons
+        @import vital/footer
+        @import vital/forms
+        @import vital/header
+        @import vital/heroes
+        @import vital/loaders
+        @import vital/notice
+        @import vital/pagination
+        @import vital/tables
+        @import vital/tabs
+        @import vital/syntax
+        @import vital/helpers
+
+        // Layouts
+        @import vital/layouts/background_cards
+        @import vital/layouts/bordered_lists
+        @import vital/layouts/photo_collages
+        @import vital/layouts/feed_cards
+
+        // Your customizations
+        @import custom
+
+    p
+      ' Most partials are optional.
+    p
+      ' Small reusable classes should be placed in
+      code> _helpers.sass
+      ' and larger, more unique code should live in
+      code _custom.sass
+      | .
+
+    h2 Application layout
+    p Your typical application layout HTML would look something like this:
+
+    = code('slim') do
+      |
+        doctype html
+        html
+          head
+            meta content='IE=edge' http-equiv='X-UA-Compatible'
+            meta charset='UTF-8'
+            meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'
+            title Vital
+            = favicon_tag 'images/favicon.ico'
+            = stylesheet_link_tag :vital
+          body
+            = partial 'layouts/header'
+            .contents
+              = yield
+            = partial 'layouts/footer'
 
     hr
     h2 Bower / NPM

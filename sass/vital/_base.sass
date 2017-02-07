@@ -3,15 +3,14 @@
 // Base
 
 *
-  box-sizing: border-box
-  -moz-box-sizing: border-box
-  -webkit-box-sizing: border-box
+  @include box-sizing(border-box)
 
 html, body
   height: 100%
   width: 100%
 
 body
+  @include font-smoothing
   background: $body
   color: $text
   font: 17px / 1.7 $font
@@ -26,8 +25,8 @@ img
 
 // Typography
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, div
-  font-weight: 300
+h1, h2, h3, h4, h5, h6
+  font-weight: 400
 
 h1, h2, h3, h4, h5, h6, p, ul, ol
   margin: 1em 0
@@ -136,13 +135,3 @@ dd
 
   .section
     width: 100%
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-
-  strong, b, .bold
-    font-weight: $bold
-
-.ie8, .ie9
-
-  strong, b, .bold
-    font-weight: $bold

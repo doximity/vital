@@ -1,80 +1,25 @@
-//
-// Icon Font: icons
-//
+// Framework Icons
 
-// https://github.com/sass/sass/issues/659#issuecomment-64819075
-@function char($character-code)
-  @if function-exists("selector-append")
-    @return unquote('"\\#{$character-code}"')
+$icon-arrow-updown: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><polyline points="114.3,212.8 388,212.8 251.1,0 114.3,212.8"/><polyline points="388,297.9 114.3,297.9 251.1,510.7 388,297.9"/></svg>'
 
-  @return str-slice("x", 1, 1) + $character-code
+$icon-check: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M219.8,347.5c-3,3-7.2,5.5-10.9,5.5c-3.7,0-7.9-2.6-11-5.6l-69.5-69.5l22.1-22.1l58.6,58.6l154.8-156l21.7,22.5L219.8,347.5z"/></g></svg>'
 
-@font-face
-  font-family: "icons"
-  src: url(if($vital-sass-asset-helper, vital-font-path("icons.eot"), "../fonts/icons.eot"))
-  src: url(if($vital-sass-asset-helper, vital-font-path("icons.eot?#iefix"), "../fonts/icons.eot?#iefix")) format("embedded-opentype"), url(if($vital-sass-asset-helper, vital-font-path("icons.woff"), "../fonts/icons.woff")) format("woff"), url(if($vital-sass-asset-helper, vital-font-path("icons.ttf"), "../fonts/icons.ttf")) format("truetype"), url(if($vital-sass-asset-helper, vital-font-path("icons.svg#icons"), "../fonts/icons.svg#icons")) format("svg")
-  font-weight: normal
-  font-style: normal
+$icon-check-inverse: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><path class="st0" d="M219.8,347.5c-3,3-7.2,5.5-10.9,5.5s-7.9-2.6-11-5.6l-69.5-69.5l22.1-22.1l58.6,58.6l154.8-156l21.7,22.5L219.8,347.5z"/></g></svg>'
 
-@media screen and (-webkit-min-device-pixel-ratio: 0)
-  @font-face
-    font-family: "icons"
-    src: url(if($vital-sass-asset-helper, vital-font-path("icons.svg#icons"), "../fonts/icons.svg#icons")) format("svg")
+$icon-clock: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="500px" height="500px" viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve"><path d="M250,0C112,0,0,112,0,250s112,250,250,250s250-112,250-250S388,0,250,0z M250,20c127.1,0,230,102.9,230,230S377.1,480,250,480S20,377.1,20,250S122.9,20,250,20z M377.8,100.6c-2.3,0.3-4.4,1.4-5.9,3.1l-110,118.8c-3.7-1.6-7.6-2.5-11.9-2.5c-16.6,0-30,13.4-30,30s13.4,30,30,30c1.6,0,3.1-0.4,4.7-0.6l41.2,76.6c2.7,4.9,8.8,6.7,13.8,4.1s6.7-8.8,4.1-13.8L272.2,270c4.8-5.3,7.8-12.3,7.8-20c0-5-1.3-9.6-3.4-13.8l110-118.8c3.9-3.9,3.8-10.3-0.1-14.1C384.2,101.1,381,100.1,377.8,100.6z"/></svg>'
 
-[data-icon]:before
-  content: attr(data-icon)
+$icon-close: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M437,75C337.1-25,175-25,75,75S-24.9,337,75,437C174.9,537,337,537,437,437S537,174.9,437,75z M374.2,359.6l-14.5,14.5L255.8,270.5L152.4,373.7l-14.5-14.5L241.3,256L137.9,152.9l14.5-14.5l103.4,103.1l103.9-103.6l14.5,14.5L270.3,256L374.2,359.6z"/></g></svg>'
 
-[data-icon]:before,
-.icon-arrow-updown:before,
-.icon-check:before,
-.icon-clock:before,
-.icon-close:before,
-.icon-close-empty:before,
-.icon-close-outline:before,
-.icon-menu:before,
-.icon-vital:before
-  display: inline-block
-  font-family: "icons"
-  font-style: normal
-  font-weight: normal
-  font-variant: normal
-  line-height: 1
-  text-decoration: inherit
-  text-rendering: optimizeLegibility
-  text-transform: none
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
-  font-smoothing: antialiased
+$icon-close-empty: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><polygon  points="358.7,136.8 254.8,240.6 151.4,137.3 136.9,151.9 240.3,255 136.9,358.3 151.4,372.7 254.8,269.5 358.7,373.2 373.2,358.8 269.3,255 373.2,151.4 "/></svg>'
 
-.icon-arrow-updown:before
-  content: char("f100")
+$icon-close-empty-white: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><style>.white{fill: white}</style><polygon class="white" points="358.7,136.8 254.8,240.6 151.4,137.3 136.9,151.9 240.3,255 136.9,358.3 151.4,372.7 254.8,269.5 358.7,373.2 373.2,358.8 269.3,255 373.2,151.4 "/></svg>'
 
-.icon-check:before
-  content: char("f101")
+$icon-close-outline: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><path class="st0" d="M437,74.9C337.1-25,175-25,75,74.9S-24.9,337,75,437c99.9,99.9,262,99.9,362,0S536.9,174.9,437,74.9zM421.9,421.9c-91.4,91.4-240.3,91.4-331.8,0s-91.4-240.3,0-331.8s240.3-91.4,331.8,0C513.4,181.5,513.4,330.4,421.9,421.9z"/></g><polygon class="st0" points="359.6,137.8 255.8,241.5 152.4,138.3 137.9,152.8 241.2,256 137.9,359.1 152.4,373.6 255.8,270.5 359.6,374.1 374.1,359.6 270.3,256 374.1,152.4" /></g></svg>'
 
-.icon-clock:before
-  content: char("f102")
+$icon-logo: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><rect width="512" height="512"/></svg>'
 
-.icon-close:before
-  content: char("f103")
+$icon-logo-type: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 210" style="enable-background:new 0 0 512 210;" xml:space="preserve"><rect width="512" height="210"/></svg>'
 
-.icon-close-empty:before
-  content: char("f104")
+$icon-menu: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><path d="M0,91.2v20.5h512V91.2H0z M0,244.8v20.5h512v-20.5H0z M0,398.4v20.5h512v-20.5H0z"/></svg>'
 
-.icon-close-outline:before
-  content: char("f105")
-
-.icon-menu:before
-  content: char("f106")
-
-.icon-vital:before
-  content: char("f107")
-
-$font-icons-icon-arrow-updown: char("f100")
-$font-icons-icon-check: char("f101")
-$font-icons-icon-clock: char("f102")
-$font-icons-icon-close: char("f103")
-$font-icons-icon-close-empty: char("f104")
-$font-icons-icon-close-outline: char("f105")
-$font-icons-icon-menu: char("f106")
-$font-icons-icon-vital: char("f107")
+$icon-menu-white: 'data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><style>.white{fill: white}</style><path class="white" d="M0,91.2v20.5h512V91.2H0z M0,244.8v20.5h512v-20.5H0z M0,398.4v20.5h512v-20.5H0z"/></svg>'

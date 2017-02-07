@@ -1,0 +1,31 @@
+// Photo collages
+
+.boxed-text
+  position: relative
+  [class*='bg-']
+    @include background-size(cover)
+  .boxed-text-outer
+    position: relative
+    top: 0
+    padding-bottom: 30%
+  .boxed-text-content
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 1em
+    color: #FFF
+    *
+      margin: 0
+    &:after
+      content: ''
+    &:hover
+      background: rgba(0,0,0,0.3)
+      transition: $all
+
+@media screen and (max-width: $handheld)
+
+  .boxed-text
+    .filler
+      padding-bottom: 80%

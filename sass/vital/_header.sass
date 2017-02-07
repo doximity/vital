@@ -1,134 +1,209 @@
-@import variables
-
 // Header
 
 .header
   background: $header
   height: $header-height
-  transform: $translate
+  z-index: 9
+  position: relative
+  a
+    cursor: pointer
   .section
     padding: 0
-    position: relative
   .logo
-    border: 0
-    color: $red
+    width: 4em
     float: left
-    line-height: 1
-    padding: 0.6em 1em
-    max-height: $header-height
-    overflow: hidden
+    padding: 0
+    min-height: 4.22em
+    img
+      margin: 0.95em 0 0 1em
+      max-height: 2.5em
     &:hover
       background: none
-      i
-        color: $red-bright
-        transition: $all
 
-  nav
+.menu
+  li
+    float: right
+  a
+    color: $header-link
+    display: block
+    font-size: 1em
+    font-weight: 400
+    line-height: $header-menu-line-height
+    padding: $header-dropdown-menu-padding
+    &:hover, &.here
+      opacity: 0.75
+  ul
+    padding: 0
+    li
+      float: right
+      &:first-child
+        a
+          padding-top: 1em
+      &:last-child
+        a
+          padding-bottom: 1em
     a
-      display: block
-      padding: 1.3em
-      &:hover
-        background: $header-link-hover
-    ul
-      padding: 0
-      margin: 0
-      li
-        background: $header
-        display: inline
-        float: left
-        position: relative
-        ul
-          left: 0
-          top: 100%
-      ul
-        display: none
-    li:hover > ul
-      display: block
-      position: absolute
-      width: 12.5em
-      z-index: 9000
-      li
-        width: 100%
-    ul ul li:hover > ul
-      left: auto
-      right: -12.5em
-      top: 0
+      line-height: 1
+      padding: $header-dropdown-submenu-padding
 
-#menu-toggle, #menu-toggle-label
-  cursor: pointer
-  display: none
-  height: $header-height
-  position: absolute
-  right: 0
-  user-select: none
-  width: $header-height
-
-#menu-toggle
-  border-radius: 0
-  border: 0
-  box-shadow: none
-  margin: 0
-  outline: none
-  padding: 0
-  z-index: -1
+.dropdown-with-avatar
+  margin-right: 1em
+  padding: 0.35em
   &:hover
-    background: $header-link-hover
-  &:before
-    content: $font-icons-icon-menu
-    font-family: $icons
-    font-size: 2em
-    padding: 0.24em 0.5em
+    .dropdown-icon
+      opacity: 1
+  ul
+    margin-top: 1px
+    left: -7em
+    text-align: right
+  .avatar
+    display: inline-block
+    max-height: 3em
+    position: relative
+    top: 0.25em
+  .dropdown-icon
+    -webkit-filter: invert(1)
+    margin: 0 0.2em
+    opacity: 0.75
+    position: absolute
+    top: 1.7em
+    width: 1em
+
+nav
+  ul
+    padding: 0
+    margin: 0
+    li
+      display: inline
+      float: left
+      position: relative
+      ul
+        left: 0
+        top: 100%
+    ul
+      display: none
+      background: $header-menu-background-color
+  li:hover > ul
+    display: block
+    position: absolute
+    width: 12.5em
+    z-index: 9000
+    li
+      width: 100%
+  ul ul li:hover > ul
+    left: auto
+    right: -12.5em
+    top: 0
+
+#menu-toggle-label, #menu-toggle
+  display: none
+
+// Header Options
+
+.header-center
+  nav
+    display: inline-block
+  .menu
     position: absolute
     right: 0
-  &:checked
-    background: $header-link-hover
-    &:before
-      bottom: 0
-      color: $text
-      content: $font-icons-icon-close-empty
-      font-size: 3em
-      left: 0
-      line-height: 0
-      padding: 0.7em 0
-      position: absolute
-      right: 0
-      top: 0
+  .section
+    text-align: center
+    padding: 0
+  .logo img
+    margin-left: 0
+
+// Mobile
 
 @media screen and (max-width: $phablet)
 
   .header
-    .logo
-      padding: 0.6em
-
-    nav
-      a
-        border-top: 1px solid #eee
-        padding: 1em
-      ul
-        li ul
-          display: block
-        li
-          border-right: none
-          display: block
-          float: left
-          width: 100%
-          text-align: center
-          a
-            background: $header-link-hover
-      >
-        ul
-          clear: both
-          display: none
-        input:checked + ul
-          display: block
-      li:hover ul
-        position: relative
-        width: auto
-      ul ul
-        li:hover > ul
-          left: auto
-          right: auto
-          top: auto
-
-  #menu-toggle, #menu-toggle-label
+    .section
+      width: 100%
+    [type='checkbox']
+      transition: none !important
+  .icon-menu
     display: block
+    position: absolute
+    top: 0
+    right: 0
+    height: $header-height
+    width: $header-height
+    z-index: -1
+    background-position: 50%
+    background-repeat: no-repeat
+    background-size: 2em
+    background-image: url($icon-menu)
+  #menu-toggle-label
+    background: transparent
+    border-radius: 0
+    border: 0
+    box-shadow: none
+    cursor: pointer
+    display: block
+    height: $header-height - 0.05em
+    margin: 0
+    outline: none
+    position: absolute
+    right: 0
+    user-select: none
+    width: 4.6em
+  #menu-toggle:checked + .icon-menu
+    background-size: 3em
+    background-image: url($icon-close-empty)
+    background-color: rgba(0,0,0,0.02)
+
+  .menu
+    *
+      float: none
+      margin: 0
+    position: relative
+    i
+      display: none
+    li
+      background: $header-menu-background-color
+      padding: 0
+    ul
+      padding: 0
+      a
+        line-height: $header-menu-line-height
+        padding: $header-dropdown-menu-padding
+
+  .dropdown-with-avatar
+    ul
+      left: 0
+      right: 0
+    .avatar, .dropdown-icon
+      display: none
+
+  nav
+    height: $header-height
+    border-bottom: 1px solid $header-menu-border-color
+    a
+      border-bottom: 1px solid $header-menu-border-color
+      padding: 1em
+      &.logo
+        border-bottom: 0
+    ul
+      li ul
+        display: block
+      li
+        border-right: none
+        display: block
+        float: left
+        width: 100%
+        text-align: center
+    >
+      ul
+        clear: both
+        display: none
+      input:checked ~ ul
+        display: block
+        opacity: 1
+    li:hover ul
+      position: relative
+      width: auto
+    ul ul
+      li:hover > ul
+        left: auto
+        right: auto
+        top: auto
