@@ -121,32 +121,36 @@ nav
       width: 100%
     [type='checkbox']
       transition: none !important
-
-  #menu-toggle-label, #menu-toggle
+  .icon-menu
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    height: $header-height
+    width: $header-height
+    z-index: -1
+    background-position: 50%
+    background-repeat: no-repeat
+    background-size: 2em
+    background-image: url($icon-menu)
+  #menu-toggle-label
+    background: transparent
+    border-radius: 0
     border: 0
+    box-shadow: none
+    cursor: pointer
     display: block
     height: $header-height - 0.05em
     margin: 0
+    outline: none
     position: absolute
     right: 0
-    width: 4.6em
-  #menu-toggle-label
     user-select: none
-  #menu-toggle
-    cursor: pointer
-    background-size: 2em
-    background-repeat: no-repeat
-    background-position: 50%
-    background-image: url($icon-menu)
-    background-color: $header-background-color
-    border-radius: 0
-    box-shadow: none
-    outline: none
-    z-index: 1
-    &:checked
-      background-size: 3em
-      background-color: $header-menu-background-color
-      background-image: url($icon-close-empty)
+    width: 4.6em
+  #menu-toggle:checked + .icon-menu
+    background-size: 3em
+    background-image: url($icon-close-empty)
+    background-color: rgba(0,0,0,0.02)
 
   .menu
     *
@@ -192,7 +196,7 @@ nav
       ul
         clear: both
         display: none
-      input:checked + ul
+      input:checked ~ ul
         display: block
         opacity: 1
     li:hover ul
