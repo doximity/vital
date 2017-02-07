@@ -10,7 +10,6 @@ namespace :vital do
       "mkdir -p #{release_dir}/{css,scss}",
       "cp {CHANGELOG,LICENSE,README}.md #{release_dir}/",
       "cp -R sass #{release_dir}/",
-      "cp -R fonts #{release_dir}/",
       "rm -f #{release_dir}/{,**/}.DS_Store"
     ].each { |cmd| sh cmd }
 
