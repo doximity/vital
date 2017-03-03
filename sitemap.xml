@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://vitalcss.com/build/build/build/build/build/components/</loc>
-    <lastmod>2017-02-07T17:37:28-02:00</lastmod>
+    <loc>http://vitalcss.com/build/components/</loc>
+    <lastmod>2017-03-03T14:20:53-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>http://vitalcss.com/build/build/build/build/build/get-started/</loc>
-    <lastmod>2017-03-03T14:10:53-03:00</lastmod>
+    <loc>http://vitalcss.com/build/get-started/</loc>
+    <lastmod>2017-03-03T14:20:53-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
@@ -25,110 +25,26 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>http://vitalcss.com/build/build/build/build/build/</loc>
-    <lastmod>2017-02-07T17:37:28-02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
     <loc>http://vitalcss.com/get-started/</loc>
     <lastmod>2017-03-03T14:10:25-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>http://vitalcss.com/build/build/build/build/components/</loc>
-    <lastmod>2017-03-03T14:10:52-03:00</lastmod>
+    <loc>http://vitalcss.com/build/</loc>
+    <lastmod>2017-03-03T14:20:53-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
-    <loc>http://vitalcss.com/build/build/build/build/get-started/</loc>
-    <lastmod>2017-03-03T14:10:52-03:00</lastmod>
+    <loc>http://vitalcss.com/build/layouts/</loc>
+    <lastmod>2017-03-03T14:20:53-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>http://vitalcss.com/components/</loc>
     <lastmod>2017-03-03T14:10:25-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/build/build/</loc>
-    <lastmod>2017-03-03T14:10:52-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/build/components/</loc>
-    <lastmod>2017-02-07T17:37:27-02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/build/get-started/</loc>
-    <lastmod>2017-02-07T17:37:27-02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/layouts/</loc>
-    <lastmod>2017-02-07T17:37:29-02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/</loc>
-    <lastmod>2017-02-07T17:37:28-02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/build/</loc>
-    <lastmod>2017-03-03T14:10:53-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/build/layouts/</loc>
-    <lastmod>2017-02-07T17:37:28-02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/components/</loc>
-    <lastmod>2017-03-03T14:10:53-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/get-started/</loc>
-    <lastmod>2017-03-03T14:10:53-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/get-started/</loc>
-    <lastmod>2017-03-03T14:10:54-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/</loc>
-    <lastmod>2017-03-03T14:10:52-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/build/layouts/</loc>
-    <lastmod>2017-03-03T14:10:52-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-  </url>
-  <url>
-    <loc>http://vitalcss.com/build/components/</loc>
-    <lastmod>2017-03-03T14:10:52-03:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
   </url>
