@@ -17,7 +17,7 @@
 └── scss
     └── ... framework sources as SCSS files ...</code></pre> <p>Depending on your project needs, copy the appropriate version of the stylesheets (<code>CSS</code>, <code>SASS</code>or <code>SCSS</code>) directory over to a directory within your project's sources that can be accessed from a browser.</p><p>Read the <a href="../components/">documentation</a> for information on the basics of setting up a common application layout.</p><hr/><h2>Rails</h2><p>Add the gem to your project's <code>Gemfile</code>:</p><pre class="highlight ruby"><code><span class="n">gem</span> <span class="s1">'vital'</span></code></pre> <p>And add the following at the top of your project's <code>app/assets/stylesheets/application.sass.css</code>:</p><pre class="highlight sass"><code><span class="k">@import</span> <span class="s">vital/sprockets</span>
 <span class="k">@import</span> <span class="s">vital/all</span></code></pre> <p><code>vital/all</code> includes everything. You can also import individual partials depending on your needs: </p><pre class="highlight sass"><code><span class="c1">// If you are using rails
-</span><span class="k">@import</span> <span class="s">sprockets</span>
+</span><span class="k">@import</span> <span class="s">vital/sprockets</span>
 
 <span class="c1">// Vendor
 </span><span class="k">@import</span> <span class="s">vital/normalize</span>
