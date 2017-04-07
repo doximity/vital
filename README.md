@@ -12,7 +12,7 @@ A minimally invasive CSS framework for modern web applications.
 |                | Size  | Gzipped |
 |:---------------|:------|:--------|
 | Javascripts    | 0     |         |
-| Vital CSS      | 24 KB | 6 KB    |
+| Vital CSS      | 23 KB | 6 KB    |
 
 ## Usage
 

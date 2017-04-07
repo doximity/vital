@@ -8,14 +8,22 @@
   .section
     position: relative
     padding: 1em
-    padding-right: 4em
-  i.icon-close-outline
+
+.notice-message
+  display: table
+  width: 100%
+
+.notice-text,
+.notice-dismiss
+  display: table-cell
+  vertical-align: middle
+
+.notice-dismiss
+  width: 3em
+  img
     cursor: pointer
-    font-size: 2em
-    line-height: 1.91
-    position: absolute
-    right: 0.5em
-    top: 0
+    width: 2em
+    height: 2em
+    float: right
     &:hover
-      &:before
-        background-image: url($icon-close)
+      opacity: 0.7

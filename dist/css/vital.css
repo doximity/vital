@@ -507,7 +507,7 @@ select {
   background-size: 1em;
   background-repeat: no-repeat;
   background-position: 99% 50%;
-  background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><polyline points="114.3,212.8 388,212.8 251.1,0 114.3,212.8"/><polyline points="388,297.9 114.3,297.9 251.1,510.7 388,297.9"/></svg>');
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M11.4 20.8h26.8L24.8 0 11.4 20.8m26.8 8.4H11.4L24.8 50l13.4-20.8"/></svg>');
   line-height: 1.1;
   padding: 0.78em 0.5em;
   padding-right: 1.4em; }
@@ -552,7 +552,7 @@ input[type='checkbox'] {
     background-size: 1em;
     background-repeat: no-repeat;
     background-position: 99% 50%;
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><style type="text/css">.st0{fill:#FFFFFF;}</style><g><path class="st0" d="M219.8,347.5c-3,3-7.2,5.5-10.9,5.5s-7.9-2.6-11-5.6l-69.5-69.5l22.1-22.1l58.6,58.6l154.8-156l21.7,22.5L219.8,347.5z"/></g></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><style type="text/css">.st0{fill:#fff;}</style><path class="st0" d="M44.3 12.2l-2.5-2.6-24 24.3-9.1-9.1-2.5 2.5 10.4 10.4c.4.4.9.7 1.3.7.3 0 .8-.3 1.2-.7l25.2-25.5z"/></svg>');
     border: none; }
 input[type='radio'] {
   border-radius: 99em; }
@@ -734,7 +734,7 @@ nav ul ul li:hover > ul {
 
   #menu-toggle:checked + .icon-menu {
     background-size: 3em;
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><polygon  points="358.7,136.8 254.8,240.6 151.4,137.3 136.9,151.9 240.3,255 136.9,358.3 151.4,372.7 254.8,269.5 358.7,373.2 373.2,358.8 269.3,255 373.2,151.4 "/></svg>');
+    background-image: url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M44.4 7.7l-2.1-2.1L25 22.9 7.7 5.6 5.6 7.7 22.9 25 5.6 42.3l2.1 2.1L25 27.1l17.3 17.3 2.1-2.1L27.1 25 44.4 7.7z"/></svg>');
     background-color: rgba(0, 0, 0, 0.02); }
 
   .menu {
@@ -867,17 +867,26 @@ nav ul ul li:hover > ul {
   text-align: center; }
   .notice .section {
     position: relative;
-    padding: 1em;
-    padding-right: 4em; }
-  .notice i.icon-close-outline {
+    padding: 1em; }
+
+.notice-message {
+  display: table;
+  width: 100%; }
+
+.notice-text,
+.notice-dismiss {
+  display: table-cell;
+  vertical-align: middle; }
+
+.notice-dismiss {
+  width: 3em; }
+  .notice-dismiss img {
     cursor: pointer;
-    font-size: 2em;
-    line-height: 1.91;
-    position: absolute;
-    right: 0.5em;
-    top: 0; }
-    .notice i.icon-close-outline:hover:before {
-      background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><path d="M437,75C337.1-25,175-25,75,75S-24.9,337,75,437C174.9,537,337,537,437,437S537,174.9,437,75z M374.2,359.6l-14.5,14.5L255.8,270.5L152.4,373.7l-14.5-14.5L241.3,256L137.9,152.9l14.5-14.5l103.4,103.1l103.9-103.6l14.5,14.5L270.3,256L374.2,359.6z"/></g></svg>'); }
+    width: 2em;
+    height: 2em;
+    float: right; }
+    .notice-dismiss img:hover {
+      opacity: 0.7; }
 
 .pagination {
   margin: 1em 0;
