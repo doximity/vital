@@ -277,8 +277,11 @@
 
 .row.notice
   .section
-    | This is a notice. Slot me anywhere.
-    i.icon-close-outline
+    .notice-message
+      .notice-text
+        | This is a notice. Slot me anywhere.
+      .notice-dismiss
+        = image_tag 'icons/icon-close-outline.svg'
 
 .row
   .section
