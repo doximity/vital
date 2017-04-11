@@ -57,6 +57,25 @@ bundle
 bundle exec middleman
 ```
 
+## Publishing to Amazon Web Services
+
+#### Set up AWS CLI
+
+`brew install awscli` then `aws configure`.
+
+#### Publishing
+
+```sh
+# publish (in the #deployments channel)
+doxbot ship vital
+
+# View site on S3
+http://vitalcss.s3-website-us-east-1.amazonaws.com/
+
+# View site on CloudFront (ensure it redirects to SSL)
+https://vitalcss.com/
+```
+
 ## Releasing a new version
 
 - Ensure docs, `README.md`, `CHANGELOG.md` are up to date
