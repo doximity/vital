@@ -9,5 +9,5 @@ set_index:
 publish:
 	aws configure set preview.cloudfront true
 	aws configure set preview.create-invalidation true
-	aws s3 sync --acl public-read --delete build/ s3://dox-workat
+	aws s3 sync --acl public-read --delete build/ s3://vitalcss
 	aws cloudfront create-invalidation --distribution-id ${VITALCSS_DIST_ID} --paths /*
