@@ -146,3 +146,66 @@
       | or
       code node_modules/vital-css
       | directory
+
+    h2 Webpack
+    p
+      ' Install vital-css and dependencies:
+    = code('sh') do
+      |
+        npm install --save css-loader sass-loader node-sass extract-text-webpack-plugin vital-css
+
+    p
+      ' Add the
+      code vital-css
+      ' module in your
+      code webpack.config.js
+      ' in order to easily import it in any Sass file:
+
+    = code('js') do
+      |
+        const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+        module.exports = {
+          entry: './src',
+          output: {
+            path: __dirname + '/build',
+            filename: 'bundle.js'
+          },
+          module: {
+            rules: [
+              {
+                test: /\.sass/,
+                use: ExtractTextPlugin.extract({
+                  fallback: 'style-loader',
+
+                  use: [
+                    { loader: 'css-loader' },
+                    {
+                      loader: 'sass-loader',
+                      options: {
+                        includePaths: [require('vital-css').includePaths]
+                      }
+                    }
+                  ]
+                })
+              }
+            ]
+          },
+          plugins: [
+            new ExtractTextPlugin("styles.css")
+          ]
+        };
+
+    p
+      ' And then you can just reference all of Vital with a single import within your
+      code .sass
+      '  files:
+      = code("css") do
+        |
+          @import "vital"
+      ' Or include only the components you need:
+      = code("sass") do
+        |
+          @import "vital/base"
+          @import "vital/variables"
+          @import "vital/forms"

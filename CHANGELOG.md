@@ -1,5 +1,8 @@
 _Post v1.1.0 releases changelog can be found on https://github.com/doximity/vital/releases_
 
+v2.1.1
+  - Add webpack convenience property to allow: `require('vital-css').includePaths`
+
 v2.1.0
   - Remove `i.` font icon targeting from `_notice.sass` and refactor for use with an image tag
   - Updated documentation with markup for notice bar

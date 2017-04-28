@@ -1,14 +1,14 @@
 PATH
   remote: .
   specs:
-    vital (2.1.0)
+    vital (2.1.1)
       sass (>= 3.4)
 
 GEM
   remote: https://rubygems.org/
   specs:
     rake (10.5.0)
-    sass (3.4.22)
+    sass (3.4.23)
 
 PLATFORMS
   ruby
@@ -19,4 +19,4 @@ DEPENDENCIES
   vital!
 
 BUNDLED WITH
-   1.13.1
+   1.14.6
