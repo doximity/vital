@@ -71,6 +71,7 @@ Publishing and deployment should be performed by a Doximity member.
 - `git commit -m 'vX.Y.Z'`
 - `git push origin master`
 - `bundle exec rake release` to push to RubyGems
+- `bundle` to push to RubyGems
 - `npm publish` to push to NPM
 - Go to https://github.com/doximity/vital/releases and create a new release with the tarball attached
 - Visit http://vitalcss.com and ensure it has been updated
