@@ -67,11 +67,11 @@ Publishing and deployment should be performed by a Doximity member.
 - Bump version on `lib/vital/version.rb`
 - Bump version on `package.json#L3`
 - `bundle exec rake vital:build`
+- `bundle`, commit and push the `Gemfile.lock` file
 - `git add ...` all of the updated files
 - `git commit -m 'vX.Y.Z'`
-- `git push origin master`
+- Create a branch, get it approved, merge the branch and checkout `master`
 - `bundle exec rake release` to push to RubyGems
-- `bundle` to push to RubyGems
 - `npm publish` to push to NPM
 - Go to https://github.com/doximity/vital/releases and create a new release with the tarball attached
 - Visit http://vitalcss.com and ensure it has been updated
