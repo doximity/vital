@@ -65,12 +65,12 @@ Publishing and deployment should be performed by a Doximity member.
 
 - Ensure docs, `README.md`, `CHANGELOG.md` are up to date
 - Bump version on `lib/vital/version.rb`
+- Bump version on `package.json#L3`
 - `bundle exec rake vital:build`
 - `git add ...` all of the updated files
 - `git commit -m 'vX.Y.Z'`
 - `git push origin master`
 - `bundle exec rake release` to push to RubyGems
-- Update `https://github.com/doximity/vital/blob/master/package.json#L3` version
 - `npm publish` to push to NPM
 - `cd docs && bundle exec rake publish` to update GitHub pages
 - Go to https://github.com/doximity/vital/releases and create a new release with the tarball attached
