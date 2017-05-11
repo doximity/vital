@@ -733,8 +733,7 @@ nav ul ul li:hover > ul {
     width: 4.6em; }
 
   #menu-toggle:checked + .icon-menu {
-    background-size: 3em;
-    background-image: url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M44.4 7.7l-2.1-2.1L25 22.9 7.7 5.6 5.6 7.7 22.9 25 5.6 42.3l2.1 2.1L25 27.1l17.3 17.3 2.1-2.1L27.1 25 44.4 7.7z"/></svg>');
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M44.4 7.7l-2.1-2.1L25 22.9 7.7 5.6 5.6 7.7 22.9 25 5.6 42.3l2.1 2.1L25 27.1l17.3 17.3 2.1-2.1L27.1 25 44.4 7.7z"/></svg>');
     background-color: rgba(0, 0, 0, 0.02); }
 
   .menu {
