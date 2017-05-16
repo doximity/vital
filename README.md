@@ -74,6 +74,7 @@ Publishing and deployment should be performed by a Doximity member.
 - `bundle exec rake release` to push to RubyGems
 - `npm publish` to push to NPM
 - Go to https://github.com/doximity/vital/releases and create a new release with the tarball attached
+- In Slack, run `doxbot ship vital` to deploy documentation site
 - Visit http://vitalcss.s3-website-us-east-1.amazonaws.com and http://vitalcss.com and ensure it has been updated
 
 ## Reporting Issues and Suggestions
