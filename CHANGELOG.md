@@ -1,6 +1,7 @@
 _Post v1.1.0 releases changelog can be found on https://github.com/doximity/vital/releases_
 
 v2.1.1
+  - Add webpack convenience property to allow: `require('vital-css').includePaths`
   - Fix an issue that caused the mobile menu close icon not to show up.
   - Update the README.md.
 

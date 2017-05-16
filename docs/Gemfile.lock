@@ -1,5 +1,5 @@
 PATH
-  remote: ../
+  remote: ..
   specs:
     vital (2.1.1)
       sass (>= 3.4)
@@ -151,4 +151,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.13.1
+   1.14.6
