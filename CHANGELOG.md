@@ -1,5 +1,8 @@
 _Post v1.1.0 releases changelog can be found on https://github.com/doximity/vital/releases_
 
+v2.2.1
+  - Fix an issue that caused the `range` input to be misaligned.
+
 v2.2.0
   - Add webpack convenience property to allow: `require('vital-css').includePaths`
 
