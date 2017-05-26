@@ -572,9 +572,6 @@ input[type='radio'] {
 @-moz-document url-prefix() {
   input[type='file'] {
     padding: 1em 0.5em; }
-  input[type='range'] {
-    border: 0;
-    margin: 0.6em 0 0 0; }
 
   select {
     padding: 0.641em 0.5em; }
