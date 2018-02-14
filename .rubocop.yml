@@ -1,0 +1,3 @@
+inherit_gem:
+  dox-style:
+    - .rubocop.yml
