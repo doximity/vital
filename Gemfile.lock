@@ -5,27 +5,36 @@ PATH
       sass (>= 3.4)
 
 GEM
-  remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    dox-style (1.0.16)
-      rubocop (~> 0.53)
+    dox-style (1.0.23)
+      rubocop (~> 0.56)
+    ffi (1.9.25)
+    jaro_winkler (1.5.1-x86_64-darwin-17)
     parallel (1.12.1)
-    parser (2.5.1.0)
+    parser (2.5.1.2)
       ast (~> 2.4.0)
-    powerpack (0.1.1)
+    powerpack (0.1.2)
     rainbow (3.0.0)
     rake (10.5.0)
-    rubocop (0.55.0)
+    rb-fsevent (0.10.3)
+    rb-inotify (0.9.10)
+      ffi (>= 0.5.0, < 2)
+    rubocop (0.58.1)
+      jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.5)
+      parser (>= 2.5, != 2.5.1.1)
       powerpack (~> 0.1)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
-    sass (3.4.23)
-    unicode-display_width (1.3.2)
+    sass (3.5.7)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    unicode-display_width (1.4.0)
 
 PLATFORMS
   ruby
@@ -37,4 +46,4 @@ DEPENDENCIES
   vital!
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
