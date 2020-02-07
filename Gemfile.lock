@@ -17,7 +17,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rdoc (6.2.1)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
     rspec-support (3.9.2)
@@ -38,8 +37,6 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    sdoc (1.0.0)
-      rdoc (>= 5.0)
     standard (0.1.7)
       rubocop (~> 0.77.0)
       rubocop-performance (~> 1.5.1)
@@ -53,7 +50,6 @@ PLATFORMS
 DEPENDENCIES
   bundler
   rspec_junit_formatter
-  sdoc
   standardrb
   vital!
 

@@ -56,12 +56,6 @@ jobs:
       - store_test_results:
           name: Store test results
           path: tmp/test-results
-      - run:
-          name: Build documentation
-          command: bundle exec rake ci:doc
-      - store_artifacts:
-          name: Saves documentation
-          path: doc
       - persist_to_workspace:
           root: .
           paths:

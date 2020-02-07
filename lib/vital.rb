@@ -17,11 +17,11 @@ module Vital
 
     # Paths
     def gem_path
-      @gem_path ||= File.expand_path '..', File.dirname(__FILE__)
+      @gem_path ||= File.expand_path "..", File.dirname(__FILE__)
     end
 
     def sass_path
-      File.join gem_path, 'sass'
+      File.join gem_path, "sass"
     end
 
     # Environment detection helpers
@@ -40,7 +40,7 @@ module Vital
     private
 
     def configure_sass
-      require 'sass'
+      require "sass"
       ::Sass.load_paths << sass_path
     end
 
@@ -49,7 +49,7 @@ module Vital
     end
 
     def register_rails_engine
-      require 'vital/engine'
+      require "vital/engine"
     end
   end
 end
