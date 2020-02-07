@@ -12,12 +12,15 @@ Gem::Specification.new do |spec|
   spec.summary       = 'A minimally invasive CSS framework for modern web applications.'
   spec.homepage      = 'https://doximity.github.io/vital/'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features|docs|icons)/}) }
+  spec.files = `git ls-files -z`.split("\x0").reject do |f|
+    f.match(%r{^(bin|test|spec|features|vendor|tasks|tmp)/})
+  end
   spec.require_paths = ['lib']
 
   spec.add_dependency 'sass', '>= 3.4'
 
-  spec.add_development_dependency "dox-style", "~> 1.0.16"
-  spec.add_development_dependency 'bundler', '~> 1.11'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rspec_junit_formatter"
+  spec.add_development_dependency "sdoc"
+  spec.add_development_dependency "standardrb"
 end

@@ -5,45 +5,57 @@ PATH
       sass (>= 3.4)
 
 GEM
+  remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    dox-style (1.0.23)
-      rubocop (~> 0.56)
     ffi (1.9.25)
-    jaro_winkler (1.5.1-x86_64-darwin-17)
-    parallel (1.12.1)
-    parser (2.5.1.2)
+    jaro_winkler (1.5.4)
+    parallel (1.19.1)
+    parser (2.7.0.2)
       ast (~> 2.4.0)
-    powerpack (0.1.2)
     rainbow (3.0.0)
-    rake (10.5.0)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rubocop (0.58.1)
+    rdoc (6.2.1)
+    rspec-core (3.9.1)
+      rspec-support (~> 3.9.1)
+    rspec-support (3.9.2)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
+    rubocop (0.77.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.5, != 2.5.1.1)
-      powerpack (~> 0.1)
+      parser (>= 2.6)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (~> 1.0, >= 1.0.1)
-    ruby-progressbar (1.9.0)
+      unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-performance (1.5.2)
+      rubocop (>= 0.71.0)
+    ruby-progressbar (1.10.1)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-    unicode-display_width (1.4.0)
+    sdoc (1.0.0)
+      rdoc (>= 5.0)
+    standard (0.1.7)
+      rubocop (~> 0.77.0)
+      rubocop-performance (~> 1.5.1)
+    standardrb (1.0.0)
+      standard
+    unicode-display_width (1.6.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.11)
-  dox-style (~> 1.0.16)
-  rake (~> 10.0)
+  bundler
+  rspec_junit_formatter
+  sdoc
+  standardrb
   vital!
 
 BUNDLED WITH
-   1.16.2
+   1.17.2
