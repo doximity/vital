@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.2.2.pre1] - 2020-02-06
+## [2.2.2.pre1] - 2020-02-21
 ### Changed
 - Release on RubyGems using gem-publisher CircleCI Orb
 - Packing gems
