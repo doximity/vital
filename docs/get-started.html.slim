@@ -113,22 +113,25 @@
     h2 Application layout
     p Your typical application layout HTML would look something like this:
 
-    = code('slim') do
+    = code('erb') do
       |
-        doctype html
-        html
-          head
-            meta content='IE=edge' http-equiv='X-UA-Compatible'
-            meta charset='UTF-8'
-            meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport'
-            title Vital
-            = favicon_tag 'images/favicon.ico'
-            = stylesheet_link_tag :vital
-          body
-            = partial 'layouts/header'
-            .contents
-              = yield
-            = partial 'layouts/footer'
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <meta content="IE=edge" http-equiv="X-UA-Compatible">
+            <meta charset="UTF-8">
+            <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+            <title>Vital</title>
+            <%= favicon_tag 'images/favicon.ico' %>
+            <%= stylesheet_link_tag :vital %>
+          </head>
+          <body>
+            <%= partial 'layouts/header' %>
+            <div class="contents">
+              <%= yield %>
+            <%= partial 'layouts/footer' %>
+          </body>
+        </html>
 
     hr
     h2 Bower / NPM
