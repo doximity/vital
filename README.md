@@ -61,6 +61,10 @@ bundle exec middleman
 
 Publishing and deployment should be performed by a Doximity member.
 
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
+
 ## Releasing a new version
 
 - Ensure docs, `README.md`, `CHANGELOG.md` are up to date
