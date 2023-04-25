@@ -62,11 +62,10 @@ end
 
 # Build-specific configuration
 configure :build do
-
   activate :robots, :rules => [
     {:user_agent => '*', :allow => %w(/)}
   ],
-  sitemap: '#{data.site.url}/sitemap.xml'
+  sitemap: "#{@app.data.site.url}/sitemap.xml"
 
   # Minify on build
   activate :minify_html
