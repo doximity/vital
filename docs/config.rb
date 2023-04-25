@@ -23,6 +23,14 @@ import_path "#{Vital.gem_path}/fonts"
 
 # General configuration
 
+# Ignore files on build
+ignore "/.gitignore"
+ignore "/config.rb"
+ignore "/config.ru"
+ignore "/Gemfile*"
+ignore "/Makefile"
+ignore "/Rakefile"
+
 # Syntax highlighting
 activate :syntax
 # Pretty URLs
