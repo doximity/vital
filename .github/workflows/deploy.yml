@@ -1,0 +1,41 @@
+name: Deploy VitalCSS docs website to S3
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "docs/**"
+
+jobs:
+  docs_deploy_s3:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    defaults:
+      run:
+        working-directory: docs
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.4.2
+          working-directory: docs
+          bundler-cache: true
+
+      - name: Middleman build
+        run: make build
+
+      - name: Setup AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-region: us-east-1
+          role-to-assume: ${{ secrets.VITALCSS_AWS_DEPLOY_ROLE }}
+
+      - name: Publish docs website to S3
+        env:
+          VITALCSS_DIST_ID: ${{ secrets.VITALCSS_DIST_ID }}
+        run: make publish
