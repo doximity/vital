@@ -9,7 +9,7 @@ on:
 
 jobs:
   docs_deploy_s3:
-    runs-on: ubuntu-latest
+    runs-on: general-purpose
     permissions:
       id-token: write
       contents: read
