@@ -9,7 +9,7 @@ on:
 
 jobs:
   docs_deploy_s3:
-    runs-on: general-purpose
+    runs-on: prod-k8s-runners
     permissions:
       id-token: write
       contents: read
