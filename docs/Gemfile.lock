@@ -108,7 +108,7 @@ GEM
       activesupport (>= 3.1)
     parallel (1.12.1)
     public_suffix (3.0.3)
-    rack (2.0.6)
+    rack (2.2.9)
     rack-livereload (0.3.16)
       rack
     rake (11.1.2)
