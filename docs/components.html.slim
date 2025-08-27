@@ -16,11 +16,13 @@
       code .section
       ' classes are core. Example usage:
 
-    = code('slim') do
+    = code('html') do
       |
-        .row
-          .section
-            p Hello World
+        <div class="row">
+          <div class="section">
+            <p>Hello World</p>
+          </div>
+        </div>
 
 .row
   .section
@@ -186,23 +188,30 @@
 
     p The navigation bar is fully responsive and can host an unlimited amount of sub-menu items.
 
-    = code('slim') do
+    = code('html') do
       |
-        .row.header
-          .section
-            nav
-              = link_to '/', class: 'logo' do
-                = image_tag 'logo.svg'
-              label#menu-toggle-label for='menu-toggle'
-              input#menu-toggle type='checkbox'
-              .icon-menu
-              ul.menu
-                li = link_to 'Link', '#'
-                li
-                  = link_to 'Menu Label', '#'
-                  ul
-                    li = link_to 'Menu Item', '#'
-                    li = link_to 'Menu Item', '#'
+        <div class="row header">
+          <div class="section">
+            <nav>
+              <a class="logo">
+                <img src='logo.svg'>
+              </a>
+              <label id="menu-toggle-label" for="menu-toggle">
+              <input id="menu-toggle" type="checkbox">
+              <div class="icon-menu"></div>
+              <ul class="menu">
+                <li><a href="#">Link</a></li>
+                <li>
+                  <li><a href="#">Menu Label</a></li>
+                  <ul>
+                    <li><a href="#">Menu Label</a></li>
+                    <li><a href="#">Menu Label</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
 
 .row
   .section
@@ -285,16 +294,20 @@
 
 .row
   .section
-    = code ('slim') do
+    = code ('html') do
       |
-        .row.notice
-          .section
-            .notice-message
-              .notice-text
-                | This is a notice. Slot me anywhere.
-              .notice-dismiss
-                = image_tag 'icons/icon-close-outline.svg'
-
+        <div class="row notice">
+          <div class="section">
+            <div class="notice-message">
+              <div class="notice-text">
+                This is a notice. Slot me anywhere.
+              </div>
+              <div class="notice-dismiss">
+                <img src="icon-close-outline.svg">
+              </div>
+            </div>
+          </div>
+        </div>
 .row
   .section
     hr
